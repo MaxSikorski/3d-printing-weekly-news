@@ -25,9 +25,9 @@
                 {
                     "heading": "Discussion Points",
                     "bullets": [
-                        "Has anyone tried multi-color mixing on their Prusa MK4?",
+                        "Has anyone tried multi-color mixing on their printers?",
                         "How does this compare to Bambu's AMS color mixing approach?",
-                        "It's open source — could we extend or customize it for our needs?"
+                        "It's open source (Full Spectrum) — could we extend or customize it for our needs?"
                     ]
                 }
             ]
@@ -141,6 +141,107 @@
                     "body": "Polar Filament offers a range of biodegradable options including PHA blends. Worth checking out if you're interested in sustainable printing.",
                     "link": "https://polarfilament.com/collections/biodegradable",
                     "linkLabel": "Browse Polar Filament"
+                }
+            ]
+        },
+        {
+            "id": "waveoverhangs",
+            "title": "WaveOverhangs",
+            "description": "No more supports needed for overhangs",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "WaveOverhangs in OrcaSlicer",
+                    "body": "A new technique for printing overhangs without supports by generating a wave-like pattern.",
+                    "videoUrl": "https://www.youtube.com/watch?v=B-JlMAnAaaI"
+                },
+                {
+                    "heading": "Links & Resources",
+                    "bullets": [
+                        "Project Website: waveoverhangs.com",
+                        "GitHub Repository: dennisklappe/OrcaSlicer-WaveOverhangs"
+                    ],
+                    "link": "https://waveoverhangs.com/",
+                    "linkLabel": "Visit WaveOverhangs"
+                }
+            ]
+        },
+        {
+            "id": "bambu-a2l",
+            "title": "Bambu A2L Leaks",
+            "description": "Upcoming large-format 'creative playground' printer from Bambu Lab",
+            "type": "discussion",
+            "slides": [
+                {
+                    "heading": "Bambu A2L Announcement",
+                    "body": "Bambu Lab is teasing a new large-format 3D printer and 'creative playground' scheduled for release on June 1. It is an extra-large, scaled-up sibling to the A1 bedslinger."
+                },
+                {
+                    "heading": "Speculated Features",
+                    "bullets": [
+                        "Large Build Volume: Estimated between 300mm and 350mm square",
+                        "Creative Attachments: Swappable toolhead modules for vinyl cutting, pen plotting, etc.",
+                        "Multi-Color: Supports the AMS Lite system",
+                        "Upgraded Hardware: PMSM closed-loop servos, active clog detection"
+                    ]
+                },
+                {
+                    "heading": "Pricing Estimates",
+                    "body": "The community estimates the standalone machine will fall between $399 and $549 USD, depending on if it's bundled with the AMS Lite."
+                }
+            ]
+        },
+        {
+            "id": "creality-kiltek",
+            "title": "Creality NextGen Nozzle Swapper",
+            "description": "KliTek's new nozzle-changing system",
+            "type": "tool",
+            "slides": [
+                {
+                    "heading": "KliTek NextGen Nozzle-Changing",
+                    "body": "A new automated nozzle-swapping system announced for Creality printers on May 29th.",
+                    "link": "https://www.reddit.com/r/Creality/comments/1tq5eck/klitek_nextgen_nozzlechanging_printing/",
+                    "linkLabel": "View Reddit Discussion"
+                }
+            ]
+        },
+        {
+            "id": "elegoo-teaser",
+            "title": "Elegoo Special Edition Teaser",
+            "description": "Announcement scheduled for June 4th",
+            "type": "tool",
+            "slides": [
+                {
+                    "heading": "Elegoo Special Edition Launch",
+                    "body": "Elegoo is teasing a special edition 3D printer launch. The full announcement will drop on June 4th at 9:30 AM EDT.",
+                    "link": "https://us.elegoo.com/pages/3d-printer-special-edition-launch",
+                    "linkLabel": "View Teaser Page"
+                }
+            ]
+        },
+        {
+            "id": "polymaker-abs",
+            "title": "Polymaker High Temp ABS",
+            "description": "New high-temperature ABS filament",
+            "type": "discussion",
+            "slides": [
+                {
+                    "heading": "Polymaker High Temp ABS",
+                    "body": "We have some photos of the new Polymaker High Temp ABS. Check out the photos folder for some examples of what it looks like and how it performs."
+                }
+            ]
+        },
+        {
+            "id": "infimech-mx",
+            "title": "Infimech MX Series",
+            "description": "A FlashForge AD5X clone with Bontech INDX tool changing",
+            "type": "tool",
+            "slides": [
+                {
+                    "heading": "AD5X + INDX = Infimech MX?",
+                    "body": "The Infimech MX series recently launched on Kickstarter. It looks remarkably like a FlashForge AD5X clone but integrates the Bontech INDX tool-changing system. Many in the community are quite skeptical of the claims.",
+                    "link": "https://www.kickstarter.com/projects/infimech-mx-series/infimech-mx-3d-printer-8x-more-efficiency-8x-less-waste",
+                    "linkLabel": "View Kickstarter"
                 }
             ]
         },
