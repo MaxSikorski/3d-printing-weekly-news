@@ -29,15 +29,22 @@ We meet weekly on Meetup.com. All skill levels are welcome — from first-layer 
 
 ## Want to Share Something?
 
-Found a cool project, a useful tip, or some wild 3D printing news this week? **Submit it as a GitHub Issue** and we'll try to cover it in the next meetup.
+Found a cool project, a useful tip, or some wild 3D printing news this week? Submit it and we'll try to cover it at the next meetup. No GitHub experience needed — it only takes a minute.
 
 **[Submit a Topic →](https://github.com/MaxSikorski/3d-printing-weekly-news/issues/new/choose)**
 
-You can share:
-- A news article or blog post you found interesting
-- A YouTube video worth watching together
-- A Reddit thread the community should see
-- Something you built, printed, or are working on
+### How it works
+
+1. **Click the link above** and you'll land on the Issues page.
+2. **Select the template** — click *"🚀 Submit a Meetup Topic or Show & Tell"* template.
+3. **Fill in the details** — the template will guide you. Replace the bracketed placeholders with your topic or show & tell. Drop in any links (article, YouTube video, Reddit thread, GitHub repo) and a quick description of why it's worth covering.
+4. **Hit "Submit new issue"** at the bottom — that's it!
+
+You can share anything, for example:
+- A news article or slicer update you spotted
+- A YouTube video worth watching as a group
+- A Reddit thread blowing up in the community
+- Something you built, printed, or are currently working on
 - A question you want to put to the group
 
-Just open an issue, fill in the template, and we'll take it from there.
+We read every submission and do our best to work them into the weekly lineup.
