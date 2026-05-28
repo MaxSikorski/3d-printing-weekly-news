@@ -487,6 +487,26 @@
                     }
                 }
 
+                if (slideData.imageUrl) {
+                    slideHTML += `
+                        <div class="slide-image-container">
+                            <img src="${slideData.imageUrl}" alt="${slideData.heading}" loading="lazy">
+                        </div>
+                    `;
+                }
+
+                if (slideData.imageUrls && Array.isArray(slideData.imageUrls)) {
+                    slideHTML += `<div class="slide-gallery-container">`;
+                    slideData.imageUrls.forEach(url => {
+                        slideHTML += `
+                            <div class="slide-gallery-item">
+                                <img src="${url}" alt="${slideData.heading}" loading="lazy">
+                            </div>
+                        `;
+                    });
+                    slideHTML += `</div>`;
+                }
+
                 if (slideData.bullets) {
                     slideHTML += '<ul class="slide-bullets">';
                     slideData.bullets.forEach(bullet => {
@@ -1080,7 +1100,8 @@
                     "slides": [
                         {
                             "heading": "Polymaker High Temp ABS",
-                            "body": "We have some photos of the new Polymaker High Temp ABS. Check out the photos folder for some examples of what it looks like and how it performs."
+                            "body": "Check out the photos of the new Polymaker High Temp ABS. It features improved thermal properties and excellent surface finish.",
+                            "imageUrl": "photos/Polymaker High Temp ABS.png"
                         }
                     ]
                 },
