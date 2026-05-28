@@ -27,7 +27,7 @@
                     "bullets": [
                         "Has anyone tried multi-color mixing on their printers?",
                         "How does this compare to Bambu's AMS color mixing approach?",
-                        "It's open source (Full Spectrum) — could we extend or customize it for our needs?"
+                        "It's open source (U1 Full Spectrum) — could we extend or customize it for our needs?"
                     ]
                 }
             ]
@@ -227,7 +227,8 @@
             "slides": [
                 {
                     "heading": "Polymaker High Temp ABS",
-                    "body": "We have some photos of the new Polymaker High Temp ABS. Check out the photos folder for some examples of what it looks like and how it performs."
+                    "body": "Check out the photos of the new Polymaker High Temp ABS. It features improved thermal properties and excellent surface finish.",
+                    "imageUrl": "photos/Polymaker High Temp ABS.png"
                 }
             ]
         },
