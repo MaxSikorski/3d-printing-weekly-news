@@ -157,6 +157,67 @@ a {
     transform: translateY(30px);
 }
 
+/* Scroll cue — gentle bob + glow pointing down to the presentations */
+html {
+    scroll-behavior: smooth;
+}
+
+.scroll-cue {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4px;
+    padding: 10px;
+    color: var(--text-color);
+    opacity: 0;
+    cursor: pointer;
+    animation: scrollCueIn 0.9s ease 1.6s forwards,
+               scrollCueBob 2.2s ease-in-out 2.6s infinite;
+    transition: opacity 0.25s ease;
+}
+
+.scroll-cue svg {
+    animation: scrollCueGlow 2.2s ease-in-out 2.6s infinite;
+    transition: transform 0.25s ease;
+}
+
+.scroll-cue:hover {
+    opacity: 1;
+}
+
+.scroll-cue:hover svg {
+    transform: scale(1.12);
+}
+
+@keyframes scrollCueIn {
+    from { opacity: 0; }
+    to   { opacity: 0.5; }
+}
+
+@keyframes scrollCueBob {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(8px); }
+}
+
+@keyframes scrollCueGlow {
+    0%, 100% { filter: drop-shadow(0 0 2px currentColor); }
+    50%      { filter: drop-shadow(0 0 9px currentColor); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    .scroll-cue {
+        opacity: 0.5;
+        animation: none;
+    }
+    .scroll-cue svg {
+        animation: none;
+        filter: drop-shadow(0 0 5px currentColor);
+    }
+}
+
 .hero-cta {
     display: flex;
     gap: 12px;
