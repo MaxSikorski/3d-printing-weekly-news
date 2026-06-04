@@ -269,7 +269,7 @@
             "slides": [
                 {
                     "heading": "Quick Tip: Calibrate Your Filament",
-                    "body": "Dialing in a new filament is easy with OrcaSlicer's built-in Calibration menu. Just work through the tests in the dropdown from top to bottom — in that sequential order — to tune temperature, flow rate, pressure advance, and more for each spool.",
+                    "body": "Dialing in a new filament is easy with OrcaSlicer's built-in Calibration menu. Just work through the tests in the dropdown from top to bottom — in that sequential order — to tune temperature, Max flow rate, pressure advance, and more for each material, brand, and even color 👀.",
                     "link": "https://www.orcaslicer.com/wiki/calibration/calibration_guide.html",
                     "linkLabel": "OrcaSlicer Calibration Guide"
                 }
