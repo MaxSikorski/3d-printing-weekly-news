@@ -1,0 +1,293 @@
+{
+    "week": "2026-W23",
+    "date": "2026-06-04",
+    "title": "A2L Launch, Creality's IPO & 3D Printer Ban Bills",
+    "subtitle": "This week in 3D printing news",
+    "timerMinutes": 20,
+    "topics": [
+        {
+            "id": "bambu-a2l",
+            "title": "Bambu A2L — Official Launch",
+            "description": "The leaked large-format 'creative playground' is real and shipping",
+            "type": "discussion",
+            "slides": [
+                {
+                    "heading": "Bambu A2L — It's Official",
+                    "body": "After weeks of leaks, the A2L launched June 1 and is shipping now. It's Bambu's first extra-large A-series bed slinger, pitched as a 'creative playground.' Price: $469 standalone, or $569 with the AMS Lite combo.",
+                    "link": "https://www.tomshardware.com/3d-printing/bambu-lab-launches-big-bed-slinger-a2l-companys-h2s-lite-is-half-the-cost-of-h2s-at-just-usd469",
+                    "linkLabel": "Read the Launch Coverage"
+                },
+                {
+                    "heading": "Key Specs",
+                    "bullets": [
+                        "Build volume: 330 × 320 × 325 mm — about 105% more space than 256 mm-class machines",
+                        "Single nozzle (for multi-material, Bambu points to the X2D); up to 4 AMS + 1 AMS Lite for multicolor",
+                        "300°C max nozzle, but only an 80°C bed (large open bed, no enclosure)",
+                        "Closed-loop PMSM servo motors plus two granular dampers — Bambu claims Core-XY-like quality",
+                        "Tom's Hardware nicknamed it the 'H2S Lite' — roughly half the cost of the H2S"
+                    ]
+                },
+                {
+                    "heading": "Creative Playground + Discussion",
+                    "body": "An optional Blade Cutting Kit turns the A2L into a cutter and pen plotter for stickers, leather, fabric, and drawing — the 'creative playground' angle.",
+                    "bullets": [
+                        "How close did it land to the leaks we covered last time?",
+                        "Single nozzle and an 80°C bed at $469 — fair trade for the bigger volume?",
+                        "Is the cutting and plotting kit genuinely useful, or a gimmick?"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "creality-ipo",
+            "title": "Creality Goes Public",
+            "description": "First consumer 3D printing company to IPO — and the money is smaller than you'd think",
+            "type": "discussion",
+            "slides": [
+                {
+                    "heading": "Creality Goes Public",
+                    "body": "Creality became the first consumer 3D printing company to IPO, listing on the Hong Kong Stock Exchange on May 29. It raised roughly HK$1.27 billion (about US$163M) at a market cap near US$1.1B — and the retail tranche was oversubscribed nearly 3,800 times.",
+                    "link": "https://3dprintingindustry.com/news/new-creality-ipo-prospectus-shows-record-revenue-alongside-competitive-pressure-250765/",
+                    "linkLabel": "Read the Prospectus Breakdown"
+                },
+                {
+                    "heading": "The Money Reality",
+                    "bullets": [
+                        "2025 revenue hit a record RMB 3.13 billion (about US$430M)...",
+                        "...but the company posted a net LOSS of about RMB 182M (~US$25M) in 2025 — margins crushed by competition",
+                        "Sales are NOT mostly US: North America + Europe were 57.3% of 2025 revenue, China 25.9% — the mix is shifting West, away from China",
+                        "On market size: ~$34–35B global in 2026, but hardware is the largest segment — 'services and materials dominate' is an industrial-AM stat, not consumer"
+                    ]
+                },
+                {
+                    "heading": "Discussion Points",
+                    "bullets": [
+                        "Now that Creality answers to shareholders, do we expect more ads and ecosystem lock-in (à la FlashForge)?",
+                        "The 'world's largest' consumer maker lost money in 2025 — is consumer 3D printing just a brutal business?",
+                        "Their KliTek nozzle-changer is slated for the K3 series in Q3 2026"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "slicer-updates",
+            "title": "Latest Slicer Releases",
+            "description": "Fresh Bambu Studio, OrcaSlicer, and PrusaSlicer updates as of June 4",
+            "type": "tool",
+            "slides": [
+                {
+                    "heading": "Bambu Studio 2.7.1",
+                    "body": "The latest public release adds support for the new A2L, plus two notable features: Texture-to-Color Painting and a new Filament Manager.",
+                    "link": "https://github.com/bambulab/BambuStudio/releases",
+                    "linkLabel": "View Releases"
+                },
+                {
+                    "heading": "OrcaSlicer 2.3.2 (RC2)",
+                    "bullets": [
+                        "Major Linux usability improvements",
+                        "Fixes for Bambu LAN printing with the legacy plugin",
+                        "Pressure equalizer corrections, plus fuzzy skin and macOS fixes"
+                    ],
+                    "link": "https://github.com/OrcaSlicer/OrcaSlicer/releases",
+                    "linkLabel": "View Releases"
+                },
+                {
+                    "heading": "PrusaSlicer + Takeaways",
+                    "bullets": [
+                        "PrusaSlicer 2.9.4 is the current stable; 3.0 is in pre-release (Spring 2026)",
+                        "Texture-to-Color Painting in Bambu Studio is a fun 30-second live demo",
+                        "Orca's Bambu LAN fixes matter because of the ongoing Bambu/SFC licensing fight"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "elegoo-emoji",
+            "title": "Elegoo × emoji® Collab",
+            "description": "The teased 'special edition' is a co-brand, not a new machine",
+            "type": "discussion",
+            "slides": [
+                {
+                    "heading": "Elegoo × emoji® Centauri Carbon 2 Combo",
+                    "body": "Elegoo's teased 'special edition' turned out to be a co-branding deal, not a new machine — the existing Centauri Carbon 2 Combo wearing emoji® branding. Price: $489. The slogan: 'Your Vibe, Now in 3D.'",
+                    "link": "https://www.prnewswire.com/news-releases/creative-expression-takes-shape-elegoo-partners-with-emoji---the-iconic-brand-for-a-special-co-branded-3d-printer-centauri-carbon-2-combo-edition-302785379.html",
+                    "linkLabel": "Read the Announcement"
+                },
+                {
+                    "heading": "Discussion Points",
+                    "bullets": [
+                        "Is sneaker-style brand-collab marketing coming for 3D printers?",
+                        "Does emoji® branding add anything, or is it pure marketing on a printer you could already buy?"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "robot-dog",
+            "title": "James Bruton's Six-Servo Robot Dog",
+            "description": "A fully open-source, printable robot dog anyone can build",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "Six-Servo Robot Dog — Open Source",
+                    "body": "James Bruton (XRobots) designed a deliberately approachable, fully open-source robot dog that's built to be printed and copied. It's a perfect group build.",
+                    "videoUrl": "https://youtu.be/2eKb_2N0SBI"
+                },
+                {
+                    "heading": "How It Works",
+                    "bullets": [
+                        "Just 6 servos total: 4 at the knees lift and lower the legs, 2 in the body drive the walking pattern",
+                        "Opposite legs swing in tandem — smooth stride, simple kinematics, no per-leg motor, minimal math",
+                        "Runs on an Arduino Uno and standard RC servos — cheap and easy to source",
+                        "Offered in two sizes: large servos for a full-size dog, or 9g micro servos for a compact one"
+                    ]
+                },
+                {
+                    "heading": "Build It Yourself",
+                    "body": "All the files — 3D models, assembly, and code — are free on his GitHub. Print the body and legs on a basic printer, bolt on standard RC servos, flash the Arduino code, and it walks. Could be a fun club build challenge.",
+                    "link": "https://github.com/XRobots",
+                    "linkLabel": "Download on GitHub"
+                }
+            ]
+        },
+        {
+            "id": "fusion-ai",
+            "title": "Autodesk Fusion AI Assistant",
+            "description": "Fusion's AI can now perform real design actions from plain language",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "Autodesk Fusion's AI Assistant",
+                    "body": "Fusion's 'Autodesk Assistant' can now perform real design actions from plain-language requests — notable for anyone doing CAD for 3D printing.",
+                    "videoUrl": "https://youtu.be/AjEK7Jht1gE"
+                },
+                {
+                    "heading": "What It Can Do",
+                    "bullets": [
+                        "Natural-language modeling: describe a task and it runs the command — Extrude, Fillet, Chamfer, Hole, Shell, Split",
+                        "Script Execute: writes and runs scripts against the Fusion API to automate multi-step workflows",
+                        "Admin automation: create projects and folders, invite teammates, review permissions by chat",
+                        "Now also reachable through Anthropic's Claude for natural-language design actions"
+                    ]
+                },
+                {
+                    "heading": "Discussion Points",
+                    "bullets": [
+                        "Does AI CAD lower the barrier for makers who hate parametric modeling — or just make confident mistakes?",
+                        "Genuinely useful for designing printable parts, or a demo gimmick?"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "flashforge-creator5",
+            "title": "FlashForge Creator 5 Toolchanger",
+            "description": "A true 4-toolhead toolchanger aimed at the Snapmaker U1",
+            "type": "tool",
+            "slides": [
+                {
+                    "heading": "FlashForge Creator 5 Toolchanger",
+                    "body": "FlashForge's Creator 5 is a true 4-toolhead toolchanger (not IDEX), aimed squarely at the Snapmaker U1. Launch pricing — $649 for the Creator 5, $799 for the enclosed Creator 5 Pro — runs through June 20.",
+                    "link": "https://all3dp.com/4/flashforges-creator-5-toolchanger-takes-aim-at-the-snapmaker-u1-starting-at-649/",
+                    "linkLabel": "Read the Breakdown"
+                },
+                {
+                    "heading": "Specs",
+                    "bullets": [
+                        "Four swappable toolheads with roughly 7-second changes; marketing claims 'zero purge waste' and '500% faster' multicolor",
+                        "256 × 256 × 256 mm, CoreXY, up to 600 mm/s",
+                        "Direct-drive hardened-steel nozzles (0.4 standard; 0.25 / 0.6 / 0.8 options), up to ~350°C, 120°C bed",
+                        "1080p camera, Wi-Fi and LAN; works with Flash Studio and Orca-FlashForge"
+                    ]
+                },
+                {
+                    "heading": "Discussion Points",
+                    "bullets": [
+                        "A 4-toolhead changer at $649 — is affordable toolchanging finally here (vs Snapmaker U1 and Prusa)?",
+                        "Given FlashForge's ecosystem-lock reputation, do we trust them with a flagship?",
+                        "True toolchanging with zero purge vs AMS-style multicolor with purge waste — which wins?"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "printer-ban",
+            "title": "The '3D Printer Ban' Bills",
+            "description": "State legislation that could force blocking tech onto every printer sold",
+            "type": "discussion",
+            "slides": [
+                {
+                    "heading": "The '3D Printer Ban' Bills",
+                    "body": "Several states are advancing bills aimed at 3D-printed firearms. Some target only the act of making a gun — but California and New York would force firearm-blocking tech and state-approved-model rosters onto every printer sold. For makers, it's as much a right-to-repair fight as a gun issue.",
+                    "videoUrl": "https://youtu.be/EGvvEuIPJxA"
+                },
+                {
+                    "heading": "California — AB 2047",
+                    "bullets": [
+                        "Passed the Assembly and is now in the state Senate — not yet law",
+                        "Would require every 3D printer sold in California to include firearm-blocking technology that screens design files",
+                        "Makes it a misdemeanor to disable or circumvent the blocking — and adds a state-approved-models roster",
+                        "Phased deadlines run 2028–2029; civil fines up to $25,000 per violation for sellers"
+                    ],
+                    "link": "https://www.tomshardware.com/3d-printing/california-assembly-passes-3d-printer-bill-that-would-criminalize-bypassing-mandated-gun-blocking-software",
+                    "linkLabel": "Read the Bill Status"
+                },
+                {
+                    "heading": "Why the EFF Is Alarmed",
+                    "bullets": [
+                        "Banning circumvention would effectively criminalize open-source firmware and lock users into proprietary ecosystems",
+                        "Compliance costs hurt small makers, and reselling a non-compliant printer could trigger penalties",
+                        "Blocking needs cloud scanning or constant updates — a surveillance layer that could expand beyond firearms",
+                        "It won't stop determined bad actors, but it will burden legitimate makers and researchers"
+                    ],
+                    "link": "https://www.eff.org/deeplinks/2026/04/dangers-californias-legislation-censor-3d-printing",
+                    "linkLabel": "Read EFF's Analysis"
+                },
+                {
+                    "heading": "Where the Other States Stand",
+                    "bullets": [
+                        "Washington: already law — HB 2320 was signed March 24, banning 3D-printed firearm manufacture and restricting design-code sharing",
+                        "New York: a proposal in the 2026–2027 state budget would mandate print-blocking tech on all printers sold",
+                        "Colorado: watered down to dodge a veto — the digital-code-distribution provision was removed to get the governor's signature"
+                    ]
+                },
+                {
+                    "heading": "Why We Care + Discussion",
+                    "bullets": [
+                        "The CA/NY approach touches every printer sold there — and could outlaw the open-source firmware we rely on (Klipper, Mainsail, even the ZMOD-style jailbreaks we covered)",
+                        "What happens to buying and selling used printers across state lines?",
+                        "Do mandated blocking algorithms actually stop anyone, or just burden hobbyists?"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "quick-tip",
+            "title": "Quick Tip of the Week",
+            "description": "Calibrate new filament fast using OrcaSlicer's built-in Calibration menu",
+            "type": "tool",
+            "slides": [
+                {
+                    "heading": "Quick Tip: Calibrate Your Filament",
+                    "body": "Dialing in a new filament is easy with OrcaSlicer's built-in Calibration menu. Just work through the tests in the dropdown from top to bottom — in that sequential order — to tune temperature, flow rate, pressure advance, and more for each spool.",
+                    "link": "https://www.orcaslicer.com/wiki/calibration/calibration_guide.html",
+                    "linkLabel": "OrcaSlicer Calibration Guide"
+                }
+            ]
+        },
+        {
+            "id": "community-news",
+            "title": "Community News & Topics",
+            "description": "Share what you're interested in talking about!",
+            "type": "text",
+            "slides": [
+                {
+                    "heading": "Next Week's Meetup",
+                    "body": "Find something you're interested in talking about? Share it here and we'll cover it in next week's meetup!",
+                    "link": "https://github.com/MaxSikorski/3d-printing-weekly-news/issues",
+                    "linkLabel": "Submit a Topic"
+                }
+            ]
+        }
+    ]
+}
