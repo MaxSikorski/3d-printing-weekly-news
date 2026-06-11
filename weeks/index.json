@@ -1,6 +1,11 @@
 {
     "weeks": [
         {
+            "id": "2026-W24",
+            "date": "2026-06-11",
+            "title": "MRRF Weekend, BigTreeTech's ViViD & Formlabs Goes Industrial"
+        },
+        {
             "id": "2026-W23",
             "date": "2026-06-04",
             "title": "A2L Launch, Creality's IPO & 3D Printer Ban Bills"
