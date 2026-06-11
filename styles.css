@@ -1095,6 +1095,28 @@ button.card:hover .card-arrow {
     transform: translateX(3px);
 }
 
+/* === Current ("This Week") featured card === */
+.current-section {
+    padding-bottom: 28px;
+}
+
+.current-list {
+    padding-top: 20px;
+}
+
+.current-card {
+    padding: 32px;
+    border-radius: 24px;
+}
+
+.current-card .archive-card-date {
+    font-size: 0.72rem;
+}
+
+.current-card .archive-card-title {
+    font-size: 1.5rem;
+}
+
 /* === Empty State === */
 .empty-state {
     text-align: center;
@@ -1160,6 +1182,14 @@ button.card:hover .card-arrow {
 
     .content-section {
         padding: 0 20px 60px;
+    }
+
+    .current-card {
+        padding: 24px;
+    }
+
+    .current-card .archive-card-title {
+        font-size: 1.25rem;
     }
 
     .slide {

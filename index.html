@@ -8,7 +8,9 @@
     <meta name="theme-color" content="#000000">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>▲</text></svg>">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -34,13 +36,19 @@
         <div class="hero-content">
             <h1 class="hero-title">3D Printing<br>Weekly</h1>
             <p class="hero-subtitle">News, tools, and discussion topics curated for our weekly meetup.</p>
-            <a href="#presentations" class="scroll-cue" aria-label="Scroll to presentations">
+            <a href="#current-section" class="scroll-cue" aria-label="Scroll to presentations">
                 <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M12 5v14M19 12l-7 7-7-7"/>
                 </svg>
             </a>
         </div>
     </section>
+
+    <!-- Current Presentation -->
+    <div class="content-section current-section" id="current-section">
+        <p class="section-label">This Week</p>
+        <div id="current-list" class="archive-list current-list"></div>
+    </div>
 
     <!-- Archive List -->
     <div class="content-section" id="presentations">
@@ -69,6 +77,11 @@
             const INLINE_DATA = {
                 "weeks": [
                     {
+                        "id": "2026-W24",
+                        "date": "2026-06-11",
+                        "title": "MRRF Weekend, BigTreeTech's ViViD & Formlabs Goes Industrial"
+                    },
+                    {
                         "id": "2026-W23",
                         "date": "2026-06-04",
                         "title": "A2L Launch, Creality's IPO & 3D Printer Ban Bills"
@@ -82,7 +95,35 @@
             };
 
             const archiveList = document.getElementById('archive-list');
+            const currentList = document.getElementById('current-list');
+            const pastSection = document.getElementById('presentations');
             const emptyState = document.getElementById('empty-state');
+
+            function buildCard(week, index, featured) {
+                const card = document.createElement('a');
+                card.href = `week.html?week=${week.id}`;
+                card.className = featured ? 'archive-card current-card' : 'archive-card';
+                card.dataset.delay = index * 0.1;
+
+                const dateObj = new Date(week.date + 'T12:00:00');
+                const formattedDate = dateObj.toLocaleDateString('en-US', {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+
+                card.innerHTML = `
+                    <div class="archive-card-info">
+                        <p class="archive-card-date">${formattedDate}</p>
+                        <h3 class="archive-card-title">${week.title}</h3>
+                    </div>
+                    <svg class="archive-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                `;
+                return card;
+            }
 
             function renderArchive(data) {
                 if (!data.weeks || data.weeks.length === 0) {
@@ -91,38 +132,22 @@
                 }
 
                 // Sort weeks newest first
-                const sorted = data.weeks.sort((a, b) => b.date.localeCompare(a.date));
+                const sorted = data.weeks.slice().sort((a, b) => b.date.localeCompare(a.date));
 
-                sorted.forEach((week, index) => {
-                    const card = document.createElement('a');
-                    card.href = `week.html?week=${week.id}`;
-                    card.className = 'archive-card';
-                    card.dataset.delay = index * 0.1;
+                // Newest week is featured up top as "This Week"
+                currentList.appendChild(buildCard(sorted[0], 0, true));
 
-                    const dateObj = new Date(week.date + 'T12:00:00');
-                    const formattedDate = dateObj.toLocaleDateString('en-US', {
-                        weekday: 'long',
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric'
-                    });
-
-                    card.innerHTML = `
-                        <div class="archive-card-info">
-                            <p class="archive-card-date">${formattedDate}</p>
-                            <h3 class="archive-card-title">${week.title}</h3>
-                        </div>
-                        <svg class="archive-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M9 18l6-6-6-6"/>
-                        </svg>
-                    `;
-
-                    archiveList.appendChild(card);
-                });
+                // Everything else goes under "Past Presentations"
+                const past = sorted.slice(1);
+                if (past.length === 0) {
+                    pastSection.style.display = 'none';
+                } else {
+                    past.forEach((week, index) => archiveList.appendChild(buildCard(week, index, false)));
+                }
 
                 // Trigger scroll reveals for dynamically added cards
                 if (typeof gsap !== 'undefined') {
-                    const cards = archiveList.querySelectorAll('.archive-card');
+                    const cards = document.querySelectorAll('.archive-card');
                     gsap.set(cards, { opacity: 0, y: 20 });
 
                     const observer = new IntersectionObserver((entries) => {
