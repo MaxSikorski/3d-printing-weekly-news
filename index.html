@@ -61,9 +61,16 @@
         </div>
     </div>
 
-    <!-- Footer -->
+    <!-- Footer / About the host -->
     <footer class="footer">
-        3D Printing Meetup
+        <p class="footer-host">Hosted by <strong>Max Sikorski</strong></p>
+        <p class="footer-tagline">3D print farm · R&amp;D &amp; manufacturing · CAD classes</p>
+        <nav class="footer-links">
+            <a href="https://www.youtube.com/@maxwellsikorski4926" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a href="https://www.meetup.com/3d-printing-club/" target="_blank" rel="noopener noreferrer">Meetup</a>
+            <a href="https://github.com/MaxSikorski" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a id="footer-workwith" href="#">Work With Us</a>
+        </nav>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -98,6 +105,16 @@
             const currentList = document.getElementById('current-list');
             const pastSection = document.getElementById('presentations');
             const emptyState = document.getElementById('empty-state');
+
+            // "Work With Us" → prefilled email (assembled so plain-text scrapers don't grab it)
+            (function () {
+                const workLink = document.getElementById('footer-workwith');
+                if (!workLink) return;
+                const email = ['3dmax.ow6p08', 'bumpmail.io'].join('@');
+                const subject = '3D Printing Weekly — Work With You (print farm / R&D / CAD)';
+                const body = "Hi Max,\n\nI'd like to talk about working together — print farm / R&D / manufacturing / CAD classes.\n\n";
+                workLink.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            })();
 
             function buildCard(week, index, featured) {
                 const card = document.createElement('a');

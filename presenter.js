@@ -36,6 +36,30 @@
     const qrToggleBtn = document.getElementById('qr-toggle-btn');
     const presenterControls = document.getElementById('presenter-controls');
     const keyboardHints = document.getElementById('keyboard-hints');
+    const slideCreditContact = document.getElementById('slide-credit-contact');
+
+    // === Branding / contact (Max Sikorski) ===
+    // Email is assembled at runtime so plain-text scrapers don't harvest it off the page.
+    const CONTACT_EMAIL = ['3dmax.ow6p08', 'bumpmail.io'].join('@');
+    const LINKS = {
+        youtube: 'https://www.youtube.com/@maxwellsikorski4926',
+        meetup: 'https://www.meetup.com/3d-printing-club/',
+        github: 'https://github.com/MaxSikorski'
+    };
+    function contactMailto(topicTitle) {
+        const subject = topicTitle
+            ? `3D Printing Weekly — interested in: ${topicTitle}`
+            : '3D Printing Weekly — getting in touch';
+        const body = topicTitle
+            ? `Hi Max,\n\nI was going through this week's 3D Printing Weekly and I'm interested in "${topicTitle}".\n\n`
+            : 'Hi Max,\n\nI came across 3D Printing Weekly and wanted to get in touch.\n\n';
+        return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    }
+    const WORK_WITH_MAILTO = (() => {
+        const subject = '3D Printing Weekly — Work With You (print farm / R&D / CAD)';
+        const body = "Hi Max,\n\nI'd like to talk about working together — print farm / R&D / manufacturing / CAD classes.\n\n";
+        return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    })();
 
     // === Utility: Extract YouTube embed URL ===
     function getYouTubeEmbedUrl(url) {
@@ -538,10 +562,29 @@
                     el: slide,
                     topicId: topic.id,
                     topicIndex: topicIndex,
+                    topicTitle: topic.title,
                     url: qrUrl
                 });
             });
         });
+
+        // === Closing slide: Connect with Max (engine-level — appears on every deck) ===
+        const connectSlide = createSlide('connect');
+        connectSlide.innerHTML = `
+            <div class="slide-content" style="text-align: center;">
+                <p class="slide-topic-badge">Connect</p>
+                <h2 class="slide-heading">Connect with Max Sikorski</h2>
+                <p class="slide-body" style="max-width: 580px; margin: 0 auto 32px;">3D Printing Weekly — print farm · R&amp;D &amp; manufacturing · CAD classes. Subscribe, say hi, or reach out about a project.</p>
+                <div class="connect-links">
+                    <a class="connect-link" href="${LINKS.youtube}" target="_blank" rel="noopener noreferrer">YouTube</a>
+                    <a class="connect-link" href="${LINKS.meetup}" target="_blank" rel="noopener noreferrer">Meetup</a>
+                    <a class="connect-link" href="${LINKS.github}" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a class="connect-link" href="${WORK_WITH_MAILTO}">Work With Us</a>
+                </div>
+            </div>
+        `;
+        container.appendChild(connectSlide);
+        slides.push({ type: 'connect', el: connectSlide, topicId: null, topicIndex: null, topicTitle: null, url: LINKS.youtube });
 
         return slides;
     }
@@ -612,7 +655,7 @@
         });
 
         // Animate inner elements stagger
-        const innerElements = nextSlideEl.querySelectorAll('.slide-topic-badge, .slide-heading, .slide-body, .slide-bullets li, .slide-link, .video-container, .topic-card');
+        const innerElements = nextSlideEl.querySelectorAll('.slide-topic-badge, .slide-heading, .slide-body, .slide-bullets li, .slide-link, .video-container, .topic-card, .connect-links');
         if (innerElements.length > 0) {
             gsap.set(innerElements, { opacity: 0, y: 15 });
             gsap.to(innerElements, {
@@ -637,6 +680,7 @@
         updateControls();
         updateQR();
         updateTOCHighlight();
+        updateSlideCredit();
     }
 
     function nextSlide() {
@@ -674,6 +718,13 @@
         // Progress bar
         const progress = slides.length > 1 ? (currentSlide / (slides.length - 1)) * 100 : 0;
         progressBar.style.width = `${progress}%`;
+    }
+
+    // === Slide credit: per-topic contact link (byline is static in week.html) ===
+    function updateSlideCredit() {
+        if (!slideCreditContact) return;
+        const s = slides[currentSlide];
+        slideCreditContact.href = contactMailto(s && s.topicTitle ? s.topicTitle : null);
     }
 
     // === Timer ===
@@ -1862,6 +1913,7 @@
             gsap.to(subtitles, { opacity: 0.85, duration: 1.2, ease: 'power4.out', delay: 0.5 });
 
             updateControls();
+            updateSlideCredit();
 
             // Start button
             const startBtn = document.getElementById('start-btn');

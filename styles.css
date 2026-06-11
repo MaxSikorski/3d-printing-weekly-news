@@ -385,8 +385,44 @@ button.card:hover .card-arrow {
     text-align: center;
     font-size: 0.8rem;
     font-weight: 500;
-    opacity: 0.3;
-    padding: 60px 0 40px;
+    padding: 60px 28px 48px;
+}
+
+.footer-host {
+    font-size: 0.95rem;
+    font-weight: 600;
+    opacity: 0.85;
+    margin-bottom: 4px;
+}
+
+.footer-host strong {
+    font-weight: 700;
+}
+
+.footer-tagline {
+    font-size: 0.8rem;
+    opacity: 0.5;
+    margin-bottom: 18px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.footer-links a {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+    opacity: 1;
 }
 
 /* === Back Link === */
@@ -715,6 +751,88 @@ button.card:hover .card-arrow {
     min-width: 60px;
     text-align: center;
     font-variant-numeric: tabular-nums;
+}
+
+/* === Slide credit: byline + per-topic contact (Max Sikorski) === */
+.slide-credit {
+    position: fixed;
+    left: 0;
+    bottom: 84px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 20px;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: var(--text-color);
+    opacity: 0.5;
+    z-index: 90;
+    pointer-events: none; /* don't block the slide or the controls */
+    transition: opacity 0.3s ease;
+}
+
+.slide-credit:hover {
+    opacity: 0.9;
+}
+
+.slide-credit-byline strong {
+    font-weight: 700;
+}
+
+.slide-credit-sep {
+    opacity: 0.4;
+}
+
+.slide-credit-contact {
+    pointer-events: auto; /* but the contact link is clickable */
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.75;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.slide-credit-contact:hover {
+    opacity: 1;
+}
+
+.slide-credit-contact svg {
+    display: block;
+}
+
+/* === Connect (closing) slide === */
+.connect-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.connect-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 22px;
+    background: var(--card-bg);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid var(--card-border);
+    border-radius: 999px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.connect-link:hover {
+    background: var(--card-hover);
+    transform: translateY(-2px);
 }
 
 /* Timer */
@@ -1190,6 +1308,12 @@ button.card:hover .card-arrow {
 
     .current-card .archive-card-title {
         font-size: 1.25rem;
+    }
+
+    .slide-credit {
+        bottom: 74px;
+        font-size: 0.66rem;
+        gap: 6px;
     }
 
     .slide {
