@@ -1,0 +1,321 @@
+{
+    "week": "2026-W24",
+    "date": "2026-06-11",
+    "title": "MRRF Weekend, BigTreeTech's ViViD & Formlabs Goes Industrial",
+    "subtitle": "This week in 3D printing news",
+    "timerMinutes": 20,
+    "topics": [
+        {
+            "id": "mrrf-2026",
+            "title": "MRRF 2026 — This Weekend!",
+            "description": "The Midwest RepRap Festival hits Goshen, IN — and several of us are going",
+            "type": "discussion",
+            "slides": [
+                {
+                    "heading": "MRRF 2026 — June 12–14, Goshen, Indiana",
+                    "body": "The Midwest RepRap Festival — one of the world's largest gatherings of 3D-printing enthusiasts — returns to the Elkhart County 4-H Fairgrounds this weekend, Friday through Sunday. It's community-run, famously free to attend, and packed with vendor booths, wild show-and-tell builds, talks, and the legendary tip-jar raffle.",
+                    "link": "https://www.facebook.com/midwestreprapfest/",
+                    "linkLabel": "MRRF on Facebook"
+                },
+                {
+                    "heading": "What to Watch For",
+                    "bullets": [
+                        "Toolchangers everywhere — Stealthchanger Vorons, the new wave of changers we've been covering, and DIY multi-material rigs",
+                        "Open-source hardware in the wild: RatRig, Voron, E3D, Slice Engineering, Annex, and the maker crowd",
+                        "Big, weird, and record-setting prints — MRRF is where the showpieces come out",
+                        "Vendor deals and brand-new gear that often debuts right at the show"
+                    ]
+                },
+                {
+                    "heading": "We're Going — Recap Next Week",
+                    "body": "Max and several meetup members are road-tripping out in person. We'll bring back photos, notes, and a full MRRF recap for next Thursday's meetup (June 18).",
+                    "bullets": [
+                        "Going too? Let's coordinate and meet up at the show",
+                        "What do you want us to hunt down and report back on?"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "bigtreetech-biqu",
+            "title": "New from BigTreeTech & BIQU",
+            "description": "A multi-color filament dryer, fresh screens & boards — plus a Bambu firmware fight",
+            "type": "tool",
+            "slides": [
+                {
+                    "heading": "BTT ViViD — Multi-Color Filament Dryer + Changer",
+                    "body": "BigTreeTech's ViViD is an all-in-one, open-source answer to the Bambu AMS for Klipper printers. It feeds and changes filament while actively drying it — and it's one of the most affordable open-source AMS alternatives out there, around $339.",
+                    "link": "https://biqu.equipment/products/biqu-vivid",
+                    "linkLabel": "View the ViViD"
+                },
+                {
+                    "heading": "Why ViViD Is Interesting",
+                    "bullets": [
+                        "Holds 4 spools and dries them with a built-in cross-flow fan while you print — gang up to 4 units for 16 colors",
+                        "Automatic filament backup: when a spool runs out, the next takes over mid-print — no pause, no failed job",
+                        "RFID auto-detects filament type, color, and recommended temp on tagged spools",
+                        "Works with Klipper machines (Voron 2.4, Trident, VzBot); needs a toolhead cutter like Filametrix or A4T"
+                    ]
+                },
+                {
+                    "heading": "More New BTT Gear",
+                    "bullets": [
+                        "PAD5 V2.0 — refreshed 5\" Klipper touchscreen (~$79)",
+                        "Creator Knomi Hi — wireless smart display with custom GIFs, made for the Creality Hi (~$56)",
+                        "K Hub V1.0 — 4-port USB 2.0 hub for Klipper, with 24V/5V power (~$18)",
+                        "Scylla V1.0 — a CNC control board (STM32H723); BTT stepping beyond just 3D printers (~$88)"
+                    ]
+                },
+                {
+                    "heading": "The Catch: Panda Touch vs. Bambu's New Firmware",
+                    "body": "BTT's Panda Touch (a wireless screen that controls Bambu printers) is getting squeezed by Bambu's new authorization/authentication firmware — print start, motion, temperature, and AMS control can stop working unless you're in LAN / Developer mode. It's the same right-to-repair fight we've been tracking with the slicer drama.",
+                    "link": "https://bigtree-tech.com/blogs/news/announcement-on-bambu-lab-security-firmware-update",
+                    "linkLabel": "BTT's Statement"
+                },
+                {
+                    "heading": "Discussion",
+                    "bullets": [
+                        "Open-source AMS alternatives (ViViD and others) vs. the locked Bambu AMS — is the gap closing?",
+                        "Bambu's auth firmware keeps breaking third-party gear — does that change what you'll buy next?"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "formlabs-fuse-x1",
+            "title": "Formlabs Fuse X1 — Industrial SLS",
+            "description": "A large-format SLS ecosystem aimed at real production, launched June 9",
+            "type": "discussion",
+            "slides": [
+                {
+                    "heading": "Formlabs Fuse X1 (Launched June 9)",
+                    "body": "Formlabs jumped from prototyping into full production with the Fuse X1, a large-format selective laser sintering (SLS) system. Starting price: $84,999, with shipping in Q4 2026.",
+                    "link": "https://3dprintingindustry.com/news/formlabs-launches-fuse-x1-technical-specifications-and-pricing-252208/",
+                    "linkLabel": "Specs & Pricing"
+                },
+                {
+                    "heading": "Why It Matters",
+                    "bullets": [
+                        "330 × 330 × 565 mm build volume — genuinely large-format SLS",
+                        "Claims production parts in under 24 hours, ~3× the throughput and ~half the cost-per-part of comparable powder-bed machines",
+                        "New 'Adaptive Thermal Control' with 13 independent thermal zones enables 30%+ packing density (vs ~10–15% typical for MJF)",
+                        "Early users — Tesla, Radio Flyer, Autotiv — already printed 30,000+ parts"
+                    ]
+                },
+                {
+                    "heading": "Discussion",
+                    "bullets": [
+                        "Does prosumer high-speed CoreXY with PA-CF eat the low end of SLS — or is powder-bed still its own world?",
+                        "At ~$85k, who's the real customer in our orbit: service bureaus, R&D labs, small manufacturers?"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "ratrig-vcore-4-1",
+            "title": "RatRig V-Core 4.1 + RatOS 2.1",
+            "description": "A meaningful open-source CoreXY refresh for the FOSS crowd",
+            "type": "tool",
+            "slides": [
+                {
+                    "heading": "RatRig V-Core 4.1 Upgrade",
+                    "body": "RatRig rolled out a 4.1 refresh of its open-source V-Core CoreXY platform — plus an upgrade kit so existing V-Core 4.0 owners can bring their machines up to spec instead of buying new.",
+                    "link": "https://ratrig.com/products/rat-rig-v-core-4-1",
+                    "linkLabel": "V-Core 4.1"
+                },
+                {
+                    "heading": "What Changed",
+                    "bullets": [
+                        "New rigid toolhead with much better part cooling, integrated with the Orbitool O2S toolboard — one clean cable to the toolhead",
+                        "Steel X-axis gantry replaces the bi-metal design, killing thermal distortion in enclosed, high-temp printing",
+                        "Pairs with RatOS 2.1: adaptive heat soak, improved compensation mesh, and better multi-point true-zero calibration",
+                        "Open-source through and through — a natural MRRF-floor machine"
+                    ]
+                },
+                {
+                    "heading": "Discussion",
+                    "bullets": [
+                        "Build-it-yourself CoreXY vs. buy-it-assembled (Bambu/Creality): who's still scratch-building in 2026, and why?",
+                        "Is the single-cable toolboard trend (Orbitool / EBB) finally making DIY toolheads painless?"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "prusament-pc-space",
+            "title": "Prusament PC Space-Grade Black",
+            "description": "An ESD-safe, low-outgassing polycarbonate you can print at home — literally space-rated",
+            "type": "discussion",
+            "slides": [
+                {
+                    "heading": "Prusa + TRL Space: PC Space-Grade Black",
+                    "body": "Prusa Research teamed up with Czech space company TRL Space on a polycarbonate filament engineered for orbit — ESD-safe and ultra-low-outgassing, meeting European Space Agency requirements. Around €249 for an 850 g spool.",
+                    "link": "https://blog.prusa3d.com/prusament-pc-space-grade-black_121877/",
+                    "linkLabel": "Prusa's Announcement"
+                },
+                {
+                    "heading": "Why 'Space-Grade' Matters",
+                    "bullets": [
+                        "Ultra-low outgassing (0.25% total mass loss vs ESA's 1% limit) — it won't fog optics or sensors in vacuum",
+                        "ESD-safe — safely dissipates static around sensitive electronics",
+                        "Developed against real CubeSat targets: ≥70 MPa tensile, 100°C heat-deflection",
+                        "Prints on a normal hardened-nozzle machine: ~290°C nozzle, 120°C bed"
+                    ]
+                },
+                {
+                    "heading": "Discussion",
+                    "bullets": [
+                        "A genuinely satellite-rated material you can run at home — gimmick, or a real door into aerospace work?",
+                        "Where would ESD-safe + low-outgassing PC actually help us — electronics enclosures, jigs, optics mounts?"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "industrial-roundup",
+            "title": "Industrial AM — Quick Hits",
+            "description": "A fast pass on the industrial side (we're a consumer-focused crew)",
+            "type": "discussion",
+            "slides": [
+                {
+                    "heading": "Industrial AM — Quick Hits",
+                    "bullets": [
+                        "Sinterit BIANCO2 — compact SLS with an open material ecosystem and an RF CO₂ laser (~€47k)",
+                        "Mastrex MX300 — metal LPBF, dual 500 W lasers, runs aluminum / Inconel / stainless ($185k)",
+                        "ExxonMobil × Meltio — a refinery part redesigned with wire-laser DED: 42% cheaper, 90% faster lead time"
+                    ],
+                    "link": "https://3dprint.com/326493/3d-printing-news-briefs-6-6-2026/",
+                    "linkLabel": "News Brief (June 6)"
+                }
+            ]
+        },
+        {
+            "id": "bloomberg-ban",
+            "title": "Who's Funding the Printer-Ban Push?",
+            "description": "Follow-up to the ban bills — videos arguing Bloomberg-backed groups are behind them",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "The Money Behind the 3D-Printer Bans",
+                    "body": "A follow-up to the ban bills we've covered: this video argues the state 3D-printer legislation isn't really grassroots — it's a coordinated push backed by Michael Bloomberg-funded advocacy groups, and that it's more about control of the technology than stopping crime. (Presented as the creator's argument — worth weighing critically.)",
+                    "videoUrl": "https://youtu.be/E1B2cWEaWDw"
+                },
+                {
+                    "heading": "NY's Law: 'Not Gun Control — Just Control'",
+                    "body": "The second video zeroes in on New York's proposal, arguing it targets the printers and the makers themselves rather than firearms.",
+                    "videoUrl": "https://youtu.be/ma12AyQHzYs"
+                },
+                {
+                    "heading": "Discussion",
+                    "bullets": [
+                        "Separate the claim from the fact — what's verifiable here, and what's advocacy?",
+                        "If the funding angle holds up, does it change how we push back: right-to-repair framing vs. gun-policy framing?",
+                        "These bills (CA AB 2047, NY budget) still reach Klipper / Mainsail and used-printer resale — worth tracking"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "microplastics-research",
+            "title": "Microplastics Research, Questioned",
+            "description": "A look at how shaky a lot of microplastics science is — and why it matters for printing",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "The Grad Student Who 'Broke' Microplastics Research",
+                    "body": "A thought-provoking video on how a grad student exposed serious problems in how microplastics research gets done — relevant given the ongoing debate over whether FDM printing and filament dust meaningfully add to microplastics and fine-particle exposure.",
+                    "videoUrl": "https://youtu.be/pNPvWsmxwno"
+                },
+                {
+                    "heading": "Discussion",
+                    "bullets": [
+                        "How much do our printers actually contribute — filament dust, FDM particle emissions, failed-print waste?",
+                        "Does this change how we think about ventilation and enclosures in our print spaces?",
+                        "Biodegradable filaments (PHA, the PLA debate) — real fix or feel-good?"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "nike-zellerfeld",
+            "title": "Nike's 3D-Printed Air Max",
+            "description": "Fully 3D-printed sneakers ship to consumers",
+            "type": "discussion",
+            "slides": [
+                {
+                    "heading": "Nike Air Max 1000.2 — Printed, Not Stitched",
+                    "body": "Nike and Zellerfeld released the Air Max 1000.2, a fully 3D-printed sneaker made from a single TPU foam (zellerFOAM). Priced at $179, the latest drop refined the geometry and outsole for better feel and faster production.",
+                    "link": "https://3dprint.com/326563/3d-printing-news-briefs-6-10-2026/",
+                    "linkLabel": "News Brief (June 10)"
+                },
+                {
+                    "heading": "Discussion",
+                    "bullets": [
+                        "Printed footwear is going mainstream — is this the consumer 'killer app' for large-format TPU printing?",
+                        "A single-material, recyclable shoe vs. traditional glued-and-stitched construction — does it stick?"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "sovol-m1d",
+            "title": "Sovol M1D — DualX Toolchanger",
+            "description": "Sovol's IDEX tool-changing printer — and I've got two on preorder",
+            "type": "discussion",
+            "slides": [
+                {
+                    "heading": "Sovol M1D — DualX™ IDEX Tool-Changer",
+                    "body": "Sovol's M1D is a new spin on multi-material: a 'DualX' IDEX system pairing one fixed extruder for reliable, continuous output with a second tool-changing extruder. A patented metal auto-grip mechanism swaps toolheads in about 5 seconds, and it'll run up to 7 colors or 7 materials with almost zero waste.",
+                    "link": "https://www.sovol3d.com/pages/sovol-m1d-landing-page",
+                    "linkLabel": "Sovol M1D"
+                },
+                {
+                    "heading": "What's Clever About It",
+                    "bullets": [
+                        "DualX: one fixed extruder + one tool-changing extruder — IDEX modes (Mirror, Copy, Single, Multi) plus true toolchanging",
+                        "~5-second toolhead swaps via a patented metal auto-grip; toolheads heat independently and preheat before a swap",
+                        "Auto Vision Calibration sets XY offsets by camera — Sovol claims up to 2.5× faster than probe-based setup",
+                        "Eddy-current auto bed leveling, auto Z-lift between heads, and a 6-channel filament system with runout / clog / tangle detection"
+                    ]
+                },
+                {
+                    "heading": "Show-and-Tell + Discussion",
+                    "body": "I've got two M1Ds on preorder — so we'll do hands-on group show-and-tell once they land.",
+                    "bullets": [
+                        "IDEX plus toolchanging in one machine — best of both worlds, or more to break?",
+                        "How does Sovol's 5s auto-grip stack up against the FlashForge Creator 5 and Snapmaker U1 changers we covered?",
+                        "Who else here runs Sovols? What would you print first with 7 materials at once?"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "quick-tip",
+            "title": "Quick Tip of the Week",
+            "description": "Dry engineering filaments before printing — and a four-spool dryer worth a look (Sovol SH03)",
+            "type": "tool",
+            "slides": [
+                {
+                    "heading": "Quick Tip: Dry Before You Print",
+                    "body": "Engineering filaments like polycarbonate, nylon, and TPU pull moisture from the air fast — and wet filament means stringing, popping, weak layers, and rough surfaces. Dry the spool before printing, and ideally keep it dry while printing (the whole idea behind boxes like ViViD and Sovol SH03). Rough starting points: ~80°C for PC, ~70°C for nylon, ~50°C for TPU, several hours each — but always check your spool's label, and when in doubt, dry longer. A great standalone option: the Sovol SH03, a four-spool dryer that heats to 85°C and can run up to 24 hours, with separate chambers so you can dry and store at once. I run two of them and they work great.",
+                    "link": "https://www.sovol3d.com/products/sovol-sh03-filament-dryer",
+                    "linkLabel": "Sovol SH03 Dryer"
+                }
+            ]
+        },
+        {
+            "id": "community-news",
+            "title": "Community News & Topics",
+            "description": "Share what you're interested in talking about!",
+            "type": "text",
+            "slides": [
+                {
+                    "heading": "Next Week's Meetup",
+                    "body": "Find something you're interested in talking about? Share it here and we'll cover it in next week's meetup!",
+                    "link": "https://github.com/MaxSikorski/3d-printing-weekly-news/issues",
+                    "linkLabel": "Submit a Topic"
+                }
+            ]
+        }
+    ]
+}
