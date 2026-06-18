@@ -1,6 +1,11 @@
 {
     "weeks": [
         {
+            "id": "2026-W25",
+            "date": "2026-06-18",
+            "title": "MRRF's Last Ride, Open-Source Volumetric Printing & a 16-Color U1"
+        },
+        {
             "id": "2026-W24",
             "date": "2026-06-11",
             "title": "MRRF Weekend, BigTreeTech's ViViD & Formlabs Goes Industrial"
