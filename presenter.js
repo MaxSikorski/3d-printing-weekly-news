@@ -969,6 +969,295 @@
     // === Inline fallback data for file:// protocol ===
     // Keep in sync with weeks/2026-W22.json
     const INLINE_WEEKS = {
+        "2026-W25": {
+            "week": "2026-W25",
+            "date": "2026-06-18",
+            "title": "MRRF's Last Ride, Open-Source Volumetric Printing & a 16-Color U1",
+            "subtitle": "This week in 3D printing news",
+            "timerMinutes": 20,
+            "topics": [
+                {
+                    "id": "mrrf-2026-recap",
+                    "title": "MRRF 2026 — Recap (The Last One As We Know It)",
+                    "description": "We road-tripped to the Midwest RepRap Festival — and it was the final year under the current organizers",
+                    "type": "discussion",
+                    "slides": [
+                        {
+                            "heading": "MRRF 2026 — We Were There (June 12–14)",
+                            "body": "Several of us road-tripped to the Midwest RepRap Festival at the Elkhart County 4-H Fairgrounds in Goshen, Indiana — the world's largest grassroots, bring-your-own-printer gathering. Community-run, free to attend, and three days of wild builds, vendor booths, talks, and the legendary tip-jar raffle. I've got a pile of photos to walk through.",
+                            "link": "https://www.facebook.com/midwestreprapfest/",
+                            "linkLabel": "MRRF on Facebook"
+                        },
+                        {
+                            "heading": "The Last MRRF As We Know It",
+                            "body": "The big news from the show: the current organizers announced this was their final year running MRRF. The festival is being handed off to The MakerHive, a makerspace in Elkhart, Indiana, who plan to keep the community going and put their own twist on it. So MRRF lives on — just under new stewardship. (Screenshots from their Facebook announcement below.)",
+                            "imageUrls": [
+                                "photos/MRRF-1.png",
+                                "photos/MRRF-2.png"
+                            ]
+                        },
+                        {
+                            "heading": "Photos from the Floor",
+                            "body": "See my photos"
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "End of an era — what made MRRF special, and what do we hope The MakerHive keeps (or changes)?",
+                                "What was the standout machine or print of the show?",
+                                "Anything you saw that changes what you'll build or buy next?",
+                                "Who's in for MRRF 2027 under the new organizers?"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "japan-reprap-festival",
+                    "title": "Japan RepRap Festival 2026 (JRRF)",
+                    "description": "Meanwhile, the global grassroots scene is thriving — Japan's biggest 3DP festival",
+                    "type": "video",
+                    "slides": [
+                        {
+                            "heading": "JRRF 2026 — Tokyo, May 30–31",
+                            "body": "While MRRF wraps up an era stateside, Japan's largest 3D-printing festival is going strong. JRRF 2026 ran at the Tokyo Distribution Center (TRC Hall E) — 144 general booths and 55+ sponsoring companies. Same open-source RepRap spirit as MRRF: see, touch, and experience real machines, from scratch-built and modded printers to the latest commercial gear. Very cool stuff.",
+                            "videoUrl": "https://youtu.be/m4X7i2JZv00"
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "MRRF in the Midwest, JRRF in Tokyo — the grassroots scene is global and healthy",
+                                "Japan's maker culture leans heavily on custom builds and creative prints — what can we learn from it?",
+                                "Worth following international creators and feeds for gear and ideas we don't see stateside"
+                            ],
+                            "link": "https://japanreprapfestival.com/",
+                            "linkLabel": "Japan RepRap Festival"
+                        }
+                    ]
+                },
+                {
+                    "id": "opencal-volumetric",
+                    "title": "OpenCAL — Volumetric Printing Goes Open-Source",
+                    "description": "Computed Axial Lithography — layerless prints in seconds — is now free and open",
+                    "type": "video",
+                    "slides": [
+                        {
+                            "heading": "Prints in Seconds — Now Open-Source",
+                            "body": "Computed Axial Lithography (CAL) is a volumetric, layer-less resin technique: instead of building up layer by layer, it projects computed light patterns into a slowly rotating vat of photopolymer, solidifying the whole object at once — in seconds. As of June 2026 it's open-source as OpenCAL, with full documentation and code on GitHub.",
+                            "videoUrl": "https://youtu.be/TWZ4I2GLYgI"
+                        },
+                        {
+                            "heading": "How OpenCAL Works & Why It Matters",
+                            "bullets": [
+                                "Layer-less: no layer lines, and it can even print around or onto existing objects (overmolding)",
+                                "Built from commercially available optics plus 3D-printed parts — runs headless on a Raspberry Pi 5",
+                                "Ships with CentrifuCAL, a centrifuge-based post-processor to spin printed parts free of excess resin",
+                                "GPL-3 license: free for research, education, and non-profit use — not for commercial use"
+                            ],
+                            "link": "https://github.com/computed-axial-lithography/OpenCAL",
+                            "linkLabel": "OpenCAL on GitHub"
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "Is volumetric printing the next big leap, or a research curiosity for now?",
+                                "Resin handling, build size, and material limits — what's the real catch?",
+                                "An open CAL printer you can build yourself: who here would actually attempt it?"
+                            ],
+                            "link": "https://opencal-org.readthedocs.io/en/stable/",
+                            "linkLabel": "OpenCAL Docs"
+                        }
+                    ]
+                },
+                {
+                    "id": "snapmaker-u1-16color",
+                    "title": "16 Colors on One Snapmaker U1 — Four AMSs",
+                    "description": "Someone hooked four AMS units to a U1 toolchanger for a real 16-color machine",
+                    "type": "tool",
+                    "slides": [
+                        {
+                            "heading": "A Real 16-Color U1 Changer",
+                            "body": "Somebody wired four AMS units up to a Snapmaker U1 toolchanger to get a genuine 16-color machine — and it works. The U1 is Snapmaker's affordable toolchanger (its SnapSwap system swaps four preloaded, pre-heated toolheads in ~5 seconds; 270 × 270 × 270 mm; ~$999 MSRP), and feeding each toolhead from its own AMS pushes it to 16 colors/materials. Very, very cool.",
+                            "videoUrl": "https://youtu.be/7EH3QAjspt0"
+                        },
+                        {
+                            "heading": "The Catch",
+                            "bullets": [
+                                "Four AMS boxes × four toolheads = 16 colors fed into a single U1",
+                                "The maker hasn't released any code or files yet",
+                                "Looks like he may be planning to sell it rather than open-source it — kind of a bummer for the DIY crowd",
+                                "Still a great proof of how far the community can push an affordable toolchanger"
+                            ]
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "Toolchanger + multiple AMSs as the multicolor endgame — overkill, or the future?",
+                                "Open-source vs. selling it: where's the line, and what would you pay for a kit like this?",
+                                "Anyone here running a U1? What would you print with 16 materials at once?"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "bondtech-indx",
+                    "title": "Bondtech INDX — 8-Tool Changer for the CORE One",
+                    "description": "Near-zero-waste multi-material toolchanger for the Prusa CORE One — Founders Editions shipping",
+                    "type": "tool",
+                    "slides": [
+                        {
+                            "heading": "Bondtech INDX — Up to 8 Materials, Near-Zero Waste",
+                            "body": "The INDX is Bondtech and Prusa's automatic toolchanger that adds fast, purgeless multi-material printing to the Prusa CORE One — up to 8 independent tools with almost no purge waste, unlike an AMS that wastes filament on every color change. The Founders Editions are shipping out June 25.",
+                            "link": "https://blog.prusa3d.com/prusa-core-one-indx-orders-now-open_134915/",
+                            "linkLabel": "Prusa: INDX Orders Open"
+                        },
+                        {
+                            "heading": "Pricing & Availability",
+                            "bullets": [
+                                "8-tool kit ~$999 / €899; 4-tool kit ~$749 / €669 (upgrade kits for the CORE One)",
+                                "Founders Editions shipping June 25 — wider availability still TBD",
+                                "Accessories and spare/extra tool heads are listed on the Bondtech store, but not buyable yet",
+                                "Purgeless toolchanging vs. an AMS: real filament + time savings on multi-material jobs"
+                            ],
+                            "link": "https://www.bondtech.se/product/founders-edition-indx-for-core-one-8-tools/",
+                            "linkLabel": "Bondtech INDX (8 Tools)"
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "Toolchanger (INDX) vs. AMS vs. the DIY 4-AMS U1 — which approach wins for multicolor?",
+                                "Purgeless is the big selling point — does near-zero waste justify the cost for you?",
+                                "CORE One owners: tempting upgrade, or wait for general availability and reviews?"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "giant-arduino-robot",
+                    "title": "Giant Arduino Robot — 7× Bigger, and It Works!",
+                    "description": "A maker scaled an Arduino robot up seven times — and it actually functions",
+                    "type": "video",
+                    "slides": [
+                        {
+                            "heading": "He Built an Arduino Robot 7× Bigger (And It Actually Works)",
+                            "body": "Pure maker fun: someone took a small Arduino robot and rebuilt it seven times larger — and the giant version actually works. A great showcase of 3D printing for large-format mechanical parts, plus the engineering headaches that come with scaling everything up.",
+                            "videoUrl": "https://youtu.be/KtBT_bazFGo"
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "Scaling up 7× isn't free — torque, weight, power, and part strength all fight back. What breaks first?",
+                                "How fun is this! Am I right?",
+                                "Best 'because I can' build any of us have attempted?"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "gesture-robot-hand",
+                    "title": "Gesture-Mirroring Robot Hand — Marina's Open-Source Build",
+                    "description": "A computer-vision hand that mirrors your movements — full credit to Marina; I forked it and added docs",
+                    "type": "video",
+                    "slides": [
+                        {
+                            "heading": "Gesture-Controlled Robotic Hand — No Gloves",
+                            "body": "A robotic hand that mirrors your real-life hand movements in real time — using computer vision to track your hand, with no gloves or sensors to wear. This is Marina's open-source project; here's her demo video.",
+                            "videoUrl": "https://youtu.be/_GSqwtdkvcs"
+                        },
+                        {
+                            "heading": "How It Works — and Full Credit to Marina",
+                            "body": "All credit goes to Marina, who designed and built this — it's fully open source on her GitHub.",
+                            "bullets": [
+                                "Computer-vision hand tracking → servo-driven 3D-printed hand, no wearable hardware",
+                                "Open source: anyone can build their own or contribute",
+                                "The original project and demo are Marina's work"
+                            ],
+                            "link": "https://github.com/mmm1712/hand-gestures-robotic-hand",
+                            "linkLabel": "Marina's GitHub"
+                        },
+                        {
+                            "heading": "My Fork & What I Added",
+                            "body": "I forked Marina's repo and contributed documentation to the project's static webpage. That pull request isn't merged upstream yet, but I'll show the docs page live tonight.",
+                            "bullets": [
+                                "My contribution: documentation for the project's static webpage (PR pending merge upstream)",
+                                "Where could a rig like this go — teleoperation, prosthetics, accessibility, animatronics?"
+                            ],
+                            "link": "https://github.com/MaxSikorski/hand-gestures-robotic-hand",
+                            "linkLabel": "My Fork"
+                        }
+                    ]
+                },
+                {
+                    "id": "quick-tip",
+                    "title": "Quick Tip of the Week",
+                    "description": "The basic 3D printer tools that are genuinely worth having",
+                    "type": "tool",
+                    "slides": [
+                        {
+                            "heading": "Quick Tip: The Basic Tools Worth Owning",
+                            "body": "You don't need a huge kit, but a handful of cheap tools make printing dramatically less painful. The full walkthrough is in the video below — and here's the complete checklist on the next few slides so you don't have to watch the whole thing.",
+                            "videoUrl": "https://youtu.be/1QjFT-w534M"
+                        },
+                        {
+                            "heading": "Before Printing (1:31)",
+                            "bullets": [
+                                "Solid glue stick — bed adhesion, or a release agent for high-grip materials like TPU to protect the build surface",
+                                "PTFE tube cutter — clean, square 90° cuts on Bowden/guide tubes to avoid gaps and friction",
+                                "Mini digital hygrometer & thermometer — track ambient or dry-box humidity so your filament stays dry"
+                            ]
+                        },
+                        {
+                            "heading": "Nozzle Cleaning (4:27)",
+                            "bullets": [
+                                "Nozzle cleaning needles — in a storage tube; clear partial clogs from standard 0.4mm nozzles",
+                                "Two brushes — soft brass for melted plastic on a hot nozzle (won't damage it), nylon for frame dust",
+                                "Dual wrench set — 20mm to hold the heater block + a multi-wrench (5/6/7mm) to swap nozzles while hot",
+                                "Tweezers — pluck oozing filament strings right as the bed finishes leveling"
+                            ]
+                        },
+                        {
+                            "heading": "Model Removal (6:30)",
+                            "bullets": [
+                                "Plastic scraper — 10 replaceable blades to lift purge lines, skirts, and light prints without scratching PEI or spring steel",
+                                "Stainless steel scraper — for stubborn, heavy-duty removal (keep it aligned to avoid gouging the plate)"
+                            ]
+                        },
+                        {
+                            "heading": "Measurement (7:41)",
+                            "bullets": [
+                                "Digital caliper — 0.1mm accuracy, mm/inch toggle, built-in step & depth gauge; ships with a battery + spare",
+                                "Mini cutting mat — compact 22 × 15 cm dual-sided mat to protect your desk from knives and files"
+                            ]
+                        },
+                        {
+                            "heading": "Post-Processing (9:46)",
+                            "bullets": [
+                                "Craft knife — X-Acto-style with 10 spare blades for trimming wisps and shaving layer artifacts",
+                                "Needle file set — 5 micro-files (flat, half-round, triangular, round) for tight geometries and screw channels",
+                                "Precision tweezers — straight, curved, and flat-tip pairs for supports and fragile parts",
+                                "Hand deburring tool — swivel head + 5 spare blades to shave sharp edge brims in one pass",
+                                "Precision flush cutters — flat-faced diagonal cutters to clip supports flush to the surface",
+                                "Silicon finger protectors — 4 caps to shield fingertips from hot stringing and sharp edges",
+                                "Manual pin vise / hand drill — pocket hand chuck + mini HSS bits to clean up undersized screw holes"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "community-news",
+                    "title": "Community News & Topics",
+                    "description": "Share what you're interested in talking about!",
+                    "type": "text",
+                    "slides": [
+                        {
+                            "heading": "Next Week's Meetup",
+                            "body": "Find something you're interested in talking about? Share it here and we'll cover it in next week's meetup!",
+                            "link": "https://github.com/MaxSikorski/3d-printing-weekly-news/issues",
+                            "linkLabel": "Submit a Topic"
+                        }
+                    ]
+                }
+            ]
+        },
         "2026-W24": {
             "week": "2026-W24",
             "date": "2026-06-11",
@@ -1962,6 +2251,47 @@
         toggleQR,
         resetTimer
     };
+
+    // === Image Lightbox (click a slide photo to expand it) ===
+    (function setupImageLightbox() {
+        const overlay = document.createElement('div');
+        overlay.className = 'image-lightbox';
+        overlay.innerHTML = '<img class="image-lightbox-img" alt="">';
+        document.body.appendChild(overlay);
+        const lightboxImg = overlay.querySelector('.image-lightbox-img');
+
+        function openLightbox(src, alt) {
+            lightboxImg.src = src;
+            lightboxImg.alt = alt || '';
+            overlay.classList.add('visible');
+        }
+        function closeLightbox() {
+            overlay.classList.remove('visible');
+        }
+
+        // Open when a slide photo (single image or gallery item) is clicked
+        document.addEventListener('click', (e) => {
+            const img = e.target.closest('.slide-image-container img, .slide-gallery-item img');
+            if (img) {
+                e.preventDefault();
+                openLightbox(img.currentSrc || img.src, img.alt);
+            }
+        });
+
+        // Click anywhere off the image (the dimmed backdrop) to close
+        overlay.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) closeLightbox();
+        });
+
+        // Escape also closes it (runs before the presenter's own Escape handler)
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && overlay.classList.contains('visible')) {
+                e.stopImmediatePropagation();
+                e.preventDefault();
+                closeLightbox();
+            }
+        }, true);
+    })();
 
     init();
 

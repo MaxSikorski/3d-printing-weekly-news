@@ -647,6 +647,64 @@ button.card:hover .card-arrow {
     object-fit: cover;
 }
 
+.slide-image-container img,
+.slide-gallery-item img {
+    cursor: zoom-in;
+}
+
+/* === Image Lightbox (expanded photo view) === */
+.image-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5vmin;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    cursor: zoom-out;
+}
+
+.image-lightbox.visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.image-lightbox-img {
+    max-width: 92vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    border-radius: 16px;
+    border: 1px solid var(--card-border);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+    object-fit: contain;
+    transform: scale(0.92);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: default;
+}
+
+.image-lightbox.visible .image-lightbox-img {
+    transform: scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .image-lightbox,
+    .image-lightbox-img {
+        transition: none;
+    }
+    .image-lightbox-img {
+        transform: none;
+    }
+}
+
 /* === Progress Bar === */
 .progress-bar-container {
     position: fixed;
