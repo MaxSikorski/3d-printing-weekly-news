@@ -25,7 +25,8 @@
                         "Sovol SV06 Ace — around $239",
                         "Up to ~30% off Elegoo and ~26% off Anycubic; filament bundles discounted across brands",
                         "Bambu Lab 4th-anniversary deals + a Creality Father's Day sale are running too"
-                    ]
+                    ],
+                    "shop": "Printers"
                 },
                 {
                     "heading": "Discussion",
@@ -56,7 +57,8 @@
                         "Certs target real use cases: food-contact items, kids' toys, and indoor air quality (VOCs/particles)",
                         "Quietly raises the question: how safe is the 'regular' PLA we print around the house?",
                         "Trade-off: a premium price vs. standard PLA — worth it for the right prints?"
-                    ]
+                    ],
+                    "product": "bambu-pla-pure"
                 },
                 {
                     "heading": "Discussion",
@@ -78,7 +80,8 @@
                     "heading": "Prusament PLA High-Speed",
                     "body": "Prusa's first high-speed PLA, claiming up to 40% faster prints 'in the right conditions.' It's formulated to flow cleanly at the higher volumetric speeds modern CoreXY machines push, and is designed to pair with Prusa's high-flow CHT Nextruder nozzles. Launching in a five-color series.",
                     "link": "https://all3dp.com/4/prusa-launches-its-first-high-speed-pla-promising-up-to-40-faster-prints/",
-                    "linkLabel": "Prusament PLA High-Speed"
+                    "linkLabel": "Prusament PLA High-Speed",
+                    "product": "prusament-pla-highspeed"
                 },
                 {
                     "heading": "Discussion",
@@ -130,7 +133,8 @@
                     "heading": "LDO Unicorn Chasing Kit",
                     "body": "A resonance-compensation toolkit for Klipper machines, in two parts. The 'Rethonance' nozzle is V6-compatible with an ADXL345 accelerometer built right into the nozzle — so you measure vibration at the tip, where ringing actually happens, instead of on the toolhead body. The 'Rethonance' hub is a magnet-mounted board that brings ADXL sensors, motor/chamber thermistors, and a GPIO port together over a single USB cable.",
                     "link": "https://docs.ldomotors.com/en/voron/unicorn",
-                    "linkLabel": "LDO Unicorn Docs"
+                    "linkLabel": "LDO Unicorn Docs",
+                    "product": "ldo-unicorn"
                 },
                 {
                     "heading": "What's Clever",
@@ -264,7 +268,8 @@
                     "heading": "Quick Tip: Input Shaping",
                     "body": "Those faint echoes or ripples next to sharp corners and embossed text are 'ringing' (ghosting/VFA's) from machine vibration. If you run Klipper, input shaping cancels it: attach an accelerometer (a cheap ADXL345 — or a kit like the LDO Unicorn above), run TEST_RESONANCES, and Klipper picks the best shaper and frequency per axis. No accelerometer? You can still improve it by eye with a ringing/tower test and by keeping your belts tensioned and frame tight. Five minutes of calibration for noticeably crisper corners.",
                     "link": "https://www.klipper3d.org/Resonance_Compensation.html",
-                    "linkLabel": "Klipper: Resonance Compensation"
+                    "linkLabel": "Klipper: Resonance Compensation",
+                    "product": "adxl345"
                 }
             ]
         },
