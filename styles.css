@@ -560,6 +560,51 @@ button.card:hover .card-arrow {
     transform: translateX(3px);
 }
 
+/* === Affiliate / "Buy on Amazon" buttons (data from recommendations.js) === */
+.slide-affiliate-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.slide-affiliate {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--btn-text);
+    background: var(--btn-bg);
+    border: 1px solid var(--btn-bg);
+    border-radius: 999px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.slide-affiliate:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+
+.slide-affiliate svg {
+    flex-shrink: 0;
+}
+
+.slide-affiliate-shop {
+    color: var(--text-color);
+    background: transparent;
+    border: 1px solid var(--btn-sec-border);
+}
+
+.affiliate-note {
+    width: 100%;
+    font-size: 0.72rem;
+    font-weight: 400;
+    opacity: 0.45;
+}
+
 /* Topic badge on slides */
 .slide-topic-badge {
     font-size: 0.75rem;
@@ -1421,5 +1466,210 @@ button.card:hover .card-arrow {
 
     .slide-heading {
         font-size: 1.6rem;
+    }
+}
+
+/* === Header nav text link (e.g. Recommendations) === */
+.nav-link {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-color);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    margin-right: 18px;
+}
+
+.nav-link:hover {
+    opacity: 1;
+}
+
+/* === Recommendations / Shop page === */
+.rec-intro {
+    padding-bottom: 8px;
+}
+
+.rec-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 8px 0 10px;
+}
+
+.rec-subtitle {
+    font-size: 1.05rem;
+    opacity: 0.7;
+    max-width: 620px;
+    margin-bottom: 8px;
+}
+
+.rec-disclosure {
+    font-size: 0.8rem;
+    opacity: 0.45;
+    margin-bottom: 28px;
+}
+
+.rec-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.rec-search {
+    width: 100%;
+    max-width: 520px;
+    padding: 12px 18px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--text-color);
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 999px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+}
+
+.rec-search:focus {
+    border-color: var(--text-muted);
+}
+
+.rec-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.rec-chip {
+    padding: 7px 16px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-color);
+    background: transparent;
+    border: 1px solid var(--card-border);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background 0.25s ease, border-color 0.25s ease, opacity 0.25s ease;
+    opacity: 0.7;
+}
+
+.rec-chip:hover {
+    opacity: 1;
+}
+
+.rec-chip.active {
+    color: var(--btn-text);
+    background: var(--btn-bg);
+    border-color: var(--btn-bg);
+    opacity: 1;
+}
+
+.rec-group {
+    margin-top: 36px;
+}
+
+.rec-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.rec-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 22px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 18px;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.rec-card:hover {
+    border-color: var(--text-muted);
+    transform: translateY(-2px);
+}
+
+.rec-card-name {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.rec-card-meta {
+    font-size: 0.8rem;
+    opacity: 0.5;
+    margin-bottom: 10px;
+}
+
+.rec-card-note {
+    font-size: 0.92rem;
+    opacity: 0.75;
+    line-height: 1.5;
+}
+
+.rec-card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.rec-buy {
+    display: inline-flex;
+    align-items: center;
+    padding: 9px 18px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--btn-text);
+    background: var(--btn-bg);
+    border: 1px solid var(--btn-bg);
+    border-radius: 999px;
+    transition: opacity 0.3s ease;
+}
+
+.rec-buy:hover {
+    opacity: 0.85;
+}
+
+.rec-brand {
+    font-size: 0.85rem;
+    font-weight: 500;
+    opacity: 0.65;
+    transition: opacity 0.3s ease;
+}
+
+.rec-brand:hover {
+    opacity: 1;
+}
+
+.rec-code {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    border: 1px dashed var(--card-border);
+    border-radius: 8px;
+    opacity: 0.8;
+}
+
+.rec-soon {
+    font-size: 0.82rem;
+    opacity: 0.4;
+    font-style: italic;
+}
+
+.rec-empty {
+    margin-top: 40px;
+    opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+    .rec-title {
+        font-size: 2rem;
     }
 }

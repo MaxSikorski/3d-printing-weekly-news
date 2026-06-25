@@ -551,6 +551,39 @@
                     `;
                 }
 
+                // Affiliate buttons (per-topic) + shop link — data from recommendations.js
+                const affIds = slideData.products || (slideData.product ? [slideData.product] : []);
+                let affHTML = '';
+                if (affIds.length && Array.isArray(window.PRODUCTS)) {
+                    affIds.forEach(pid => {
+                        const p = window.PRODUCTS.find(x => x.id === pid);
+                        if (p && p.amazonUrl) {
+                            affHTML += `
+                                <a href="${p.amazonUrl}" target="_blank" rel="noopener noreferrer sponsored" class="slide-affiliate">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                                    </svg>
+                                    Buy on Amazon${p.name ? ' — ' + p.name : ''}
+                                </a>`;
+                        }
+                    });
+                }
+                if (slideData.shop) {
+                    const shopCat = (typeof slideData.shop === 'string') ? slideData.shop : '';
+                    const shopHref = 'recommendations.html' + (shopCat ? ('#' + encodeURIComponent(shopCat)) : '');
+                    affHTML += `
+                        <a href="${shopHref}" class="slide-affiliate slide-affiliate-shop">
+                            Shop my picks
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M13 6l6 6-6 6"/>
+                            </svg>
+                        </a>`;
+                }
+                if (affHTML) {
+                    slideHTML += `<div class="slide-affiliate-group">${affHTML}<span class="affiliate-note">${window.AFFILIATE_DISCLOSURE || 'Some links may be affiliate links.'}</span></div>`;
+                }
+
                 slideHTML += '</div>';
                 slide.innerHTML = slideHTML;
                 container.appendChild(slide);
@@ -996,7 +1029,8 @@
                                 "Sovol SV06 Ace — around $239",
                                 "Up to ~30% off Elegoo and ~26% off Anycubic; filament bundles discounted across brands",
                                 "Bambu Lab 4th-anniversary deals + a Creality Father's Day sale are running too"
-                            ]
+                            ],
+                            "shop": "Printers"
                         },
                         {
                             "heading": "Discussion",
@@ -1015,7 +1049,7 @@
                     "type": "tool",
                     "slides": [
                         {
-                            "heading": "Bambu PLA Pure (Launched June 15)",
+                            "heading": "Bambu PLA Pure",
                             "body": "Bambu Lab launched PLA Pure, a filament built around safety and transparency: it publicly lists all five ingredients and is certified for food contact (EU 10/2011), kids' toys (EN 71-3 heavy-metal limits), and low indoor emissions (UL 2904 Greenguard). The talc is verified asbestos-free. Around $24.99 a spool ($21.99 refill), in soft pastels plus black and white.",
                             "link": "https://www.tomshardware.com/3d-printing/bambu-lab-launches-pla-pure-filament-new-material-boasts-kid-safe-toy-certifications-and-asbestos-free-talc",
                             "linkLabel": "PLA Pure Details"
@@ -1027,7 +1061,8 @@
                                 "Certs target real use cases: food-contact items, kids' toys, and indoor air quality (VOCs/particles)",
                                 "Quietly raises the question: how safe is the 'regular' PLA we print around the house?",
                                 "Trade-off: a premium price vs. standard PLA — worth it for the right prints?"
-                            ]
+                            ],
+                            "product": "bambu-pla-pure"
                         },
                         {
                             "heading": "Discussion",
@@ -1046,10 +1081,11 @@
                     "type": "tool",
                     "slides": [
                         {
-                            "heading": "Prusament PLA High-Speed (Launched June 25)",
+                            "heading": "Prusament PLA High-Speed",
                             "body": "Prusa's first high-speed PLA, claiming up to 40% faster prints 'in the right conditions.' It's formulated to flow cleanly at the higher volumetric speeds modern CoreXY machines push, and is designed to pair with Prusa's high-flow CHT Nextruder nozzles. Launching in a five-color series.",
                             "link": "https://all3dp.com/4/prusa-launches-its-first-high-speed-pla-promising-up-to-40-faster-prints/",
-                            "linkLabel": "Prusament PLA High-Speed"
+                            "linkLabel": "Prusament PLA High-Speed",
+                            "product": "prusament-pla-highspeed"
                         },
                         {
                             "heading": "Discussion",
@@ -1101,7 +1137,8 @@
                             "heading": "LDO Unicorn Chasing Kit",
                             "body": "A resonance-compensation toolkit for Klipper machines, in two parts. The 'Rethonance' nozzle is V6-compatible with an ADXL345 accelerometer built right into the nozzle — so you measure vibration at the tip, where ringing actually happens, instead of on the toolhead body. The 'Rethonance' hub is a magnet-mounted board that brings ADXL sensors, motor/chamber thermistors, and a GPIO port together over a single USB cable.",
                             "link": "https://docs.ldomotors.com/en/voron/unicorn",
-                            "linkLabel": "LDO Unicorn Docs"
+                            "linkLabel": "LDO Unicorn Docs",
+                            "product": "ldo-unicorn"
                         },
                         {
                             "heading": "What's Clever",
@@ -1135,9 +1172,9 @@
                             "linkLabel": "Divergent Super-Factory"
                         },
                         {
-                            "heading": "...And They 3D-Print a Hypercar (Czinger 21C)",
+                            "heading": "...And They 3D-Print a Hypercar; Czinger 21C",
                             "body": "The fun connection: Divergent and Czinger Vehicles share a founder — Kevin Czinger. The Czinger 21C is a 3D-printed hybrid hypercar built on that same additive tech: a tandem two-seater making 1,250 hp (1,350 in the limited 'Blackbird'), a top speed around 281 mph, just 80 units, from ~$1.7M. The 3D-printed metal structures aren't a gimmick — they're how it gets so light and strong.",
-                            "link": "https://en.wikipedia.org/wiki/Czinger_21C",
+                            "link": "https://www.czinger.com/model-21c",
                             "linkLabel": "Czinger 21C"
                         },
                         {
@@ -1232,10 +1269,11 @@
                     "type": "tool",
                     "slides": [
                         {
-                            "heading": "Quick Tip: Run Input Shaping (Kill the Ghosting)",
-                            "body": "Those faint echoes or ripples next to sharp corners and embossed text are 'ringing' (ghosting) from machine vibration. If you run Klipper, input shaping cancels it: attach an accelerometer (a cheap ADXL345 — or a kit like the LDO Unicorn above), run TEST_RESONANCES, and Klipper picks the best shaper and frequency per axis. No accelerometer? You can still improve it by eye with a ringing/tower test and by keeping your belts tensioned and frame tight. Five minutes of calibration for noticeably crisper corners.",
+                            "heading": "Quick Tip: Input Shaping",
+                            "body": "Those faint echoes or ripples next to sharp corners and embossed text are 'ringing' (ghosting/VFA's) from machine vibration. If you run Klipper, input shaping cancels it: attach an accelerometer (a cheap ADXL345 — or a kit like the LDO Unicorn above), run TEST_RESONANCES, and Klipper picks the best shaper and frequency per axis. No accelerometer? You can still improve it by eye with a ringing/tower test and by keeping your belts tensioned and frame tight. Five minutes of calibration for noticeably crisper corners.",
                             "link": "https://www.klipper3d.org/Resonance_Compensation.html",
-                            "linkLabel": "Klipper: Resonance Compensation"
+                            "linkLabel": "Klipper: Resonance Compensation",
+                            "product": "adxl345"
                         }
                     ]
                 },

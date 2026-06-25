@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Recommendations — 3D Printing Weekly</title>
+    <meta name="description" content="Printers, filament, tools, and upgrades we cover at the weekly 3D printing meetup — in one searchable list.">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="dark">
+
+    <!-- Navigation -->
+    <nav class="header-nav">
+        <a href="index.html" class="logo">3D Printing Meetup</a>
+        <div class="nav-right">
+            <a href="index.html" class="nav-link">Presentations</a>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path class="sun-path"
+                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Intro + controls -->
+    <div class="content-section rec-intro">
+        <p class="section-label">Recommendations</p>
+        <h1 class="rec-title">Gear We Cover</h1>
+        <p class="rec-subtitle">Printers, filament, tools, and upgrades from the weekly meetup — collected in one place. Search or filter by category.</p>
+        <p class="rec-disclosure" id="rec-disclosure"></p>
+        <div class="rec-controls">
+            <input id="rec-search" class="rec-search" type="search" placeholder="Search printers, filament, tools…" aria-label="Search recommendations">
+            <div class="rec-chips" id="rec-chips"></div>
+        </div>
+    </div>
+
+    <!-- Results -->
+    <div class="content-section rec-results" id="rec-results"></div>
+
+    <!-- Footer / About the host -->
+    <footer class="footer">
+        <p class="footer-host">Hosted by <strong>Max Sikorski</strong></p>
+        <p class="footer-tagline">3D print farm · R&amp;D &amp; manufacturing · CAD classes</p>
+        <nav class="footer-links">
+            <a href="index.html">Presentations</a>
+            <a href="https://www.youtube.com/@maxwellsikorski4926" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a href="https://www.meetup.com/3d-printing-club/" target="_blank" rel="noopener noreferrer">Meetup</a>
+            <a href="https://github.com/MaxSikorski" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="script.js"></script>
+    <script src="recommendations.js"></script>
+    <script>
+        (function () {
+            'use strict';
+            const CATS = ["Printers", "Filament & Materials", "Accessories", "Tools", "Electronics & Upgrades"];
+            const products = Array.isArray(window.PRODUCTS) ? window.PRODUCTS : [];
+            const results = document.getElementById('rec-results');
+            const search = document.getElementById('rec-search');
+            const chipsEl = document.getElementById('rec-chips');
+            document.getElementById('rec-disclosure').textContent = window.AFFILIATE_DISCLOSURE || '';
+
+            let activeCat = 'All';
+            let query = '';
+
+            // Build filter chips
+            ['All', ...CATS].forEach(c => {
+                const b = document.createElement('button');
+                b.className = 'rec-chip' + (c === 'All' ? ' active' : '');
+                b.textContent = c;
+                b.dataset.cat = c;
+                b.addEventListener('click', () => { activeCat = c; syncChips(); render(); });
+                chipsEl.appendChild(b);
+            });
+            function syncChips() {
+                chipsEl.querySelectorAll('.rec-chip').forEach(b => b.classList.toggle('active', b.dataset.cat === activeCat));
+            }
+
+            // Deep-link: recommendations.html#Printers preselects that category
+            (function () {
+                const h = decodeURIComponent((location.hash || '').replace('#', '')).trim().toLowerCase();
+                const match = CATS.find(c => c.toLowerCase() === h);
+                if (match) { activeCat = match; syncChips(); }
+            })();
+
+            function esc(s) {
+                return String(s == null ? '' : s).replace(/[&<>"]/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch]));
+            }
+
+            function cardHTML(p) {
+                const buy = p.amazonUrl
+                    ? `<a class="rec-buy" href="${esc(p.amazonUrl)}" target="_blank" rel="noopener noreferrer sponsored">Buy on Amazon</a>`
+                    : `<span class="rec-soon">Amazon link coming soon</span>`;
+                const code = p.code ? `<span class="rec-code">Code: ${esc(p.code)}</span>` : '';
+                const brand = p.brandUrl ? `<a class="rec-brand" href="${esc(p.brandUrl)}" target="_blank" rel="noopener noreferrer">${esc(p.brand || 'Brand')} site →</a>` : '';
+                return `<div class="rec-card">
+                    <div class="rec-card-info">
+                        <h3 class="rec-card-name">${esc(p.name)}</h3>
+                        <p class="rec-card-meta">${esc([p.brand, p.category].filter(Boolean).join(' · '))}</p>
+                        ${p.note ? `<p class="rec-card-note">${esc(p.note)}</p>` : ''}
+                    </div>
+                    <div class="rec-card-actions">${buy}${code}${brand}</div>
+                </div>`;
+            }
+
+            function render() {
+                const q = query.trim().toLowerCase();
+                results.innerHTML = '';
+                let any = false;
+                CATS.forEach(cat => {
+                    if (activeCat !== 'All' && activeCat !== cat) return;
+                    const items = products.filter(p =>
+                        p.category === cat &&
+                        (!q || `${p.name} ${p.brand} ${p.note} ${p.category}`.toLowerCase().includes(q))
+                    );
+                    if (!items.length) return;
+                    any = true;
+                    const group = document.createElement('div');
+                    group.className = 'rec-group';
+                    group.innerHTML = `<p class="section-label">${esc(cat)}</p><div class="rec-grid">${items.map(cardHTML).join('')}</div>`;
+                    results.appendChild(group);
+                });
+                if (!any) {
+                    results.innerHTML = `<p class="rec-empty">No matches${q ? ` for "${esc(query)}"` : ''}. Try a different search or category.</p>`;
+                }
+            }
+
+            search.addEventListener('input', e => { query = e.target.value; render(); });
+            render();
+        })();
+    </script>
+</body>
+</html>
