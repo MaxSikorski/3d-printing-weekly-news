@@ -1,6 +1,11 @@
 {
     "weeks": [
         {
+            "id": "2026-W26",
+            "date": "2026-06-25",
+            "title": "Prime Day Deals, Desktop 5-Axis & a 3D-Printed Hypercar"
+        },
+        {
             "id": "2026-W25",
             "date": "2026-06-18",
             "title": "MRRF's Last Ride, Open-Source Volumetric Printing & a 16-Color U1"
