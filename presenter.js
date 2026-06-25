@@ -969,6 +969,292 @@
     // === Inline fallback data for file:// protocol ===
     // Keep in sync with weeks/2026-W22.json
     const INLINE_WEEKS = {
+        "2026-W26": {
+            "week": "2026-W26",
+            "date": "2026-06-25",
+            "title": "Prime Day Deals, Desktop 5-Axis & a 3D-Printed Hypercar",
+            "subtitle": "This week in 3D printing news",
+            "timerMinutes": 20,
+            "topics": [
+                {
+                    "id": "prime-day-deals",
+                    "title": "Amazon Prime Day — 3D Printer Deals (June 23–26)",
+                    "description": "Prime Day is on during meetup week — here's what's worth grabbing",
+                    "type": "tool",
+                    "slides": [
+                        {
+                            "heading": "Prime Day 2026 — Deals Are Live (June 23–26)",
+                            "body": "Amazon Prime Day runs June 23–26, and the 3D-printing brands are all in — Bambu Lab (also marking its 4th anniversary), Anycubic, Elegoo, Creality, Prusa, and Sovol are discounting printers, filament, and bundles. Prices move fast, so check the live links — but here are some standouts.",
+                            "link": "https://www.tomshardware.com/3d-printing/prime-day-brings-huge-savings-on-affordable-3d-printers-top-value-picks-from-anycubic-bambu-lab-elegoo-and-creality-hit-rock-bottom-pricing-cant-miss-deals-on-filament-bundles",
+                            "linkLabel": "Prime Day Deals Roundup"
+                        },
+                        {
+                            "heading": "Standout Deals (Verify Current Prices)",
+                            "bullets": [
+                                "Anycubic Kobra X — around $299.99 for Prime members",
+                                "Creality K2 — around $369 (down from $549)",
+                                "Sovol SV06 Ace — around $239",
+                                "Up to ~30% off Elegoo and ~26% off Anycubic; filament bundles discounted across brands",
+                                "Bambu Lab 4th-anniversary deals + a Creality Father's Day sale are running too"
+                            ]
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "Best entry-level printer to recommend to a newcomer right now?",
+                                "Stock up on filament, or hold out for a printer upgrade?",
+                                "Any deals you've spotted that we should share with the group?"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "bambu-pla-pure",
+                    "title": "Bambu Lab PLA Pure — A 'Cleaner' Filament",
+                    "description": "A PLA that lists every ingredient and is certified food- and toy-safe",
+                    "type": "tool",
+                    "slides": [
+                        {
+                            "heading": "Bambu PLA Pure (Launched June 15)",
+                            "body": "Bambu Lab launched PLA Pure, a filament built around safety and transparency: it publicly lists all five ingredients and is certified for food contact (EU 10/2011), kids' toys (EN 71-3 heavy-metal limits), and low indoor emissions (UL 2904 Greenguard). The talc is verified asbestos-free. Around $24.99 a spool ($21.99 refill), in soft pastels plus black and white.",
+                            "link": "https://www.tomshardware.com/3d-printing/bambu-lab-launches-pla-pure-filament-new-material-boasts-kid-safe-toy-certifications-and-asbestos-free-talc",
+                            "linkLabel": "PLA Pure Details"
+                        },
+                        {
+                            "heading": "Why It Matters",
+                            "bullets": [
+                                "Most filament makers don't disclose ingredients — Bambu listing all five is unusual",
+                                "Certs target real use cases: food-contact items, kids' toys, and indoor air quality (VOCs/particles)",
+                                "Quietly raises the question: how safe is the 'regular' PLA we print around the house?",
+                                "Trade-off: a premium price vs. standard PLA — worth it for the right prints?"
+                            ]
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "Do you think about fumes/particles when printing indoors? Enclosure + ventilation habits?",
+                                "Would you pay extra for certified-safe filament for toys, the kitchen, or kids' projects?",
+                                "Should ingredient disclosure become the industry norm?"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "prusa-highspeed-pla",
+                    "title": "Prusament PLA High-Speed",
+                    "description": "Prusa's first high-speed PLA — up to 40% faster prints",
+                    "type": "tool",
+                    "slides": [
+                        {
+                            "heading": "Prusament PLA High-Speed (Launched June 25)",
+                            "body": "Prusa's first high-speed PLA, claiming up to 40% faster prints 'in the right conditions.' It's formulated to flow cleanly at the higher volumetric speeds modern CoreXY machines push, and is designed to pair with Prusa's high-flow CHT Nextruder nozzles. Launching in a five-color series.",
+                            "link": "https://all3dp.com/4/prusa-launches-its-first-high-speed-pla-promising-up-to-40-faster-prints/",
+                            "linkLabel": "Prusament PLA High-Speed"
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "High-speed PLAs (Bambu, Polymaker, now Prusa) — real gains, or mostly marketing?",
+                                "The real bottleneck is usually hot-end flow — does a high-flow (CHT) nozzle matter more than the filament?",
+                                "Speed vs. safety: pair this with Bambu's PLA Pure above — two very different bets on what PLA should be"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "top-e-r1-5axis",
+                    "title": "TOP.E R1 — Desktop 5-Axis Printing",
+                    "description": "A 5-axis FFF printer for the desktop that tilts the bed to kill supports",
+                    "type": "video",
+                    "slides": [
+                        {
+                            "heading": "TOP.E R1 — 5-Axis on the Desktop",
+                            "body": "Most desktop printers are 3-axis. The TOP.E R1 adds two more by tilting the build plate on a 3-point system (each point lifts independently, up to ~30°). That lets it lay plastic along curves and hit support-free overhangs up to ~75° — less support waste, stronger parts, and non-planar prints like the helical pillar in the demo.",
+                            "videoUrl": "https://www.youtube.com/watch?v=n3eZYf1dJcQ"
+                        },
+                        {
+                            "heading": "Specs & The Catch",
+                            "bullets": [
+                                "350 × 340 × 320 mm build, hotend to 350°C, bed to 100°C, actively heated chamber to 60°C",
+                                "Tilting 3-point bed adds 2 axes; support-free overhangs up to ~75°",
+                                "Integrated 4-spool multi-material + dual monitoring cameras",
+                                "~$1,699 — about an H2S; launching via Kickstarter (crowdfunding — not shipping yet, back at your own risk)"
+                            ]
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "Is 5-axis genuinely useful for our prints, or a novelty for showpieces?",
+                                "Non-planar / support-free printing — what would you actually make with it?",
+                                "Would you back a $1,699 5-axis printer on Kickstarter, or wait for reviews?"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "ldo-unicorn",
+                    "title": "LDO 'Unicorn' Chasing Kit — Resonance, Tuned",
+                    "description": "An accelerometer in the nozzle for dialed-in input shaping (Voron / Klipper)",
+                    "type": "tool",
+                    "slides": [
+                        {
+                            "heading": "LDO Unicorn Chasing Kit",
+                            "body": "A resonance-compensation toolkit for Klipper machines, in two parts. The 'Rethonance' nozzle is V6-compatible with an ADXL345 accelerometer built right into the nozzle — so you measure vibration at the tip, where ringing actually happens, instead of on the toolhead body. The 'Rethonance' hub is a magnet-mounted board that brings ADXL sensors, motor/chamber thermistors, and a GPIO port together over a single USB cable.",
+                            "link": "https://docs.ldomotors.com/en/voron/unicorn",
+                            "linkLabel": "LDO Unicorn Docs"
+                        },
+                        {
+                            "heading": "What's Clever",
+                            "bullets": [
+                                "Accelerometer in the nozzle = input-shaper data measured exactly where it matters",
+                                "Rethonance hub: 2 ADXL ports + 4 thermistor ports + GPIO, all over one USB to the Pi",
+                                "V6-compatible nozzle; works with Klipper / Katapult; magnet-mounts to the flex plate",
+                                "Aimed at the Voron / Klipper crowd chasing sharper corners and less ghosting"
+                            ]
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "Does measuring resonance at the nozzle meaningfully beat a toolhead-mounted ADXL?",
+                                "Input shaping: who here runs it, and did it actually fix your ringing?",
+                                "Niche tuning gear like this — worth it, or diminishing returns?"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "divergent-czinger",
+                    "title": "Divergent's Metal Mega-Factory — & the Czinger Hypercar",
+                    "description": "A 64-machine metal-printing super-factory, from the people who 3D-print a hypercar",
+                    "type": "discussion",
+                    "slides": [
+                        {
+                            "heading": "Divergent's 64-Machine Metal Super-Factory",
+                            "body": "Divergent Technologies is betting big on defense and automotive with a 64-machine metal 3D-printing super-factory in Torrance, CA. It runs on their new in-house 'Monolith One' — a laser powder-bed-fusion (LPBF) printer with a massive 24 kW of laser power. The machine isn't for sale; it's proprietary production capacity feeding their DAPS pipeline (design → print → auto-assemble complex metal structures).",
+                            "link": "https://all3dp.com/4/divergent-bets-big-on-defense-with-massive-new-printer-64-machine-3d-printing-super-factory/",
+                            "linkLabel": "Divergent Super-Factory"
+                        },
+                        {
+                            "heading": "...And They 3D-Print a Hypercar (Czinger 21C)",
+                            "body": "The fun connection: Divergent and Czinger Vehicles share a founder — Kevin Czinger. The Czinger 21C is a 3D-printed hybrid hypercar built on that same additive tech: a tandem two-seater making 1,250 hp (1,350 in the limited 'Blackbird'), a top speed around 281 mph, just 80 units, from ~$1.7M. The 3D-printed metal structures aren't a gimmick — they're how it gets so light and strong.",
+                            "link": "https://en.wikipedia.org/wiki/Czinger_21C",
+                            "linkLabel": "Czinger 21C"
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "Metal AM going from prototyping to a 64-machine production farm — the 'factory of the future,' or hype?",
+                                "A genuinely 3D-printed hypercar at 281 mph — does this make additive cool to the mainstream?",
+                                "Printed structures vs. traditional stamping/casting for cars — who wins long-term?"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "mgm-cults",
+                    "title": "MGM Makes Cults Block 'Stargate' Searches",
+                    "description": "Trademark enforcement quietly breaking search on a model repo",
+                    "type": "discussion",
+                    "slides": [
+                        {
+                            "heading": "Cults Blocks 'Stargate' at MGM's Request",
+                            "body": "Cults, one of the big 3D-model marketplaces, has disabled search results for the term 'stargate' after pressure from MGM Studios, which owns the Stargate trademark. The odd part: it's a selective block — other Stargate-related terms still surface models — so it does little to stop actual infringement and mostly just breaks search for everyone. Cults hasn't commented.",
+                            "link": "https://all3dp.com/6/cults-prevents-searches-for-term-startgate-at-behest-of-mgm-studios-inc/",
+                            "linkLabel": "All3DP: Cults & MGM"
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "Blunt, automated IP enforcement on model repos — where's the line between protecting IP and censoring makers?",
+                                "We're eyeing Printables / MakerWorld / Thingiverse / Cults / Thangs for a future 'Model Spotlight' — does this change which repos we trust?",
+                                "Fan-made models of franchises: fair game, gray area, or asking for takedowns?"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "printed-to-fit-you",
+                    "title": "Printed to Fit You — Prosthetics & Custom Insoles",
+                    "description": "3D printing made personal: assistive devices and scan-to-print insoles",
+                    "type": "discussion",
+                    "slides": [
+                        {
+                            "heading": "3D-Printed Prosthetics Step Up",
+                            "body": "Two prosthetics milestones this week. Open Bionics released the HERO Flex, its first 3D-printed above-elbow system — lightweight and modular with swappable attachments — recently fitted to a New York physicist after decades without a prosthetic. And researchers at the University of Alicante / ISABIAL unveiled a patent-pending modular arm prosthesis using simple, easy-swap mechanical modules and flexible biocompatible sockets, aimed at affordability and user autonomy.",
+                            "link": "https://3dprint.com/327335/3d-printing-news-briefs-6-20-2026/",
+                            "linkLabel": "News Brief (June 20)"
+                        },
+                        {
+                            "heading": "Scan-to-Print Insoles (Superfeet ME3D)",
+                            "body": "On the consumer side, Superfeet's ME3D platform now lets you scan your feet with an iPhone (13 or newer) and customize 3D-printed insoles at home using their biomechanical algorithms, then have them manufactured and shipped. A clean example of mass-customization: your body, scanned by a phone, turned into a printed product."
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "Phone-scan → custom printed product: where else does this go (braces, grips, ergonomic tools)?",
+                                "Could our group print assistive devices locally for people who need them?",
+                                "Affordable open prosthetics vs. medical-grade certified devices — where's the line?"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "research-space-quickhits",
+                    "title": "Research & Space — Quick Hits",
+                    "description": "A fast pass on the cool research and off-world printing news",
+                    "type": "discussion",
+                    "slides": [
+                        {
+                            "heading": "Research & Space — Quick Hits",
+                            "bullets": [
+                                "Self-aware parts: researchers 3D-printed magnetoelectronics that let a part sense its own motion and state ('4D mechatronics')",
+                                "Printing in orbit: Auburn University + NASA Marshall demoed a process for astronauts to make electronic components in space",
+                                "Building off-world: a new review maps how 3D-printed regolith concrete could enable lunar / Martian structures",
+                                "Also: ORNL printed foldable panels via a hybrid method, and Chalmers made a biodegradable printable material from baker's yeast + cellulose"
+                            ],
+                            "link": "https://3dprint.com/327529/3d-printing-news-briefs-6-24-2026/",
+                            "linkLabel": "News Brief (June 24)"
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "Self-sensing printed parts — gimmick, or the start of smart mechanisms?",
+                                "In-space manufacturing: how soon is it actually practical?",
+                                "Which of these surprised you most?"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "quick-tip",
+                    "title": "Quick Tip of the Week",
+                    "description": "Kill ringing/ghosting with input shaping",
+                    "type": "tool",
+                    "slides": [
+                        {
+                            "heading": "Quick Tip: Run Input Shaping (Kill the Ghosting)",
+                            "body": "Those faint echoes or ripples next to sharp corners and embossed text are 'ringing' (ghosting) from machine vibration. If you run Klipper, input shaping cancels it: attach an accelerometer (a cheap ADXL345 — or a kit like the LDO Unicorn above), run TEST_RESONANCES, and Klipper picks the best shaper and frequency per axis. No accelerometer? You can still improve it by eye with a ringing/tower test and by keeping your belts tensioned and frame tight. Five minutes of calibration for noticeably crisper corners.",
+                            "link": "https://www.klipper3d.org/Resonance_Compensation.html",
+                            "linkLabel": "Klipper: Resonance Compensation"
+                        }
+                    ]
+                },
+                {
+                    "id": "community-news",
+                    "title": "Community News & Topics",
+                    "description": "Share what you're interested in talking about!",
+                    "type": "text",
+                    "slides": [
+                        {
+                            "heading": "Next Week's Meetup",
+                            "body": "Find something you're interested in talking about? Share it here and we'll cover it in next week's meetup!",
+                            "link": "https://github.com/MaxSikorski/3d-printing-weekly-news/issues",
+                            "linkLabel": "Submit a Topic"
+                        }
+                    ]
+                }
+            ]
+        },
         "2026-W25": {
             "week": "2026-W25",
             "date": "2026-06-18",
