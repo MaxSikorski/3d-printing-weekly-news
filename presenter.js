@@ -1002,6 +1002,218 @@
     // === Inline fallback data for file:// protocol ===
     // Keep in sync with weeks/2026-W22.json
     const INLINE_WEEKS = {
+        "2026-W27": {
+            "week": "2026-W27",
+            "date": "2026-07-02",
+            "title": "SUNLU's US Factory, Sovol M1D Pricing & a Walking Robot Duck",
+            "subtitle": "This week in 3D printing news",
+            "timerMinutes": 20,
+            "topics": [
+                {
+                    "id": "sunlu-usa-factory",
+                    "title": "SUNLU Is Bringing a Factory to the USA",
+                    "description": "The filament giant teases a US manufacturing plant",
+                    "type": "discussion",
+                    "slides": [
+                        {
+                            "heading": "SUNLU: 'Made in USA — Coming Soon'",
+                            "body": "SUNLU announced this week (official post, timed with the brand's 13th anniversary) that it will establish a manufacturing plant in the United States — promising faster delivery, stronger support, and a tighter worldwide connection. One of the biggest budget-filament brands planting a flag on US soil.",
+                            "imageUrl": "photos/sunlu-usa-factory-news.png"
+                        },
+                        {
+                            "heading": "The Fine Print (There Isn't Much)",
+                            "bullets": [
+                                "It's a teaser: no location, no timeline, no capacity announced yet",
+                                "The factory picture in the post is a concept render, not a real building",
+                                "SUNLU's stated 'why': faster delivery and stronger support — tariffs go unmentioned, but loom over every brand's US move",
+                                "No press coverage yet — the announcement is the social post itself"
+                            ],
+                            "link": "https://www.sunlu.com/",
+                            "linkLabel": "SUNLU"
+                        },
+                        {
+                            "heading": "Also from SUNLU: FilaDC i10 Drying Cabinet",
+                            "body": "In the same week, SUNLU's filament-dehumidifying cabinet built with Inslogic — the FilaDC i10, first shown at RAPID+TCT — was slated for release July 1. It stores up to ten 1 kg spools dry at once: SUNLU moving past single-spool dryers into whole-shelf moisture management.",
+                            "link": "https://www.prnewswire.com/news-releases/sunlu-and-inslogic-team-up-to-announce-the-filadc-i10-at-rapid-tct-in-boston-302745575.html",
+                            "linkLabel": "FilaDC i10 Announcement"
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "Would you pay a premium for US-made filament — and how much of one?",
+                                "If tariffs stick around, does a US plant actually mean lower prices on the shelf?",
+                                "Which brand announces a US factory next?"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "sovol-m1d-pricing",
+                    "title": "Sovol M1D — Pricing Is Out",
+                    "description": "The IDEX + 7-head toolchanger gets a price tag",
+                    "type": "video",
+                    "slides": [
+                        {
+                            "heading": "Sovol M1D — Now With a Price Tag",
+                            "body": "We covered the M1D announcement a few weeks back — now the pricing is out. It's Sovol's IDEX-plus-toolchanger machine: two independent extruders AND a rack of swappable heads (up to 7 total), so multi-color and multi-material printing without a purge tower. 300 × 300 × 350 mm build, up to 600 mm/s, and ~5-second head swaps with a patented metal gripper.",
+                            "videoUrl": "https://youtu.be/KxvXpApL6tA"
+                        },
+                        {
+                            "heading": "Pricing & The Catch",
+                            "bullets": [
+                                "Kickstarter super early bird: $1,499 — expected list price $1,799",
+                                "A $20 VIP reservation locks in the lowest tier (final number on Sovol's page)",
+                                "Sovol's claim: the world's first IDEX tool-changing 3D printer",
+                                "It's a Kickstarter: not shipping yet — back at your own risk (same caveat as last week's TOP.E R1)"
+                            ],
+                            "link": "https://www.sovol3d.com/products/sovol-m1d-vip-reservation",
+                            "linkLabel": "M1D VIP Reservation",
+                            "product": "sovol-m1d"
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "IDEX + toolchanger vs. AMS-style single-nozzle systems — is purge waste finally solved?",
+                                "$1,499 for 7-head multi-material — bargain or big promise?",
+                                "Would you back it on Kickstarter, or wait for review units?"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "bondtech-indx-shipping",
+                    "title": "Bondtech INDX — First Units in the Wild (and a Delay)",
+                    "description": "Founders Editions are appearing on camera — while others wait",
+                    "type": "video",
+                    "slides": [
+                        {
+                            "heading": "INDX Founders Editions: It's Complicated",
+                            "body": "Two weeks ago we said Founders Editions were set to ship June 25. Reality is messier: the first FE 8-tool units are showing up on camera — DarkTeck3D has one in hand — but forum reports say many Founders orders are still waiting after Bondtech caught a printhead issue that forced rework and re-testing, without committing to a firm new date.",
+                            "videoUrl": "https://youtu.be/AKtfOcpj83A"
+                        },
+                        {
+                            "heading": "Recap & Where Things Stand",
+                            "bullets": [
+                                "Recap: INDX is the purgeless 8-tool indexing toolchanger for the Prusa CORE One",
+                                "Founders run: the first 1,000 units — pre-orders currently showing sold out",
+                                "Pricing: 8-tool ~$999 / €899 · 4-tool ~$749 / €669",
+                                "Status: early units in the wild; broader Founders shipping held up by the printhead rework"
+                            ],
+                            "link": "https://www.bondtech.se/indx-by-bondtech/",
+                            "linkLabel": "INDX by Bondtech",
+                            "product": "bondtech-indx"
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "A delay for rework — red flag, or exactly what you want a small company to do?",
+                                "Anyone here holding a Founders order? What's Bondtech telling you?",
+                                "Toolchangers vs. AMS-style multi-material — where does this land in five years?"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "slicer-tricks",
+                    "title": "Slicer Tricks You're Not Using Yet",
+                    "description": "Vase-mode strength hacks, corrugated walls & quasi non-planar",
+                    "type": "tool",
+                    "slides": [
+                        {
+                            "heading": "The 'Everything Is a Wall' Hack",
+                            "body": "Spectrum Filaments' short shows a clever strength trick: fool the slicer into treating the whole model as wall, so the part prints as continuous extrusions — vase-mode-style toughness without vase mode's single-wall limit. We'll walk through how it works.",
+                            "videoUrl": "https://youtu.be/IwDNXsbhsKs"
+                        },
+                        {
+                            "heading": "OrcaSlicer 2.4.1: Corrugated 'Ripple' Walls",
+                            "body": "New in OrcaSlicer 2.4.1: a corrugated-wall generator hiding in the fuzzy-skin tab. Instead of just roughing up the surface, it ripples the wall like corrugated cardboard — a big stiffness-per-gram gain, demoed by the Magnetic IDEX channel on real parts that flex less and take more abuse.",
+                            "videoUrl": "https://youtu.be/qNiUTy18Jpo"
+                        },
+                        {
+                            "heading": "Quasi Non-Planar: Smoother Shallow Angles",
+                            "body": "Quasi non-planar printing lets the nozzle vary Z within a layer to smooth out the stair-stepping on shallow slopes — no more staircase on gentle curves. Demoed in Spectrum's short (tagged for Bambu Studio; the feature is landing across the Bambu/Orca slicer family).",
+                            "videoUrl": "https://youtu.be/wOHd-li9zoQ"
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "Which of these tricks gets tried first on your printer?",
+                                "Corrugated walls: where does stiffness-per-gram matter most in your prints?",
+                                "Non-planar features going mainstream — how long before it's a default checkbox in every slicer?"
+                            ],
+                            "link": "https://github.com/SoftFever/OrcaSlicer/releases",
+                            "linkLabel": "OrcaSlicer Releases"
+                        }
+                    ]
+                },
+                {
+                    "id": "open-duck-mini-v2",
+                    "title": "Open Duck Mini V2 — A 3D-Printed Robot Duck Kit",
+                    "description": "Open-source walking robot: $570 kit or print-and-source it yourself",
+                    "type": "video",
+                    "slides": [
+                        {
+                            "heading": "Open Duck Mini V2",
+                            "body": "Open Duck Mini is Antoine Pirrone's open-source, 3D-printable bipedal robot duck (heavy BDX-droid vibes) with a walking gait trained by reinforcement learning. Back to Engineering's build video is an honest look at what the build actually takes — '4 days of soldering, assembling, and electrical exorcisms.'",
+                            "videoUrl": "https://youtu.be/tt-g_fi-eGU"
+                        },
+                        {
+                            "heading": "Kit vs. Self-Source",
+                            "bullets": [
+                                "V2 kit: about $570 with shipping via tnkr.ai, quoted 2–3 week lead time",
+                                "Fully open source — print the parts and self-source the electronics from the BOM for less",
+                                "The gait is trained with RL in simulation, then deployed to the real robot",
+                                "Not a beginner kit: plenty of soldering and small-parts assembly"
+                            ],
+                            "link": "https://tnkr.ai/open-duck-mini/open-duck-mini-v2",
+                            "linkLabel": "Open Duck Mini V2 Kit"
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "Kit at $570 vs. self-sourcing the BOM — which would you do?",
+                                "RL-trained gaits reaching hobby desks — what would you train a robot to do next?",
+                                "Robots keep stealing the show here (giant Arduino robot, Marina's hand) — should robotics become a regular segment?"
+                            ],
+                            "link": "https://github.com/apirrone/Open_Duck_Mini",
+                            "linkLabel": "Open Duck Mini on GitHub"
+                        }
+                    ]
+                },
+                {
+                    "id": "quick-tip",
+                    "title": "Quick Tip of the Week",
+                    "description": "Summer humidity is print poison — dry your filament",
+                    "type": "tool",
+                    "slides": [
+                        {
+                            "heading": "Quick Tip: Beat Summer Humidity",
+                            "body": "Wet filament means stringing, popping and hissing at the nozzle, fuzzy surfaces, and brittle parts — and mid-summer air wets PLA and PETG in days, nylon and TPU in hours. The fix is cheap: dry before you print (typical: PLA ~45–55°C for 4–6 h, PETG ~55–65°C for 4–6 h, nylon ~70–80°C for 8–12 h — check your brand's numbers), store spools sealed with desiccant, and keep a cheap hygrometer in the dry box so you know when it's time to re-dry.",
+                            "link": "https://help.prusa3d.com/article/how-to-dry-filaments_332086",
+                            "linkLabel": "Prusa: How to Dry Filaments",
+                            "products": [
+                                "sovol-sh03",
+                                "filament-hygrometer"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "community-news",
+                    "title": "Community News & Topics",
+                    "description": "Share what you're interested in talking about!",
+                    "type": "text",
+                    "slides": [
+                        {
+                            "heading": "Next Week's Meetup",
+                            "body": "Find something you're interested in talking about? Share it here and we'll cover it in next week's meetup!",
+                            "link": "https://github.com/MaxSikorski/3d-printing-weekly-news/issues",
+                            "linkLabel": "Submit a Topic"
+                        }
+                    ]
+                }
+            ]
+        },
         "2026-W26": {
             "week": "2026-W26",
             "date": "2026-06-25",
