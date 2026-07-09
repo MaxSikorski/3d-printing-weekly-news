@@ -1,0 +1,222 @@
+{
+    "week": "2026-W28",
+    "date": "2026-07-09",
+    "title": "California's AB 2047, INDX Finally Ships & a Clay Printer That Prints the Impossible",
+    "subtitle": "This week in 3D printing news",
+    "timerMinutes": 20,
+    "topics": [
+        {
+            "id": "ab-2047-final-hearing",
+            "title": "AB 2047 — California's 3D Printer Bill Keeps Moving",
+            "description": "The 'firearm blocking technology' mandate clears another committee",
+            "type": "discussion",
+            "slides": [
+                {
+                    "heading": "The Final Hearing in California",
+                    "body": "Joel Telling (3D Printing Nerd) walks through the June 30 Senate Public Safety hearing on AB 2047 — California's bill that would require every consumer 3D printer sold in the state to run state-approved 'firearm blocking' software that scans your STL, CAD, and G-code files before printing.",
+                    "videoUrl": "https://youtu.be/b6fpPStIAsY"
+                },
+                {
+                    "heading": "Where the Bill Actually Stands",
+                    "bullets": [
+                        "June 30 result: passed Senate Public Safety 5–1, as amended — now headed to Appropriations after summer recess",
+                        "The community IS moving the text: May amendments softened the open-source-slicer treatment after loud pushback",
+                        "But make no mistake — the bill is still advancing, not dying",
+                        "Timeline if enacted: DOJ standards by Jan 1, 2028; sale ban on non-compliant printers from March 1, 2029",
+                        "On record against it: Josef Průša, VORON Design, Make's Dale Dougherty, Joel Telling, and the EFF"
+                    ],
+                    "link": "https://calmatters.digitaldemocracy.org/bills/ca_202520260ab2047",
+                    "linkLabel": "AB 2047 Bill Tracker"
+                },
+                {
+                    "heading": "Discussion",
+                    "bullets": [
+                        "Scanning every print job against a state-approved algorithm — where does that leave open source and privacy?",
+                        "The amendments show pressure works — what does effective pushback look like from here?",
+                        "If this passes in California, how fast do other states copy it?"
+                    ],
+                    "link": "https://www.the3dprintingnerd.com/ab2047",
+                    "linkLabel": "Joel's AB 2047 Resource Page"
+                }
+            ]
+        },
+        {
+            "id": "bambu-owners-corner",
+            "title": "Bambu Owners' Corner — A Sleeper Upgrade & Free Parametric Models",
+            "description": "The AMS riser BV3D didn't know he needed, plus ParamaCraft Lite",
+            "type": "tool",
+            "slides": [
+                {
+                    "heading": "The Upgrade You Didn't Know You Needed",
+                    "body": "Bryan Vines (BV3D) tried Sanja 3D's AMS Flipper Glass Slider Riser V6 — a printable riser combo for the P1S and X1C that lifts the AMS off the printer top, slides the glass lid, and fixes three small annoyances at once. His verdict is in the title: didn't know he needed it, until he tried it.",
+                    "videoUrl": "https://youtu.be/c49oyM8Hq6U"
+                },
+                {
+                    "heading": "ParamaCraft Lite — Free Parametric Editing in MakerWorld",
+                    "body": "New in Bambu's MakerLab this week (July 6): ParamaCraft Lite, a free browser-based parametric editor. Take an existing template model and dial exact dimensions, shapes, and surface patterns with sliders — no CAD, no install. The full version stays paid, but the free tier covers the everyday 'I just need it 3 mm wider' cases.",
+                    "link": "https://3druck.com/en/programs/paramacraft-lite-parametric-model-editor-now-available-for-free-via-bambu-labs-makerworld-21159558/",
+                    "linkLabel": "ParamaCraft Lite Coverage"
+                },
+                {
+                    "heading": "Discussion",
+                    "bullets": [
+                        "What's the best cheap-or-free upgrade you've added to your printer this year?",
+                        "Parametric-lite tools in the browser — gateway drug to real CAD, or all most people will ever need?",
+                        "Bambu keeps pulling tools into its walled garden — convenience win or lock-in worry?"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "indx-july-update",
+            "title": "INDX Ships — Plus a Hot Take and a Wild Custom Build",
+            "description": "Founders Editions are going out; the community is already remixing it",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "State of INDX: It's Actually Shipping",
+                    "body": "Last week we reported the printhead-rework delay with no committed date. This week Prusa's official July 3 update answers it: Founders Edition units are shipping now, the first CORE One conversion kits go out by end of July, and the whole first batch should ship by end of August. Firmware 6.6.1 is out, with more PLA profiles, nozzle sizes, and a bigger waste bin in the pipeline.",
+                    "link": "https://blog.prusa3d.com/indx_july_2026_update_137377/",
+                    "linkLabel": "State of INDX — July 2026",
+                    "product": "bondtech-indx"
+                },
+                {
+                    "heading": "The Skeptic's Take: 'Brilliant, But Not Finished'",
+                    "body": "mpoxDE's hands-on review (German, subtitles do fine) lands on: genuinely brilliant toolchanger, but it ships feeling like a beta — limited profiles, rough edges, early-adopter energy. Our take at the meetup: this launch rhymes with the Prusa XL's in 2021 — a big multi-tool promise that took a year of updates to grow into itself.",
+                    "videoUrl": "https://youtu.be/Khf-A6ofChE"
+                },
+                {
+                    "heading": "And the Community Is Already Going Off-Script",
+                    "body": "David Wood (dwuk3d) has INDX toolheads running 2-second tool changes on a heavily customized Sovol SV08 — dual X-axis, with the motion system, toolheads, and board all converted to Duet 3D hardware. The INDX ecosystem escaping the CORE One this early is the most interesting signal of the week.",
+                    "videoUrl": "https://youtu.be/csogGqbEnKo"
+                },
+                {
+                    "heading": "Discussion",
+                    "bullets": [
+                        "Shipping resumed a week after the delay news — does that change anyone's read on Bondtech?",
+                        "Beta-feel launches: fair price for early access, or should v1 mean finished?",
+                        "INDX heads on a Duet-converted SV08 — who else wants toolchanging without buying a CORE One?"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "pps-brake-rotors",
+            "title": "3D-Printed Brake Rotors in PPS-CF — It Did Not Go Well",
+            "description": "A ~$1,000 lesson in material limits",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "Printing Brake Rotors. Then Testing Them.",
+                    "body": "The Fabrication Series printed actual brake rotors in PPS-CF — one of the toughest high-temp filaments you can buy — and put them on a real car. Spoiler: it did not go well. Braking turns kinetic energy into heat by design, and even a filament that laughs at 200°C+ meets its match against glowing cast iron temperatures.",
+                    "videoUrl": "https://youtu.be/U_BuiDNe-K8"
+                },
+                {
+                    "heading": "The Price of the Experiment",
+                    "bullets": [
+                        "Back-of-napkin math: the rotors alone ate two 3 kg spools of Polymaker Fiberon PPS at roughly $399 each — ~$800 in filament, likely ~$1,000 all-in",
+                        "PPS-CF is a genuinely elite engineering filament — chemical resistance, high heat deflection — just not brake-rotor heat",
+                        "The right lesson: know what your material is FOR, not just how strong the spec sheet looks",
+                        "Obvious but worth saying: never put printed parts in your braking system"
+                    ]
+                },
+                {
+                    "heading": "Discussion",
+                    "bullets": [
+                        "What's the most expensive failed print experiment you've run — and was it worth it?",
+                        "Where do PPS and other exotic filaments actually earn their price for you?",
+                        "Content like this: valuable myth-busting, or expensive stunts?"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "clay-3d-printer",
+            "title": "Joshua Bird's Clay Printer — Impossible Objects, Open Sourced",
+            "description": "The Core R-Theta creator turns to ceramics",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "A Clay Printer That Prints Impossible Objects",
+                    "body": "Joshua Bird — the builder behind the Core R-Theta 4-axis polar printer (884 stars on GitHub) — strapped a clay extruder onto his rotating-bed machine. Because the bed spins and the head prints radially, it lays down ceramic geometries a normal Cartesian clay printer physically can't: severe overhangs and curves with no supports.",
+                    "videoUrl": "https://youtu.be/ajfrOBs_mNk"
+                },
+                {
+                    "heading": "Build It Yourself — Both Halves Are Open",
+                    "bullets": [
+                        "The clay extruder is open source: CAD files (.f3d/.step) plus a BOM — NEMA 14 stepper, pneumatic compressor, clay cylinder",
+                        "It's designed to mount on his Core R-Theta 4-axis printer, which is also fully open source",
+                        "R-Theta = polar motion: radial arm + rotating bed instead of X/Y — that's where the 'impossible' geometry comes from",
+                        "Ceramics + hobby 3D printing is still wide open territory — this is the most accessible multi-axis clay setup we've seen"
+                    ],
+                    "link": "https://github.com/jyjblrd/Ceramic-3D-Printer",
+                    "linkLabel": "Ceramic Printer on GitHub"
+                },
+                {
+                    "heading": "Discussion",
+                    "bullets": [
+                        "Who here would fire and glaze printed ceramics if the printer were solved?",
+                        "Polar/multi-axis machines keep coming from solo builders, not brands — why?",
+                        "What's the next material that deserves the open-source-printer treatment?"
+                    ],
+                    "link": "https://github.com/jyjblrd/Core-R-Theta-4-Axis-Printer",
+                    "linkLabel": "Core R-Theta 4-Axis Printer"
+                }
+            ]
+        },
+        {
+            "id": "curved-cut-tool",
+            "title": "The Tool Slicers Should Have — Curved Cuts Without Blender",
+            "description": "DaveRig's cutter — and our plan to put it in your browser",
+            "type": "tool",
+            "slides": [
+                {
+                    "heading": "Curved Cuts, Finally",
+                    "body": "Every slicer can cut a model flat. The moment you want a curved cut — or several — you're off to Blender. DaveRig Design built the tool slicers should have shipped years ago: define curved cutting paths, even multiple compound curves, and split your model right there. Dropped this week and it's exactly the kind of small-sharp-tool this hobby runs on.",
+                    "videoUrl": "https://youtu.be/7G6voqHYV5U"
+                },
+                {
+                    "heading": "And Here's Our Plan for It",
+                    "body": "We like this one enough to act on it: we're planning to rebuild the concept as a free web-based tool and publish it on our GitHub, so anyone can do curved cuts in the browser — no install, no Blender. Consider this your teaser; watch the community-news slot in the coming weeks.",
+                    "link": "https://github.com/MaxSikorski",
+                    "linkLabel": "Our GitHub"
+                },
+                {
+                    "heading": "Discussion",
+                    "bullets": [
+                        "What's YOUR most-wanted missing slicer feature?",
+                        "Curved cuts for prints too big for the bed — who has a project waiting on this?",
+                        "Small independent tools vs. waiting for slicer teams to ship it — which serves the hobby better?"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "quick-tip",
+            "title": "Quick Tip of the Week",
+            "description": "Thermoforming over prints — two processes, one part",
+            "type": "tool",
+            "slides": [
+                {
+                    "heading": "Quick Tip: Thermoform Onto Your Prints",
+                    "body": "Mihai T's tablet case combines a printed body with a thermoformed insert — heat a thin plastic sheet until floppy, form it over or into the printed part, and you get thin, glossy, flexible geometry that would print terribly. A heat gun, a scrap of PETG or polycarbonate sheet, and your print becomes the mold. Great for cases, lenses covers, living-hinge-ish panels, and clean cosmetic skins.",
+                    "videoUrl": "https://youtu.be/WNTNCcYMRRM"
+                }
+            ]
+        },
+        {
+            "id": "community-news",
+            "title": "Community News & Topics",
+            "description": "Share what you're interested in talking about!",
+            "type": "text",
+            "slides": [
+                {
+                    "heading": "Next Week's Meetup",
+                    "body": "Find something you're interested in talking about? Share it here and we'll cover it in next week's meetup!",
+                    "link": "https://github.com/MaxSikorski/3d-printing-weekly-news/issues",
+                    "linkLabel": "Submit a Topic"
+                }
+            ]
+        }
+    ]
+}
