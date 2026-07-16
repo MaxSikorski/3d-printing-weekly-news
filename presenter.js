@@ -1002,6 +1002,259 @@
     // === Inline fallback data for file:// protocol ===
     // Keep in sync with weeks/2026-W22.json
     const INLINE_WEEKS = {
+        "2026-W29": {
+            "week": "2026-W29",
+            "date": "2026-07-16",
+            "title": "Curve Cut Goes Live, INDX Opens Orders & the Toolchanger Wars Heat Up",
+            "subtitle": "This week in 3D printing news",
+            "timerMinutes": 20,
+            "topics": [
+                {
+                    "id": "indx-dev-kit-orders",
+                    "title": "INDX Dev Kit — Orders Open, For Real This Time",
+                    "description": "The July 3 launch faceplanted; July 15's actually stuck",
+                    "type": "tool",
+                    "slides": [
+                        {
+                            "heading": "Second Launch's the Charm",
+                            "body": "Bondtech's original July 3 dev-kit launch collapsed under website issues — orders simply wouldn't go through. Two weeks of work with their hosting partner later, orders re-opened Wednesday, July 15 at 15:00 CEST. This came straight to subscriber inboxes on the 14th — and this time, the store held.",
+                            "imageUrl": "photos/INDX_email-post.png"
+                        },
+                        {
+                            "heading": "What $390 Buys — and What It Doesn't",
+                            "bullets": [
+                                "The Smart Toolhead is $390 — one per printer; it does the heating and driving",
+                                "The $40 passive tools are what it actually swaps — that's the whole INDX trick",
+                                "A full 8-tool setup with docks, link board, and cables lands around $1,250",
+                                "Shipping: late August into September",
+                                "This kit is the BYO-printer path — aimed at Voron, Sovol, and custom builds. 'Open by design': reference geometry and tool CAD live on GitHub"
+                            ],
+                            "link": "https://www.bondtech.se/product/indx-development-kit/",
+                            "linkLabel": "INDX Development Kit",
+                            "product": "bondtech-indx"
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "Dev kit on your own machine vs. the CORE One conversion kit — which path tempts you?",
+                                "~$1,250 for 8 purgeless tools on a printer you already own — fair math?",
+                                "Anyone here actually order — and did the site survive you this time?"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "toolchanger-wars",
+                    "title": "The Toolchanger Wars — July 2026 Standings",
+                    "description": "Sovol, Creality, FlashForge, Snapmaker — the fight over your next multi-material machine",
+                    "type": "discussion",
+                    "slides": [
+                        {
+                            "heading": "Suddenly, Everyone Has a Toolchanger",
+                            "body": "Purge towers are the enemy — the war is over how to kill them. The July 2026 board:",
+                            "bullets": [
+                                "Bondtech INDX — one smart head, cheap passive tools, open ecosystem (see previous topic)",
+                                "Sovol M1D — IDEX crossed with a toolchanger; Kickstarter imminent",
+                                "Creality KliTek — swaps the nozzle, not the head; debuts on the K3 this fall",
+                                "FlashForge Creator 5 — four independent heads at a price-fighter $699, shipping now",
+                                "Snapmaker U1 — whole-head swaps, shipping since late 2025 off a $20.6M Kickstarter record",
+                                "And the DIY corner never left: Voron toolchangers keep getting easier to build"
+                            ]
+                        },
+                        {
+                            "heading": "Sovol M1D — 'Launching Soon,' Not Launched",
+                            "body": "We checked the Kickstarter page last night: still pre-launch — a notify-me button and 1,911 followers, no public date. Don't let the coverage fool you into thinking it's live.",
+                            "bullets": [
+                                "DualX: one fixed extruder plus one tool-changing head — '1+6 toolheads,' up to 7 colors or materials",
+                                "Near-zero purge waste, 5-second swaps, 300×300×350 mm, 600 mm/s, vision calibration, open source",
+                                "Sovol's claim: the first-ever IDEX + toolchanger in one machine",
+                                "From $1,199 — that's the pre-order early-bird price (roughly $200 off); final tiers at launch",
+                                "We put down the $20 VIP deposit ourselves — early-bird locked"
+                            ],
+                            "link": "https://www.kickstarter.com/projects/sovol/sovol-m1d-idex-tool-changing-3d-printer",
+                            "linkLabel": "M1D on Kickstarter",
+                            "product": "sovol-m1d"
+                        },
+                        {
+                            "heading": "Creality KliTek — Swap the Nozzle, Keep the Head",
+                            "bullets": [
+                                "Creality's entry (announced May 29) rides the upcoming K3: CoreXY, 260×260×260 mm, due this fall",
+                                "Four nozzles garaged at the back of the chamber — the head clicks one on in under 5 seconds; a full color/material switch runs under 15",
+                                "Mix nozzle sizes in one print: 0.4 mm for surface detail, 0.8 mm for bulk infill",
+                                "TPU claims that raise eyebrows: 15 mm³/s on 95A (~7× typical) and stable extrusion down to soft 80A, helped by the S-Drive dual-power feed",
+                                "Repositioning spec: within 25 µm after every swap",
+                                "The strategy is the story: KliTek across a range of machines, not one flagship"
+                            ],
+                            "link": "https://www.creality.com/campaigns/creality-nozzle-changing-3d-printer-2026",
+                            "linkLabel": "Creality K3 / KliTek"
+                        },
+                        {
+                            "heading": "FlashForge Creator 5 — the Price Fighter",
+                            "bullets": [
+                                "Four independent toolheads, zero purge waste claimed, 256×256×256 mm, 300 mm/s print",
+                                "$699 after the automatic $100 cart discount ($799 list) — undercuts everything else on this board",
+                                "Shipping now — 1–2 week delivery. No Kickstarter, no 'coming this fall'",
+                                "Broad material menu out of the box: TPU 90A/95A/64D, CF blends — high-temp set with the enclosure",
+                                "Our caveat, stated plainly: good machine for the money, but we're not fans of FlashForge's business practices — go in eyes-open"
+                            ],
+                            "link": "https://www.flashforge.com/products/flashforge-creator-5",
+                            "linkLabel": "Creator 5 Product Page"
+                        },
+                        {
+                            "heading": "Snapmaker U1 — Shipping, Maturing… Growing?",
+                            "bullets": [
+                                "The one you can actually buy today: $899, 270³, four heads — and still improving",
+                                "July 8 firmware added top-cover support, auto-refill across colors, and AI detection uploads",
+                                "RUMOR CORNER — clearly labeled: a bigger U1 (350³ build volume, 6 toolheads) is making the rounds",
+                                "We looked everywhere: nothing public, no leak, no filing. Pure rumor until receipts show up",
+                                "Seen it somewhere real? Bring it to the community slot"
+                            ],
+                            "product": "snapmaker-u1"
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "Five machines, four architectures — whole head (U1, Creator 5), nozzle-only (KliTek), IDEX hybrid (M1D), passive tools (INDX): which wins the next two years?",
+                                "What actually matters to you — swap speed, purge waste, or price per extra material?",
+                                "The elephant: Bambu has been silent all year. When they move, does this whole board reshuffle?"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "adidas-bb01",
+                    "title": "adidas BB.01 — the First 3D-Printed Basketball Shoe",
+                    "description": "$250, a printed lattice upper, and only 169 pairs on Earth",
+                    "type": "discussion",
+                    "slides": [
+                        {
+                            "heading": "Printed for the Court",
+                            "body": "adidas released the BB.01 on July 14 — the first 3D-printed basketball shoe. A printed lattice upper engineered to wrap the foot, breathable windows along the sides, $250. It's the debut of Project R.A.P. — 'Radical Athlete Perception' — adidas's program for pushing additive manufacturing into performance footwear, sport by sport.",
+                            "link": "https://3dprintingindustry.com/news/adidas-prints-bb-01-becomes-the-worlds-first-3d-basketball-shoe-253043/",
+                            "linkLabel": "BB.01 Coverage"
+                        },
+                        {
+                            "heading": "The Catch — and the Conversation",
+                            "bullets": [
+                                "169 pairs worldwide: 50 at the Las Vegas flagship (July 10), 89 on the CONFIRMED app (July 14), 30 in Greater China",
+                                "So — real product line, or collector-bait marketing flex?",
+                                "Lattice uppers at $250, while home printers push TPU lattices for pocket change: how far away is DIY performance footwear?",
+                                "Printed midsoles took adidas years to reach real shelves — when does a printed UPPER go mass-market?"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "makers-muse-hacks",
+                    "title": "Five 3D Printing Hacks, Actually Tested",
+                    "description": "Maker's Muse separates the keepers from the clickbait",
+                    "type": "video",
+                    "slides": [
+                        {
+                            "heading": "Tested So You Don't Have To",
+                            "body": "Angus at Maker's Muse ran five viral 3D-printing hacks through real testing — and the video dropped this morning, so you're seeing it the day it landed. Which ones survive contact with reality?",
+                            "videoUrl": "https://youtu.be/JZ5rcWgxeFo"
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "Our favorite is the last one: isopropyl alcohol to pop TPU off the build plate — flexible prints release clean instead of fighting you",
+                                "Which hacks do YOU swear by that everyone else doubts?",
+                                "And which famous 'hack' turned out to be bunk when you actually tried it?"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "filament-color-match",
+                    "title": "Color Match — Find the Filament That Matches Anything",
+                    "description": "Free tool: paste a color code, get the closest real spools",
+                    "type": "tool",
+                    "slides": [
+                        {
+                            "heading": "From Color Code to Spool",
+                            "body": "Color Match on filamentcolors.xyz takes any color — hex, RGB, HSV, or LAB — and returns the closest real, physically measured filament swatches across brands and materials, ranked by ΔE color distance. Community-run, free, no ads. The honest caveat: it only knows swatches they've measured — but that library is the largest one going.",
+                            "bullets": [
+                                "Matching a client's brand color without ordering five spools on faith",
+                                "Extending or repairing an old print when the original spool is long gone",
+                                "Building multi-brand color schemes that actually agree with each other"
+                            ],
+                            "link": "https://filamentcolors.xyz/colormatch/",
+                            "linkLabel": "Try Color Match"
+                        }
+                    ]
+                },
+                {
+                    "id": "builder-spotlight",
+                    "title": "Builder Spotlight: Curve Cut — Built Here, Live Now",
+                    "description": "Last week we teased it. This week you can use it.",
+                    "type": "tool",
+                    "slides": [
+                        {
+                            "heading": "Builder Spotlight: Curve Cut",
+                            "body": "Last week we covered DaveRig Design's curved-cut tool and said we'd rebuild the concept for the browser — free, no install, no Blender. One week later: it's live. Curve Cut slices your models along drawn curves instead of flat planes, right in the browser. Full credit to DaveRig for the spark — this is our take on the tool the hobby was missing.",
+                            "link": "https://maxsikorski.github.io/curve-cut/",
+                            "linkLabel": "Try Curve Cut"
+                        },
+                        {
+                            "heading": "What It Does",
+                            "bullets": [
+                                "Drag in an STL, OBJ, or 3MF — no account, nothing to install",
+                                "Draw the cut with a pen tool, or use the Planar and Dovetail presets",
+                                "Preview before committing, tune the gap, and add plug connectors — pegs on one side, matching sockets on the other (circle or hexagon)",
+                                "Exploded view to inspect the pieces; exports binary STL or 3MF",
+                                "Free and open source (MIT) — Manifold WebAssembly and Three.js under the hood"
+                            ],
+                            "link": "https://github.com/MaxSikorski/curve-cut",
+                            "linkLabel": "Curve Cut on GitHub"
+                        },
+                        {
+                            "heading": "BIG Print Mode — Bigger Than Your Bed",
+                            "bullets": [
+                                "Pick your printer — or type a custom bed size — and scale by multiplier or to a target size",
+                                "It grid-cuts the model to fit and exports a zip of parts, every piece engraved with its ID (A1, B2-L3…)",
+                                "Connectors auto-placed on every seam, plus a manifest and a printable assembly map",
+                                "The pitch: statue-sized prints from a 220 mm bed, without touching Blender"
+                            ],
+                            "link": "https://maxsikorski.github.io/curve-cut/",
+                            "linkLabel": "Try Curve Cut"
+                        },
+                        {
+                            "heading": "Live Demo",
+                            "body": "Full walk-through, right now: load a model, draw a curve, cut it, then blow it up to BIG-print scale and watch it grid itself into labeled, connector-fitted parts. Feature requests welcome — it's our tool, so the roadmap is this room's to shape.",
+                            "link": "https://maxsikorski.github.io/curve-cut/",
+                            "linkLabel": "Follow Along"
+                        }
+                    ]
+                },
+                {
+                    "id": "quick-tip",
+                    "title": "Quick Tip of the Week",
+                    "description": "Fillets first, then chamfers",
+                    "type": "tool",
+                    "slides": [
+                        {
+                            "heading": "Quick Tip: Fillets First, Then Chamfers",
+                            "body": "When you're finishing edges in CAD, order matters: fillet first, then chamfer. On side and top edges that sequence gives you smoother transitions between faces. The one exception is the build-plate edge — save it for the very end, chamfer the edge that touches the plate, then fillet the top edge of that chamfer. You keep a printable angle at the plate (no steep overhang) and still land a soft, finished edge."
+                        }
+                    ]
+                },
+                {
+                    "id": "community-news",
+                    "title": "Community News & Topics",
+                    "description": "Share what you're interested in talking about!",
+                    "type": "text",
+                    "slides": [
+                        {
+                            "heading": "Next Week's Meetup",
+                            "body": "Find something you're interested in talking about? Share it here and we'll cover it in next week's meetup!",
+                            "link": "https://github.com/MaxSikorski/3d-printing-weekly-news/issues",
+                            "linkLabel": "Submit a Topic"
+                        }
+                    ]
+                }
+            ]
+        },
         "2026-W28": {
             "week": "2026-W28",
             "date": "2026-07-09",
@@ -1011,23 +1264,23 @@
             "topics": [
                 {
                     "id": "ab-2047-final-hearing",
-                    "title": "AB 2047 \u2014 California's 3D Printer Bill Keeps Moving",
+                    "title": "AB 2047 — California's 3D Printer Bill Keeps Moving",
                     "description": "The 'firearm blocking technology' mandate clears another committee",
                     "type": "discussion",
                     "slides": [
                         {
                             "heading": "The Final Hearing in California",
-                            "body": "Joel Telling (3D Printing Nerd) walks through the June 30 Senate Public Safety hearing on AB 2047 \u2014 California's bill that would require every consumer 3D printer sold in the state to run state-approved 'firearm blocking' software that scans your STL, CAD, and G-code files before printing.",
+                            "body": "Joel Telling (3D Printing Nerd) walks through the June 30 Senate Public Safety hearing on AB 2047 — California's bill that would require every consumer 3D printer sold in the state to run state-approved 'firearm blocking' software that scans your STL, CAD, and G-code files before printing.",
                             "videoUrl": "https://youtu.be/b6fpPStIAsY"
                         },
                         {
                             "heading": "Where the Bill Actually Stands",
                             "bullets": [
-                                "June 30 result: passed Senate Public Safety 5\u20131, as amended \u2014 now headed to Appropriations after summer recess",
+                                "June 30 result: passed Senate Public Safety 5–1, as amended — now headed to Appropriations after summer recess",
                                 "The community IS moving the text: May amendments softened the open-source-slicer treatment after loud pushback",
-                                "But make no mistake \u2014 the bill is still advancing, not dying",
+                                "But make no mistake — the bill is still advancing, not dying",
                                 "Timeline if enacted: DOJ standards by Jan 1, 2028; sale ban on non-compliant printers from March 1, 2029",
-                                "On record against it: Josef Pr\u016f\u0161a, VORON Design, Make's Dale Dougherty, Joel Telling, and the EFF"
+                                "On record against it: Josef Průša, VORON Design, Make's Dale Dougherty, Joel Telling, and the EFF"
                             ],
                             "link": "https://calmatters.digitaldemocracy.org/bills/ca_202520260ab2047",
                             "linkLabel": "AB 2047 Bill Tracker"
@@ -1035,8 +1288,8 @@
                         {
                             "heading": "Discussion",
                             "bullets": [
-                                "Scanning every print job against a state-approved algorithm \u2014 where does that leave open source and privacy?",
-                                "The amendments show pressure works \u2014 what does effective pushback look like from here?",
+                                "Scanning every print job against a state-approved algorithm — where does that leave open source and privacy?",
+                                "The amendments show pressure works — what does effective pushback look like from here?",
                                 "If this passes in California, how fast do other states copy it?"
                             ],
                             "link": "https://www.the3dprintingnerd.com/ab2047",
@@ -1046,18 +1299,18 @@
                 },
                 {
                     "id": "bambu-owners-corner",
-                    "title": "Bambu Owners' Corner \u2014 A Sleeper Upgrade & Free Parametric Models",
+                    "title": "Bambu Owners' Corner — A Sleeper Upgrade & Free Parametric Models",
                     "description": "The AMS riser BV3D didn't know he needed, plus ParamaCraft Lite",
                     "type": "tool",
                     "slides": [
                         {
                             "heading": "The Upgrade You Didn't Know You Needed",
-                            "body": "Bryan Vines (BV3D) tried Sanja 3D's AMS Flipper Glass Slider Riser V6 \u2014 a printable riser combo for the P1S and X1C that lifts the AMS off the printer top, slides the glass lid, and fixes three small annoyances at once. His verdict is in the title: didn't know he needed it, until he tried it.",
+                            "body": "Bryan Vines (BV3D) tried Sanja 3D's AMS Flipper Glass Slider Riser V6 — a printable riser combo for the P1S and X1C that lifts the AMS off the printer top, slides the glass lid, and fixes three small annoyances at once. His verdict is in the title: didn't know he needed it, until he tried it.",
                             "videoUrl": "https://youtu.be/c49oyM8Hq6U"
                         },
                         {
-                            "heading": "ParamaCraft Lite \u2014 Free Parametric Editing in MakerWorld",
-                            "body": "New in Bambu's MakerLab this week (July 6): ParamaCraft Lite, a free browser-based parametric editor. Take an existing template model and dial exact dimensions, shapes, and surface patterns with sliders \u2014 no CAD, no install. The full version stays paid, but the free tier covers the everyday 'I just need it 3 mm wider' cases.",
+                            "heading": "ParamaCraft Lite — Free Parametric Editing in MakerWorld",
+                            "body": "New in Bambu's MakerLab this week (July 6): ParamaCraft Lite, a free browser-based parametric editor. Take an existing template model and dial exact dimensions, shapes, and surface patterns with sliders — no CAD, no install. The full version stays paid, but the free tier covers the everyday 'I just need it 3 mm wider' cases.",
                             "link": "https://3druck.com/en/programs/paramacraft-lite-parametric-model-editor-now-available-for-free-via-bambu-labs-makerworld-21159558/",
                             "linkLabel": "ParamaCraft Lite Coverage"
                         },
@@ -1065,15 +1318,15 @@
                             "heading": "Discussion",
                             "bullets": [
                                 "What's the best cheap-or-free upgrade you've added to your printer this year?",
-                                "Parametric-lite tools in the browser \u2014 gateway drug to real CAD, or all most people will ever need?",
-                                "Bambu keeps pulling tools into its walled garden \u2014 convenience win or lock-in worry?"
+                                "Parametric-lite tools in the browser — gateway drug to real CAD, or all most people will ever need?",
+                                "Bambu keeps pulling tools into its walled garden — convenience win or lock-in worry?"
                             ]
                         }
                     ]
                 },
                 {
                     "id": "indx-july-update",
-                    "title": "INDX Ships \u2014 Plus a Hot Take and a Wild Custom Build",
+                    "title": "INDX Ships — Plus a Hot Take and a Wild Custom Build",
                     "description": "Founders Editions are going out; the community is already remixing it",
                     "type": "video",
                     "slides": [
@@ -1081,45 +1334,45 @@
                             "heading": "State of INDX: It's Actually Shipping",
                             "body": "Last week we reported the printhead-rework delay with no committed date. This week Prusa's official July 3 update answers it: Founders Edition units are shipping now, the first CORE One conversion kits go out by end of July, and the whole first batch should ship by end of August. Firmware 6.6.1 is out, with more PLA profiles, nozzle sizes, and a bigger waste bin in the pipeline.",
                             "link": "https://blog.prusa3d.com/indx_july_2026_update_137377/",
-                            "linkLabel": "State of INDX \u2014 July 2026",
+                            "linkLabel": "State of INDX — July 2026",
                             "product": "bondtech-indx"
                         },
                         {
                             "heading": "The Skeptic's Take: 'Brilliant, But Not Finished'",
-                            "body": "mpoxDE's hands-on review (German, subtitles do fine) lands on: genuinely brilliant toolchanger, but it ships feeling like a beta \u2014 limited profiles, rough edges, early-adopter energy. Our take at the meetup: this launch rhymes with the Prusa XL's in 2021 \u2014 a big multi-tool promise that took a year of updates to grow into itself.",
+                            "body": "mpoxDE's hands-on review (German, subtitles do fine) lands on: genuinely brilliant toolchanger, but it ships feeling like a beta — limited profiles, rough edges, early-adopter energy. Our take at the meetup: this launch rhymes with the Prusa XL's in 2021 — a big multi-tool promise that took a year of updates to grow into itself.",
                             "videoUrl": "https://youtu.be/Khf-A6ofChE"
                         },
                         {
                             "heading": "And the Community Is Already Going Off-Script",
-                            "body": "David Wood (dwuk3d) has INDX toolheads running 2-second tool changes on a heavily customized Sovol SV08 \u2014 dual X-axis, with the motion system, toolheads, and board all converted to Duet 3D hardware. The INDX ecosystem escaping the CORE One this early is the most interesting signal of the week.",
+                            "body": "David Wood (dwuk3d) has INDX toolheads running 2-second tool changes on a heavily customized Sovol SV08 — dual X-axis, with the motion system, toolheads, and board all converted to Duet 3D hardware. The INDX ecosystem escaping the CORE One this early is the most interesting signal of the week.",
                             "videoUrl": "https://youtu.be/csogGqbEnKo"
                         },
                         {
                             "heading": "Discussion",
                             "bullets": [
-                                "Shipping resumed a week after the delay news \u2014 does that change anyone's read on Bondtech?",
+                                "Shipping resumed a week after the delay news — does that change anyone's read on Bondtech?",
                                 "Beta-feel launches: fair price for early access, or should v1 mean finished?",
-                                "INDX heads on a Duet-converted SV08 \u2014 who else wants toolchanging without buying a CORE One?"
+                                "INDX heads on a Duet-converted SV08 — who else wants toolchanging without buying a CORE One?"
                             ]
                         }
                     ]
                 },
                 {
                     "id": "pps-brake-rotors",
-                    "title": "3D-Printed Brake Rotors in PPS-CF \u2014 It Did Not Go Well",
+                    "title": "3D-Printed Brake Rotors in PPS-CF — It Did Not Go Well",
                     "description": "A ~$1,000 lesson in material limits",
                     "type": "video",
                     "slides": [
                         {
                             "heading": "Printing Brake Rotors. Then Testing Them.",
-                            "body": "The Fabrication Series printed actual brake rotors in PPS-CF \u2014 one of the toughest high-temp filaments you can buy \u2014 and put them on a real car. Spoiler: it did not go well. Braking turns kinetic energy into heat by design, and even a filament that laughs at 200\u00b0C+ meets its match against glowing cast iron temperatures.",
+                            "body": "The Fabrication Series printed actual brake rotors in PPS-CF — one of the toughest high-temp filaments you can buy — and put them on a real car. Spoiler: it did not go well. Braking turns kinetic energy into heat by design, and even a filament that laughs at 200°C+ meets its match against glowing cast iron temperatures.",
                             "videoUrl": "https://youtu.be/U_BuiDNe-K8"
                         },
                         {
                             "heading": "The Price of the Experiment",
                             "bullets": [
-                                "Back-of-napkin math: the rotors alone ate two 3 kg spools of Polymaker Fiberon PPS at roughly $399 each \u2014 ~$800 in filament, likely ~$1,000 all-in",
-                                "PPS-CF is a genuinely elite engineering filament \u2014 chemical resistance, high heat deflection \u2014 just not brake-rotor heat",
+                                "Back-of-napkin math: the rotors alone ate two 3 kg spools of Polymaker Fiberon PPS at roughly $399 each — ~$800 in filament, likely ~$1,000 all-in",
+                                "PPS-CF is a genuinely elite engineering filament — chemical resistance, high heat deflection — just not brake-rotor heat",
                                 "The right lesson: know what your material is FOR, not just how strong the spec sheet looks",
                                 "Obvious but worth saying: never put printed parts in your braking system"
                             ]
@@ -1127,7 +1380,7 @@
                         {
                             "heading": "Discussion",
                             "bullets": [
-                                "What's the most expensive failed print experiment you've run \u2014 and was it worth it?",
+                                "What's the most expensive failed print experiment you've run — and was it worth it?",
                                 "Where do PPS and other exotic filaments actually earn their price for you?",
                                 "Content like this: valuable myth-busting, or expensive stunts?"
                             ]
@@ -1136,22 +1389,22 @@
                 },
                 {
                     "id": "clay-3d-printer",
-                    "title": "Joshua Bird's Clay Printer \u2014 Impossible Objects, Open Sourced",
+                    "title": "Joshua Bird's Clay Printer — Impossible Objects, Open Sourced",
                     "description": "The Core R-Theta creator turns to ceramics",
                     "type": "video",
                     "slides": [
                         {
                             "heading": "A Clay Printer That Prints Impossible Objects",
-                            "body": "Joshua Bird \u2014 the builder behind the Core R-Theta 4-axis polar printer (884 stars on GitHub) \u2014 strapped a clay extruder onto his rotating-bed machine. Because the bed spins and the head prints radially, it lays down ceramic geometries a normal Cartesian clay printer physically can't: severe overhangs and curves with no supports.",
+                            "body": "Joshua Bird — the builder behind the Core R-Theta 4-axis polar printer (884 stars on GitHub) — strapped a clay extruder onto his rotating-bed machine. Because the bed spins and the head prints radially, it lays down ceramic geometries a normal Cartesian clay printer physically can't: severe overhangs and curves with no supports.",
                             "videoUrl": "https://youtu.be/ajfrOBs_mNk"
                         },
                         {
-                            "heading": "Build It Yourself \u2014 Both Halves Are Open",
+                            "heading": "Build It Yourself — Both Halves Are Open",
                             "bullets": [
-                                "The clay extruder is open source: CAD files (.f3d/.step) plus a BOM \u2014 NEMA 14 stepper, pneumatic compressor, clay cylinder",
+                                "The clay extruder is open source: CAD files (.f3d/.step) plus a BOM — NEMA 14 stepper, pneumatic compressor, clay cylinder",
                                 "It's designed to mount on his Core R-Theta 4-axis printer, which is also fully open source",
-                                "R-Theta = polar motion: radial arm + rotating bed instead of X/Y \u2014 that's where the 'impossible' geometry comes from",
-                                "Ceramics + hobby 3D printing is still wide open territory \u2014 this is the most accessible multi-axis clay setup we've seen"
+                                "R-Theta = polar motion: radial arm + rotating bed instead of X/Y — that's where the 'impossible' geometry comes from",
+                                "Ceramics + hobby 3D printing is still wide open territory — this is the most accessible multi-axis clay setup we've seen"
                             ],
                             "link": "https://github.com/jyjblrd/Ceramic-3D-Printer",
                             "linkLabel": "Ceramic Printer on GitHub"
@@ -1160,7 +1413,7 @@
                             "heading": "Discussion",
                             "bullets": [
                                 "Who here would fire and glaze printed ceramics if the printer were solved?",
-                                "Polar/multi-axis machines keep coming from solo builders, not brands \u2014 why?",
+                                "Polar/multi-axis machines keep coming from solo builders, not brands — why?",
                                 "What's the next material that deserves the open-source-printer treatment?"
                             ],
                             "link": "https://github.com/jyjblrd/Core-R-Theta-4-Axis-Printer",
@@ -1170,18 +1423,18 @@
                 },
                 {
                     "id": "curved-cut-tool",
-                    "title": "The Tool Slicers Should Have \u2014 Curved Cuts Without Blender",
-                    "description": "DaveRig's cutter \u2014 and our plan to put it in your browser",
+                    "title": "The Tool Slicers Should Have — Curved Cuts Without Blender",
+                    "description": "DaveRig's cutter — and our plan to put it in your browser",
                     "type": "tool",
                     "slides": [
                         {
                             "heading": "Curved Cuts, Finally",
-                            "body": "Every slicer can cut a model flat. The moment you want a curved cut \u2014 or several \u2014 you're off to Blender. DaveRig Design built the tool slicers should have shipped years ago: define curved cutting paths, even multiple compound curves, and split your model right there. Dropped this week and it's exactly the kind of small-sharp-tool this hobby runs on.",
+                            "body": "Every slicer can cut a model flat. The moment you want a curved cut — or several — you're off to Blender. DaveRig Design built the tool slicers should have shipped years ago: define curved cutting paths, even multiple compound curves, and split your model right there. Dropped this week and it's exactly the kind of small-sharp-tool this hobby runs on.",
                             "videoUrl": "https://youtu.be/7G6voqHYV5U"
                         },
                         {
                             "heading": "And Here's Our Plan for It",
-                            "body": "We like this one enough to act on it: we're planning to rebuild the concept as a free web-based tool and publish it on our GitHub, so anyone can do curved cuts in the browser \u2014 no install, no Blender. Consider this your teaser; watch the community-news slot in the coming weeks.",
+                            "body": "We like this one enough to act on it: we're planning to rebuild the concept as a free web-based tool and publish it on our GitHub, so anyone can do curved cuts in the browser — no install, no Blender. Consider this your teaser; watch the community-news slot in the coming weeks.",
                             "link": "https://github.com/MaxSikorski",
                             "linkLabel": "Our GitHub"
                         },
@@ -1189,8 +1442,8 @@
                             "heading": "Discussion",
                             "bullets": [
                                 "What's YOUR most-wanted missing slicer feature?",
-                                "Curved cuts for prints too big for the bed \u2014 who has a project waiting on this?",
-                                "Small independent tools vs. waiting for slicer teams to ship it \u2014 which serves the hobby better?"
+                                "Curved cuts for prints too big for the bed — who has a project waiting on this?",
+                                "Small independent tools vs. waiting for slicer teams to ship it — which serves the hobby better?"
                             ]
                         }
                     ]
@@ -1198,12 +1451,12 @@
                 {
                     "id": "quick-tip",
                     "title": "Quick Tip of the Week",
-                    "description": "Thermoforming over prints \u2014 two processes, one part",
+                    "description": "Thermoforming over prints — two processes, one part",
                     "type": "tool",
                     "slides": [
                         {
                             "heading": "Quick Tip: Thermoform Onto Your Prints",
-                            "body": "Mihai T's tablet case combines a printed body with a thermoformed insert \u2014 heat a thin plastic sheet until floppy, form it over or into the printed part, and you get thin, glossy, flexible geometry that would print terribly. A heat gun, a scrap of PETG or polycarbonate sheet, and your print becomes the mold. Great for cases, lenses covers, living-hinge-ish panels, and clean cosmetic skins.",
+                            "body": "Mihai T's tablet case combines a printed body with a thermoformed insert — heat a thin plastic sheet until floppy, form it over or into the printed part, and you get thin, glossy, flexible geometry that would print terribly. A heat gun, a scrap of PETG or polycarbonate sheet, and your print becomes the mold. Great for cases, lenses covers, living-hinge-ish panels, and clean cosmetic skins.",
                             "videoUrl": "https://youtu.be/WNTNCcYMRRM"
                         }
                     ]
@@ -2315,7 +2568,7 @@
                     "slides": [
                         {
                             "heading": "Quick Tip: Dry Before You Print",
-                            "body": "Engineering filaments like polycarbonate, nylon, and TPU pull moisture from the air fast — and wet filament means stringing, popping, weak layers, and rough surfaces. Dry the spool before printing, and ideally keep it dry while printing (the whole idea behind boxes like BTT's ViViD). Rough starting points: ~80°C for PC, ~70°C for nylon, ~50°C for TPU, several hours each — but always check your spool's label, and when in doubt, dry longer. A great standalone option: the Sovol SH03, a four-spool dryer that heats to 85°C and can run up to 24 hours, with separate chambers so you can dry and store at once. I run two of them and they work great.",
+                            "body": "Engineering filaments like polycarbonate, nylon, and TPU pull moisture from the air fast — and wet filament means stringing, popping, weak layers, and rough surfaces. Dry the spool before printing, and ideally keep it dry while printing (the whole idea behind boxes like ViViD and Sovol SH03). Rough starting points: ~80°C for PC, ~70°C for nylon, ~50°C for TPU, several hours each — but always check your spool's label, and when in doubt, dry longer. A great standalone option: the Sovol SH03, a four-spool dryer that heats to 85°C and can run up to 24 hours, with separate chambers so you can dry and store at once. I run two of them and they work great.",
                             "link": "https://www.sovol3d.com/products/sovol-sh03-filament-dryer",
                             "linkLabel": "Sovol SH03 Dryer"
                         }
@@ -2607,7 +2860,7 @@
                     "type": "tool",
                     "slides": [
                         {
-                            "heading": "Calibrate Your Filament",
+                            "heading": "Quick Tip: Calibrate Your Filament",
                             "body": "Dialing in a new filament is easy with OrcaSlicer's built-in Calibration menu. Just work through the tests in the dropdown from top to bottom — in that sequential order — to tune temperature, flow rate, pressure advance, and more for each spool.",
                             "link": "https://www.orcaslicer.com/wiki/calibration/calibration_guide.html",
                             "linkLabel": "OrcaSlicer Calibration Guide"
@@ -2657,9 +2910,9 @@
                         {
                             "heading": "Discussion Points",
                             "bullets": [
-                                "Has anyone tried multi-color mixing on their Prusa MK4?",
+                                "Has anyone tried multi-color mixing on their printers?",
                                 "How does this compare to Bambu's AMS color mixing approach?",
-                                "It's open source — could we extend or customize it for our needs?"
+                                "It's open source (U1 Full Spectrum) — could we extend or customize it for our needs?"
                             ]
                         }
                     ]
