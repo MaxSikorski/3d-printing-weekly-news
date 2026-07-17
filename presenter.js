@@ -586,6 +586,14 @@
 
                 slideHTML += '</div>';
                 slide.innerHTML = slideHTML;
+
+                // Curtain Reveal (opt-in): hide this slide behind a glass curtain until clicked
+                if (slideData.reveal) {
+                    slide.classList.add('reveal-armed');
+                    slide.dataset.revealConfig = JSON.stringify(slideData.reveal === true ? {} : slideData.reveal);
+                    slide.insertAdjacentHTML('beforeend', revealCurtainHTML(slideData.reveal));
+                }
+
                 container.appendChild(slide);
 
                 // Determine URL for QR code
@@ -645,6 +653,122 @@
             }
         });
     }
+
+    // === Curtain Reveal — opt-in per slide via a "reveal" key (true | {kicker, label, confetti}) ===
+    // A one-shot theatrical unveil: the slide hides behind a glass curtain with a single
+    // button; clicking parts the curtain and staggers the content in. Reloading re-arms it.
+    // Added 2026-07-16 for the W29 Curve Cut spotlight; dormant unless a slide opts in.
+    function revealCurtainHTML(reveal) {
+        const cfg = (typeof reveal === 'object' && reveal !== null) ? reveal : {};
+        const kicker = cfg.kicker || 'Builder Spotlight';
+        const label = cfg.label || 'Unveil';
+        return `
+            <div class="slide-reveal-curtain">
+                <div class="slide-reveal-panel slide-reveal-panel-left"></div>
+                <div class="slide-reveal-panel slide-reveal-panel-right"></div>
+                <div class="slide-reveal-seam"></div>
+                <div class="slide-reveal-center">
+                    <p class="slide-reveal-kicker">${kicker}</p>
+                    <button type="button" class="slide-reveal-btn">${label}</button>
+                </div>
+            </div>
+        `;
+    }
+
+    function playReveal(slideEl) {
+        if (!slideEl || slideEl.dataset.revealed === 'true') return;
+        slideEl.dataset.revealed = 'true';
+        const curtain = slideEl.querySelector('.slide-reveal-curtain');
+        const content = slideEl.querySelector('.slide-content');
+        if (!curtain || !content) return;
+
+        let cfg = {};
+        try { cfg = JSON.parse(slideEl.dataset.revealConfig || '{}'); } catch (e) { /* defaults */ }
+
+        const left = curtain.querySelector('.slide-reveal-panel-left');
+        const right = curtain.querySelector('.slide-reveal-panel-right');
+        const seam = curtain.querySelector('.slide-reveal-seam');
+        const center = curtain.querySelector('.slide-reveal-center');
+        const heading = content.querySelector('.slide-heading');
+        const inner = content.querySelectorAll('.slide-topic-badge, .slide-heading, .slide-body, .slide-bullets li, .slide-link, .video-container, .slide-image-container, .slide-affiliate-group');
+
+        // Light sweep: sits under the parting panels, over the content
+        const sweep = document.createElement('div');
+        sweep.className = 'slide-reveal-sweep';
+        slideEl.appendChild(sweep);
+
+        gsap.set(inner, { opacity: 0, y: 26 });
+        slideEl.classList.remove('reveal-armed'); // content column back; children start hidden
+
+        const tl = gsap.timeline({
+            onComplete: () => { curtain.remove(); sweep.remove(); }
+        });
+        tl.to(center, { opacity: 0, y: -14, duration: 0.35, ease: 'power2.in' }, 0)
+          .to(seam, { opacity: 0.5, duration: 0.25, ease: 'power2.out' }, 0.1)
+          .to(seam, { opacity: 0, duration: 0.6, ease: 'power2.out' }, 0.45)
+          .to(left, { xPercent: -103, duration: 1.15, ease: 'power4.inOut' }, 0.3)
+          .to(right, { xPercent: 103, duration: 1.15, ease: 'power4.inOut' }, 0.3)
+          .fromTo(sweep, { xPercent: -120 }, { xPercent: 120, duration: 1.0, ease: 'power2.out' }, 0.85)
+          .to(inner, { opacity: 1, y: 0, duration: 0.9, ease: 'power4.out', stagger: 0.1 }, 0.9);
+        // The heading lands with a pop, not just a fade
+        if (heading) {
+            tl.fromTo(heading, { scale: 0.92 }, { scale: 1, duration: 0.8, ease: 'back.out(1.7)', clearProps: 'scale' }, 1.0);
+        }
+        // Settle body copy at the engine's resting opacity
+        content.querySelectorAll('.slide-body, .slide-bullets li').forEach(el => {
+            tl.to(el, { opacity: 0.85, duration: 0.5, ease: 'power2.out' }, 1.9);
+        });
+        // Celebration extra — opt-in via the reveal config
+        if (cfg.confetti) tl.add(() => spawnRevealConfetti(slideEl), 1.05);
+    }
+
+    // Multicolor confetti burst — the ONE sanctioned color exception (Max's call, 2026-07-16):
+    // everything else stays monochrome; the confetti alone gets party colors.
+    const REVEAL_CONFETTI_COLORS = [
+        '#ff3b30', // red
+        '#ff9500', // orange
+        '#ffcc00', // yellow
+        '#34c759', // green
+        '#14b8a6', // teal
+        '#007aff', // blue
+        '#af52de', // purple
+        '#ff2d55'  // pink
+    ];
+
+    function spawnRevealConfetti(slideEl) {
+        const box = document.createElement('div');
+        box.className = 'slide-reveal-confetti';
+        slideEl.appendChild(box);
+        const W = slideEl.clientWidth, H = slideEl.clientHeight;
+        const COUNT = 80;
+        for (let i = 0; i < COUNT; i++) {
+            const p = document.createElement('div');
+            p.className = 'slide-reveal-confetti-piece';
+            const strip = Math.random() < 0.5;
+            const s = 5 + Math.random() * 6;
+            p.style.width = s + 'px';
+            p.style.height = (strip ? s * 2.4 : s) + 'px';
+            p.style.background = REVEAL_CONFETTI_COLORS[Math.floor(Math.random() * REVEAL_CONFETTI_COLORS.length)];
+            p.style.opacity = String(0.85 + Math.random() * 0.15); // full color, slight depth
+            box.appendChild(p);
+            const x0 = W / 2, y0 = H * 0.62;
+            const drift = (Math.random() - 0.5) * W * 0.9;
+            const rise = H * (0.25 + Math.random() * 0.45);
+            const d1 = 0.55 + Math.random() * 0.35;
+            const d2 = 0.9 + Math.random() * 0.6;
+            gsap.set(p, { x: x0, y: y0, rotation: Math.random() * 360 });
+            gsap.timeline({ onComplete: () => p.remove() })
+                .to(p, { x: x0 + drift * 0.6, y: y0 - rise, rotation: '+=' + (180 + Math.random() * 360), duration: d1, ease: 'power2.out' })
+                .to(p, { x: x0 + drift, y: y0 + H * 0.25, rotation: '+=' + (180 + Math.random() * 360), duration: d2, ease: 'power1.in' })
+                .to(p, { opacity: 0, duration: 0.35 }, '-=0.35');
+        }
+        gsap.delayedCall(3.2, () => box.remove());
+    }
+
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.slide-reveal-btn');
+        if (btn) playReveal(btn.closest('.slide'));
+    });
 
     // === Navigation ===
     function goToSlide(index, direction) {
@@ -1194,7 +1318,12 @@
                             "heading": "Builder Spotlight: Curve Cut",
                             "body": "Last week we covered DaveRig Design's curved-cut tool and said we'd rebuild the concept for the browser — free, no install, no Blender. One week later: it's live. Curve Cut slices your models along drawn curves instead of flat planes, right in the browser. Full credit to DaveRig for the spark — this is our take on the tool the hobby was missing.",
                             "link": "https://maxsikorski.github.io/curve-cut/",
-                            "linkLabel": "Try Curve Cut"
+                            "linkLabel": "Try Curve Cut",
+                            "reveal": {
+                                "kicker": "One week later",
+                                "label": "Unveil",
+                                "confetti": true
+                            }
                         },
                         {
                             "heading": "What It Does",
