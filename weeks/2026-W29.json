@@ -20,7 +20,7 @@
                     "heading": "What $390 Buys — and What It Doesn't",
                     "bullets": [
                         "The Smart Toolhead is $390 — one per printer; it does the heating and driving",
-                        "The ~$56 passive tools are what it actually swaps — that's the whole INDX trick",
+                        "The $40 passive tools are what it actually swaps — that's the whole INDX trick",
                         "A full 8-tool setup with docks, link board, and cables lands around $1,250",
                         "Shipping: late August into September",
                         "This kit is the BYO-printer path — aimed at Voron, Sovol, and custom builds. 'Open by design': reference geometry and tool CAD live on GitHub"
@@ -190,7 +190,12 @@
                     "heading": "Builder Spotlight: Curve Cut",
                     "body": "Last week we covered DaveRig Design's curved-cut tool and said we'd rebuild the concept for the browser — free, no install, no Blender. One week later: it's live. Curve Cut slices your models along drawn curves instead of flat planes, right in the browser. Full credit to DaveRig for the spark — this is our take on the tool the hobby was missing.",
                     "link": "https://maxsikorski.github.io/curve-cut/",
-                    "linkLabel": "Try Curve Cut"
+                    "linkLabel": "Try Curve Cut",
+                    "reveal": {
+                        "kicker": "One week later",
+                        "label": "Unveil",
+                        "confetti": true
+                    }
                 },
                 {
                     "heading": "What It Does",
