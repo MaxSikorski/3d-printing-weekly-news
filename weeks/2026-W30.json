@@ -1,0 +1,317 @@
+{
+    "week": "2026-W30",
+    "date": "2026-07-23",
+    "title": "INDX Kits Ship Within Days, Polymaker's Best Filament Yet & Pressure Advance Goes Automatic",
+    "subtitle": "This week in 3D printing news",
+    "timerMinutes": 20,
+    "topics": [
+        {
+            "id": "indx-deep-dive",
+            "title": "INDX — the Deep Dive, Because Kits Ship Within Days",
+            "description": "Missed last week? Here's the whole story — plus the details we didn't have room for",
+            "type": "tool",
+            "slides": [
+                {
+                    "heading": "INDX in 60 Seconds — the Recap",
+                    "body": "A lot of you missed last week, and this story is moving too fast to skip. INDX is Bondtech's toolchanger: ONE smart toolhead does all the heating and driving, and swaps between cheap passive tools — each with its own nozzle and its own material path. No purge tower, no flushing half a spool into the bin.",
+                    "bullets": [
+                        "Founders Edition units: shipped and in early adopters' hands",
+                        "Dev kit orders re-opened July 15 (the July 3 launch died of website issues): $390 smart toolhead, $40 passive tools, ~$1,250 for a full 8-tool setup, ships late Aug–Sept",
+                        "The dev kit is the BYO-printer path — Voron, Sovol, custom builds; geometry and tool CAD are on GitHub"
+                    ],
+                    "link": "https://www.bondtech.se/indx-by-bondtech/",
+                    "linkLabel": "INDX by Bondtech",
+                    "product": "bondtech-indx"
+                },
+                {
+                    "heading": "The Big One: CORE One Kits Start Shipping by July 31",
+                    "body": "Per Prusa's July 'State of INDX' post, the standard Conversion Kit for the CORE One/+ has first units leaving the factory by the END OF THIS MONTH — that's within days — and the whole first batch ships by the end of August. April's sell-out crowd is about to get hardware.",
+                    "bullets": [
+                        "Redesigned front docking panel — you can actually see your parked tools now",
+                        "Silicone nozzle cleaner + waste bin; priming pellets average a tiny 0.013–0.015 g",
+                        "Inductive sensor auto-calibrates tool offsets — no manual paper-shim ritual",
+                        "Budget a real afternoon: install runs about 5–6 hours",
+                        "Four more print profiles and firmware updates on the way"
+                    ],
+                    "link": "https://blog.prusa3d.com/indx_july_2026_update_137377/",
+                    "linkLabel": "State of INDX — July Update"
+                },
+                {
+                    "heading": "ColorMix and the Waste Math",
+                    "bullets": [
+                        "ColorMix: halftoning across a CMYKW+RGB 8-tool loadout fakes DOZENS of color tones from 8 spools — the 'infinite colors' idea, done with toolheads",
+                        "Prusa's own waste test on a typical multi-color model: 29 g with INDX vs up to 696.4 g on competing purge-based systems (their numbers — but a 24× gap survives a lot of skepticism)",
+                        "That's the whole INDX pitch in one stat: every material keeps its own path, so nothing gets flushed"
+                    ]
+                },
+                {
+                    "heading": "Discussion",
+                    "bullets": [
+                        "Conversion kit on a CORE One vs dev kit on a machine you already own — which path is yours?",
+                        "Is 29 g vs ~700 g the stat that finally kills the purge tower argument?",
+                        "Anyone in the April order batch — watching the mailbox yet?"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "toolchanger-wars-round-2",
+            "title": "The Toolchanger Wars, Round 2 — a New Challenger Appears",
+            "description": "The July standings, one week later: Sovol still counting followers, HeyGears crashes the party",
+            "type": "discussion",
+            "slides": [
+                {
+                    "heading": "The Board, One Week Later",
+                    "body": "Last week we mapped the war over killing the purge tower. Seven days on, the board has a new player:",
+                    "bullets": [
+                        "Bondtech INDX — kits ship within days (previous topic). The pace car right now",
+                        "Sovol M1D — still 'launching soon'… but the crowd is growing fast",
+                        "HeyGears G1 — NEW ENTRANT: launched on Kickstarter TODAY, and it fights with ink, not toolheads",
+                        "Creality KliTek — nozzle-swap system on the K3, still slated for fall",
+                        "FlashForge Creator 5 — four heads, $699 after cart discount, still shipping now (and our business-practices caveat still applies)",
+                        "Snapmaker U1 — still the one you can buy today; 'U1 Max' rumor: STILL nothing public, still just a rumor"
+                    ],
+                    "product": "snapmaker-u1"
+                },
+                {
+                    "heading": "Sovol M1D — Still Pre-Launch, Crowd +20% in a Week",
+                    "body": "We checked the Kickstarter page again today: still 'Launching soon,' still no date. But the follower count tells its own story — 2,305 now, up from 1,911 when we checked last Wednesday. Nearly 400 people joined the waitlist in seven days.",
+                    "bullets": [
+                        "The pitch, for the recap crowd: IDEX crossed with a toolchanger — '1+6 toolheads,' up to 7 colors/materials, 5-second swaps, near-zero purge",
+                        "From $1,199 pre-order early-bird (~$200 off) — we hold a $20 VIP deposit ourselves",
+                        "Sovol's claim to fame: first-ever IDEX + toolchanger in one machine"
+                    ],
+                    "link": "https://www.kickstarter.com/projects/sovol/sovol-m1d-idex-tool-changing-3d-printer",
+                    "linkLabel": "M1D on Kickstarter",
+                    "product": "sovol-m1d"
+                },
+                {
+                    "heading": "HeyGears G1 — Full Color Without the Toolchanger",
+                    "body": "Launched on Kickstarter this morning (9 AM Pacific): HeyGears calls the G1 Series the world's first desktop full-color 3D and UV printer. It's a modular 3-in-1 — full-color 3D printing, 3D-textured UV printing, and flat 2D UV printing in one machine — aimed at creators and small customization businesses. And the launch detonated: past $5.5 MILLION pledged against a $100k goal from 1,300 backers on day one (we checked mid-afternoon — it'll be higher by the time you read this).",
+                    "bullets": [
+                        "The angle that matters for this board: color via UV inkjet instead of juggling toolheads — a completely different answer to the same multicolor question",
+                        "Claims 10M+ colors, full-color and transparent in one print, auto-calibration",
+                        "Super Early Bird from $1,999 (G1 Starter, $2,699 MSRP); the G1X with the full 3D resin station starts at $3,299 ($4,999 MSRP)",
+                        "Usual Kickstarter rules apply: it's a pledge, not a purchase — and HeyGears is at least an established manufacturer, not a garage startup",
+                        "If it delivers, 'multicolor' stops being a toolchanger-only conversation"
+                    ],
+                    "link": "https://www.kickstarter.com/projects/heygears/heygears-g1-series-first-desktop-full-color-3d-and-uv-printer",
+                    "linkLabel": "G1 Series on Kickstarter"
+                },
+                {
+                    "heading": "Discussion",
+                    "bullets": [
+                        "Toolheads vs inkjet color: is the G1 even fighting the same war, or starting a new one?",
+                        "M1D's waitlist grew ~20% in a week without a launch date — smart demand-building or stalling?",
+                        "Still the elephant: Bambu stays silent. Who's most exposed when they finally move?"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "polymaker-ht-pla-pro",
+            "title": "Polymaker HT-PLA Pro — 'The Best Filament We've Ever Made'",
+            "description": "PLA that shrugs off 148 °C, prints like PLA, made in the USA — and it sold out on day one",
+            "type": "discussion",
+            "slides": [
+                {
+                    "heading": "PLA's Big Weakness, Patched",
+                    "body": "Polymaker launched HT-PLA Pro today, calling it the best filament they've ever made. The pitch: PLA's famous printability with the heat resistance that's always been its Achilles' heel — a Vicat softening point of 148.3 °C straight off the build plate, 150.5 °C if you anneal. Regular PLA taps out around 60.",
+                    "bullets": [
+                        "Prints like PLA: 210–230 °C nozzle, standard brass nozzle, no enclosure, bed as low as 25 °C, speeds up to 300 mm/s",
+                        "Tough, fatigue-resistant recipe aimed at functional parts, not just trinkets",
+                        "$25.99 per kilo, 17 colors, made in the USA",
+                        "Sold out on Polymaker's shop on launch day — the market has spoken"
+                    ],
+                    "link": "https://shop.polymaker.com/products/polymaker-ht-pla-pro",
+                    "linkLabel": "HT-PLA Pro at Polymaker"
+                },
+                {
+                    "heading": "Discussion",
+                    "bullets": [
+                        "Full disclosure, as always: Polymaker is one of the brands we work with — and this launch is why",
+                        "A no-enclosure, brass-nozzle filament that survives a car dashboard in July: what does this replace in YOUR lineup — PETG? ABS?",
+                        "Who's grabbing a spool for a torture test the moment it restocks?"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "big-box-silver-pla",
+            "title": "Big-Box Filament Showdown: Michaels vs Best Buy vs Hobby Lobby",
+            "description": "Filament while-you-wait is now a real thing at three national chains",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "The Craft Store Filament Era Is Here",
+                    "body": "Prints Charming grabbed silver PLA from Michaels, Best Buy, and Hobby Lobby and put them head-to-head. The quiet story: you can now walk into three national big-box chains and leave with filament the same afternoon. The impulse-buy era of 3D printing supplies has officially arrived.",
+                    "videoUrl": "https://youtu.be/GBGnEv9WS9M"
+                },
+                {
+                    "heading": "Discussion",
+                    "bullets": [
+                        "Our own experience: we've run the Hobby Lobby spools before and they genuinely impressed us — so the Michaels and Best Buy runs are now on our to-try list",
+                        "Same-day filament within 15 minutes of your house: does this change what you keep in stock at home?",
+                        "Anyone already tried the Michaels or Best Buy house spools? Report in"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "orcaslicer-imagemap",
+            "title": "OrcaSlicer ImageMap — Full-Spectrum Color From a Handful of Spools",
+            "description": "Print photos ON the walls of your prints — no paint, no hydro-dip, no thousand tool changes",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "Images on the SIDE of Your Print",
+                    "body": "This one is genuinely unique: OrcaSlicer-ImageMap is a free fork of OrcaSlicer that prints full-color images on the side surfaces of your models. The trick is 'overhang modulation' — it cycles a fixed set of colors (think CMYK) and varies how much each layer's edge overhangs, so the blend your eye sees can hit essentially any color in the spectrum.",
+                    "bullets": [
+                        "One tool change per LAYER — not per color region — which is why YGK3D's testing found it cuts multicolor print times roughly in half",
+                        "Imports textured OBJ/glTF/GLB models, projects images, renders text — it'll even print pictures on your prime tower",
+                        "Free and open source (AGPL), beta builds for Windows and macOS on GitHub"
+                    ],
+                    "videoUrl": "https://youtu.be/B5cvfSPWjlU"
+                },
+                {
+                    "heading": "Try It / Discussion",
+                    "bullets": [
+                        "AMS or toolchanger owners: this squeezes photo-grade color out of hardware you already have",
+                        "It's a beta fork — expect rough edges, and slice something you don't love first",
+                        "Between this, ColorMix halftoning, and UV inkjet — 'full color' suddenly has three totally different roads"
+                    ],
+                    "link": "https://github.com/sentientstardust-dev/OrcaSlicer-ImageMap",
+                    "linkLabel": "ImageMap on GitHub"
+                }
+            ]
+        },
+        {
+            "id": "load-cell-pressure-advance",
+            "title": "Pressure Advance, Calibrated by the Bed Sensor You Already Have",
+            "description": "CNC Kitchen automates the most tedious calibration in FDM — with a load cell",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "No More Squinting at Test Lines",
+                    "body": "Pressure advance calibration usually means printing test patterns and squinting at which line looks least bad. Stefan at CNC Kitchen just showed a much smarter way: use a load-cell bed sensor to MEASURE nozzle pressure directly — the extruder runs a controlled acceleration ramp against the sensor, and math does the judging. It's the same trick Bambu and Snapmaker machines quietly do with their built-in sensors, now in the open.",
+                    "videoUrl": "https://youtu.be/sHLGrTBLxLg"
+                },
+                {
+                    "heading": "The Open-Source Path: bd_pressure",
+                    "bullets": [
+                        "Stefan's Prusa-based build rides on markniu's open-source bd_pressure project — a strain-gauge sensor that pulls double duty as a nozzle probe AND a pressure-advance instrument",
+                        "Works with Klipper and RepRapFirmware; E3D and Voron toolhead mounts; MIT licensed",
+                        "Results land in the same ballpark as Bambu's factory auto-calibration — from a part you can buy from the usual Voron vendors",
+                        "The bigger arc: flagship-printer 'magic' keeps getting reverse-engineered into open source within a year or two"
+                    ],
+                    "link": "https://github.com/markniu/bd_pressure",
+                    "linkLabel": "bd_pressure on GitHub"
+                }
+            ]
+        },
+        {
+            "id": "shapr3d-slicer-export",
+            "title": "Shapr3D Now Exports Straight to Your Slicer",
+            "description": "Design on the iPad, hit export, land in PrusaSlicer or EasyPrint",
+            "type": "tool",
+            "slides": [
+                {
+                    "heading": "One Less Hop Between CAD and Print",
+                    "body": "Shapr3D — the tablet-first CAD app a lot of our CAD-class folks already use — added direct export to PrusaSlicer and Prusa's cloud slicer EasyPrint. Model, tap export, and you're staged to print. The sleeper detail: EasyPrint can push jobs over LAN to plenty of NON-Prusa printers too, with the essential settings covered — so for simple parts, the full desktop slicer never even opens.",
+                    "link": "https://www.shapr3d.com/",
+                    "linkLabel": "Shapr3D"
+                }
+            ]
+        },
+        {
+            "id": "cgtrader-ai-numbers",
+            "title": "1 in 6 Uploads, 1 in 90 Dollars — CGTrader's AI Report Card",
+            "description": "The marketplace numbers behind the AI-model hype",
+            "type": "discussion",
+            "slides": [
+                {
+                    "heading": "The Numbers",
+                    "body": "3D model marketplace CGTrader published its yearly trends report, and it's the first hard data we've seen on AI-generated models in the wild. Demand for 3D-PRINTABLE models grew faster than general CG models — good news for our side of the hobby. The AI slice is where it gets interesting:",
+                    "bullets": [
+                        "Roughly 1 in 6 new uploads is AI-generated…",
+                        "…but AI models earn only about 1 dollar in every 90 of marketplace revenue",
+                        "Only 1 in 25 buyers who printed an AI model says it 'works well'",
+                        "72% of buyers haven't touched an AI-generated model at all"
+                    ],
+                    "link": "https://www.cgtrader.com/",
+                    "linkLabel": "CGTrader Report"
+                },
+                {
+                    "heading": "Discussion",
+                    "bullets": [
+                        "Flood of supply, trickle of value — is AI generation actually getting closer to printable, or just closer to pretty renders?",
+                        "Have you successfully PRINTED an AI-generated model? What did it take to fix it?",
+                        "Prediction time: what does this 1-in-90 revenue number look like this time next year?"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "curve-cut-update",
+            "title": "Curve Cut — Quick Update From the Workbench",
+            "description": "Hollowing improvements are done — shipping next week",
+            "type": "tool",
+            "slides": [
+                {
+                    "heading": "Curve Cut: What's Cooking",
+                    "body": "Quick reminder for anyone who missed the unveil: Curve Cut is our free, browser-based tool that slices models along drawn curves instead of flat planes — with connector pegs, presets, and a BIG Print mode that grid-cuts models bigger than your bed. Status update: we've been heads-down on it this week and the hollowing improvements are DONE — that work ships next week. Nothing new on the GitHub yet, so what's live today is still the launch version. Consider this the calm before the update.",
+                    "link": "https://maxsikorski.github.io/curve-cut/",
+                    "linkLabel": "Try Curve Cut"
+                }
+            ]
+        },
+        {
+            "id": "crown-molding-print",
+            "title": "Print File of the Week: Crown Molding With a Built-In LED Strip",
+            "description": "Print your own trim — with a light channel where the dust would be",
+            "type": "tool",
+            "slides": [
+                {
+                    "heading": "Crown Molding, Off the Printer",
+                    "body": "File find of the week: printable crown molding with an integrated LED strip channel, free on Printables from maker BTCB. Print trim sections, chain them along the wall, drop a strip in the channel, and you've got indirect cove lighting without a single piece of MDF. It's an excellent idea — the kind of 'wait, I can just PRINT that' home project this hobby is for.",
+                    "bullets": [
+                        "Sections chain along the wall — print as many as the room needs",
+                        "The LED channel aims the light up the wall for a clean indirect glow",
+                        "Painted PLA or PETG passes for real trim once it's on the ceiling"
+                    ],
+                    "link": "https://www.printables.com/model/1775449-crown-molding-with-led-strip",
+                    "linkLabel": "Crown Molding on Printables"
+                }
+            ]
+        },
+        {
+            "id": "quick-tip",
+            "title": "Quick Tip of the Week",
+            "description": "How to print 'glass'",
+            "type": "tool",
+            "slides": [
+                {
+                    "heading": "Quick Tip: How to Print Glass",
+                    "body": "Want prints that look like glass? The classic 'How To Print Glass' guide by Rygar1432 on Printables shows transparent prints are a settings game, not a filament miracle. The short version: use a clear PETG or PCTG, print SLOW, print HOT — hotter than you think — and use fine layers so the light passes through fewer, better-fused boundaries. Patience is the actual ingredient: the test pieces prove clear parts come off a stock printer.",
+                    "link": "https://www.printables.com/model/15310-how-to-print-glass",
+                    "linkLabel": "How To Print Glass",
+                    "products": ["petg", "pctg"]
+                }
+            ]
+        },
+        {
+            "id": "community-news",
+            "title": "Community News & Topics",
+            "description": "Share what you're interested in talking about!",
+            "type": "text",
+            "slides": [
+                {
+                    "heading": "Next Week's Meetup",
+                    "body": "Find something you're interested in talking about? Share it here and we'll cover it in next week's meetup!",
+                    "link": "https://github.com/MaxSikorski/3d-printing-weekly-news/issues",
+                    "linkLabel": "Submit a Topic"
+                }
+            ]
+        }
+    ]
+}
