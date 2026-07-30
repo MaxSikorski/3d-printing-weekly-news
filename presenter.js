@@ -551,6 +551,21 @@
                     `;
                 }
 
+                if (slideData.links && Array.isArray(slideData.links)) {
+                    slideHTML += `<div class="slide-links-row">`;
+                    slideData.links.forEach(lnk => {
+                        slideHTML += `
+                            <a href="${lnk.url}" target="_blank" rel="noopener noreferrer" class="slide-link">
+                                ${lnk.label || 'Open Link'}
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M7 17L17 7M17 7H7M17 7v10"/>
+                                </svg>
+                            </a>
+                        `;
+                    });
+                    slideHTML += `</div>`;
+                }
+
                 // Affiliate buttons (per-topic) + shop link — data from recommendations.js
                 const affIds = slideData.products || (slideData.product ? [slideData.product] : []);
                 let affHTML = '';
@@ -597,7 +612,7 @@
                 container.appendChild(slide);
 
                 // Determine URL for QR code
-                const qrUrl = slideData.link || slideData.videoUrl || topic.url || null;
+                const qrUrl = slideData.link || slideData.videoUrl || (slideData.links && slideData.links[0] && slideData.links[0].url) || topic.url || null;
                 slides.push({
                     type: 'topic',
                     el: slide,
@@ -1126,6 +1141,337 @@
     // === Inline fallback data for file:// protocol ===
     // Keep in sync with weeks/2026-W22.json
     const INLINE_WEEKS = {
+        "2026-W31": {
+            "week": "2026-W31",
+            "date": "2026-07-30",
+            "title": "M1D Goes Live, INDX Nozzles Aren't Hardened & HT-PLA's Fine Print",
+            "subtitle": "This week in 3D printing news",
+            "timerMinutes": 20,
+            "topics": [
+                {
+                    "id": "sovol-m1d-live",
+                    "title": "Sovol M1D Is LIVE — and We Ordered Two",
+                    "description": "The 1+6 toolchanger finally launched — and blew past its goal 15× on day one",
+                    "type": "tool",
+                    "slides": [
+                        {
+                            "heading": "The Waiting Is Over: M1D Launches",
+                            "body": "We've been tracking this one for weeks — last Wednesday it was still 'Launching soon' with 2,305 followers and no date. Monday morning it went live, and the crowd we watched build finally got to open their wallets. They did: the campaign obliterated its goal within hours. And yes — we put our money where the coverage is and ordered TWO.",
+                            "bullets": [
+                                "Launched July 28; HK$23,309,857 pledged by 1,884 backers against a HK$1.5 million goal — about US$2.97 million and climbing",
+                                "Super Early Bird: ~US$1,299 Essential / ~US$1,599 Advanced",
+                                "The pitch, one more time: IDEX crossed with a toolchanger — 1 active + 6 parked toolheads, ~5-second swaps, near-zero purge",
+                                "Sovol keeps leaning on the open-source positioning",
+                                "Those spec claims are still campaign claims — nobody outside Sovol has tested a production M1D yet"
+                            ],
+                            "link": "https://www.kickstarter.com/projects/sovol/sovol-m1d-idex-tool-changing-3d-printer",
+                            "linkLabel": "M1D on Kickstarter",
+                            "product": "sovol-m1d"
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "Usual Kickstarter rules: it's a pledge, not a purchase — who else in the room backed it?",
+                                "US$2.97M in two days for a purge-killer: is this the demand signal Bambu can't ignore?",
+                                "We'll report from the front of the line when ours arrive — hold us to it"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "indx-nozzles-not-hardened",
+                    "title": "INDX Nozzles Aren't Hardened — Bondtech Comes Clean",
+                    "description": "Sold as hardened, measured at HRC 30 — and our recommendation has changed",
+                    "type": "discussion",
+                    "slides": [
+                        {
+                            "heading": "Hardened on the Box, Not in the Steel",
+                            "body": "Last week we told you INDX conversion kits were days from shipping. This week the toolchanger story took a hard turn: after 3D Musketeers put the nozzles under scrutiny on PrintFixFriday, Bondtech published an official update on July 29 admitting the 'hardened, abrasive-resistant' nozzles that shipped… aren't.",
+                            "bullets": [
+                                "The shipped nitrocarburized nozzles measure about HRC 30–32 — Bondtech's own number for truly hardened steel is HRC 55–60",
+                                "Every Founders Edition nozzle and the initial Prusa-kit batches are affected",
+                                "Carbon-fiber, glass-fiber, glow, and metal-fill filaments will chew through these nozzles fast",
+                                "Non-abrasive materials remain fine — that's Bondtech's own framing, and it's honest",
+                                "Bondtech is offering returns and refunds; genuinely hardened production is 'many months' away"
+                            ],
+                            "videoUrl": "https://youtu.be/VEdDrMN3UtI",
+                            "links": [
+                                {
+                                    "label": "Bondtech's Official Update",
+                                    "url": "https://www.bondtech.se/2026/07/29/indx-hardened-nozzles-update/"
+                                }
+                            ]
+                        },
+                        {
+                            "heading": "Our Call: Wait",
+                            "body": "We've been INDX optimists since the reveal — the purge-tower math still favors it, and nothing about the architecture changed. But a launch that ships spec-sheet promises the steel can't back is a launch that isn't done. Painful conclusion, familiar shape:",
+                            "bullets": [
+                                "Prusa's conversion-kit product page still listed the nozzles as 'Hardened' while we built this deck",
+                                "Our group's recommendation: do NOT buy or set up INDX until the nozzle situation is fully sorted",
+                                "It's sad — and it's nearly identical to what early Prusa XL buyers went through: right idea, shipped before it was ready"
+                            ]
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "Anyone here holding a Founders Edition or an April kit order — refund, or ride it out on non-abrasives?",
+                                "Does a self-reported HRC confession make you trust Bondtech more or less than silence would?",
+                                "The XL recovered and became a great machine. What does INDX have to do to earn that arc?"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "printed-solid-prusa-usa",
+                    "title": "Printed Solid Is Now Prusa USA",
+                    "description": "Prusa's U.S. arm gets a name that says the quiet part out loud",
+                    "type": "text",
+                    "slides": [
+                        {
+                            "heading": "Printed Solid → Prusa USA Inc.",
+                            "body": "Delaware's Printed Solid — the shop that's been Prusa's U.S. distributor and assembly operation for years — legally rebranded to Prusa USA Inc. this week, per Tom's Hardware. For U.S. buyers this is the formalization of something that was already true: domestic Prusa assembly, support, and warranty handling under Prusa's own name.",
+                            "bullets": [
+                                "Reported July 25; the transition branding is 'Printed Solid, a Prusa Company'",
+                                "Day-to-day operations are explicitly unchanged — same people, same warehouse",
+                                "The interesting question is what a first-party U.S. footprint sets up next: tariff insulation, faster support, maybe U.S.-assembled CORE Ones"
+                            ],
+                            "link": "https://www.tomshardware.com/3d-printing/delawares-printed-solid-rebrands-to-prusa-usa",
+                            "linkLabel": "Read at Tom's Hardware",
+                            "product": "prusa-core-one"
+                        }
+                    ]
+                },
+                {
+                    "id": "ht-pla-pro-fine-print",
+                    "title": "HT-PLA Pro Follow-Up: Read the Fine Print",
+                    "description": "The 148 °C headline is real — but the number that matters needs an oven",
+                    "type": "discussion",
+                    "slides": [
+                        {
+                            "heading": "Heat Under Load: Annealing Changes Everything",
+                            "body": "Last week we covered Polymaker's HT-PLA Pro launch and its sold-out day one. This week we did our homework on the spec sheet, and there's a distinction every buyer should understand before expecting a 100 °C-class part straight off the plate. The headline 148.3 °C figure is Vicat — a no-load softening test. Put the part under actual load and the as-printed number tells a different story:",
+                            "bullets": [
+                                "Heat deflection under load (0.45 MPa), as printed: 56.3 °C — regular-PLA territory",
+                                "The same test after annealing: 107.6 °C — THAT'S where the 100 °C-class claim lives",
+                                "The anneal itself is easy: 100 °C for 30 minutes",
+                                "Full disclosure, as always: Polymaker is one of the brands we work with — which is exactly why we're reading their datasheet this closely",
+                                "Bottom line: still an incredible filament — you just have to anneal it to get the headline performance"
+                            ],
+                            "link": "https://shop.polymaker.com/products/polymaker-ht-pla-pro",
+                            "linkLabel": "HT-PLA Pro at Polymaker"
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "Annealing shrinks and warps some geometries — who's tried it on a dimensionally critical part?",
+                                "Does 'anneal to unlock it' change your use case, or is 30 minutes at 100 °C a non-issue?",
+                                "Vicat vs HDT on the same box: should filament makers be forced to lead with the load-bearing number?"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "bambuddy-command-center",
+                    "title": "Bambuddy: Your Self-Hosted Bambu Command Center",
+                    "description": "Local monitoring, job history, and print queues — on your hardware, not Bambu's cloud",
+                    "type": "video",
+                    "slides": [
+                        {
+                            "heading": "Your Printers, Your Server, Your Data",
+                            "body": "Bambuddy is an open-source, self-hosted command center for Bambu Lab printers — it talks to your machines locally over Developer Mode, so monitoring, job history, and queue management live on YOUR hardware instead of Bambu's cloud. The Lesser The Besser's new video takes it further, pairing it with TrueNAS and Tailscale into a fully private print cloud you can reach from anywhere.",
+                            "bullets": [
+                                "AGPL-3.0 open source, self-hosted",
+                                "Local Developer-Mode connection — printer monitoring, job history/archive, queue management",
+                                "The video's stack: Bambuddy + TrueNAS + Tailscale = private print cloud",
+                                "A live public demo lets you click around before installing anything"
+                            ],
+                            "videoUrl": "https://youtu.be/ea6_EunDp10",
+                            "links": [
+                                {
+                                    "label": "Bambuddy",
+                                    "url": "https://bambuddy.cool/"
+                                },
+                                {
+                                    "label": "Bambuddy on GitHub",
+                                    "url": "https://github.com/maziggy/bambuddy"
+                                },
+                                {
+                                    "label": "Bambuddy Demo",
+                                    "url": "https://demo.bambuddy.cool/"
+                                }
+                            ]
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "After the Bambu ecosystem-lockdown fights, how many of you want the cloud OUT of your print farm?",
+                                "It's a self-hosted command center — not a drop-in replacement for everything the Handy app does. Which features would you actually miss?",
+                                "Who's already running TrueNAS or Tailscale and could stand this up this weekend?"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "modly-local-image-to-3d",
+                    "title": "Modly: Image → 3D Model, Fully Local",
+                    "description": "An MIT-licensed desktop app that keeps the AI on your machine",
+                    "type": "tool",
+                    "slides": [
+                        {
+                            "heading": "Image-to-3D Without the Cloud",
+                            "body": "The image-to-3D generators we've covered all run in someone else's cloud — your pictures go up, a mesh comes down, and a subscription meter runs. Modly flips that: it's an MIT-licensed desktop app that runs open-source AI models entirely on your own machine. Feed it an image, get a printable mesh, and nothing ever leaves your computer.",
+                            "bullets": [
+                                "Runs the AI models locally — offline and private",
+                                "Windows, Linux, and Apple-silicon macOS builds",
+                                "Exports STL, OBJ, GLB, and PLY",
+                                "Plan for 16 GB+ RAM; the heavier models want roughly 8 GB of GPU VRAM",
+                                "Expectation check: treat it as a tool to TRY — nobody's proven one-click print-ready output yet"
+                            ],
+                            "link": "https://github.com/lightningpixel/modly",
+                            "linkLabel": "Modly on GitHub"
+                        }
+                    ]
+                },
+                {
+                    "id": "lumina-studio-color-calibration",
+                    "title": "Lumina Studio: Camera-Calibrated Multicolor",
+                    "description": "Stop guessing what your filaments blend into — measure it with a camera",
+                    "type": "tool",
+                    "slides": [
+                        {
+                            "heading": "Calibrate Color From Photographs",
+                            "body": "Every multicolor workflow we've shown — ColorMix halftoning, ImageMap overhang tricks — ultimately guesses how your filaments blend. Lumina Studio measures it instead: print its calibration plates with your actual filaments, photograph them with your actual camera, and it maps the colors your printer really produces before building the print job.",
+                            "bullets": [
+                                "Free and open source",
+                                "Works with 2–8 loaded colors",
+                                "The calibration loop covers your printer, filaments, lighting, and camera — not a theoretical color model",
+                                "Exports 3MF straight into Bambu Studio or OrcaSlicer"
+                            ],
+                            "link": "https://github.com/lumina-layer-studio/Lumina-Layers",
+                            "linkLabel": "Lumina Layers on GitHub"
+                        }
+                    ]
+                },
+                {
+                    "id": "prusawire-r1",
+                    "title": "Prusawire R1: Your Old MK3/MK4 Parts, Reborn CoreXZ",
+                    "description": "The half-a-printer left over from your upgrade wants a second life",
+                    "type": "tool",
+                    "slides": [
+                        {
+                            "heading": "Turn the Donor Printer Into a CoreXZ",
+                            "body": "If a CORE One or MK4 upgrade left a gutted MK3 on your shelf, this one's aimed straight at you. Prusawire R1 is an open DIY conversion that reuses a Prusa MK3/MK4-family frame and leftover parts to build a Switchwire-style CoreXZ machine — the classic 'house build stuff' answer to half-a-printer-in-a-box syndrome.",
+                            "bullets": [
+                                "Open, documented DIY conversion — no kit purchase required",
+                                "Reuses the Prusa frame, motion parts, and electronics you already own",
+                                "What's reusable depends on your donor's configuration — read the docs before tearing down",
+                                "No total-cost claim from us: it genuinely varies by what's in your parts bin"
+                            ],
+                            "link": "https://prusawire.positron3d.com/",
+                            "linkLabel": "Prusawire R1 Documentation",
+                            "product": "prusa-mk4s"
+                        }
+                    ]
+                },
+                {
+                    "id": "nine-slicer-hacks",
+                    "title": "9 Slicer Hacks — Two You Need Today",
+                    "description": "Nine minutes of tips; two of them changed how we set up prints this week",
+                    "type": "video",
+                    "slides": [
+                        {
+                            "heading": "Two Slicer Moves to Steal",
+                            "body": "Printcademy packed nine slicer tricks into nine minutes, and while the whole video is worth your lunch break, two of them stopped us cold — the first two we genuinely didn't know. We'll walk the rest live, but two are the keepers:",
+                            "videoUrl": "https://youtu.be/tPWG06UIIi4"
+                        },
+                        {
+                            "heading": "The Two Keepers",
+                            "bullets": [
+                                "Threaded connectors, IN the slicer: Bambu Studio's thread model drops printable screw threads onto parts without touching CAD — exactly what we were talking about last week, Brian",
+                                "Exact-scale from a measurement: measure any feature, type the size it SHOULD be, and the whole model rescales proportionally to match",
+                                "We tested the exact-scaling move in OrcaSlicer — works there too"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "curve-cut-updates",
+                    "title": "Curve Cut — Quick Update From the Workbench",
+                    "description": "Hollowing work continues — and threads might be next",
+                    "type": "tool",
+                    "slides": [
+                        {
+                            "heading": "Still on the Workbench",
+                            "body": "Quick status on our free curve-slicing tool for anyone following along: the hollowing improvements we teased are still in the works — necessary updates first, ship date when it's ready, not before. And a new idea just jumped the queue: now that Bambu Studio has a thread model, we're seriously looking at adding thread support to Curve Cut's connector system. What's live today is still the launch version.",
+                            "link": "https://maxsikorski.github.io/curve-cut/",
+                            "linkLabel": "Try Curve Cut"
+                        }
+                    ]
+                },
+                {
+                    "id": "builder-spotlight",
+                    "title": "Builder Spotlight: John Boss's Beach Robot",
+                    "description": "A cooler, a handle, wheels — and nobody carries anything to the beach again",
+                    "type": "video",
+                    "slides": [
+                        {
+                            "heading": "A Robot Built for Beach Duty",
+                            "body": "This week's spotlight is pure summer engineering joy: John Boss got tired of hauling beach gear, so he built a robot to do it — basically a cooler and a handle on wheels, done properly.",
+                            "videoUrl": "https://youtu.be/K6y0kSSMVfw"
+                        },
+                        {
+                            "heading": "The Build",
+                            "bullets": [
+                                "A homemade hauler that carries his cooler and beach gear across sand so he doesn't have to",
+                                "The video covers the whole build arc — frame, electronics, testing, and the real beach run",
+                                "Watch it for the iteration: every version that failed on sand taught the next one something"
+                            ],
+                            "links": [
+                                {
+                                    "label": "John Boss on YouTube",
+                                    "url": "https://www.youtube.com/@john-boss"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "quick-tip",
+                    "title": "Quick Tip of the Week",
+                    "description": "PTFE tube + printed PETG = real bearings",
+                    "type": "video",
+                    "slides": [
+                        {
+                            "heading": "Quick Tip: PTFE Tube Bearings",
+                            "body": "File this one under 'why didn't we think of that': Printabot shows how to make genuinely effective linear and rotary bearings from PTFE tube seated in a printed PETG housing. PTFE is one of the slipperiest solids you can buy, and the tube form is cheap and everywhere. The video is in Spanish — subtitles handle it fine, and the technique needs no translation.",
+                            "videoUrl": "https://youtu.be/2UZ4EHST6_M"
+                        },
+                        {
+                            "heading": "Making It Work",
+                            "bullets": [
+                                "Dial in the tube fit in the printed housing before committing to the full part",
+                                "Orient the print so the bearing load works with the layers, not against them",
+                                "Cut and prep the PTFE tube cleanly, then lubricate the finished bearing"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "community-news",
+                    "title": "Community News & Topics",
+                    "description": "Share what you're interested in talking about!",
+                    "type": "text",
+                    "slides": [
+                        {
+                            "heading": "Next Week's Meetup",
+                            "body": "Find something you're interested in talking about? Share it here and we'll cover it in next week's meetup!",
+                            "link": "https://github.com/MaxSikorski/3d-printing-weekly-news/issues",
+                            "linkLabel": "Submit a Topic"
+                        }
+                    ]
+                }
+            ]
+        },
         "2026-W30": {
             "week": "2026-W30",
             "date": "2026-07-23",

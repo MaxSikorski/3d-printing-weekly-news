@@ -560,6 +560,13 @@ button.card:hover .card-arrow {
     transform: translateX(3px);
 }
 
+.slide-links-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+}
+
 /* === Affiliate / "Buy on Amazon" buttons (data from recommendations.js) === */
 .slide-affiliate-group {
     display: flex;
