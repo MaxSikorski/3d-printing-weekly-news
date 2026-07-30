@@ -1187,6 +1187,10 @@
                         {
                             "heading": "Hardened on the Box, Not in the Steel",
                             "body": "Last week we told you INDX conversion kits were days from shipping. This week the toolchanger story took a hard turn: after 3D Musketeers put the nozzles under scrutiny on PrintFixFriday, Bondtech published an official update on July 29 admitting the 'hardened, abrasive-resistant' nozzles that shipped… aren't.",
+                            "videoUrl": "https://youtu.be/VEdDrMN3UtI"
+                        },
+                        {
+                            "heading": "What Bondtech Admitted",
                             "bullets": [
                                 "The shipped nitrocarburized nozzles measure about HRC 30–32 — Bondtech's own number for truly hardened steel is HRC 55–60",
                                 "Every Founders Edition nozzle and the initial Prusa-kit batches are affected",
@@ -1194,7 +1198,6 @@
                                 "Non-abrasive materials remain fine — that's Bondtech's own framing, and it's honest",
                                 "Bondtech is offering returns and refunds; genuinely hardened production is 'many months' away"
                             ],
-                            "videoUrl": "https://youtu.be/VEdDrMN3UtI",
                             "links": [
                                 {
                                     "label": "Bondtech's Official Update",
@@ -1279,13 +1282,16 @@
                         {
                             "heading": "Your Printers, Your Server, Your Data",
                             "body": "Bambuddy is an open-source, self-hosted command center for Bambu Lab printers — it talks to your machines locally over Developer Mode, so monitoring, job history, and queue management live on YOUR hardware instead of Bambu's cloud. The Lesser The Besser's new video takes it further, pairing it with TrueNAS and Tailscale into a fully private print cloud you can reach from anywhere.",
+                            "videoUrl": "https://youtu.be/ea6_EunDp10"
+                        },
+                        {
+                            "heading": "What You Get",
                             "bullets": [
                                 "AGPL-3.0 open source, self-hosted",
                                 "Local Developer-Mode connection — printer monitoring, job history/archive, queue management",
                                 "The video's stack: Bambuddy + TrueNAS + Tailscale = private print cloud",
                                 "A live public demo lets you click around before installing anything"
                             ],
-                            "videoUrl": "https://youtu.be/ea6_EunDp10",
                             "links": [
                                 {
                                     "label": "Bambuddy",
