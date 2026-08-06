@@ -44,7 +44,9 @@
     const LINKS = {
         youtube: 'https://www.youtube.com/@maxwellsikorski4926',
         meetup: 'https://www.meetup.com/3d-printing-club/',
-        github: 'https://github.com/MaxSikorski'
+        github: 'https://github.com/MaxSikorski',
+        discord: 'https://discord.gg/GRJs8zzq',
+        buzz: 'https://buzz.xyz/'
     };
     function contactMailto(topicTitle) {
         const subject = topicTitle
@@ -635,6 +637,8 @@
                     <a class="connect-link" href="${LINKS.youtube}" target="_blank" rel="noopener noreferrer">YouTube</a>
                     <a class="connect-link" href="${LINKS.meetup}" target="_blank" rel="noopener noreferrer">Meetup</a>
                     <a class="connect-link" href="${LINKS.github}" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a class="connect-link" href="${LINKS.discord}" target="_blank" rel="noopener noreferrer">Discord</a>
+                    <a class="connect-link" href="${LINKS.buzz}" target="_blank" rel="noopener noreferrer">Buzz</a>
                     <a class="connect-link" href="${WORK_WITH_MAILTO}">Work With Us</a>
                 </div>
             </div>
