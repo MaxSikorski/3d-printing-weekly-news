@@ -21,9 +21,11 @@ The presentations run live at our weekly meetups and are archived here for anyon
 
 ## Where to Find Us
 
-We meet weekly on Meetup.com. All skill levels are welcome — from first-layer frustration to multi-color multipart builds.
+We meet weekly on Meetup.com and are on Discord (Buzz soon). All skill levels are welcome — from first-layer frustration to multi-color multipart builds.
 
 **[meetup.com/3d-printing-club](https://www.meetup.com/3d-printing-club/)**
+
+**[Discord: 3D Printing Club](https://discord.gg/GRJs8zzq)**
 
 ---
 
