@@ -1141,6 +1141,331 @@
     // === Inline fallback data for file:// protocol ===
     // Keep in sync with weeks/2026-W22.json
     const INLINE_WEEKS = {
+        "2026-W32": {
+            "week": "2026-W32",
+            "date": "2026-08-06",
+            "title": "Qidi Plus5 Lands, INDX Slips to Mid-August & AB 2047 Hits the Suspense File",
+            "subtitle": "This week in 3D printing news",
+            "timerMinutes": 20,
+            "topics": [
+                {
+                    "id": "qidi-plus5-launch",
+                    "title": "Qidi Plus5: Big, Hot & $749",
+                    "description": "Qidi's Plus4 successor launched yesterday — and it undercuts half the enclosed CoreXY field",
+                    "type": "tool",
+                    "slides": [
+                        {
+                            "heading": "Launched Yesterday, Aimed at Everyone",
+                            "body": "Qidi pulled the trigger on the Plus5 yesterday morning, and the spec-per-dollar math is hard to argue with: a bigger build volume than the Plus4 in the same footprint, a genuinely hot actively heated chamber, and a price that starts with a 7. Our take up front: if we were shopping Qidi today, we'd buy this over the Q2.",
+                            "bullets": [
+                                "$749, or $899 Combo with the QIDI Box — up to 16-color multi-material",
+                                "320 × 320 × 300 mm build volume — 18% more than the Plus4, same machine size",
+                                "65 °C active chamber heating (3rd gen), 370 °C nozzle, 120 °C bed — engineering materials are the point",
+                                "CoreXY, 600 mm/s toolhead speed, 20,000 mm/s² acceleration",
+                                "Tempered-glass enclosure, 3-stage filtration, AI camera with skip-objects, dual Z lead screws",
+                                "Launch pricing runs to Aug 31 — the member discount takes it under $700; in stock, ships 1–3 days from the China warehouse"
+                            ],
+                            "link": "https://qidi3d.com/products/plus5",
+                            "linkLabel": "Plus5 at Qidi"
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "Plus5 vs Q2: same money, different philosophies — who picks the Q2 anyway, and why?",
+                                "A 65 °C chamber at $749 was a $2,000 feature not long ago. What's left that justifies flagship prices?",
+                                "Anyone running a Plus4 — what would the extra 18% of volume have saved you?"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "indx-kits-mid-august",
+                    "title": "INDX Watch: Kits Slip to Mid-August",
+                    "description": "Prusa's official status post confirms the delay — and promises free extra hardware",
+                    "type": "discussion",
+                    "slides": [
+                        {
+                            "heading": "The Nozzle Mess Has a Timeline Now",
+                            "body": "Last week Bondtech admitted the 'hardened' INDX nozzles measure HRC 30–32, and our call was: don't buy or set up INDX until it's sorted. This week Prusa posted an official status update, and the short version is that the end-of-July kit shipments are now mid-August — with a make-good attached.",
+                            "bullets": [
+                                "Conversion kits: end-of-July promise is now mid-August, shipping in order by purchase date",
+                                "Prusa's own abrasion test: 5 kg of PETG-CF ran fine — just 100 g of their Ultraglow filament killed the nozzle coating",
+                                "Current nozzles are fine for standard materials: PLA, PETG, ABS, ASA, TPU, PC, Nylon and friends",
+                                "Prusa is adding extra hardware to initial-batch orders free, at their expense — specifics promised before shipping",
+                                "They may not finish the full first batch by end of August; truly hardened nozzles still have no timeline",
+                                "Cancel any time before shipment for a full refund, plus a 60-day return window after delivery"
+                            ],
+                            "link": "https://forum.prusa3d.com/forum/prusa-indx-general-discussion-announcements-and-releases/current-as-of-july-31st-2026-status-on-prusa-core-one-index-orders/",
+                            "linkLabel": "Prusa's Official Status Post"
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "Our recommendation stands: wait until the nozzle situation is fully fixed. Anyone tempted anyway?",
+                                "Mystery hardware: what would actually make this right — free hardened nozzles later, or something else?",
+                                "Kit holders in the room: riding it out on non-abrasives, or taking the refund?"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "ab-2047-suspense-file",
+                    "title": "AB 2047 Lands on the Suspense File",
+                    "description": "California's 3D printer bill reached the make-or-break holding pen on Monday",
+                    "type": "discussion",
+                    "slides": [
+                        {
+                            "heading": "Monday: Senate Appropriations, Suspense File",
+                            "body": "The standing watch fired this week. AB 2047 — the bill that would ban selling any 3D printer in California unless it's on a DOJ-approved roster with 'firearm blocking technology' — came back from summer recess and went straight to Senate Appropriations on Monday, August 3. The committee referred it to the suspense file, which sounds like procedure but is actually the whole ballgame.",
+                            "bullets": [
+                                "The suspense file is where fiscal committees park bills that cost real money, then decide their fate in one vote-only hearing",
+                                "That hearing must happen by Friday, August 14 — bills either advance to the Senate floor or die quietly, no debate",
+                                "The full session ends August 31 — if it clears suspense, the floor vote comes fast",
+                                "It has cleared every hurdle so far: three Assembly committees, the Assembly floor, Senate Judiciary June 23, Senate Public Safety June 30 by a 5–1 vote"
+                            ],
+                            "link": "https://calmatters.digitaldemocracy.org/bills/ca_202520260ab2047",
+                            "linkLabel": "Track AB 2047 at CalMatters"
+                        },
+                        {
+                            "heading": "What the Bill Looks Like Now",
+                            "body": "It's been amended 33 times on its way through the Assembly, and the current shape is softer than the original in two ways that matter — while the core mandate is untouched:",
+                            "bullets": [
+                                "The performance standard was weakened from 'effectively prevent' circumvention to 'substantially reduce' it",
+                                "A carveout now allows private resale of printers bought before the mandate takes effect",
+                                "The core stays: every new printer sold in California would need DOJ certification and blocking software",
+                                "EFF's case against it: it censors lawful making, it builds corporate surveillance into every printer, and it won't work — determined bad actors route around it while everyone else gets monitored",
+                                "The opposition coalition is unchanged: Průša, VORON, Make, Joel Telling, EFF — Joel's action hub is pointing everyone at the Appropriations committee right now"
+                            ],
+                            "links": [
+                                {
+                                    "label": "EFF's Analysis",
+                                    "url": "https://www.eff.org/deeplinks/2026/06/we-can-still-stop-californias-3d-printer-surveillance-scheme"
+                                },
+                                {
+                                    "label": "Joel's Action Hub",
+                                    "url": "https://www.the3dprintingnerd.com/ab2047"
+                                }
+                            ]
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "By next Friday this bill is either headed to the Senate floor or dead. Predictions?",
+                                "The suspense file kills bills over cost, not principle — does 'this mandate is expensive to enforce' sit right as the last line of defense?",
+                                "Californians in the room: has anyone actually written to Appropriations? The action hub makes it a five-minute job"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "m1d-week-one",
+                    "title": "Sovol M1D, Week One: $3M and Climbing",
+                    "description": "Quick follow-up on the campaign we backed twice",
+                    "type": "text",
+                    "slides": [
+                        {
+                            "heading": "The Toolchanger Bet Keeps Growing",
+                            "body": "One week into the campaign we covered last Thursday: All3DP reports the M1D passed $3 million with close to 2,000 backers as of August 1, and the campaign runs to August 27. Our two orders stand, and the usual Kickstarter rules still apply — it's a pledge, not a purchase. We'll pull up the live total on the QR right now; it's moved since we wrote this slide.",
+                            "link": "https://www.kickstarter.com/projects/sovol/sovol-m1d-idex-tool-changing-3d-printer",
+                            "linkLabel": "M1D on Kickstarter",
+                            "product": "sovol-m1d"
+                        }
+                    ]
+                },
+                {
+                    "id": "linear-shaft-motor",
+                    "title": "A Fully Closed-Loop Linear Shaft Motor",
+                    "description": "No belts, no screws — the motor IS the motion system",
+                    "type": "video",
+                    "slides": [
+                        {
+                            "heading": "The Motor Is the Axis",
+                            "body": "This one's a homework topic — we're covering it because we can't stop thinking about it. Builder midi700 demos a fully closed-loop linear shaft motor built for 3D printers and pick-and-place machines: the carriage rides the shaft directly, position feedback closes the loop, and there's no belt anywhere in the system.",
+                            "videoUrl": "https://youtu.be/mbTjdPQQA20"
+                        },
+                        {
+                            "heading": "Why We're Watching",
+                            "bullets": [
+                                "Belts stretch, ring, and need tensioning — direct linear drive removes that whole failure category",
+                                "Closed-loop means the machine knows where the toolhead actually is, not where it should be",
+                                "No GitHub and no files yet — this is a build to watch, not one to copy this weekend",
+                                "We'll dig deeper and report back — if you know this builder or this motor class, come talk to us after"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "growbot-ai-body",
+                    "title": "Give an AI a Body — With Your Phone",
+                    "description": "Art of the Problem's GrowBot puts the robot brain in the device you already own",
+                    "type": "video",
+                    "slides": [
+                        {
+                            "heading": "The Robot Is Already in Your Pocket",
+                            "body": "Art of the Problem's pitch is disarmingly simple: your phone already has the eyes, ears, and inner ear a robot needs — camera, mic, gyroscope, touch, speaker. GrowBot is an AI that wakes up inside the phone, uses those senses, and grows from its own experience. Print it a body and it starts moving through your house. We're building one.",
+                            "videoUrl": "https://youtu.be/mIfmUHiMN3U"
+                        },
+                        {
+                            "heading": "What It Takes",
+                            "bullets": [
+                                "$20 GrowBot Pass, one-time — no subscription; includes the app, brain credits, and step-by-step build instructions",
+                                "Roughly $40 in printed and off-the-shelf parts for the body, or a $99 all-in-one kit",
+                                "Free 5-minute trial before you spend anything",
+                                "The AI gets full sensory use of the phone — it sees, hears, and feels tilt and touch",
+                                "Expect a report from us once ours is walking"
+                            ],
+                            "links": [
+                                {
+                                    "label": "GrowBot at Art of the Problem",
+                                    "url": "https://artoftheproblem.com/pages/growbot-preview"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "curve-cut-premium",
+                    "title": "Curve Cut: A Premium Tier Is in the Works",
+                    "description": "Free stays free — a paid option is coming when the code is ready",
+                    "type": "tool",
+                    "slides": [
+                        {
+                            "heading": "From the Workbench: Going Freemium",
+                            "body": "An update on our curve-slicing tool, and a small announcement: Curve Cut is getting a premium option. The free version stays free — everything you use today keeps working — and the paid tier adds more on top. It has NOT shipped yet: we're still building it out and optimizing the code, and it goes live when it's ready, not before. Same rule as always.",
+                            "link": "https://maxsikorski.github.io/curve-cut/",
+                            "linkLabel": "Try Curve Cut (Free)"
+                        }
+                    ]
+                },
+                {
+                    "id": "new-discord",
+                    "title": "We Have a New Discord — Join Us!",
+                    "description": "The community hangout is live again, and there's more coming",
+                    "type": "text",
+                    "slides": [
+                        {
+                            "heading": "The New Hangout Is Open",
+                            "body": "The revamp we've been promising is here: our new Discord is live. This is where the between-meetup conversation lives — show your prints, ask for help, argue about nozzles. Scan the QR and you're in. This also closes the GitHub issue that's been asking for it — thanks for the push.",
+                            "bullets": [
+                                "Scan the QR or grab the invite link — everyone's welcome",
+                                "We'll also be trying out Buzz by Block alongside it — more on that in a coming week"
+                            ],
+                            "link": "https://discord.gg/GRJs8zzq",
+                            "linkLabel": "Join the Discord",
+                            "links": [
+                                {
+                                    "label": "Buzz",
+                                    "url": "https://buzz.xyz/"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "polymaker-affiliate",
+                    "title": "New: Our Polymaker Affiliate Link",
+                    "description": "15% off your first purchase — and every cent supports the meetup",
+                    "type": "text",
+                    "slides": [
+                        {
+                            "heading": "Filament That Funds the Meetup",
+                            "body": "Full disclosure as always: Polymaker is one of the brands we work with, and we now have an official affiliate link. Use it and you get 15% off your first purchase; every cent of affiliate revenue goes back into running this meetup. Thank you for supporting us — it genuinely keeps the lights on.",
+                            "bullets": [
+                                "15% off — first purchase only",
+                                "All affiliate revenue goes to the meetup",
+                                "Same Polymaker store, same products — the link just credits us"
+                            ],
+                            "link": "https://shop.polymaker.com/MAXSIKORSKI",
+                            "linkLabel": "Polymaker — 15% Off First Order"
+                        }
+                    ]
+                },
+                {
+                    "id": "infinityflow-demo",
+                    "title": "InfinityFlow S1 Plus — Live Demo Tonight",
+                    "description": "Use the whole spool, down to the last gram — no pause, no purge",
+                    "type": "tool",
+                    "slides": [
+                        {
+                            "heading": "The End-of-Spool Problem, Solved?",
+                            "body": "Our 5 kg unit arrived yesterday, so tonight you get a live demo instead of a review of someone else's. The InfinityFlow S1 Plus is a standalone device with one job: when a spool runs out, it feeds the next one — mid-print, no pause, no cutting, no purging. Because it sits outside the printer, it claims to work with any machine: any firmware, any brand, any type. For long and large prints, that's the whole pitch.",
+                            "bullets": [
+                                "Uses literally the last bit of every spool — the end-of-roll graveyard goes away",
+                                "Standalone and printer-agnostic: no firmware mods, adapters listed for Bambu, Elegoo, Creality and more",
+                                "Roller options up to 5 kg spools — ours is the 5 kg setup you'll see tonight",
+                                "$179.99 right now (down from $210.99), about a 1-week lead time",
+                                "Our link gets you an extra $10 off — and yes, watch the demo before you decide"
+                            ],
+                            "link": "https://infinityflow3d.com/products/s1-plus-automatic-filament-loader?ad_id=9x9fB1JzoD",
+                            "linkLabel": "InfinityFlow S1 Plus ($10 Off)"
+                        }
+                    ]
+                },
+                {
+                    "id": "builder-spotlight",
+                    "title": "Builder Spotlight: Rocco's Stuff",
+                    "description": "A fully 3D-printed coin-operated vending machine — free files and all",
+                    "type": "video",
+                    "slides": [
+                        {
+                            "heading": "A Vending Machine You Print",
+                            "body": "This week's spotlight goes to Rocco's Stuff, a channel that builds proper mechanical machines out of printed parts. The star: a fully 3D-printed, coin-operated vending machine for fun-size candy bars — real coin mechanism, real vending coils, and he keeps reinventing it.",
+                            "videoUrl": "https://youtu.be/7GeJV4fl4lU"
+                        },
+                        {
+                            "heading": "The Build — and the Files",
+                            "bullets": [
+                                "Takes US quarters, or the included printable discs if you'd rather not bank real change",
+                                "A keyed door on the back unlocks restocking and the coin drawer",
+                                "July update: Euro-coin mechanisms, an improved lock bolt, doors for stacking multiple units, and a coil redesign that prints support-free",
+                                "The files are FREE on Printables and MakerWorld — print one for your desk, your shop, your kid",
+                                "The channel is all mechanical builds like this — worth a follow"
+                            ],
+                            "links": [
+                                {
+                                    "label": "Rocco's Stuff on Printables",
+                                    "url": "https://www.printables.com/@RoccosStuff/models"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "quick-tip",
+                    "title": "Quick Tip of the Week",
+                    "description": "A dried spool isn't a done spool",
+                    "type": "text",
+                    "slides": [
+                        {
+                            "heading": "Quick Tip: Dryer → Sealed Box, Immediately",
+                            "body": "It's August, it's humid, and here's the part of filament drying nobody tells you: the drying isn't the hard part — keeping it dry is. Nylon and PVA can re-absorb enough moisture to print badly within hours of leaving the dryer; even PLA degrades over a few weeks in open summer air. The fix costs less than a spool:",
+                            "bullets": [
+                                "The moment drying finishes, the spool goes into a sealed container — never onto the shelf 'for now'",
+                                "A cereal container with silica gel and a $5 hygrometer is a real dry box — aim for under 25% RH, under 15% for nylon",
+                                "Indicating silica shows you when it's spent; recharge it in the oven at 120 °C for 1–2 hours, forever",
+                                "Print from the dry box on hygroscopic materials — a feed hole and a PTFE stub is all it takes"
+                            ],
+                            "link": "https://slice-lab.com/en/guide-humidity",
+                            "linkLabel": "Slice Lab's Humidity Guide"
+                        }
+                    ]
+                },
+                {
+                    "id": "community-news",
+                    "title": "Community News & Topics",
+                    "description": "Share what you're interested in talking about!",
+                    "type": "text",
+                    "slides": [
+                        {
+                            "heading": "Next Week's Meetup",
+                            "body": "Find something you're interested in talking about? Share it here and we'll cover it in next week's meetup!",
+                            "link": "https://github.com/MaxSikorski/3d-printing-weekly-news/issues",
+                            "linkLabel": "Submit a Topic"
+                        }
+                    ]
+                }
+            ]
+        },
         "2026-W31": {
             "week": "2026-W31",
             "date": "2026-07-30",
