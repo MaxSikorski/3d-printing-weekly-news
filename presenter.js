@@ -45,7 +45,7 @@
         youtube: 'https://www.youtube.com/@maxwellsikorski4926',
         meetup: 'https://www.meetup.com/3d-printing-club/',
         github: 'https://github.com/MaxSikorski',
-        discord: 'https://discord.gg/GRJs8zzq',
+        discord: 'https://discord.gg/pnFyeAZJsk',
         buzz: 'https://buzz.xyz/'
     };
     function contactMailto(topicTitle) {
@@ -1145,6 +1145,265 @@
     // === Inline fallback data for file:// protocol ===
     // Keep in sync with weeks/2026-W22.json
     const INLINE_WEEKS = {
+        "2026-W33": {
+            "week": "2026-W33",
+            "date": "2026-08-13",
+            "title": "Prusa Goes Gen 2, Bambu Teases Its First Laser & AB 2047's Decision Day",
+            "subtitle": "This week in 3D printing news",
+            "timerMinutes": 20,
+            "topics": [
+                {
+                    "id": "prusa-gen2-refresh",
+                    "title": "Prusa Refreshes the Whole Line: XL+, CORE One+ (Gen 2), CORE One L+",
+                    "description": "Same prices, new hardware — and pending orders upgrade free",
+                    "type": "tool",
+                    "slides": [
+                        {
+                            "heading": "Same Prices, Better Machines",
+                            "body": "Prusa dropped a lineup-wide refresh yesterday: the XL, CORE One and CORE One L all go 'plus', with quality-of-life hardware across the board — and no price increase on any of them. The classiest move is buried in the fine print: every pending order ships as the new version, free.",
+                            "bullets": [
+                                "All three: GT1.5 belts for cleaner surfaces, plus an integrated nozzle wiper for cleaner print starts",
+                                "XL+: 360° part cooling, high-flow nozzles standard, and an eddy-current Tool Offset Sensor — toolhead calibration about 20× faster",
+                                "XL+ chamber rated to 60 °C, with the heater itself still to come",
+                                "CORE One+ (Gen 2): redesigned heatbed mounting kills the 'absorbing heat' wait on beds at 85 °C or lower, plus a snap-on top panel",
+                                "Assembled Gen 2 machines are shipping now — XL+ follows late August",
+                                "Existing owners: upgrade kits land end of August into September, parts also sold individually"
+                            ],
+                            "link": "https://blog.prusa3d.com/better-prints-easier-use-prusa-xl-core-one-l-and-core-one-gen-2-our-big-product-update_137539/",
+                            "linkLabel": "Prusa's Announcement"
+                        },
+                        {
+                            "heading": "The INDX Check-In, Same Post",
+                            "body": "Mid-August was the promised kit window — it's mid-August. The only INDX movement this week came inside the Gen 2 post, and it's thin: 'very soon', again. Our stance hasn't changed since the nozzle mess: wait.",
+                            "bullets": [
+                                "Prusa: the first INDX units are shipping 'very soon' — no confirmed standard-kit deliveries in the wild yet",
+                                "INDX is fully compatible with the Gen 2 machines; CORE One L compatibility is in testing",
+                                "A dedicated State of INDX update post is promised for next week — we'll have it Thursday",
+                                "Also teased in the post: PrusaSlicer 3.0 alpha 'within weeks', an HT Hotend in September, and Prusa Connect Local in early access"
+                            ]
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "Free Gen 2 for pending orders is the anti-Osborne play — should we expect this from every vendor now?",
+                                "CORE One owners in the room: upgrade kit, or is Gen 1 fine for how you print?",
+                                "INDX 'very soon' — after end-of-July became mid-August became this: what would convince you it's actually shipping?"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "bambu-r1-teaser",
+                    "title": "Bambu Teases the R1 — Its First Standalone Laser",
+                    "description": "\"A new Ray of making\" — announced today, coming September",
+                    "type": "tool",
+                    "slides": [
+                        {
+                            "heading": "One More Tool in the Lab",
+                            "body": "Announced this morning across Bambu's channels: the R1, their first standalone laser engraver and cutter, 'coming September'. The page is a tagline, a signup form, and a render of a laser cutting the Bambu logo through light wood — that's the entire official record, so resist the spec rumors until there's a spec sheet.",
+                            "bullets": [
+                                "First standalone laser from Bambu — the H2D already does laser, but only as a combo ($2,149 with 10W, $2,699 with 40W)",
+                                "No price, no specs, no date beyond 'September' — email signup is live now",
+                                "The obvious read: Bambu wants the xTool/Glowforge crowd inside its ecosystem",
+                                "Laser folks in the room — what would the R1 need to pull you over?"
+                            ],
+                            "link": "https://bambulab.com/en/r1",
+                            "linkLabel": "Bambu Lab R1"
+                        }
+                    ]
+                },
+                {
+                    "id": "ab-2047-decision-day",
+                    "title": "AB 2047: Decision Day Was Today",
+                    "description": "The suspense-file vote happened this afternoon — the record posts tonight",
+                    "type": "discussion",
+                    "slides": [
+                        {
+                            "heading": "Advance or Die — Decided Hours Ago",
+                            "body": "The make-or-break moment we flagged last week landed on meetup day: Senate Appropriations ran its vote-only suspense hearing today. AB 2047 — the bill requiring DOJ-certified 'firearm blocking technology' on every 3D printer sold in California — either advanced to the Senate floor this afternoon or died in the file. As we built this deck, the official record hadn't posted yet; it usually appears overnight. Scan the tracker and we'll check together.",
+                            "bullets": [
+                                "Suspense file rules: one vote, no debate — bills either move to the floor or quietly stop existing",
+                                "The hearing was today, against a Friday Aug 14 deadline; the session itself ends August 31",
+                                "If it advanced, the floor vote comes fast — then the governor's desk",
+                                "How to check: the CalMatters tracker on the QR, or the official Bill History page — or just search 'AB 2047'",
+                                "It has cleared every prior hurdle: the full Assembly, Senate Judiciary, and Public Safety 5–1"
+                            ],
+                            "link": "https://calmatters.digitaldemocracy.org/bills/ca_202520260ab2047",
+                            "linkLabel": "AB 2047 Live Tracker",
+                            "links": [
+                                {
+                                    "label": "Official Bill History",
+                                    "url": "https://leginfo.legislature.ca.gov/faces/billHistoryClient.xhtml?bill_id=202520260AB2047"
+                                },
+                                {
+                                    "label": "Joel's Action Hub",
+                                    "url": "https://www.the3dprintingnerd.com/ab2047"
+                                },
+                                {
+                                    "label": "EFF's Analysis",
+                                    "url": "https://www.eff.org/deeplinks/2026/06/we-can-still-stop-californias-3d-printer-surveillance-scheme"
+                                }
+                            ]
+                        },
+                        {
+                            "heading": "Discussion",
+                            "bullets": [
+                                "Suspense kills bills over cost, not principle — if this died today, it died over enforcement budgets. Does that feel like a win?",
+                                "If it advanced: floor vote within two weeks. What's left for the opposition — Průša, VORON, Make, Joel, EFF — to throw at it?",
+                                "If it died: it can come back next session, and copycat bills in other states are the real long game. Who's watching their own statehouse?"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "m1d-follow-up",
+                    "title": "Sovol M1D: $3.4M With 13 Days Left",
+                    "description": "Live numbers from the campaign we backed twice",
+                    "type": "text",
+                    "slides": [
+                        {
+                            "heading": "Still Climbing",
+                            "body": "We read the Kickstarter page live this afternoon: $3,435,700 pledged from 2,173 backers, 13 days to go. The campaign closes Thursday, August 27 at 10 AM Eastern, deliveries are still estimated for November, and our two orders stand. Same disclaimer as always — it's a pledge, not a purchase. The QR has the live total; it's moved since we wrote this.",
+                            "link": "https://www.kickstarter.com/projects/sovol/sovol-m1d-idex-tool-changing-3d-printer",
+                            "linkLabel": "M1D on Kickstarter",
+                            "product": "sovol-m1d"
+                        }
+                    ]
+                },
+                {
+                    "id": "yudx-tool-changer",
+                    "title": "YUDX: The INDX You Can Build Today",
+                    "description": "A college builder open-sourced a 7-tool changer — files, BOM and all",
+                    "type": "tool",
+                    "slides": [
+                        {
+                            "heading": "While Everyone Waits on Kits…",
+                            "body": "…a builder called Dumpling lab put a complete toolchanger on GitHub. YUDX went open source August 5 under GPL-3.0: a 7-tool changer that mounts on a VORON, with every file you need to build one this weekend. It plays the same one-motor-runs-every-tool trick as INDX — but the demo video is from last December, before the INDX hype cycle, and the execution is its own thing.",
+                            "videoUrl": "https://youtu.be/G3__Ysn6-TI"
+                        },
+                        {
+                            "heading": "What's Actually in the Repo",
+                            "bullets": [
+                                "Seven swappable toolheads on magnet-seat docks — 32 neodymium magnets and steel balls do the kinematic coupling — running Bambu hotends",
+                                "One 36 mm stepper drives every tool, through mirrored one-way-bearing gearboxes on the carriage — no motor per head",
+                                "A 42-page illustrated assembly PDF, STLs, STEP models, sample G-code, and a full BOM with Amazon links",
+                                "The BOM's own note: the Amazon links were 'found by Claude Code' — the builder put an AI to work on parts sourcing",
+                                "A finished extruder kit 'may be released in the coming months' — but nothing stops a scratch build now",
+                                "GPL-3.0: fork it, improve it, share it back. Who's first in the club to try?"
+                            ],
+                            "links": [
+                                {
+                                    "label": "Watch the YUDX Demo",
+                                    "url": "https://youtu.be/G3__Ysn6-TI"
+                                },
+                                {
+                                    "label": "YUDX on GitHub",
+                                    "url": "https://github.com/dumplinglab/YUDX-tool-changer"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "polymaker-affiliate",
+                    "title": "Polymaker Affiliate: Our First Sale, Full Circle",
+                    "description": "Someone used the link — and you'll meet him in two slides",
+                    "type": "text",
+                    "slides": [
+                        {
+                            "heading": "It Works — and It Came From This Room",
+                            "body": "A follow-up on last week's announcement, with the best possible proof it works: our Polymaker affiliate link recorded its first sale — and the buyer is tonight's Builder Spotlight. Ben used it to order HT-PLA Pro for the exact build you're about to see. Full disclosure, same as always: 15% off your first purchase, and every cent of affiliate revenue goes back into running this meetup.",
+                            "bullets": [
+                                "15% off — first purchase only",
+                                "All affiliate revenue funds the meetup — thank you, Ben, for sale number one",
+                                "Same Polymaker store, same products — the link just credits us",
+                                "Heads-up: HT-PLA Pro itself is backordered right now — orders queue and ship when it restocks"
+                            ],
+                            "link": "https://shop.polymaker.com/MAXSIKORSKI",
+                            "linkLabel": "Polymaker — 15% Off First Order"
+                        }
+                    ]
+                },
+                {
+                    "id": "builder-spotlight",
+                    "title": "Builder Spotlight: Ben's 3D-Printed Glasses",
+                    "description": "His frames broke — so he printed better ones",
+                    "type": "tool",
+                    "slides": [
+                        {
+                            "heading": "Ben Printed His Own Glasses",
+                            "body": "This week's spotlight is Ben — Horizon-3D on our GitHub. His frames broke, so he and a friend made it a challenge: no buying replacements, print them. He modeled the lenses from photos and measurements, built the frames around them, and he's wearing the result right now. He's here tonight.",
+                            "imageUrls": [
+                                "photos/w33-ben-glasses-1.jpg",
+                                "photos/w33-ben-glasses-2.jpg",
+                                "photos/w33-ben-glasses-3.jpg"
+                            ],
+                            "link": "https://github.com/MaxSikorski/3d-printing-weekly-news/issues/4",
+                            "linkLabel": "Ben's Full Write-Up"
+                        },
+                        {
+                            "heading": "The Workflow: Frames Break → Print Your Own",
+                            "body": "The part worth stealing. If your frames ever break, this is the whole recipe — follow along and ask Ben the hard questions tonight:",
+                            "bullets": [
+                                "Trace your lenses — photograph them flat, take careful measurements",
+                                "Into CAD: trace the lens outline, then design and extrude the frame around it",
+                                "Measure the old frames' geometry — the angles, the lens spacing, the arm length — and carry those numbers over",
+                                "Print the frames beefier than the originals — thin injection-molded shapes don't survive as prints",
+                                "Heat-form the fit: gentle heat softens the plastic just enough to bend the nose bridge and arms ever so slightly — hold until cool",
+                                "Assemble: heat-set inserts, small bolts, a drop of threadlocker — done"
+                            ]
+                        },
+                        {
+                            "heading": "The Build, Up Close",
+                            "body": "Hinge hardware and the finished fit — and in his words: 'Im really proud of it.' He should be.",
+                            "bullets": [
+                                "Hinges: heat-set inserts and M2.5 bolts, threadlocked so they stay put",
+                                "The material journey: PETG snapped within minutes of wearing, regular PLA can't take the heat — PLA Pro is holding today, with a Polymaker HT-PLA Pro reprint queued"
+                            ],
+                            "imageUrls": [
+                                "photos/w33-ben-glasses-4.jpg",
+                                "photos/w33-ben-glasses-5.jpg"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "quick-tip",
+                    "title": "Quick Tip of the Week",
+                    "description": "Bend it like Ben — heat-forming printed parts",
+                    "type": "text",
+                    "slides": [
+                        {
+                            "heading": "Quick Tip: Your Print Isn't Final — Heat It",
+                            "body": "PLA goes rubbery around 60–70 °C, and that's a feature. A blow dryer or a dip in hot water softens a printed part just enough to bend it against a form — exactly how Ben fitted his glasses to his face. The print doesn't have to come off the bed in its final shape.",
+                            "bullets": [
+                                "Blow dryer for local tweaks, near-boiling water for even all-over softening — either gets you there",
+                                "Bend slightly past your target and hold until cool — plastic springs back a little",
+                                "Cold water locks the new shape instantly",
+                                "Overdid it? Reheat: PLA has shape memory and creeps back toward its printed form — you get retries",
+                                "Skip it on precision or load-bearing parts — bending stresses the layer bonds"
+                            ],
+                            "link": "https://www.instructables.com/Shaping-PLA-through-boiling/",
+                            "linkLabel": "Shaping PLA: the How-To"
+                        }
+                    ]
+                },
+                {
+                    "id": "community-news",
+                    "title": "Community News & Topics",
+                    "description": "Share what you're interested in talking about!",
+                    "type": "text",
+                    "slides": [
+                        {
+                            "heading": "Next Week's Meetup",
+                            "body": "Find something you're interested in talking about? Share it here and we'll cover it in next week's meetup!",
+                            "link": "https://github.com/MaxSikorski/3d-printing-weekly-news/issues",
+                            "linkLabel": "Submit a Topic"
+                        }
+                    ]
+                }
+            ]
+        },
         "2026-W32": {
             "week": "2026-W32",
             "date": "2026-08-06",
@@ -1354,7 +1613,7 @@
                                 "Scan the QR or grab the invite link — everyone's welcome",
                                 "We'll also be trying out Buzz by Block alongside it — more on that in a coming week"
                             ],
-                            "link": "https://discord.gg/GRJs8zzq",
+                            "link": "https://discord.gg/pnFyeAZJsk",
                             "linkLabel": "Join the Discord",
                             "links": [
                                 {
