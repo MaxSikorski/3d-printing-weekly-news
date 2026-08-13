@@ -2,7 +2,7 @@
 
 A weekly news and discussion presentation for our local 3D printing meetup group. Each week we cover the latest printers, slicers, materials, community drama, and cool builds — then open the floor for discussion.
 
-**[View the Presentations](https://MaxSikorski.github.io/3d-printing-weekly-news)** &nbsp;·&nbsp; **[Join the Meetup](https://www.meetup.com/3d-printing-club/)** &nbsp;·&nbsp; **[Work With Us](mailto:3dmax.ow6p08%40bumpmail.io?subject=3D%20Printing%20Weekly%20%E2%80%94%20Work%20With%20You%20(print%20farm%20%2F%20R%26D%20%2F%20CAD)&body=Hi%20Max%2C%0A%0AI'd%20like%20to%20talk%20about%20working%20together%20%E2%80%94%20print%20farm%20%2F%20R%26D%20%2F%20manufacturing%20%2F%20CAD%20classes.%0A%0A)** &nbsp;·&nbsp; **[Discord](https://discord.gg/GRJs8zzq)**
+**[View the Presentations](https://MaxSikorski.github.io/3d-printing-weekly-news)** &nbsp;·&nbsp; **[Join the Meetup](https://www.meetup.com/3d-printing-club/)** &nbsp;·&nbsp; **[Work With Us](mailto:3dmax.ow6p08%40bumpmail.io?subject=3D%20Printing%20Weekly%20%E2%80%94%20Work%20With%20You%20(print%20farm%20%2F%20R%26D%20%2F%20CAD)&body=Hi%20Max%2C%0A%0AI'd%20like%20to%20talk%20about%20working%20together%20%E2%80%94%20print%20farm%20%2F%20R%26D%20%2F%20manufacturing%20%2F%20CAD%20classes.%0A%0A)** &nbsp;·&nbsp; **[Discord](https://discord.gg/zhYWfP47r)**
 
 ---
 
@@ -25,7 +25,7 @@ We meet weekly on Meetup.com and are on Discord (Buzz soon). All skill levels ar
 
 **[meetup.com/3d-printing-club](https://www.meetup.com/3d-printing-club/)**
 
-**[Discord: 3D Printing Club](https://discord.gg/GRJs8zzq)**
+**[Discord: 3D Printing Club](https://discord.gg/zhYWfP47r)**
 
 ---
 
