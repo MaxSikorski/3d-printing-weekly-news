@@ -1127,6 +1127,237 @@ button.card:hover .card-arrow {
     border-radius: 12px;
 }
 
+/* === Share (engine-level) — per-topic share button + share sheet (S) === */
+.slide-share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    opacity: 0.35;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding: 6px 0;
+    transition: opacity 0.3s ease;
+}
+
+.slide-share-btn:hover {
+    opacity: 0.8;
+}
+
+.slide-share-btn:active {
+    transform: scale(0.97);
+}
+
+.share-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 210;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.share-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.share-sheet {
+    position: fixed;
+    left: 50%;
+    bottom: 90px;
+    transform: translate(-50%, 24px);
+    width: min(600px, calc(100vw - 32px));
+    background: var(--card-bg);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid var(--card-border);
+    border-radius: 24px;
+    padding: 28px;
+    z-index: 211;
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.share-sheet.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+
+.share-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(128, 128, 128, 0.2);
+    border: none;
+    color: var(--text-color);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.share-close:hover {
+    background: rgba(128, 128, 128, 0.4);
+}
+
+.share-title {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+}
+
+.share-topic-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    padding-right: 40px;
+}
+
+.share-main {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.share-qr {
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.share-qr canvas {
+    display: block;
+    border-radius: 12px;
+}
+
+.share-qr-label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-top: 8px;
+}
+
+.share-right {
+    flex: 1;
+    min-width: 0;
+}
+
+.share-link-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    padding: 10px 12px 10px 16px;
+    margin-bottom: 16px;
+}
+
+.share-link-text {
+    flex: 1;
+    min-width: 0;
+    font-family: "SF Mono", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.share-copy-btn {
+    flex-shrink: 0;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    border-radius: 30px;
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.share-copy-btn:hover {
+    background: var(--btn-hover);
+}
+
+.share-copy-btn:active {
+    transform: scale(0.97);
+}
+
+.share-targets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.share-target {
+    background: var(--btn-sec-bg);
+    color: var(--btn-sec-text);
+    border: 1px solid var(--card-border);
+    border-radius: 30px;
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.share-target:hover {
+    background: var(--btn-sec-hover);
+    border-color: var(--btn-sec-border);
+}
+
+.share-target:active {
+    transform: scale(0.97);
+}
+
+@media (max-width: 768px) {
+    .share-sheet {
+        bottom: 78px;
+        padding: 22px;
+    }
+
+    .share-main {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    /* The QR is a projector/in-room affordance — on phones the buttons do the work */
+    .share-qr {
+        display: none;
+    }
+
+    .share-target {
+        padding: 12px 18px;
+    }
+}
+
 .qr-label {
     font-size: 0.7rem;
     font-weight: 500;

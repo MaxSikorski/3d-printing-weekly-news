@@ -601,6 +601,20 @@
                     slideHTML += `<div class="slide-affiliate-group">${affHTML}<span class="affiliate-note">${window.AFFILIATE_DISCLOSURE || 'Some links may be affiliate links.'}</span></div>`;
                 }
 
+                // Share (engine-level, 2026-08-13 — community request, GitHub issue #6):
+                // every topic's FIRST slide carries a quiet share affordance; S opens the sheet.
+                if (slideIndex === 0) {
+                    slideHTML += `
+                        <button type="button" class="slide-share-btn" data-topic-id="${topic.id}" aria-label="Share this topic" title="Share this topic (S)">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+                                <line x1="8.59" y1="10.49" x2="15.42" y2="6.51"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                            </svg>
+                            <span>Share</span>
+                        </button>
+                    `;
+                }
+
                 slideHTML += '</div>';
                 slide.innerHTML = slideHTML;
 
@@ -831,7 +845,7 @@
         });
 
         // Animate inner elements stagger
-        const innerElements = nextSlideEl.querySelectorAll('.slide-topic-badge, .slide-heading, .slide-body, .slide-bullets li, .slide-link, .video-container, .topic-card, .connect-links');
+        const innerElements = nextSlideEl.querySelectorAll('.slide-topic-badge, .slide-heading, .slide-body, .slide-bullets li, .slide-link, .video-container, .topic-card, .connect-links, .slide-share-btn');
         if (innerElements.length > 0) {
             gsap.set(innerElements, { opacity: 0, y: 15 });
             gsap.to(innerElements, {
@@ -849,6 +863,9 @@
             });
             nextSlideEl.querySelectorAll('.slide-bullets li').forEach(el => {
                 gsap.to(el, { opacity: 0.85, duration: 0.6, ease: 'power4.out', delay: 0.3 });
+            });
+            nextSlideEl.querySelectorAll('.slide-share-btn').forEach(el => {
+                gsap.to(el, { opacity: 0.35, duration: 0.6, ease: 'power4.out', delay: 0.3 });
             });
         }
 
@@ -968,6 +985,142 @@
         }
     }
 
+    // === Share (engine-level) — per-topic deep links + share sheet (S) ===
+    // Added 2026-08-13 (community request — GitHub issue #6). Links are built from
+    // window.location, so they follow the site wherever it lives: GitHub Pages today,
+    // the Vercel mirror, or a future custom domain — no hardcoded host anywhere.
+    let shareOpen = false;
+    let shareSheet = null, shareOverlay = null;
+
+    function shareUrlFor(topicId) {
+        const params = new URLSearchParams(window.location.search);
+        const week = params.get('week') || (weekData && weekData.week) || '';
+        let url = `${window.location.origin}${window.location.pathname}?week=${encodeURIComponent(week)}`;
+        if (topicId) url += `&topic=${encodeURIComponent(topicId)}`;
+        return url;
+    }
+
+    function buildShareSheet() {
+        shareOverlay = document.createElement('div');
+        shareOverlay.className = 'share-overlay';
+        shareSheet = document.createElement('div');
+        shareSheet.className = 'share-sheet';
+        shareSheet.setAttribute('role', 'dialog');
+        shareSheet.setAttribute('aria-label', 'Share');
+        shareSheet.innerHTML = `
+            <button type="button" class="share-close" aria-label="Close share">&times;</button>
+            <p class="share-title">Share</p>
+            <p class="share-topic-title"></p>
+            <div class="share-main">
+                <div class="share-qr">
+                    <canvas></canvas>
+                    <p class="share-qr-label">Scan to open</p>
+                </div>
+                <div class="share-right">
+                    <div class="share-link-row">
+                        <span class="share-link-text"></span>
+                        <button type="button" class="share-copy-btn">Copy Link</button>
+                    </div>
+                    <div class="share-targets"></div>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(shareOverlay);
+        document.body.appendChild(shareSheet);
+        shareOverlay.addEventListener('click', closeShare);
+        shareSheet.querySelector('.share-close').addEventListener('click', closeShare);
+        shareSheet.querySelector('.share-copy-btn').addEventListener('click', (e) => {
+            copyShareLink(e.currentTarget.dataset.url || '', e.currentTarget);
+        });
+    }
+
+    function copyShareLink(url, btn) {
+        const done = () => {
+            btn.textContent = 'Copied ✓';
+            setTimeout(() => { btn.textContent = 'Copy Link'; }, 1600);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(url).then(done).catch(() => fallbackCopy(url, done));
+        } else {
+            fallbackCopy(url, done);
+        }
+    }
+
+    function fallbackCopy(text, done) {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); } catch (e) { /* best effort */ }
+        ta.remove();
+        done();
+    }
+
+    function buildShareTargets(container, url, title) {
+        const eUrl = encodeURIComponent(url);
+        const eTitle = encodeURIComponent(title);
+        let html = '';
+        if (navigator.share) {
+            html += `<button type="button" class="share-target" data-native="true">Share…</button>`;
+        }
+        html += `
+            <a class="share-target" href="mailto:?subject=${eTitle}&body=${eTitle}%0A%0A${eUrl}">Email</a>
+            <a class="share-target" href="https://twitter.com/intent/tweet?text=${eTitle}&url=${eUrl}" target="_blank" rel="noopener noreferrer">X</a>
+            <a class="share-target" href="https://www.facebook.com/sharer/sharer.php?u=${eUrl}" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a class="share-target" href="https://www.linkedin.com/sharing/share-offsite/?url=${eUrl}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="share-target" href="https://www.reddit.com/submit?url=${eUrl}&title=${eTitle}" target="_blank" rel="noopener noreferrer">Reddit</a>
+            <a class="share-target" href="https://wa.me/?text=${eTitle}%20${eUrl}" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        `;
+        container.innerHTML = html;
+        const nativeBtn = container.querySelector('[data-native]');
+        if (nativeBtn) {
+            nativeBtn.addEventListener('click', () => {
+                navigator.share({ title: title, url: url }).catch(() => { /* user closed the native sheet */ });
+            });
+        }
+    }
+
+    function openShare(topicId) {
+        if (!shareSheet) buildShareSheet();
+        // No explicit topic → share the current slide's topic; on title/overview/finale, the week
+        if (topicId === undefined || topicId === null || topicId === '') {
+            topicId = slides[currentSlide] ? slides[currentSlide].topicId : null;
+        }
+        const slideMeta = topicId ? slides.find(s => s.topicId === topicId) : null;
+        const topicTitle = slideMeta ? slideMeta.topicTitle : null;
+        const url = shareUrlFor(topicId);
+        const shareTitle = topicTitle ? `${topicTitle} — 3D Printing Weekly` : `${weekData ? weekData.title : '3D Printing Weekly'}`;
+
+        shareSheet.querySelector('.share-topic-title').textContent = topicTitle || (weekData ? weekData.title : '');
+        shareSheet.querySelector('.share-link-text').textContent = url.replace(/^https?:\/\//, '');
+        shareSheet.querySelector('.share-copy-btn').dataset.url = url;
+        generateQR(url, shareSheet.querySelector('.share-qr canvas'), 132);
+        buildShareTargets(shareSheet.querySelector('.share-targets'), url, shareTitle);
+
+        shareOpen = true;
+        shareOverlay.classList.add('open');
+        shareSheet.classList.add('open');
+    }
+
+    function closeShare() {
+        if (!shareOpen) return;
+        shareOpen = false;
+        shareOverlay.classList.remove('open');
+        shareSheet.classList.remove('open');
+    }
+
+    function toggleShare() {
+        if (shareOpen) closeShare();
+        else openShare();
+    }
+
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.slide-share-btn');
+        if (btn) openShare(btn.dataset.topicId);
+    });
+
     // === TOC ===
     function buildTOC(data) {
         tocList.innerHTML = '';
@@ -1057,7 +1210,9 @@
                 break;
             case 'Escape':
                 e.preventDefault();
-                if (tocOpen) {
+                if (shareOpen) {
+                    closeShare();
+                } else if (tocOpen) {
                     closeTOC();
                 } else {
                     goToOverview();
@@ -1072,6 +1227,11 @@
             case 'Q':
                 e.preventDefault();
                 toggleQR();
+                break;
+            case 's':
+            case 'S':
+                e.preventDefault();
+                toggleShare();
                 break;
             case 'r':
             case 'R':
@@ -1094,7 +1254,7 @@
 
     presentation.addEventListener('touchstart', (e) => {
         // Single-finger only, and not while an overlay is open
-        if (e.touches.length !== 1 || tocOpen || qrVisible) { touchTracking = false; return; }
+        if (e.touches.length !== 1 || tocOpen || qrVisible || shareOpen) { touchTracking = false; return; }
         touchTracking = true;
         touchStartX = e.touches[0].clientX;
         touchStartY = e.touches[0].clientY;
@@ -4614,6 +4774,19 @@
 
             // Show keyboard hints briefly
             setTimeout(showKeyboardHints, 2000);
+
+            // Deep link (share feature): ?topic=<id> lands on that topic's first slide.
+            // A shared link shouldn't start the meetup timer — suppress autostart for the jump.
+            const topicParam = params.get('topic');
+            if (topicParam) {
+                const idx = slides.findIndex(s => s.topicId === topicParam);
+                if (idx > 0) {
+                    const wasStarted = timerStarted;
+                    timerStarted = true;
+                    goToSlide(idx, 1);
+                    timerStarted = wasStarted;
+                }
+            }
         }
 
         // Try fetch first (GitHub Pages / HTTP), fall back to inline data (file://)
