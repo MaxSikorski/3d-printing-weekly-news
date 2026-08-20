@@ -1305,6 +1305,329 @@
     // === Inline fallback data for file:// protocol ===
     // Keep in sync with weeks/2026-W22.json
     const INLINE_WEEKS = {
+        "2026-W34": {
+            "week": "2026-W34",
+            "date": "2026-08-20",
+            "title": "AB 2047 Advances, Bambu's Toolchanger Patents & Lasers Fix Weak Z-Layers",
+            "subtitle": "This week in 3D printing news",
+            "timerMinutes": 20,
+            "topics": [
+                {
+                    "id": "ab-2047-advances",
+                    "title": "AB 2047 Advanced — and It's Not Alone",
+                    "description": "Through the suspense file 5–2; floor vote by August 31 — plus the state-by-state wave",
+                    "type": "discussion",
+                    "slides": [
+                        {
+                            "heading": "AB 2047 Advanced: It's Through — Floor Vote by August 31",
+                            "body": "Last week we ended the night not knowing. Here's the answer: Senate Appropriations pulled AB 2047 off the suspense file on August 13 and voted it through, 5–2, 'do pass as amended.' The printer-blocking bill heads to the full Senate floor — and the session ends August 31, so this resolves within eleven days.",
+                            "bullets": [
+                                "Survived the suspense file 5–2 — the cost hurdle that quietly kills bills didn't kill this one",
+                                "Next: Senate floor vote before the August 31 session end, then Assembly concurrence, then Newsom's desk",
+                                "It has now cleared every committee it faced",
+                                "Same QR as last week — the tracker updates the moment the floor votes"
+                            ],
+                            "link": "https://calmatters.digitaldemocracy.org/bills/ca_202520260ab2047",
+                            "linkLabel": "AB 2047 Live Tracker",
+                            "links": [
+                                {
+                                    "label": "Official Bill History",
+                                    "url": "https://leginfo.legislature.ca.gov/faces/billHistoryClient.xhtml?bill_id=202520260AB2047"
+                                },
+                                {
+                                    "label": "Joel's Action Hub",
+                                    "url": "https://www.the3dprintingnerd.com/ab2047"
+                                },
+                                {
+                                    "label": "EFF's Analysis",
+                                    "url": "https://www.eff.org/deeplinks/2026/06/we-can-still-stop-californias-3d-printer-surveillance-scheme"
+                                }
+                            ]
+                        },
+                        {
+                            "heading": "What the Law Would Actually Do",
+                            "body": "We read the amended text, not the headlines. It targets businesses selling printers in California, and it phases in over three years.",
+                            "bullets": [
+                                "Any business that sells, distributes, or transfers a 3D printer in California must ship it with 'firearm blocking technology'",
+                                "The mechanism: the printer refuses every print job until a 'firearm blueprint detection algorithm' has screened the file",
+                                "Timeline: DOJ standards Sept 2028 → manufacturer attestations March 2029 → approved-printer list June 2029 → sales ban December 1, 2029",
+                                "Teeth: civil penalties up to $25,000 per violation",
+                                "The industry's core objection: no one has demonstrated a detection algorithm that reliably works"
+                            ],
+                            "link": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB2047",
+                            "linkLabel": "Read the Bill Text"
+                        },
+                        {
+                            "heading": "What It Means for You",
+                            "body": "The questions the room actually has: your printers, your used market, your imports — and the prop-shop exemption everyone's heard about, which is narrower than the rumor.",
+                            "bullets": [
+                                "Printers you already own: untouched — the ban is on new sales, not possession",
+                                "Used market: private resale stays legal for printers bought before the approved list publishes in June 2029",
+                                "Overseas vs US brands: no difference — the duty falls on whoever sells in California, so imports comply the same as domestic machines",
+                                "Exemptions: licensed firearm manufacturers, law enforcement — and prop shops, with a catch",
+                                "The prop catch: only printers 'manufactured for and sold exclusively to' stagecraft and propmaking studios qualify — it's who the printer is sold to, not what you use it for, and Hollywood shops running off-the-shelf machines say that covers none of theirs"
+                            ],
+                            "link": "https://hoodline.com/2026/07/hollywood-prop-shops-blast-sacramento-s-3d-printer-gun-crackdown/",
+                            "linkLabel": "Hollywood's Objection"
+                        },
+                        {
+                            "heading": "It's Not Just California",
+                            "body": "The copycat wave is the long game. Two states have live bills on the AB 2047 model, and six already enacted printed-gun laws this year.",
+                            "bullets": [
+                                "Washington: HB 2320 requires a license to 3D-print firearm frames; HB 2321 mandates blueprint-detection on every printer sold in the state — the AB 2047 model",
+                                "New York: Hochul's 2026 agenda pairs criminal penalties for printed-gun manufacture with mandatory blocking standards for printer makers",
+                                "Oregon: nothing new this year — existing law only",
+                                "Enacted somewhere in 2026: Colorado, Maine, New Jersey, New York, Virginia and Washington all tightened printed-gun or ghost-gun rules",
+                                "Discussion: if California and Washington both mandate detection algorithms, does the whole US market end up shipping compliant printers?",
+                                "Who's watching your statehouse?"
+                            ],
+                            "link": "https://stateline.org/2026/06/11/more-states-restrict-3d-printed-firearms/",
+                            "linkLabel": "Stateline: The National Map",
+                            "links": [
+                                {
+                                    "label": "Washington's Bills",
+                                    "url": "https://www.geekwire.com/2026/proposals-take-aim-at-3d-printing-tech-to-strengthen-washington-state-laws-against-ghost-guns/"
+                                },
+                                {
+                                    "label": "New York's Proposal",
+                                    "url": "https://www.governor.ny.gov/news/keeping-new-yorkers-safe-governor-hochul-announces-nation-leading-proposals-crack-down-3d"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "toolchanger-wars",
+                    "title": "Toolchanger Wars: Bambu Shows Its Hand",
+                    "description": "Patents point past Vortek, U1 beats Creator 5, and the M1D goes quiet",
+                    "type": "tool",
+                    "slides": [
+                        {
+                            "heading": "Toolchanger Wars: Bambu's Paper Trail Points Past Vortek",
+                            "body": "Patent applications from Bambu's parent company published August 14 — filed June 30, one claiming priority back to November 2025. They describe a dock where the toolhead parks and picks up swappable print units in a single motion: unlock and seat in one stroke, with drawings showing a nine-bay rack.",
+                            "bullets": [
+                                "CN122560412A/413A, 'Holder and 3D Printer': the toolhead orients, moves onto the dock, and one motion unlocks the unit and seats it in the rack",
+                                "Coverage splits on how big a deal it is: some read a full printhead changer, others a nine-bay hotend rack — either way it goes beyond the H2C's Vortek swap",
+                                "A patent isn't a product announcement — read it as direction, not a launch",
+                                "Meanwhile: the R1 laser page still says only 'Coming September' — full specs due within days"
+                            ],
+                            "link": "https://www.fabbaloo.com/news/nine-bambu-lab-patents-reveal-broader-printer-architecture",
+                            "linkLabel": "Fabbaloo on the Patents",
+                            "links": [
+                                {
+                                    "label": "The Nine-Bay Rack Read",
+                                    "url": "https://3dprintingcostcalculator.com/news/bambu-lab-hotend-rack-patent"
+                                }
+                            ]
+                        },
+                        {
+                            "heading": "Head to Head: Snapmaker U1 vs Flashforge Creator 5 Pro",
+                            "body": "The shipping toolchangers are already fighting it out. Mitsu Makes ran both — and the tiebreaker isn't just print quality.",
+                            "videoUrl": "https://youtu.be/YHkD1y8H6NA"
+                        },
+                        {
+                            "heading": "The Verdict — and the License Problem",
+                            "bullets": [
+                                "Mitsu's verdict after running both: the U1 takes overall quality",
+                                "The other axis is openness: Flashforge ships modified Klipper while claiming '100% closed source, no Klipper code' — the community has documented the GPL problem since 2023",
+                                "Snapmaker is open about the U1's Klipper base and gives users firmware access",
+                                "Buying between these two? Quality and license behavior are both on the table"
+                            ],
+                            "links": [
+                                {
+                                    "label": "Watch the Full Review",
+                                    "url": "https://youtu.be/YHkD1y8H6NA"
+                                },
+                                {
+                                    "label": "The Klipper GPL Thread",
+                                    "url": "https://klipper.discourse.group/t/flashforge-klipper-license-violation/13313"
+                                }
+                            ]
+                        },
+                        {
+                            "heading": "The Rest of the Field",
+                            "body": "Sovol's M1D closes out next Thursday — and the surge is over. Read live off the Kickstarter page this afternoon: the campaign that raised $1M in 13 minutes has added three backers in a week.",
+                            "bullets": [
+                                "M1D: $3,440,335 from 2,176 backers, 6 days to go — up just $4,600 and 3 backers since last Thursday",
+                                "Aurora Tech's in-depth review is out — worth the watch before the campaign closes (QR'd below)",
+                                "Our take, posted in the comments: the open-source story is great, but expect some layer-stacking and Z-banding next to Bambu — if the H2C is a 10, call the M1D a 7 or 8",
+                                "Campaign ends Thursday August 27, 10 AM Eastern — the final total lands by next meetup; November delivery estimate stands, as do our two orders",
+                                "INDX: the promised 'State of INDX' post never published — third-party word says nozzle manufacturing still constrains kit shipping; our stance stays WAIT"
+                            ],
+                            "link": "https://www.kickstarter.com/projects/sovol/sovol-m1d-idex-tool-changing-3d-printer",
+                            "linkLabel": "M1D on Kickstarter",
+                            "product": "sovol-m1d",
+                            "links": [
+                                {
+                                    "label": "Aurora Tech's M1D Review",
+                                    "url": "https://youtu.be/LHxx4_c6y38?t=882"
+                                },
+                                {
+                                    "label": "M1D on Kickstarter",
+                                    "url": "https://www.kickstarter.com/projects/sovol/sovol-m1d-idex-tool-changing-3d-printer"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "laser-z-layers",
+                    "title": "Lasers vs the Z-Layer Problem",
+                    "description": "Two lasers on the toolhead — and the weakest direction nearly disappears",
+                    "type": "video",
+                    "slides": [
+                        {
+                            "heading": "Lasers vs Z-Layers: Welding Instead of Stacking",
+                            "body": "The channel I Changed a thing mounted two lasers beside the hotend to remelt the previous layer an instant before the next one lands — so the new layer welds on instead of just sticking. It's the closest an FDM print has come to isotropic.",
+                            "videoUrl": "https://youtu.be/Z4Z035srbKI"
+                        },
+                        {
+                            "heading": "The Results",
+                            "bullets": [
+                                "Z-direction strength reaches 94% of X-strength in ABS, about 78% in PLA",
+                                "The trick: the laser preheats only the line about to be printed over — not the whole part",
+                                "Hackaday picked it up this Sunday — the idea is officially loose in the community"
+                            ],
+                            "links": [
+                                {
+                                    "label": "Watch the Build",
+                                    "url": "https://youtu.be/Z4Z035srbKI"
+                                },
+                                {
+                                    "label": "Hackaday's Writeup",
+                                    "url": "https://hackaday.com/2026/08/16/laser-layers-for-almost-isotropicly-strong-prints/"
+                                }
+                            ]
+                        },
+                        {
+                            "heading": "Same Lasers, Second Job: Smoothing",
+                            "body": "Same builder, same hardware, different target: pointing the laser at finished top surfaces instead of nozzle ironing. Early results — promising, still needs tuning.",
+                            "videoUrl": "https://youtu.be/vpd5nh9Lj98"
+                        }
+                    ]
+                },
+                {
+                    "id": "printabot-petg-rails",
+                    "title": "Printabot's Printed Rails Hold 50 Pounds",
+                    "description": "PETG linear rails, round two — and he's agreed to come talk to us",
+                    "type": "video",
+                    "slides": [
+                        {
+                            "heading": "Printabot: Printed Linear Rails, Round Two",
+                            "body": "Printabot is back with the next round of his 3D-printed PETG linear-rail experiments — this time loading them to around 50 pounds. The video's in Spanish; the engineering needs no translation.",
+                            "videoUrl": "https://youtu.be/Etgkeux6AtU"
+                        },
+                        {
+                            "heading": "Printed Motion, Taken Seriously",
+                            "bullets": [
+                                "Printed PETG rails carrying ~50 lb in testing",
+                                "Cheap, printable motion components keep getting closer to hardware-store legitimacy",
+                                "The news: we've been emailing — he's agreed to join a future meetup for a deep-dive on the design. Date to come."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "robotics-corner",
+                    "title": "Robotics Corner: US Bans New Chinese Humanoids",
+                    "description": "New weekly section — and it opens with a ban",
+                    "type": "discussion",
+                    "slides": [
+                        {
+                            "heading": "Robotics Corner: The Covered List Gets Robots",
+                            "body": "New standing section: robotics is the biggest 3D-printing-adjacent build space going, so it now has a home in this deck every week — right before the spotlight. We open with the story of the summer: the US banned new Chinese humanoids.",
+                            "videoUrl": "https://youtu.be/QpVpTaMjFyE"
+                        },
+                        {
+                            "heading": "What Actually Changed",
+                            "bullets": [
+                                "FCC added foreign humanoid and quadruped robots to its Covered List July 28 — new models can't get the authorization required for US import or sale",
+                                "Cited: documented backdoors in Unitree hardware running at MIT, Princeton and Carnegie Mellon",
+                                "Already-approved models stay legal to sell and own — robots already here aren't contraband",
+                                "Timing: days after Unitree's first Western commercial launch, mid-IPO — and the Pentagon had tagged Unitree a Chinese military company in June"
+                            ],
+                            "links": [
+                                {
+                                    "label": "Why the US Banned Unitree",
+                                    "url": "https://youtu.be/QpVpTaMjFyE"
+                                },
+                                {
+                                    "label": "CNN's Coverage",
+                                    "url": "https://www.cnn.com/2026/07/29/tech/us-china-robot-ban-intl-hnk"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "builder-spotlight",
+                    "title": "Builder Spotlight: Adam Hajek's Printed E-Bike",
+                    "description": "Drone motor, printed gears, homemade battery — about $1,200 all-in",
+                    "type": "tool",
+                    "slides": [
+                        {
+                            "heading": "Builder Spotlight: Adam Hajek's Printed E-Bike",
+                            "body": "Adam Hajek built an e-bike where the printer did the heavy lifting: 3D-printed toothed gears, a battery pack he assembled himself at the cell level, and a drone motor for power. It moves.",
+                            "videoUrl": "https://youtu.be/_WUQaKHzLfY"
+                        },
+                        {
+                            "heading": "The Numbers",
+                            "bullets": [
+                                "Power: a high-output drone motor, geared down through 3D-printed toothed gears — a 10:1 torque reduction",
+                                "Battery: self-built pack, assembled from individual cells",
+                                "Range about 30 miles, top speed about 35 mph — figures from the build video",
+                                "All-in cost: roughly $1,200",
+                                "It's his second printed e-bike — the first was the budget build that saved him $4,350 vs retail"
+                            ],
+                            "links": [
+                                {
+                                    "label": "Watch the Build",
+                                    "url": "https://youtu.be/_WUQaKHzLfY"
+                                },
+                                {
+                                    "label": "His First E-Bike Build",
+                                    "url": "https://youtu.be/zKeCP9cCjg4"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "quick-tip",
+                    "title": "Quick Tip of the Week",
+                    "description": "More walls beat more infill",
+                    "type": "text",
+                    "slides": [
+                        {
+                            "heading": "Quick Tip: Stop Cranking Infill — Add Walls",
+                            "body": "When a part needs to be stronger, the reflex is to raise the infill slider. The test data says put that plastic in the walls instead: bending loads concentrate at the surface of a part, so perimeters carry far more than sparse infill ever will.",
+                            "bullets": [
+                                "CNC Kitchen's hook tests: at equal weight, the extra-perimeter hook beat the extra-infill hook by about 22%",
+                                "Rule of thumb: 3–4 walls at 15–25% infill outperforms 2 walls with the infill cranked, for most functional parts",
+                                "Walls also print denser and cleaner than infill — the strength comes with better surfaces",
+                                "Infill still has a job: supporting top surfaces and taking compression — don't drop below ~10–15%"
+                            ],
+                            "link": "https://youtu.be/AmEaNAwFSfI",
+                            "linkLabel": "CNC Kitchen: Infill vs Shells"
+                        }
+                    ]
+                },
+                {
+                    "id": "community-news",
+                    "title": "Community News & Topics",
+                    "description": "Share what you're interested in talking about!",
+                    "type": "text",
+                    "slides": [
+                        {
+                            "heading": "Next Week's Meetup",
+                            "body": "Find something you're interested in talking about? Share it here and we'll cover it in next week's meetup!",
+                            "link": "https://github.com/MaxSikorski/3d-printing-weekly-news/issues",
+                            "linkLabel": "Submit a Topic"
+                        }
+                    ]
+                }
+            ]
+        },
         "2026-W33": {
             "week": "2026-W33",
             "date": "2026-08-13",
