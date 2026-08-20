@@ -1,6 +1,11 @@
 {
     "weeks": [
         {
+            "id": "2026-W34",
+            "date": "2026-08-20",
+            "title": "AB 2047 Advances, Bambu's Toolchanger Patents & Lasers Fix Weak Z-Layers"
+        },
+        {
             "id": "2026-W33",
             "date": "2026-08-13",
             "title": "Prusa Goes Gen 2, Bambu Teases Its First Laser & AB 2047's Decision Day"
