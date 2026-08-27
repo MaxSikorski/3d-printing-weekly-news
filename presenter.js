@@ -1453,12 +1453,34 @@
                 },
                 {
                     "id": "robotics-corner",
-                    "title": "Robotics Corner: A Robot Dog on Four Servos",
-                    "description": "Petoi's Quaddle walks on half the usual hardware — plus builds you can start tonight",
+                    "title": "Robotics Corner: The $399 Duck & a 4-Servo Dog",
+                    "description": "Hugging Face starts selling the duck we covered in W27 — plus Petoi's Quaddle and builds you can start tonight",
                     "type": "tool",
                     "slides": [
                         {
-                            "heading": "Robotics Corner: A Robot Dog That Walks on Four Servos",
+                            "heading": "Robotics Corner: Hugging Face Is Selling a $399 Duck",
+                            "body": "Announced this morning: MicroDuck, a 25 cm biped duck robot from Pollen Robotics — the company Hugging Face acquired in 2025. And here's the fun part: it's the commercial descendant of the Open Duck Mini, the printable DIY duck we covered in W27, whose creator Antoine Pirrone works at Pollen.",
+                            "videoUrl": "https://www.youtube.com/watch?v=RAtzEyGBGFU"
+                        },
+                        {
+                            "heading": "MicroDuck: Buy It Built, or Print Its Ancestor",
+                            "bullets": [
+                                "$399 pre-order (before tax/shipping), ships before Christmas — almost exactly the Open Duck Mini's DIY parts bill",
+                                "15 motors, 800 g, camera + LiDAR + two IMUs; ships with 7 trained behaviors — walking, kicking, grabbing with its beak, recovery, even roller skating",
+                                "Open source where it counts: the SDK, simulation, and full RL training stack are on GitHub (Apache-2.0) — train a policy in simulation, deploy it to the duck",
+                                "The buy-vs-build choice is real: MicroDuck arrives assembled; the Open Duck Mini (two slides down) is the print-it-yourself lineage"
+                            ],
+                            "link": "https://pollen-robotics.com/microduck/",
+                            "linkLabel": "MicroDuck Pre-Order",
+                            "links": [
+                                {
+                                    "label": "MicroDuck on GitHub",
+                                    "url": "https://github.com/pollen-robotics/microduck"
+                                }
+                            ]
+                        },
+                        {
+                            "heading": "A Robot Dog That Walks on Four Servos",
                             "body": "Petoi's Quaddle is a mini desk robot dog that walks, glides sideways, and spins in place on just 4 servos — most quadrupeds need 8 to 12. It runs on OpenCat (yes, the dog runs on OpenCat — that's the name of Petoi's open-source quadruped framework), and you can dress it up with your own printed shells and LEGO-compatible mounts.",
                             "bullets": [
                                 "Programming ladder: drag-and-drop blocks → Python → C++ → ROS — same framework as their Bittle robot dog",
@@ -1473,7 +1495,7 @@
                             "heading": "Don't Want to Wait? Build One Tonight",
                             "body": "Max asked the better question: what can members actually print and build right now? These three are fully published — files, firmware, and build docs are up today.",
                             "bullets": [
-                                "Open Duck Mini — the ~$400 printable walking duck we covered in W27; files and RL walking policies on GitHub",
+                                "Open Duck Mini — the ~$400 printable walking duck we covered in W27, and MicroDuck's direct ancestor; files and RL walking policies on GitHub",
                                 "TOPS — Aaed Musa's open-source printed quadruped ('SPOT' backwards): full CAD, code, and build video",
                                 "Berkeley Humanoid Lite — an open-source 3D-printed HUMANOID with printable cycloidal gearboxes, for the ambitious"
                             ],
