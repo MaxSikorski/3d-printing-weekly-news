@@ -1,0 +1,287 @@
+{
+    "week": "2026-W35",
+    "date": "2026-08-27",
+    "title": "AB 2047 Loses Its Teeth, INDX Gen 2 Ships & Sovol's $3.2M Finish",
+    "subtitle": "This week in 3D printing news",
+    "timerMinutes": 20,
+    "topics": [
+        {
+            "id": "ab-2047-endgame",
+            "title": "AB 2047: Gutted Before the Final Vote",
+            "description": "The August 17 amendments hollowed the bill out — and the session ends Monday",
+            "type": "discussion",
+            "slides": [
+                {
+                    "heading": "AB 2047: Quietly Gutted Before the Final Vote",
+                    "body": "Last week the printer-blocking bill was headed to the Senate floor with its mandate intact. Not anymore. Amendments filed August 17 hollowed out the enforcement chain, and on August 18 the amended bill was ordered to third reading. The floor vote deadline is Monday, August 31 — this ends within days.",
+                    "bullets": [
+                        "The DOJ-standards → manufacturer-attestations → approved-printer-list chain is gone from the bill",
+                        "The Dec 1, 2029 sales restriction now hangs on a standards body that hasn't written the standard",
+                        "Ordered to third reading Aug 18 — the full Senate is the next and final stop before concurrence",
+                        "Same QR as the last three weeks — the tracker updates the moment the floor votes"
+                    ],
+                    "link": "https://calmatters.digitaldemocracy.org/bills/ca_202520260ab2047",
+                    "linkLabel": "AB 2047 Live Tracker",
+                    "links": [
+                        {
+                            "label": "Official Bill History",
+                            "url": "https://leginfo.legislature.ca.gov/faces/billHistoryClient.xhtml?bill_id=202520260AB2047"
+                        },
+                        {
+                            "label": "VoxelMatters on the Amendments",
+                            "url": "https://www.voxelmatters.com/california-amends-3d-printed-firearm-blocking-bill/"
+                        },
+                        {
+                            "label": "Joel's Action Hub",
+                            "url": "https://www.the3dprintingnerd.com/ab2047"
+                        }
+                    ]
+                },
+                {
+                    "heading": "The ASTM Off-Ramp: A Mandate Becomes a Tripwire",
+                    "body": "The amended bill hands the hard part to ASTM International, the industry standards body — and builds in its own exit.",
+                    "bullets": [
+                        "From July 1, 2027: California DOJ checks quarterly whether ASTM has published a firearm-blocking standard for 3D printers",
+                        "If ASTM publishes one, the state gets 24 months to issue guidance based on it",
+                        "If ASTM publishes nothing by July 1, 2029, the department 'shall not be required to make any further determinations' — it just stops",
+                        "No ASTM standard exists today, and ASTM is under no obligation to write one"
+                    ]
+                },
+                {
+                    "heading": "What Happens by Monday",
+                    "body": "Report it straight: the bill is still alive and still advancing — it's just carrying far less than it did two weeks ago.",
+                    "bullets": [
+                        "Senate floor vote by Aug 31 (session end), then Assembly concurrence in the amendments, then Newsom's desk",
+                        "No floor date was set as of Thursday — it could happen while we're meeting",
+                        "The opposition coalition (Průša, VORON, Make, Joel Telling, EFF) hasn't stood down — a weakened bill still normalizes the idea",
+                        "Copycats to watch either way: Washington HB 2320/2321, New York (Hochul)"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "indx-gen2-ships",
+            "title": "INDX Gen 2: Kits Ship, Full Printers On Sale",
+            "description": "The toolchanger saga hits its biggest week since the Founders Edition",
+            "type": "tool",
+            "product": "bondtech-indx",
+            "slides": [
+                {
+                    "heading": "INDX Gen 2: Kits Are Shipping, Full Printers On Sale",
+                    "body": "August 20: Prusa started shipping the first batch of INDX conversion kits and opened orders for a complete CORE One+ (Gen 2) with Bondtech INDX — the first time you can buy the toolchanger machine whole instead of converting.",
+                    "bullets": [
+                        "Complete printer options: assembled or kit, 4-tool or 8-tool — assembled runs $1,999 (4-tool) / $2,249 (8-tool)",
+                        "Conversion kits cover both the CORE One+ and the Gen 2",
+                        "Today (Aug 27): the bigger CORE One L+ joined — conversion kits and assembled L+ INDX printers both open for orders",
+                        "Prusa notes the Founders Edition hardware isn't identical to this standard edition — refinements landed in between"
+                    ],
+                    "link": "https://blog.prusa3d.com/prusa-core-one-gen-2-indx-shipping-has-started-complete-printers-open-for-orders_137623/",
+                    "linkLabel": "Prusa's Announcement",
+                    "links": [
+                        {
+                            "label": "INDX Product Page",
+                            "url": "https://www.prusa3d.com/p/bondtech-indx/"
+                        }
+                    ]
+                },
+                {
+                    "heading": "Still Owed From the Saga",
+                    "bullets": [
+                        "The promised 'State of INDX' blog post still hasn't appeared — shipping apparently outran the write-up",
+                        "PrusaSlicer 3.0 alpha is still 'weeks away' — no release this week from Prusa, Orca, or Bambu Studio",
+                        "Founders Edition owners: watch for the firmware updates that carry the Gen 2 refinements back"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "sovol-m1d-funded",
+            "title": "Sovol M1D: Funded at $3.19M",
+            "description": "The campaign closed meetup morning — after a final-week slide",
+            "type": "discussion",
+            "slides": [
+                {
+                    "heading": "Sovol M1D: Funded at $3.19M — After a Final-Week Slide",
+                    "body": "The IDEX-toolchanger Kickstarter closed this morning at 10AM: $3,187,254 from 2,027 backers, roughly 16x its goal. The oddity is the direction it closed in — a week ago it stood at $3.44M and 2,176 backers.",
+                    "bullets": [
+                        "Final week net change: about −$253k in pledges and −149 backers — people pulled out at the wire",
+                        "Late pledges are open if you missed the campaign",
+                        "We backed two — delivery expected around November",
+                        "Standing Kickstarter caveat: it's a pledge, not a purchase — November is a promise, not a ship date"
+                    ],
+                    "link": "https://www.kickstarter.com/projects/sovol/sovol-m1d-idex-tool-changing-3d-printer",
+                    "linkLabel": "Sovol M1D on Kickstarter"
+                }
+            ]
+        },
+        {
+            "id": "print-orientation",
+            "title": "Print Orientation: You Asked",
+            "description": "Members asked how to orient prints for strength and detail — here's the map",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "Print Orientation 101: Strength Is Directional",
+                    "body": "Members asked about this last week, so let's cover the fundamentals. A print isn't equally strong in every direction — the layer seams are the weak points, and orientation decides whether your load runs along the plastic or pries the seams apart.",
+                    "imageUrls": [
+                        "photos/w35-print-orientation-strength.png"
+                    ],
+                    "bullets": [
+                        "Flat in X/Y: force runs along the layers — the strong direction",
+                        "Upright in Z: force pulls layer seams apart — the weak direction, parts snap at a seam",
+                        "Orientation also sets surface detail: the walls facing up/out print cleaner than surfaces fighting the layer stack"
+                    ]
+                },
+                {
+                    "heading": "The Classic Explainer",
+                    "body": "Maker's Muse's orientation walkthrough is a decade old and still the clearest starting point — the physics hasn't changed.",
+                    "videoUrl": "https://youtu.be/OqRbSkX5IJk"
+                },
+                {
+                    "heading": "The 45° Trick",
+                    "body": "CNC Kitchen tested tilting parts 45° instead of printing them flat or upright: no load direction hits the seams square-on, so you trade a little peak strength for decent strength in more directions.",
+                    "videoUrl": "https://youtu.be/7aJ4dDyyf20"
+                }
+            ]
+        },
+        {
+            "id": "robotics-corner",
+            "title": "Robotics Corner: A Robot Dog on Four Servos",
+            "description": "Petoi's Quaddle walks on half the usual hardware — plus builds you can start tonight",
+            "type": "tool",
+            "slides": [
+                {
+                    "heading": "Robotics Corner: A Robot Dog That Walks on Four Servos",
+                    "body": "Petoi's Quaddle is a mini desk robot dog that walks, glides sideways, and spins in place on just 4 servos — most quadrupeds need 8 to 12. It runs on OpenCat (yes, the dog runs on OpenCat — that's the name of Petoi's open-source quadruped framework), and you can dress it up with your own printed shells and LEGO-compatible mounts.",
+                    "bullets": [
+                        "Programming ladder: drag-and-drop blocks → Python → C++ → ROS — same framework as their Bittle robot dog",
+                        "Kickstarter hasn't launched yet — August signup list now, early-bird tiers listed at $99 / $139 / $179",
+                        "Honest print caveat: shells and mounts are printable, but the load-critical joints stay injection-molded",
+                        "Usual Kickstarter rules apply — nothing is real until it ships"
+                    ],
+                    "link": "https://www.petoi.com/pages/quaddle-educational-robot-kit",
+                    "linkLabel": "Quaddle at Petoi"
+                },
+                {
+                    "heading": "Don't Want to Wait? Build One Tonight",
+                    "body": "Max asked the better question: what can members actually print and build right now? These three are fully published — files, firmware, and build docs are up today.",
+                    "bullets": [
+                        "Open Duck Mini — the ~$400 printable walking duck we covered in W27; files and RL walking policies on GitHub",
+                        "TOPS — Aaed Musa's open-source printed quadruped ('SPOT' backwards): full CAD, code, and build video",
+                        "Berkeley Humanoid Lite — an open-source 3D-printed HUMANOID with printable cycloidal gearboxes, for the ambitious"
+                    ],
+                    "links": [
+                        {
+                            "label": "Open Duck Mini",
+                            "url": "https://github.com/apirrone/Open_Duck_Mini"
+                        },
+                        {
+                            "label": "TOPS Quadruped",
+                            "url": "https://github.com/aaedmusa/TOPS"
+                        },
+                        {
+                            "label": "Berkeley Humanoid Lite",
+                            "url": "https://github.com/HybridRobotics/Berkeley-Humanoid-Lite"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "upcoming-events",
+            "title": "Upcoming Events & Our New Discord",
+            "description": "3DPrintopia hits Philadelphia September 26–27 — and the new Discord is live",
+            "type": "text",
+            "slides": [
+                {
+                    "heading": "Upcoming Events: 3DPrintopia, Philadelphia, Sept 26–27",
+                    "body": "A full consumer 3D-printing festival lands at the Pennsylvania Convention Center (Hall F) the last weekend of September — vendors, workshops, makers showing off builds, and printing companies demoing new machines.",
+                    "bullets": [
+                        "Saturday Sept 26, 10–5 · Sunday Sept 27, 10–4 · 1101 Arch St, Philadelphia",
+                        "Road-trip material — if you're going, say so in the Discord and coordinate",
+                        "Tickets are on Eventbrite — second QR link below"
+                    ],
+                    "link": "https://3dprintopia.com/",
+                    "linkLabel": "3DPrintopia",
+                    "links": [
+                        {
+                            "label": "Tickets on Eventbrite",
+                            "url": "https://www.eventbrite.com/e/3dprintopia-tickets-1984723070130"
+                        }
+                    ]
+                },
+                {
+                    "heading": "Reminder: We Have a New Discord",
+                    "body": "The group's new Discord is live — this invite link never expires, so join whenever and bring your prints, fails, and questions between meetups.",
+                    "link": "https://discord.gg/pnFyeAZJsk",
+                    "linkLabel": "Join the Discord"
+                }
+            ]
+        },
+        {
+            "id": "builder-spotlight",
+            "title": "Builder Spotlight: soiboi's Air-Powered Display",
+            "description": "A 64-pixel display that runs on vacuum instead of electricity",
+            "type": "tool",
+            "slides": [
+                {
+                    "heading": "Builder Spotlight: soiboi's Air-Powered Display",
+                    "body": "This week's spotlight is soiboi soft, who built a 64-pixel dot display that runs entirely on air — no electronics in the display at all. It's 3D-printed fluidic logic: channels and valves printed into rigid plates with a silicone membrane in between.",
+                    "videoUrl": "https://youtu.be/RTOARC-yeMc"
+                },
+                {
+                    "heading": "How You Compute With Air",
+                    "bullets": [
+                        "The logic levels are pressures: near-vacuum is a 1, atmospheric pressure is a 0",
+                        "The clever part is multiplexing — one valve per row and one per column drives all 64 pixels, instead of one valve per pixel",
+                        "An earlier build strung vacuum-powered 'transistors' into pneumatic RAM — a clock display that remembers its digits with zero electricity",
+                        "Print the plates, add a silicone sheet and a vacuum source — the whole logic family is printable"
+                    ],
+                    "links": [
+                        {
+                            "label": "soiboi soft on YouTube",
+                            "url": "https://www.youtube.com/@soiboisoft"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "quick-tip",
+            "title": "Quick Tip of the Week",
+            "description": "Maintenance 101 — your printer wants ten minutes a month",
+            "type": "text",
+            "slides": [
+                {
+                    "heading": "Quick Tip: Clean Your Lead Screws (Maintenance 101)",
+                    "body": "Those greased vertical screws that move your Z axis are dust magnets — and old grease plus dust turns into grinding paste that shows up as banding and Z artifacts in your prints. LayerLab's fix takes ten minutes: wipe the old grease off with a rag and isopropyl, then re-apply a thin coat of fresh grease.",
+                    "videoUrl": "https://youtu.be/pPNgU4Sku6E"
+                },
+                {
+                    "heading": "The Rest of the Ten-Minute Checklist",
+                    "bullets": [
+                        "Wipe the build plate with dish soap and water — finger oils are the top cause of adhesion loss (IPA between washes)",
+                        "Check belt tension — loose belts read as layer shifts and ringing",
+                        "Clear filament dust out of the extruder drive gears",
+                        "Vacuum the fans and electronics bay — dust is insulation your stepper drivers don't want",
+                        "Keep filament dry — wet filament wastes every other minute you spent on this list"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "community-news",
+            "title": "Community News & Topics",
+            "description": "Share what you're interested in talking about!",
+            "type": "text",
+            "slides": [
+                {
+                    "heading": "Next Week's Meetup",
+                    "body": "Find something you're interested in talking about? Share it here and we'll cover it in next week's meetup!",
+                    "link": "https://github.com/MaxSikorski/3d-printing-weekly-news/issues",
+                    "linkLabel": "Submit a Topic"
+                }
+            ]
+        }
+    ]
+}
