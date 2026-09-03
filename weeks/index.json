@@ -1,6 +1,11 @@
 {
     "weeks": [
         {
+            "id": "2026-W36",
+            "date": "2026-09-03",
+            "title": "AB 2047 Reaches Newsom's Desk, PrusaSlicer 3.0 Arrives & Creality Goes Red"
+        },
+        {
             "id": "2026-W35",
             "date": "2026-08-27",
             "title": "AB 2047 Loses Its Teeth, INDX Gen 2 Ships & Sovol's $3.2M Finish"
