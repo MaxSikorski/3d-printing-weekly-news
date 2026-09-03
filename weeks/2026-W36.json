@@ -63,6 +63,18 @@
                         "The opposition coalition (Průša, VORON, Make, Joel Telling, EFF) argued precisely this — and hasn't stood down",
                         "Report it straight: today this is a conditional sales rule awaiting a standard nobody has written — not a ban on our hobby. We watch ASTM next."
                     ]
+                },
+                {
+                    "heading": "New: Our Legislation Tracker Is Live",
+                    "body": "Everything we just covered now lives on a page we keep updated — every state, every country, every bill aimed at printers or printing, and what each one means for the way you actually print.",
+                    "bullets": [
+                        "Every bill answers the same five questions: new printers, used sales, self-built machines, offline printers, print businesses",
+                        "Tap your situation once and every card flags the rows that apply to you",
+                        "A full deep dive on \"blocking technology\" — what exists, what's only claimed, and where it breaks",
+                        "AB 2047 sits on Newsom's desk for 28 more days — the Take Action tab drafts your letter to him"
+                    ],
+                    "link": "https://maxsikorski.github.io/3d-printing-regulation/",
+                    "linkLabel": "The Legislation Tracker"
                 }
             ]
         },
