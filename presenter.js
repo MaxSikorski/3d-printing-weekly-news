@@ -1305,6 +1305,255 @@
     // === Inline fallback data for file:// protocol ===
     // Keep in sync with weeks/2026-W22.json
     const INLINE_WEEKS = {
+        "2026-W36": {
+            "week": "2026-W36",
+            "date": "2026-09-03",
+            "title": "AB 2047 Reaches Newsom's Desk, PrusaSlicer 3.0 Arrives & Creality Goes Red",
+            "subtitle": "This week in 3D printing news",
+            "timerMinutes": 20,
+            "topics": [
+                {
+                    "id": "ab-2047-passed",
+                    "title": "AB 2047 Passed — What It Means for Us",
+                    "description": "The printer bill cleared the legislature Aug 31 — here's what's actually in it",
+                    "type": "discussion",
+                    "slides": [
+                        {
+                            "heading": "AB 2047 Passed the Legislature",
+                            "body": "It's done moving. On August 31 — the session's last day — the Assembly concurred in the Senate amendments 60–18, and the bill went to enrollment. It now sits on Governor Newsom's desk: sign or veto by the end of September.",
+                            "bullets": [
+                                "Aug 31: Assembly concurrence, 60 ayes / 18 noes — the final legislative vote",
+                                "The version that passed is the gutted ASTM off-ramp bill from two weeks ago, not the original mandate",
+                                "Newsom has until the end of September to sign or veto — no signal from his office yet",
+                                "Same QR as the last month — the tracker shows the governor's action the moment it happens"
+                            ],
+                            "link": "https://calmatters.digitaldemocracy.org/bills/ca_202520260ab2047",
+                            "linkLabel": "AB 2047 Live Tracker",
+                            "links": [
+                                {
+                                    "label": "Full Bill Text",
+                                    "url": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB2047"
+                                },
+                                {
+                                    "label": "Joel's Action Hub",
+                                    "url": "https://www.the3dprintingnerd.com/ab2047"
+                                }
+                            ]
+                        },
+                        {
+                            "heading": "What the Bill Actually Says",
+                            "body": "Read the operative text before the hot takes: the ban is on SELLING printers without 'firearm blocking technology' — hardware or firmware that evaluates a print file and refuses firearms, illegal parts, and machine-gun conversion devices. And none of it fires unless a standards body acts first.",
+                            "bullets": [
+                                "Unlawful to sell, offer, or transfer for consideration a 3D printer without the blocking tech — once the rules exist",
+                                "July 1, 2027: DOJ starts checking quarterly whether ASTM has published a blocking-tech standard",
+                                "If ASTM publishes: 24 months for state regulations, then sales restrictions one year after that — roughly 2030 at the earliest",
+                                "If ASTM publishes nothing by July 1, 2029, the DOJ's obligation ends — the bill sunsets itself",
+                                "No ASTM standard exists today, and ASTM is under no obligation to write one"
+                            ]
+                        },
+                        {
+                            "heading": "What It Means for Hobbyists — Cosplay, Props & Garage Printers",
+                            "body": "The bill regulates the point of sale, not your workshop. Owning, using, and printing on the machines you have stays untouched — your cosplay props and functional prints are not the target and never enter the bill's text.",
+                            "bullets": [
+                                "Printers you already own: unaffected — there is no possession or use restriction anywhere in the bill",
+                                "Printing props, cosplay pieces, terrain, anything legal: unaffected — the tech only screens firearm geometry, and there's an explicit entertainment-props carve-out on top",
+                                "The catch to watch: 'transfer for consideration' isn't limited to manufacturers — a compliant-only rule could someday reach used-printer sales inside California",
+                                "Out-of-state members: this is California-only, but Washington and New York copycats are already drafted"
+                            ]
+                        },
+                        {
+                            "heading": "The Open-Source and Offline Question",
+                            "body": "Here's our community's real long-term worry, and it's worth saying precisely: blocking tech has to live in hardware or firmware and evaluate files on the machine. Our printers run Klipper and Marlin, and half of them sit in garages with no Wi-Fi.",
+                            "bullets": [
+                                "File-screening firmware clashes with open-source firmware you can recompile — the block and the freedom to modify can't both hold",
+                                "Offline printers mean any screening must run entirely on-device — no cloud check can be assumed, which is exactly why experts call the tech infeasible",
+                                "The opposition coalition (Průša, VORON, Make, Joel Telling, EFF) argued precisely this — and hasn't stood down",
+                                "Report it straight: today this is a conditional sales rule awaiting a standard nobody has written — not a ban on our hobby. We watch ASTM next."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "prusaslicer-3-alpha",
+                    "title": "PrusaSlicer 3.0: The Alpha Is Finally Out",
+                    "description": "The rewrite Prusa promised for months shipped September 1",
+                    "type": "video",
+                    "slides": [
+                        {
+                            "heading": "PrusaSlicer 3.0: The Alpha Is Finally Out",
+                            "body": "After months of 'weeks away,' the first public alpha of PrusaSlicer 3.0 landed September 1. It's the biggest change to the slicer in years — most of the UI code was rewritten from scratch. Prusa's own preview video is the best tour.",
+                            "videoUrl": "https://youtu.be/qMupKmuXoZc"
+                        },
+                        {
+                            "heading": "What's New in 3.0",
+                            "body": "This is an architecture release: the features are about how you work, not just how it slices.",
+                            "bullets": [
+                                "Multiple beds in one project — and the beds can be DIFFERENT printers in the same file",
+                                "Multiple projects open at once in tabs, in a single instance",
+                                "Redesigned UI: left navigation sidebar, collapsible object list, a favorites system for settings",
+                                "New rendering: PBR materials, ambient occlusion, shadows, a view cube for the camera",
+                                "INDX caveat: toolchanger profiles are NOT bundled in the alpha — they arrive later via a Configuration Wizard online update"
+                            ],
+                            "link": "https://github.com/prusa3d/PrusaSlicer/releases/tag/version_3.0.0-alpha11",
+                            "linkLabel": "PrusaSlicer 3.0.0-alpha11 on GitHub"
+                        }
+                    ]
+                },
+                {
+                    "id": "sovol-m1d-preorder",
+                    "title": "Sovol M1D: The Post-Kickstarter Math",
+                    "description": "Missed the campaign? The website preorder costs $200 more — and I'm fine with that",
+                    "type": "discussion",
+                    "slides": [
+                        {
+                            "heading": "Sovol M1D: You Can Just Preorder It Now",
+                            "body": "Follow-up on last week's $3.19M campaign close: Sovol's own website now takes M1D preorders directly. The math against the Kickstarter early bird is simple — and it says something about whether backing was worth the hassle.",
+                            "bullets": [
+                                "Website preorder: $1,499 (listed at $1,799 MSRP), estimated to ship late November to mid-December",
+                                "Kickstarter early bird was $1,299 — so waiting costs exactly $200",
+                                "Around Thanksgiving, maybe later, either way — the preorder and pledge windows land in the same season",
+                                "My take: $200 to skip crowdfunding risk and buy from a store with an order number? I won't be doing a Kickstarter again",
+                                "Standing caveat still applies to BOTH: 'estimated to ship' is a promise, not a date"
+                            ],
+                            "link": "https://www.sovol3d.com/products/sovol-m1d-3d-printer",
+                            "linkLabel": "M1D Preorder at Sovol"
+                        }
+                    ]
+                },
+                {
+                    "id": "creality-h1-loss",
+                    "title": "Creality Goes Into the Red",
+                    "description": "Three months after its IPO, the former #1 posts a first-half loss",
+                    "type": "discussion",
+                    "slides": [
+                        {
+                            "heading": "Creality: More Printers Sold, Money Lost",
+                            "body": "Three months after listing in Hong Kong, Creality reported its first half of 2026: revenue UP 12.9% to about $242M — and a net loss of about $8.8M, against a $16M profit a year earlier. Selling more and earning less is the whole consumer market in one line.",
+                            "bullets": [
+                                "Revenue RMB 1.63B (~$242M), up 12.9% year over year — the machines are selling",
+                                "Net loss RMB 59.1M (~$8.8M) vs a RMB 107.5M profit in H1 2025",
+                                "The causes: price cuts and promos to defend overseas share, inventory clearance around product upgrades, bigger R&D spend, currency losses",
+                                "What it means for us: the price war with Bambu is being paid for out of the brands' own pockets — cheap printers are literally subsidized right now"
+                            ],
+                            "link": "https://3dprint.com/331409/3d-printing-financials-creality-posts-h1-loss-plans-80m-am-headquarters/",
+                            "linkLabel": "The Numbers at 3DPrint.com"
+                        }
+                    ]
+                },
+                {
+                    "id": "snapmaker-u1-upgrades",
+                    "title": "Snapmaker U1: The Upgrade Scene",
+                    "description": "Layer Forge ranks another round of community upgrades for the U1",
+                    "type": "video",
+                    "slides": [
+                        {
+                            "heading": "Snapmaker U1: The Upgrade Scene Is Thriving",
+                            "body": "Layer Forge is back with a second round of community upgrades for the Snapmaker U1, ranked so you don't have to test them all. When a printer grows an upgrade ecosystem this fast, that's the community voting with their printers.",
+                            "videoUrl": "https://youtu.be/HV8U52OynAo"
+                        },
+                        {
+                            "heading": "Why We Keep Bringing the U1 Up",
+                            "bullets": [
+                                "My take: the U1 is the best printer under $1,000 right now, hands down",
+                                "The upgrade wave — printable mods, ranked and iterated within weeks — is the strongest signal a machine has legs",
+                                "Pattern to remember: the printers that win aren't just good out of the box, they're good platforms to build on"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "robotics-corner",
+                    "title": "Robotics Corner: A Robot Arm Prints a 130 kg Part",
+                    "description": "Adaxis' AdaOne software turns industrial robot arms into large-format 3D printers",
+                    "type": "video",
+                    "slides": [
+                        {
+                            "heading": "Robotics Corner: A Robot Arm Prints a 1.80 m, 130 kg Part",
+                            "body": "This is the purest robotics-meets-3D-printing crossover there is: take an industrial 6-axis robot arm, bolt on an extruder, and let software do the hard part. Adaxis published this today — Global Tool Trading AG printing a 1.80-meter, ~130 kg industrial part in one continuous run.",
+                            "videoUrl": "https://youtu.be/bjYWC8CRDCQ"
+                        },
+                        {
+                            "heading": "AdaOne: The Slicer Is the Robot's Brain",
+                            "body": "Adaxis makes AdaOne — think of it as the slicer for robot arms: it takes part geometry and turns it into optimized robotic toolpaths, for any brand of arm. The twist in this print: the material is a THERMOSET, not a thermoplastic.",
+                            "bullets": [
+                                "Thermosets cure by irreversible chemical reaction — once the material is mixed, the print is running; there's no pause and no do-over",
+                                "Flow, deposition rate, arm speed, toolpath, and cure kinetics all have to agree for the entire print — that's a software problem, and that's the product",
+                                "The material is Sika's SikaBiresin MC system — high stiffness and thermal stability for molds and tooling",
+                                "New standing beat for this corner: large-format robotic-arm printing — arms, pellet extruders, and the software driving them",
+                                "Also since last week: Petoi's Quaddle Kickstarter went live Sept 2 — the 4-servo robot dog from W35 passed half its $50k goal on day one"
+                            ],
+                            "link": "https://adaxis.eu",
+                            "linkLabel": "Adaxis / AdaOne",
+                            "links": [
+                                {
+                                    "label": "Quaddle on Kickstarter",
+                                    "url": "https://www.kickstarter.com/projects/petoi/quaddle-open-source-desktop-robot-kit"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "builder-spotlight",
+                    "title": "Builder Spotlight: Mirza Makes' PrusaDeck",
+                    "description": "A wireless ESP32 touchscreen that runs his whole print setup",
+                    "type": "tool",
+                    "slides": [
+                        {
+                            "heading": "Builder Spotlight: Mirza Makes' PrusaDeck",
+                            "body": "This week's spotlight is Mirza Makes and his PrusaDeck — a wireless desktop touchscreen controller for his printers, built around an ESP32-S3 with a 5-inch touch display. Power your printers on and off and watch their status without touching a computer.",
+                            "videoUrl": "https://youtu.be/r9dXBKfKYtY"
+                        },
+                        {
+                            "heading": "How the PrusaDeck Works",
+                            "bullets": [
+                                "The brain is a CrowPanel Advance 5\" HMI — an ESP32-S3 board with an 800×480 IPS touchscreen built in",
+                                "Printers switch on and off through Shelly smart plugs; live status comes back from his CORE One and MK4S over the network",
+                                "The touch UI was built visually in SquareLine Studio — no hand-coded graphics",
+                                "The enclosure is 3D printed, with a CNC'd faceplate after the printed one fought back — an honest it-went-wrong build log",
+                                "It's an evolution of his earlier PrusaLauncher, rebuilt after a commenter suggested improvements — project files are on his site"
+                            ],
+                            "link": "https://mirzamakes.com",
+                            "linkLabel": "Project Files at mirzamakes.com"
+                        }
+                    ]
+                },
+                {
+                    "id": "quick-tip",
+                    "title": "Quick Tip of the Week",
+                    "description": "Try PrusaSlicer 3.0 without risking your working setup",
+                    "type": "text",
+                    "slides": [
+                        {
+                            "heading": "Quick Tip: Test-Drive PrusaSlicer 3.0 Safely",
+                            "body": "Want to poke at the 3.0 alpha from earlier tonight without endangering the profiles that earn you good prints? You can — Prusa built the escape hatch in.",
+                            "bullets": [
+                                "The alpha saves its configuration to a separate PrusaSlicer3-dev folder — it never touches your 2.9.6 profiles",
+                                "So install it NEXT TO your current slicer and run both side by side — nothing to back up, nothing to break",
+                                "Treat alphas as look-don't-ship: explore the new UI, but slice production parts in 2.9.6 until the stable release",
+                                "Same trick applies to most slicer betas — check where a prerelease stores its config before you trust it"
+                            ],
+                            "link": "https://github.com/prusa3d/PrusaSlicer/releases/tag/version_3.0.0-alpha11",
+                            "linkLabel": "Get the Alpha"
+                        }
+                    ]
+                },
+                {
+                    "id": "community-news",
+                    "title": "Community News & Topics",
+                    "description": "Share what you're interested in talking about!",
+                    "type": "text",
+                    "slides": [
+                        {
+                            "heading": "Next Week's Meetup",
+                            "body": "Find something you're interested in talking about? Share it here and we'll cover it in next week's meetup!",
+                            "link": "https://github.com/MaxSikorski/3d-printing-weekly-news/issues",
+                            "linkLabel": "Submit a Topic"
+                        }
+                    ]
+                }
+            ]
+        },
         "2026-W35": {
             "week": "2026-W35",
             "date": "2026-08-27",
