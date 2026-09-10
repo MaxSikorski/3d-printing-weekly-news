@@ -1,0 +1,263 @@
+{
+    "week": "2026-W37",
+    "date": "2026-09-10",
+    "title": "The First Real Full-Color Printer, 45 Shades From Five Spools & a Printable Robot Vacuum",
+    "subtitle": "This week in 3D printing news",
+    "timerMinutes": 20,
+    "topics": [
+        {
+            "id": "heygears-g1x",
+            "title": "HeyGears G1X: The First Real Full-Color 3D Printer",
+            "description": "Full-color prints on a desk — and the Kickstarter closes tomorrow",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "HeyGears G1X: Full Color Comes Home",
+                    "body": "This is the machine everyone's reviewing right now — a desktop printer that jets CMYK ink INTO the model as it builds. Full-color figures, no painting. Steve Makes Everything got hands-on; his macro shots tell the story better than any spec sheet.",
+                    "videoUrl": "https://www.youtube.com/watch?v=IlAAKqK1rCg"
+                },
+                {
+                    "heading": "What the G1X Actually Is",
+                    "body": "A 3-in-1: full-color 3D printing with UV-cured resin, 3D texture printing, and flat 2D UV printing on wood, metal, acrylic — 400+ materials. The color engine is an industrial Epson i3200 printhead laying 3.9-picoliter droplets of CMYK plus white, clear, and support.",
+                    "bullets": [
+                        "Full-color 3D on a desk — until now this tech cost as much as a car",
+                        "8-channel ink system builds color into the model layer by layer — no post-paint",
+                        "Doubles as a 2D UV flatbed printer: 330 × 420 mm bed, prints on 400+ materials",
+                        "Reviewers agree the 2D output is superb; 3D sharpness still trails a good resin printer"
+                    ],
+                    "link": "https://www.fauxhammer.com/featured/heygears-g1x-review-a-proper-first-look-at-full-colour-3d-printing/",
+                    "linkLabel": "FauxHammer's Full Review (Sep 10)"
+                },
+                {
+                    "heading": "The Kickstarter Closes TOMORROW — Don't Back It",
+                    "body": "The campaign has raised over $16.5 million from about 3,800 backers and ends September 11. My advice stands: don't buy the Kickstarter. Let the first wave eat the beta pain — this is v1 hardware with unfinished software.",
+                    "bullets": [
+                        "Roughly $3.3–3.6k on Kickstarter for the full-color 3D config, against a $5.5k MSRP",
+                        "Reviewers call it 'hugely promising beta hardware' — messy ink handling, gloves required, ~5-minute manual changeover between 2D and 3D modes",
+                        "Batch print times are still unpublished — the one number a small shop would need",
+                        "Watch this one mature: the tech is real, the product isn't finished"
+                    ],
+                    "link": "https://www.kickstarter.com/projects/heygears/heygears-g1-series-first-desktop-full-color-3d-and-uv-printer",
+                    "linkLabel": "The Campaign (look, don't touch)"
+                }
+            ]
+        },
+        {
+            "id": "prusament-colormix",
+            "title": "Prusament PLA ColorMix: 45 Shades From Five Spools",
+            "description": "Prusa open-sources halftoning for filament printers",
+            "type": "tool",
+            "slides": [
+                {
+                    "heading": "ColorMix: 45 Shades From Five Spools",
+                    "body": "Prusa's answer to the color question, from the other direction: instead of new hardware, math. Load cyan, yellow, magenta, black, and white — the slicer alternates the colors by layers, and from viewing distance your eye blends them. Halftoning, exactly like an inkjet.",
+                    "bullets": [
+                        "Five CYMKW spools mix into 45 distinct shades — announced September 8",
+                        "Works in PrusaSlicer and EasyPrint on ANY multi-color setup: MMU3, XL, INDX",
+                        "The mixing model is open source — built on the community's Full Spectrum project",
+                        "Bundle with all seven spools (the five colors plus two glitters) is $209.99; singles $32.99"
+                    ],
+                    "link": "https://blog.prusa3d.com/prusament-pla-colormix-print-45-color-shades-using-just-five-filament-spools-and-more_137835/",
+                    "linkLabel": "The ColorMix Announcement"
+                }
+            ]
+        },
+        {
+            "id": "bambu-tops-creality",
+            "title": "Bambu Is Now #1 — The Numbers Behind the Price War",
+            "description": "Context's full-year data crowns a new entry-level king",
+            "type": "discussion",
+            "slides": [
+                {
+                    "heading": "Bambu Overtakes Creality as the #1 Entry-Level Brand",
+                    "body": "Market-research firm Context published its full-year 2025 shipment data: Bambu Lab took 37% of the sub-$2,500 segment and knocked Creality off a top spot it held for years. Remember last week's slide — Creality selling more printers and losing money? Same story, other side.",
+                    "bullets": [
+                        "Bambu: 37% of entry-level shipments; Creality, Elegoo, Anycubic round out the top four",
+                        "The whole segment grew 26% in 2025 — Q4 alone was up 47% year over year",
+                        "Bambu's moat isn't just hardware: MakerWorld hit ~10 million monthly active users",
+                        "For us: the price war is real, printers keep getting cheaper — and last week's Creality loss shows who's paying for it"
+                    ],
+                    "link": "https://www.tomshardware.com/3d-printing/bambu-lab-overtakes-creality-as-the-worlds-top-selling-budget-3d-printer-brand",
+                    "linkLabel": "The Data at Tom's Hardware"
+                }
+            ]
+        },
+        {
+            "id": "sunlu-filadc-i10",
+            "title": "SUNLU FilaDC i10: A Dryer That Never Heats Your Filament",
+            "description": "Commercial-style desiccant drying, sized for ten spools",
+            "type": "tool",
+            "slides": [
+                {
+                    "heading": "SUNLU FilaDC i10: Drying Without the Heat",
+                    "body": "This is the commercial drying method finally sized for us: a 10-spool cabinet that circulates room-temperature air through molecular-sieve desiccant. The filament itself is NEVER heated — no more cooking your spools through endless dry cycles.",
+                    "bullets": [
+                        "Air loops through the desiccant, which traps the moisture — filament stays at room temperature",
+                        "When the sieve saturates, a PTC heater regenerates IT, not your filament, then flips back automatically",
+                        "Ten 1 kg spools, humidity dialed anywhere from 10 to 55% RH",
+                        "~0.23 kWh a day versus ~2.9 for a heated dryer, at 35 dB or quieter",
+                        "Pre-orders open September 15 — price lands then, rumored under $200",
+                        "Open question the launch photos don't answer: where the expelled moisture actually goes"
+                    ],
+                    "link": "https://3dprinting.com/news/sunlu-inslogic-filadc-i10-filament-dehumidifying-cabinet/",
+                    "linkLabel": "The i10 Details"
+                }
+            ]
+        },
+        {
+            "id": "fibreseeker-3",
+            "title": "FibreSeeker 3: Continuous Carbon Fiber on a Desktop",
+            "description": "A $2,399 machine that lays unbroken fiber into your prints",
+            "type": "tool",
+            "slides": [
+                {
+                    "heading": "FibreSeeker 3: Continuous Carbon Fiber Goes Desktop",
+                    "body": "Not chopped-fiber filament — this machine lays UNBROKEN carbon fiber strands inside the print, the technique that lets plastic parts stand in for machined metal. After a $4.7M Kickstarter, FibreSeek opened a 500-unit global pre-sale on September 9.",
+                    "bullets": [
+                        "Dual nozzle: 0.4 mm for regular FFF, 0.7 mm for fiber co-extrusion, with a built-in fiber cutter",
+                        "Claimed 900 MPa tensile strength — the brochure math says 30× standard PLA",
+                        "300 × 300 × 245 mm build volume, up to 500 mm/s in plain FFF mode, 65 °C heated chamber",
+                        "US pre-sale opens September 15: $3,199 early bird against a $3,499 retail price — 500 units worldwide",
+                        "Same rule as every pre-sale: that strength number is the vendor's — wait for independent tests"
+                    ],
+                    "link": "https://3dprinting.com/news/fibreseek-opens-pre-sale-of-fibreseeker-3-continuous-carbon-fibre-printer/",
+                    "linkLabel": "The Pre-Sale Story"
+                }
+            ]
+        },
+        {
+            "id": "printabot-rails",
+            "title": "Printabot Is Back: Printed Rails That Beat Steel",
+            "description": "PETG + PTFE linear rails outperform metal — suggested by our own Horizon-3D",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "Printabot: PETG + PTFE Rails vs. Steel — Printed Wins",
+                    "body": "Our friend Printabot is back, and this one's a jaw-dropper: he replaced EVERY steel linear rail on a Sovol Zero CoreXY with printed PETG rails riding PTFE tube — and the printer ran BETTER than on its metal ball-bearing rails. Video's in Spanish; the results speak every language.",
+                    "videoUrl": "https://youtu.be/mBbuhzq9Cbg"
+                },
+                {
+                    "heading": "Why This One Matters",
+                    "bullets": [
+                        "Printed rails means no bearing noise, no grease, pennies in material — and he measured print quality going UP",
+                        "PTFE against smooth PETG is a naturally slick pair — no balls to pit, no preload to tune",
+                        "Shout-out: our member Horizon-3D submitted this exact video on our GitHub — this is the topic pipeline working",
+                        "Working on getting Printabot to join a meetup for a deep-dive — stay tuned"
+                    ],
+                    "link": "https://youtu.be/mBbuhzq9Cbg",
+                    "linkLabel": "Watch the Build",
+                    "links": [
+                        {
+                            "label": "Horizon-3D's Topic Submission",
+                            "url": "https://github.com/MaxSikorski/3d-printing-weekly-news/issues/7"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "indx-shipping",
+            "title": "INDX Update: Kits Are Shipping, Full Printers on Sale",
+            "description": "The toolchanger saga reaches actual customers",
+            "type": "discussion",
+            "slides": [
+                {
+                    "heading": "INDX: From Promise to Porch",
+                    "body": "The toolchanger story we've tracked since spring finally reached the shipping stage: Prusa confirmed the first batch of INDX conversion kits is going out, and you can now order a complete CORE One+ (Gen 2) INDX — assembled or kit, 4 or 8 tools.",
+                    "bullets": [
+                        "First-batch conversion kits: shipping started, per Prusa's August 20 post",
+                        "Complete INDX printers now orderable — no more converting an existing CORE One yourself",
+                        "August 27: the bigger CORE One L+ got its INDX kits and assembled option too",
+                        "Slicer catch still stands: PrusaSlicer 3.0's alpha ships WITHOUT INDX profiles — they arrive later through the Configuration Wizard",
+                        "Rival watch: Sovol M1D preorders are live (last week), Co Print's Quadro Kickstarter is due in October — 2026 really is the toolchanger year"
+                    ],
+                    "link": "https://blog.prusa3d.com/prusa-core-one-gen-2-indx-shipping-has-started-complete-printers-open-for-orders_137623/",
+                    "linkLabel": "Prusa's Shipping Announcement"
+                }
+            ]
+        },
+        {
+            "id": "robotics-corner",
+            "title": "Robotics Corner: Oomwoo, the Robot Vacuum You Print",
+            "description": "Open-source, offline-only, and built on your own printer",
+            "type": "tool",
+            "slides": [
+                {
+                    "heading": "Robotics Corner: Print Your Own Robot Vacuum",
+                    "body": "Maker's Pet launched Oomwoo — an open-source robot vacuum you 3D print and assemble yourself: printed chassis, Raspberry Pi brain, a cheap 2D LiDAR, ROS 2 underneath. And the design goal that makes it OUR kind of robot: it runs entirely offline. No cloud, no account, no microphone phoning home.",
+                    "bullets": [
+                        "Everything is open — hardware, firmware, software, Apache 2.0, targeting ~$200 in parts",
+                        "Runs ROS 2 with Nav2 and talks to Home Assistant — a real robotics stack, not a toy",
+                        "The offline-only stance is a direct answer to the hijacked-vacuum horror stories — researchers took over camera-equipped Ecovacs units remotely",
+                        "It's early: v0 covers the chassis, simulation, and LiDAR mapping; build instructions are due this fall",
+                        "I've been in the project's GitHub discussions myself — jump in, this is a fun one to watch"
+                    ],
+                    "link": "https://github.com/makerspet/oomwoo",
+                    "linkLabel": "Oomwoo on GitHub",
+                    "links": [
+                        {
+                            "label": "The Story at Tom's Hardware",
+                            "url": "https://www.tomshardware.com/3d-printing/maker-kicks-off-oomwoo-an-open-source-robot-vacuum-you-can-3d-print-and-build-yourself"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "builder-spotlight",
+            "title": "Builder Spotlight: Salim's 3D-Printed PCB Motor",
+            "description": "An axial flux motor with the circuit board as its stator",
+            "type": "tool",
+            "slides": [
+                {
+                    "heading": "Builder Spotlight: A Motor Where the PCB IS the Stator",
+                    "body": "This week's spotlight is Salim's Workshop and a build that rethinks what a motor even is: a rotary axial flux motor where the stator windings are traces on a printed circuit board, and the rotor is 3D printed around off-the-shelf magnets. Then he tested whether it actually works.",
+                    "videoUrl": "https://youtu.be/nxREYUHPGpo"
+                },
+                {
+                    "heading": "Why a Printed Motor Matters",
+                    "bullets": [
+                        "Axial flux motors are prized for their flat, pancake form — and normally priced way out of hobby reach",
+                        "The stator is just a PCB order and the rotor is just a print — two things every maker can already do",
+                        "It runs: the video walks the full build and the real-world test, including what didn't work on the way",
+                        "If motors become something we print and order like any other part, whole categories of builds open up — robots included"
+                    ],
+                    "link": "https://youtu.be/nxREYUHPGpo",
+                    "linkLabel": "Watch the Build & Test"
+                }
+            ]
+        },
+        {
+            "id": "quick-tip",
+            "title": "Quick Tip of the Week",
+            "description": "Dry with desiccant, not heat cycles",
+            "type": "text",
+            "slides": [
+                {
+                    "heading": "Quick Tip: Stop Cooking Your Filament",
+                    "body": "Tonight's Sunlu cabinet is built on a principle you can use for free, right now: moisture management beats repeated drying. Every heat-dry cycle ages your filament a little — the goal is to never need the oven in the first place.",
+                    "bullets": [
+                        "Store spools in a sealed box or bag with desiccant and a $5 hygrometer — keep them dry instead of re-drying them",
+                        "Recharge the DESICCANT in the oven, not the filament — silica gel comes back forever, polymer doesn't",
+                        "Heat-dry a spool when it actually needs it (stringing, popping, matte surfaces), not on a schedule",
+                        "September humidity is exactly when a $10 box of desiccant pays for itself"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "community-news",
+            "title": "Community News & Topics",
+            "description": "Share what you're interested in talking about!",
+            "type": "text",
+            "slides": [
+                {
+                    "heading": "Next Week's Meetup",
+                    "body": "Find something you're interested in talking about? Share it here and we'll cover it in next week's meetup!",
+                    "link": "https://github.com/MaxSikorski/3d-printing-weekly-news/issues",
+                    "linkLabel": "Submit a Topic"
+                }
+            ]
+        }
+    ]
+}
