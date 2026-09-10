@@ -3,14 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>3D Printing Meetup — Weekly Presentations</title>
-    <meta name="description" content="Weekly 3D printing news and discussion topics for our meetup group.">
+    <title></title>
+    <meta name="description" content="">
+    <script src="config.js"></script>
+    <script>
+        // Pre-paint branding from config.js: title, description, favicons.
+        (function (cfg) {
+            if (!cfg) return;
+            var page = /week\.html$/.test(location.pathname) ? 'week' : 'index';
+            document.title = cfg.pageTitles[page];
+            var meta = document.querySelector('meta[name="description"]');
+            if (meta) meta.content = cfg.metaDescription[page];
+            (cfg.favicons || []).forEach(function (icon) {
+                var link = document.createElement('link');
+                Object.keys(icon).forEach(function (k) { link.setAttribute(k, icon[k]); });
+                document.head.appendChild(link);
+            });
+        })(window.SITE_CONFIG);
+    </script>
     <meta name="theme-color" content="#000000">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -18,9 +31,14 @@
 
     <!-- Navigation -->
     <nav class="header-nav">
-        <a href="index.html" class="logo" id="logo-refresh">3D Printing Meetup</a>
+        <a href="index.html" class="logo" id="logo-refresh"></a>
         <div class="nav-right">
-            <a href="recommendations.html" class="nav-link">Recommendations</a>
+            <span id="nav-links"></span>
+            <button id="search-toggle" class="theme-toggle search-toggle" aria-label="Search all presentations" title="Search (/)">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path>
+                </svg>
+            </button>
             <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
                 <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -35,8 +53,8 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-content">
-            <h1 class="hero-title">3D Printing<br>Weekly</h1>
-            <p class="hero-subtitle">News, tools, and discussion topics curated for our weekly meetup.</p>
+            <h1 class="hero-title"></h1>
+            <p class="hero-subtitle"></p>
             <a href="#current-section" class="scroll-cue" aria-label="Scroll to presentations">
                 <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M12 5v14M19 12l-7 7-7-7"/>
@@ -62,121 +80,20 @@
         </div>
     </div>
 
-    <!-- Footer / About the host -->
-    <footer class="footer">
-        <p class="footer-host">Hosted by <strong>Max Sikorski</strong></p>
-        <p class="footer-tagline">3D print farm · R&amp;D &amp; manufacturing · CAD classes</p>
-        <nav class="footer-links">
-            <a href="recommendations.html">Recommendations</a>
-            <a href="https://www.youtube.com/@maxwellsikorski4926" target="_blank" rel="noopener noreferrer">YouTube</a>
-            <a href="https://www.meetup.com/3d-printing-club/" target="_blank" rel="noopener noreferrer">Meetup</a>
-            <a href="https://github.com/MaxSikorski" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a id="footer-workwith" href="#">Work With Us</a>
-        </nav>
-    </footer>
+    <!-- Footer -->
+    <footer class="footer" id="site-footer"></footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="gsap.min.js"></script>
     <script src="script.js"></script>
+    <script src="data.js"></script>
     <script>
         (function () {
             'use strict';
-
-            // Inline fallback data (used when opening via file:// protocol)
-            // Keep this in sync with weeks/index.json
-            const INLINE_DATA = {
-                "weeks": [
-                    {
-                        "id": "2026-W36",
-                        "date": "2026-09-03",
-                        "title": "AB 2047 Reaches Newsom's Desk, PrusaSlicer 3.0 Arrives & Creality Goes Red"
-                    },
-                    {
-                        "id": "2026-W35",
-                        "date": "2026-08-27",
-                        "title": "AB 2047 Loses Its Teeth, INDX Gen 2 Ships & Sovol's $3.2M Finish"
-                    },
-                    {
-                        "id": "2026-W34",
-                        "date": "2026-08-20",
-                        "title": "AB 2047 Advances, Bambu's Toolchanger Patents & Lasers Fix Weak Z-Layers"
-                    },
-                    {
-                        "id": "2026-W33",
-                        "date": "2026-08-13",
-                        "title": "Prusa Goes Gen 2, Bambu Teases Its First Laser & AB 2047's Decision Day"
-                    },
-                    {
-                        "id": "2026-W32",
-                        "date": "2026-08-06",
-                        "title": "Qidi Plus5 Lands, INDX Slips to Mid-August & AB 2047 Hits the Suspense File"
-                    },
-                    {
-                        "id": "2026-W31",
-                        "date": "2026-07-30",
-                        "title": "M1D Goes Live, INDX Nozzles Aren't Hardened & HT-PLA's Fine Print"
-                    },
-                    {
-                        "id": "2026-W30",
-                        "date": "2026-07-23",
-                        "title": "INDX Kits Ship Within Days, Polymaker's Best Filament Yet & Pressure Advance Goes Automatic"
-                    },
-                    {
-                        "id": "2026-W29",
-                        "date": "2026-07-16",
-                        "title": "Curve Cut Goes Live, INDX Opens Orders & the Toolchanger Wars Heat Up"
-                    },
-                    {
-                        "id": "2026-W28",
-                        "date": "2026-07-09",
-                        "title": "California's AB 2047, INDX Finally Ships & a Clay Printer That Prints the Impossible"
-                    },
-                    {
-                        "id": "2026-W27",
-                        "date": "2026-07-02",
-                        "title": "SUNLU's US Factory, Sovol M1D Pricing & a Walking Robot Duck"
-                    },
-                    {
-                        "id": "2026-W26",
-                        "date": "2026-06-25",
-                        "title": "Prime Day Deals, Desktop 5-Axis & a 3D-Printed Hypercar"
-                    },
-                    {
-                        "id": "2026-W25",
-                        "date": "2026-06-18",
-                        "title": "MRRF's Last Ride, Open-Source Volumetric Printing & a 16-Color U1"
-                    },
-                    {
-                        "id": "2026-W24",
-                        "date": "2026-06-11",
-                        "title": "MRRF Weekend, BigTreeTech's ViViD & Formlabs Goes Industrial"
-                    },
-                    {
-                        "id": "2026-W23",
-                        "date": "2026-06-04",
-                        "title": "A2L Launch, Creality's IPO & 3D Printer Ban Bills"
-                    },
-                    {
-                        "id": "2026-W22",
-                        "date": "2026-05-28",
-                        "title": "PHA Filaments, Slicer Drama & Color Mixing"
-                    }
-                ]
-            };
 
             const archiveList = document.getElementById('archive-list');
             const currentList = document.getElementById('current-list');
             const pastSection = document.getElementById('presentations');
             const emptyState = document.getElementById('empty-state');
-
-            // "Work With Us" → prefilled email (assembled so plain-text scrapers don't grab it)
-            (function () {
-                const workLink = document.getElementById('footer-workwith');
-                if (!workLink) return;
-                const email = ['3dmax.ow6p08', 'bumpmail.io'].join('@');
-                const subject = '3D Printing Weekly — Work With You (print farm / R&D / CAD)';
-                const body = "Hi Max,\n\nI'd like to talk about working together — print farm / R&D / manufacturing / CAD classes.\n\n";
-                workLink.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            })();
 
             function buildCard(week, index, featured) {
                 const card = document.createElement('a');
@@ -201,6 +118,28 @@
                         <path d="M9 18l6-6-6-6"/>
                     </svg>
                 `;
+
+                // Breathing glow on the featured card — a soft halo swells in and melts
+                // away (1s in, 1s out), then 2s fully dark, forever.
+                const haloColors = (window.SITE_CONFIG && window.SITE_CONFIG.halo) || [];
+                if (featured && haloColors.length > 0) {
+                    const halo = document.createElement('div');
+                    halo.className = 'glow-halo';
+                    halo.setAttribute('aria-hidden', 'true');
+                    card.appendChild(halo);
+
+                    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                    if (!reduceMotion && typeof gsap !== 'undefined') {
+                        const tl = gsap.timeline({ repeat: -1 });
+                        const addPulse = (color) => {
+                            tl.set(halo, { boxShadow: `0 0 14px 2px ${color}, 0 0 42px 12px ${color}` });
+                            tl.to(halo, { opacity: 1, duration: 1, ease: 'sine.inOut' });
+                            tl.to(halo, { opacity: 0, duration: 1, ease: 'sine.inOut' });
+                            tl.to({}, { duration: 2 });
+                        };
+                        haloColors.forEach(color => addPulse(color));
+                    }
+                }
                 return card;
             }
 
@@ -221,7 +160,107 @@
                 if (past.length === 0) {
                     pastSection.style.display = 'none';
                 } else {
-                    past.forEach((week, index) => archiveList.appendChild(buildCard(week, index, false)));
+                    const monthGroups = new Map();
+                    past.forEach(week => {
+                        const dateObj = new Date(week.date + 'T12:00:00');
+                        const monthKey = `${dateObj.getFullYear()}-${String(dateObj.getMonth() + 1).padStart(2, '0')}`;
+                        if (!monthGroups.has(monthKey)) {
+                            monthGroups.set(monthKey, { date: dateObj, weeks: [] });
+                        }
+                        monthGroups.get(monthKey).weeks.push(week);
+                    });
+
+                    const months = Array.from(monthGroups.entries()).sort(([a], [b]) => b.localeCompare(a));
+                    const openMonths = (window.SITE_CONFIG && window.SITE_CONFIG.archive && window.SITE_CONFIG.archive.openMonths) ?? 2;
+                    const archiveYears = new Map();
+
+                    months.forEach(([monthKey]) => {
+                        const year = monthKey.slice(0, 4);
+                        if (!archiveYears.has(year)) archiveYears.set(year, monthKey);
+                    });
+
+                    if (archiveYears.size > 1) {
+                        const yearRail = document.createElement('nav');
+                        yearRail.className = 'archive-years';
+                        yearRail.setAttribute('aria-label', 'Jump to year');
+                        archiveYears.forEach((monthKey, year) => {
+                            const yearLink = document.createElement('a');
+                            yearLink.href = `#month-${monthKey}`;
+                            yearLink.textContent = year;
+                            yearRail.appendChild(yearLink);
+                        });
+                        archiveList.prepend(yearRail);
+                    }
+
+                    months.forEach(([monthKey, month], monthIndex) => {
+                        const isOpen = monthIndex < openMonths;
+                        const monthSection = document.createElement('section');
+                        monthSection.className = 'archive-month';
+                        monthSection.dataset.month = monthKey;
+
+                        const monthToggle = document.createElement('button');
+                        monthToggle.type = 'button';
+                        monthToggle.className = 'archive-month-toggle';
+                        monthToggle.setAttribute('aria-expanded', String(isOpen));
+                        monthToggle.setAttribute('aria-controls', `month-${monthKey}`);
+
+                        const monthName = document.createElement('span');
+                        monthName.className = 'archive-month-name';
+                        monthName.textContent = month.date.toLocaleDateString('en-US', {
+                            month: 'long',
+                            year: 'numeric'
+                        });
+
+                        const monthCount = document.createElement('span');
+                        monthCount.className = 'archive-month-count';
+                        monthCount.textContent = `${month.weeks.length} ${month.weeks.length === 1 ? 'deck' : 'decks'}`;
+
+                        const chevron = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                        chevron.setAttribute('class', 'archive-month-chevron');
+                        chevron.setAttribute('width', '16');
+                        chevron.setAttribute('height', '16');
+                        chevron.setAttribute('viewBox', '0 0 24 24');
+                        chevron.setAttribute('fill', 'none');
+                        chevron.setAttribute('stroke', 'currentColor');
+                        chevron.setAttribute('stroke-width', '1.5');
+                        chevron.setAttribute('stroke-linecap', 'round');
+                        chevron.setAttribute('stroke-linejoin', 'round');
+                        chevron.setAttribute('aria-hidden', 'true');
+                        const chevronPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                        chevronPath.setAttribute('d', 'M6 9l6 6 6-6');
+                        chevron.appendChild(chevronPath);
+
+                        const monthCards = document.createElement('div');
+                        monthCards.className = 'archive-month-cards';
+                        monthCards.id = `month-${monthKey}`;
+                        monthCards.hidden = !isOpen;
+                        month.weeks.forEach((week, i) => monthCards.appendChild(buildCard(week, i, false)));
+
+                        monthToggle.appendChild(monthName);
+                        monthToggle.appendChild(monthCount);
+                        monthToggle.appendChild(chevron);
+                        monthSection.appendChild(monthToggle);
+                        monthSection.appendChild(monthCards);
+                        archiveList.appendChild(monthSection);
+
+                        monthToggle.addEventListener('click', () => {
+                            const expanded = monthToggle.getAttribute('aria-expanded') === 'true';
+                            monthToggle.setAttribute('aria-expanded', String(!expanded));
+                            monthCards.hidden = expanded;
+
+                            if (!expanded && typeof gsap !== 'undefined') {
+                                monthCards.querySelectorAll('.archive-card').forEach(card => {
+                                    gsap.to(card, {
+                                        opacity: 1,
+                                        y: 0,
+                                        duration: 0.8,
+                                        ease: 'power4.out',
+                                        delay: parseFloat(card.dataset.delay) || 0
+                                    });
+                                });
+                            }
+                        });
+                    });
                 }
 
                 // Trigger scroll reveals for dynamically added cards
@@ -254,10 +293,16 @@
                     if (!res.ok) throw new Error('HTTP error');
                     return res.json();
                 })
-                .then(data => renderArchive(data))
+                .then(data => {
+                    renderArchive(data);
+                    const initialQuery = new URLSearchParams(window.location.search).get('q') || '';
+                    if (initialQuery) window.DeckSearch.openPalette({ initialQuery });
+                })
                 .catch(() => {
                     console.log('Using inline data (file:// mode)');
-                    renderArchive(INLINE_DATA);
+                    renderArchive(window.INLINE_DATA || { weeks: [] });
+                    const initialQuery = new URLSearchParams(window.location.search).get('q') || '';
+                    if (initialQuery) window.DeckSearch.openPalette({ initialQuery });
                 });
         })();
     </script>
