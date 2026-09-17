@@ -61,6 +61,12 @@ window.SITE_CONFIG = {
     // per-topic anchor events on Max's Buzz relay; the site key publishes anchors via
     // ../tools/likes_admin.py. Relay URL is interim (custom domain planned) — this is
     // the ONLY place it lives. Demo the mock UI any time with ?likesDemo=1.
+    // Telemetry: anonymous view/share counters to Max's private collector
+    // (buzz-admin on Railway — admin-dashboard-plan §3a). Counters only, no identifiers.
+    telemetry: {
+        url: "https://buzz-admin-production.up.railway.app/beacon",
+        site: "3dpw"
+    },
     likes: {
         adapter: "nostr",
         relay: "wss://buzz-production-7d9e.up.railway.app",

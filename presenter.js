@@ -48,6 +48,24 @@
     }
     const WORK_WITH_MAILTO = mailtoFor(MAIL.workWithSubject || '', MAIL.workWithBody || '');
 
+    // === Telemetry beacons (engine-level, 2026-09-17 — admin-dashboard-plan §3a) ===
+    // Dormant unless config.js sets telemetry.url (Max's private collector). A beacon is
+    // an anonymous counter tick: {site, kind, week, topic} — no ids, no durations, nothing
+    // per-person. Sent at most once per kind+target per pageview; every failure is silent.
+    const TELEMETRY = CFG.telemetry || {};
+    const beaconSent = {};
+    function beacon(kind, week, topic) {
+        if (!TELEMETRY.url || !navigator.sendBeacon) return;
+        const key = kind + ':' + (week || '') + ':' + (topic || '');
+        if (beaconSent[key]) return;
+        beaconSent[key] = true;
+        try {
+            navigator.sendBeacon(TELEMETRY.url, JSON.stringify({
+                site: TELEMETRY.site || '', kind: kind, week: week || '', topic: topic || ''
+            }));
+        } catch (e) { /* telemetry must never break the deck */ }
+    }
+
     // === Likes (engine-level, 2026-09-10 — issue #6 second half) ===
     // Dormant unless config.js sets likes.adapter, or the page runs with ?likesDemo=1.
     // v1 ships the 'mock' adapter only (localStorage, seeded counts) so the UI can be demoed
@@ -1214,6 +1232,9 @@
     function goToSlide(index, direction) {
         if (index < 0 || index >= slides.length || index === currentSlide) return;
 
+        if (slides[index].topicId) {
+            beacon('view-topic', weekData && weekData.week, slides[index].topicId);
+        }
         const prevSlideEl = slides[currentSlide].el;
         const nextSlideEl = slides[index].el;
         const dir = direction || (index > currentSlide ? 1 : -1);
@@ -1393,6 +1414,8 @@
     function toggleQR() {
         qrVisible = !qrVisible;
         if (qrVisible) {
+            beacon('share-qr', weekData && weekData.week,
+                slides[currentSlide] ? slides[currentSlide].topicId : null);
             qrToggleBtn.classList.add('active');
             updateQR();
         } else {
@@ -1407,6 +1430,7 @@
     // the Vercel mirror, or a future custom domain — no hardcoded host anywhere.
     let shareOpen = false;
     let shareSheet = null, shareOverlay = null;
+    let lastShareTopic = null;   // context for the share beacons
 
     function shareUrlFor(topicId) {
         const params = new URLSearchParams(window.location.search);
@@ -1451,6 +1475,7 @@
     }
 
     function copyShareLink(url, btn) {
+        beacon('share-copy', weekData && weekData.week, lastShareTopic);
         const done = () => {
             btn.textContent = 'Copied ✓';
             setTimeout(() => { btn.textContent = 'Copy Link'; }, 1600);
@@ -1493,6 +1518,7 @@
         const nativeBtn = container.querySelector('[data-native]');
         if (nativeBtn) {
             nativeBtn.addEventListener('click', () => {
+                beacon('share-native', weekData && weekData.week, lastShareTopic);
                 navigator.share({ title: title, url: url }).catch(() => { /* user closed the native sheet */ });
             });
         }
@@ -1507,6 +1533,8 @@
         const slideMeta = topicId ? slides.find(s => s.topicId === topicId) : null;
         const topicTitle = slideMeta ? slideMeta.topicTitle : null;
         const url = shareUrlFor(topicId);
+        lastShareTopic = topicId || null;
+        beacon('share-open', weekData && weekData.week, lastShareTopic);
         const shareTitle = topicTitle ? `${topicTitle} — ${CFG.weeklyName || ''}` : `${weekData ? weekData.title : CFG.weeklyName || ''}`;
 
         shareSheet.querySelector('.share-topic-title').textContent = topicTitle || (weekData ? weekData.title : '');
@@ -1943,6 +1971,7 @@
             buildSlides(data);
             buildTOC(data);
             initLikes(data);
+            beacon('view-deck', data.week);
             initLiveDashboard();
             initBip110Dashboard();
 
