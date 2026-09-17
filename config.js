@@ -57,6 +57,16 @@ window.SITE_CONFIG = {
         ],
         workWithLabel: "Work With Us"
     },
+    // Likes: LIVE on Nostr (2026-09-17). A like = a kind-7 reaction to this site's
+    // per-topic anchor events on Max's Buzz relay; the site key publishes anchors via
+    // ../tools/likes_admin.py. Relay URL is interim (custom domain planned) — this is
+    // the ONLY place it lives. Demo the mock UI any time with ?likesDemo=1.
+    likes: {
+        adapter: "nostr",
+        relay: "wss://buzz-production-7d9e.up.railway.app",
+        sitePubkey: "0daf0fbd4c54dbeccb22e21feffbb8faeb1db0c8f72077135aa33e57cacde4ac",
+        tagPrefix: "3dpw"
+    },
     accents: {},
     halo: [],
     liveAccent: "#f7931a",

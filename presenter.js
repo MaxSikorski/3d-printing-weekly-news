@@ -47,6 +47,358 @@
         return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     }
     const WORK_WITH_MAILTO = mailtoFor(MAIL.workWithSubject || '', MAIL.workWithBody || '');
+
+    // === Likes (engine-level, 2026-09-10 — issue #6 second half) ===
+    // Dormant unless config.js sets likes.adapter, or the page runs with ?likesDemo=1.
+    // v1 ships the 'mock' adapter only (localStorage, seeded counts) so the UI can be demoed
+    // before the Nostr backend exists; the 'nostr' adapter replaces load/like/unlike later
+    // (relay URL comes from SITE_CONFIG.likes.relay — see future features/like-button-plan.md).
+    const LIKES_CFG = CFG.likes || {};
+    const likesDemo = new URLSearchParams(window.location.search).get('likesDemo') === '1';
+    const likesAdapter = likesDemo ? 'mock' : (LIKES_CFG.adapter || null);
+    let likesStore = null;
+    if (likesAdapter === 'mock') {
+        likesStore = {
+            _key(weekId) { return 'likes:mock:' + weekId; },
+            _read(weekId) {
+                try { return JSON.parse(localStorage.getItem(this._key(weekId))) || {}; }
+                catch (e) { return {}; }
+            },
+            _write(weekId, counts) {
+                try { localStorage.setItem(this._key(weekId), JSON.stringify(counts)); } catch (e) {}
+            },
+            _seed(topicId) {
+                // Deterministic fake count per topic so the demo looks alive (3–24).
+                let h = 0;
+                for (let i = 0; i < topicId.length; i++) h = ((h << 5) - h + topicId.charCodeAt(i)) | 0;
+                return 3 + (Math.abs(h) % 22);
+            },
+            load(weekId, topicIds) {
+                const stored = this._read(weekId);
+                const counts = {};
+                topicIds.forEach(id => { counts[id] = (id in stored) ? stored[id] : this._seed(id); });
+                return Promise.resolve(counts);
+            },
+            like(weekId, topicId, current) {
+                const stored = this._read(weekId);
+                stored[topicId] = current + 1;
+                this._write(weekId, stored);
+                return Promise.resolve(stored[topicId]);
+            },
+            unlike(weekId, topicId, current) {
+                const stored = this._read(weekId);
+                stored[topicId] = Math.max(0, current - 1);
+                this._write(weekId, stored);
+                return Promise.resolve(stored[topicId]);
+            }
+        };
+    } else if (likesAdapter === 'nostr' && LIKES_CFG.relay && LIKES_CFG.sitePubkey &&
+               window.WebSocket && window.crypto && window.crypto.subtle &&
+               typeof BigInt !== 'undefined') {
+        likesStore = createNostrLikesStore();
+    }
+
+    // === Likes 'nostr' adapter (2026-09-17 — the backend half of issue #6) ===
+    // A like = a NIP-25 kind-7 reaction to this site's per-topic ANCHOR event (the relay
+    // requires reactions to reference a real event), published to SITE_CONFIG.likes.relay.
+    // Anchors are kind-1 events from likes.sitePubkey, tagged ["t","<prefix>:<week>:<topic>"],
+    // published by tools/likes_admin.py. Unlike = NIP-09 deletion of your own reaction.
+    // The relay requires NIP-42 auth even to read, and the event pubkey must match the
+    // authenticated key — so every visitor gets a persistent throwaway key (localStorage),
+    // and a NIP-07 extension user is offered their real key on first like (the extension
+    // shows its own consent prompt; declining falls back to the throwaway for good).
+    // Every failure path resolves to "hearts stay dormant" — never an error state.
+    function createNostrLikesStore() {
+        const RELAY = LIKES_CFG.relay;
+        const SITE_PK = String(LIKES_CFG.sitePubkey).toLowerCase();
+        const PREFIX = LIKES_CFG.tagPrefix || 'likes';
+
+        // --- secp256k1 + BIP-340 Schnorr over BigInt (sha256 via WebCrypto) ---
+        const CP = BigInt('0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F');
+        const CN = BigInt('0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141');
+        const GP = [BigInt('0x79BE667EF9DCBBAC55A06295CE870B07029BFCDB2DCE28D959F2815B16F81798'),
+                    BigInt('0x483ADA7726A3C4655DA4FBFC0E1108A8FD17B448A68554199C47D08FFB10D4B8')];
+        function pmod(a, m) { const r = a % m; return r < 0n ? r + m : r; }
+        function powmod(b, e, m) {
+            let r = 1n; b = pmod(b, m);
+            while (e > 0n) { if (e & 1n) r = r * b % m; b = b * b % m; e >>= 1n; }
+            return r;
+        }
+        function inv(a, m) { return powmod(a, m - 2n, m); }
+        function ptAdd(a, b) {
+            if (!a) return b;
+            if (!b) return a;
+            if (a[0] === b[0] && pmod(a[1] + b[1], CP) === 0n) return null;
+            let lam;
+            if (a[0] === b[0] && a[1] === b[1]) lam = pmod(3n * a[0] * a[0] * inv(2n * a[1], CP), CP);
+            else lam = pmod((b[1] - a[1]) * inv(pmod(b[0] - a[0], CP), CP), CP);
+            const x = pmod(lam * lam - a[0] - b[0], CP);
+            return [x, pmod(lam * (a[0] - x) - a[1], CP)];
+        }
+        function ptMul(k, p) {
+            let r = null; p = p || GP;
+            while (k > 0n) { if (k & 1n) r = ptAdd(r, p); p = ptAdd(p, p); k >>= 1n; }
+            return r;
+        }
+        function bytesToHex(u8) {
+            let s = '';
+            for (let i = 0; i < u8.length; i++) s += u8[i].toString(16).padStart(2, '0');
+            return s;
+        }
+        function hexToBytes(hex) {
+            const u8 = new Uint8Array(hex.length / 2);
+            for (let i = 0; i < u8.length; i++) u8[i] = parseInt(hex.substr(i * 2, 2), 16);
+            return u8;
+        }
+        function bigTo32(b) { return hexToBytes(b.toString(16).padStart(64, '0')); }
+        function bytesToBig(u8) { return BigInt('0x' + (bytesToHex(u8) || '0')); }
+        function concatBytes() {
+            let len = 0;
+            for (const a of arguments) len += a.length;
+            const out = new Uint8Array(len);
+            let o = 0;
+            for (const a of arguments) { out.set(a, o); o += a.length; }
+            return out;
+        }
+        async function sha256(u8) {
+            return new Uint8Array(await crypto.subtle.digest('SHA-256', u8));
+        }
+        async function taggedHash(tag, msg) {
+            const t = await sha256(new TextEncoder().encode(tag));
+            return sha256(concatBytes(t, t, msg));
+        }
+        async function schnorrSign(msg32, d, pub32) {
+            const aux = crypto.getRandomValues(new Uint8Array(32));
+            const t = d ^ bytesToBig(await taggedHash('BIP0340/aux', aux));
+            const k0 = pmod(bytesToBig(await taggedHash('BIP0340/nonce',
+                concatBytes(bigTo32(t), pub32, msg32))), CN);
+            if (k0 === 0n) throw new Error('nonce');
+            const R = ptMul(k0, null);
+            const k = (R[1] & 1n) === 0n ? k0 : CN - k0;
+            const e = pmod(bytesToBig(await taggedHash('BIP0340/challenge',
+                concatBytes(bigTo32(R[0]), pub32, msg32))), CN);
+            return concatBytes(bigTo32(R[0]), bigTo32(pmod(k + e * d, CN)));
+        }
+
+        // --- identity: persistent throwaway key, or the visitor's NIP-07 extension ---
+        const KEY_SK = 'likes:nostr:sk';
+        const KEY_IDENT = 'likes:nostr:ident';   // 'nip07' | 'throwaway' | unset (undecided)
+        function evtsKey(weekId) { return 'likes:nostr:evts:' + weekId; }
+        function readEvts(weekId) {
+            try { return JSON.parse(localStorage.getItem(evtsKey(weekId))) || {}; }
+            catch (e) { return {}; }
+        }
+        function writeEvts(weekId, map) {
+            try { localStorage.setItem(evtsKey(weekId), JSON.stringify(map)); } catch (e) {}
+        }
+        function getPref(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+        function setPref(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+
+        function throwawaySigner() {
+            let skHex = getPref(KEY_SK);
+            if (!skHex || skHex.length !== 64) {
+                skHex = bytesToHex(crypto.getRandomValues(new Uint8Array(32)));
+                setPref(KEY_SK, skHex);
+            }
+            const sk0 = pmod(bytesToBig(hexToBytes(skHex)), CN - 1n) + 1n;
+            const p0 = ptMul(sk0, null);
+            const d = (p0[1] & 1n) === 0n ? sk0 : CN - sk0;
+            const pub32 = bigTo32(p0[0]);
+            return {
+                pubkey: bytesToHex(pub32),
+                async signEvent(ev) {
+                    const ser = JSON.stringify([0, this.pubkey, ev.created_at, ev.kind, ev.tags, ev.content]);
+                    const id = bytesToHex(await sha256(new TextEncoder().encode(ser)));
+                    const sig = bytesToHex(await schnorrSign(hexToBytes(id), d, pub32));
+                    return Object.assign({ id: id, pubkey: this.pubkey, sig: sig }, ev);
+                }
+            };
+        }
+        async function nip07Signer() {
+            const pubkey = await window.nostr.getPublicKey();
+            return {
+                pubkey: pubkey,
+                async signEvent(ev) { return window.nostr.signEvent(ev); }
+            };
+        }
+
+        // --- one authenticated WebSocket session, rebuilt if the identity upgrades ---
+        let session = null;   // Promise<{ws, signer}> | null
+        function resetSession() {
+            if (session) session.then(s => { try { s.ws.close(); } catch (e) {} }).catch(() => {});
+            session = null;
+        }
+        function ensureSession() {
+            if (session) return session;
+            session = (async () => {
+                const signer = getPref(KEY_IDENT) === 'nip07' && window.nostr
+                    ? await nip07Signer() : throwawaySigner();
+                const ws = new WebSocket(RELAY);
+                const listeners = [];   // transient routers; each returns true when done
+                ws.onmessage = (m) => {
+                    let msg;
+                    try { msg = JSON.parse(m.data); } catch (e) { return; }
+                    for (let i = listeners.length - 1; i >= 0; i--) {
+                        if (listeners[i](msg)) listeners.splice(i, 1);
+                    }
+                };
+                function expect(match, timeoutMs) {
+                    return new Promise((resolve, reject) => {
+                        const timer = setTimeout(() => reject(new Error('relay timeout')), timeoutMs);
+                        listeners.push((msg) => {
+                            const hit = match(msg);
+                            if (hit !== undefined) { clearTimeout(timer); resolve(hit); return true; }
+                            return false;
+                        });
+                    });
+                }
+                await new Promise((resolve, reject) => {
+                    const timer = setTimeout(() => reject(new Error('connect timeout')), 8000);
+                    ws.onopen = () => { clearTimeout(timer); resolve(); };
+                    ws.onerror = () => { clearTimeout(timer); reject(new Error('ws error')); };
+                });
+                const challengeWait = expect(msg => msg[0] === 'AUTH' ? msg[1] : undefined, 6000);
+                ws.send(JSON.stringify(['REQ', 'hello', { kinds: [7], limit: 1 }]));
+                const challenge = await challengeWait;
+                const authEv = await signer.signEvent({
+                    kind: 22242, created_at: Math.floor(Date.now() / 1000),
+                    tags: [['relay', RELAY], ['challenge', challenge]], content: ''
+                });
+                const okWait = expect(msg =>
+                    msg[0] === 'OK' && msg[1] === authEv.id ? !!msg[2] : undefined, 6000);
+                ws.send(JSON.stringify(['AUTH', authEv]));
+                if (!(await okWait)) throw new Error('auth rejected');
+                return { ws: ws, signer: signer, expect: expect };
+            })();
+            session.catch(() => { session = null; });
+            return session;
+        }
+
+        function fetchEvents(s, filter, timeoutMs) {
+            return new Promise((resolve) => {
+                const sub = 's' + Math.random().toString(36).slice(2, 10);
+                const events = [];
+                const finish = () => { try { s.ws.send(JSON.stringify(['CLOSE', sub])); } catch (e) {} resolve(events); };
+                const timer = setTimeout(finish, timeoutMs);
+                s.expect((msg) => {
+                    if (msg[1] !== sub) return undefined;
+                    if (msg[0] === 'EVENT') { events.push(msg[2]); return undefined; }
+                    if (msg[0] === 'EOSE' || msg[0] === 'CLOSED') { clearTimeout(timer); return true; }
+                    return undefined;
+                }, timeoutMs + 500).then(finish, finish);
+                s.ws.send(JSON.stringify(['REQ', sub, filter]));
+            });
+        }
+        async function publish(s, ev) {
+            // Fire and confirm loosely: the relay sometimes never OKs a kind 7 that it
+            // stored anyway (verified against Buzz 2026-09-17), so a timeout is not a failure.
+            s.ws.send(JSON.stringify(['EVENT', ev]));
+            try { await s.expect(msg => msg[0] === 'OK' && msg[1] === ev.id ? true : undefined, 3000); }
+            catch (e) { /* assume delivered */ }
+        }
+
+        // On the first-ever like, a NIP-07 extension user gets one chance to use their
+        // real key (that's what badge awards attach to). The extension prompts; a decline
+        // locks in the throwaway so they're never nagged again.
+        async function maybeUpgradeIdentity() {
+            if (getPref(KEY_IDENT) || !window.nostr) return;
+            try {
+                await window.nostr.getPublicKey();
+                setPref(KEY_IDENT, 'nip07');
+                resetSession();
+            } catch (e) {
+                setPref(KEY_IDENT, 'throwaway');
+            }
+        }
+
+        const anchorIds = {};   // topicId -> anchor event id (per loaded week)
+
+        return {
+            load(weekId, topicIds) {
+                return (async () => {
+                    const s = await ensureSession();
+                    const slugs = topicIds.map(id => PREFIX + ':' + weekId + ':' + id);
+                    const anchors = await fetchEvents(s,
+                        { authors: [SITE_PK], kinds: [1], '#t': slugs }, 8000);
+                    const slugToTopic = {};
+                    topicIds.forEach((id, i) => { slugToTopic[slugs[i]] = id; });
+                    const idToTopic = {};
+                    anchors.forEach(ev => {
+                        (ev.tags || []).forEach(tag => {
+                            if (tag[0] === 't' && tag[1] in slugToTopic) {
+                                anchorIds[slugToTopic[tag[1]]] = ev.id;
+                                idToTopic[ev.id] = slugToTopic[tag[1]];
+                            }
+                        });
+                    });
+                    const ids = Object.keys(idToTopic);
+                    if (!ids.length) throw new Error('no anchors');   // hearts stay dormant
+                    const reactions = await fetchEvents(s, { kinds: [7], '#e': ids }, 8000);
+                    const byTopic = {};   // topicId -> Set of pubkeys
+                    const mine = {};      // topicId -> own reaction event id
+                    reactions.forEach(ev => {
+                        (ev.tags || []).forEach(tag => {
+                            if (tag[0] === 'e' && tag[1] in idToTopic) {
+                                const topic = idToTopic[tag[1]];
+                                (byTopic[topic] = byTopic[topic] || new Set()).add(ev.pubkey);
+                                if (ev.pubkey === s.signer.pubkey) mine[topic] = ev.id;
+                            }
+                        });
+                    });
+                    // Reconcile this browser's liked-state with what the relay actually has.
+                    const liked = {};
+                    Object.keys(mine).forEach(t => { liked[t] = true; });
+                    writeLiked(weekId, liked);
+                    writeEvts(weekId, mine);
+                    const counts = {};
+                    topicIds.forEach(id => { counts[id] = byTopic[id] ? byTopic[id].size : 0; });
+                    return counts;
+                })();
+            },
+            like(weekId, topicId, current) {
+                return (async () => {
+                    await maybeUpgradeIdentity();
+                    const s = await ensureSession();
+                    const anchor = anchorIds[topicId];
+                    if (!anchor) throw new Error('no anchor');
+                    const ev = await s.signer.signEvent({
+                        kind: 7, created_at: Math.floor(Date.now() / 1000),
+                        tags: [['e', anchor], ['p', SITE_PK],
+                               ['t', PREFIX + ':' + weekId + ':' + topicId]],
+                        content: '+'
+                    });
+                    await publish(s, ev);
+                    const evts = readEvts(weekId);
+                    evts[topicId] = ev.id;
+                    writeEvts(weekId, evts);
+                    return current + 1;
+                })();
+            },
+            unlike(weekId, topicId, current) {
+                return (async () => {
+                    const s = await ensureSession();
+                    const evts = readEvts(weekId);
+                    if (!evts[topicId]) return Math.max(0, current - 1);
+                    const ev = await s.signer.signEvent({
+                        kind: 5, created_at: Math.floor(Date.now() / 1000),
+                        tags: [['e', evts[topicId]]], content: ''
+                    });
+                    await publish(s, ev);
+                    delete evts[topicId];
+                    writeEvts(weekId, evts);
+                    return Math.max(0, current - 1);
+                })();
+            }
+        };
+    }
+    function likedKey(weekId) { return 'likes:liked:' + weekId; }
+    function readLiked(weekId) {
+        try { return JSON.parse(localStorage.getItem(likedKey(weekId))) || {}; }
+        catch (e) { return {}; }
+    }
+    function writeLiked(weekId, map) {
+        try { localStorage.setItem(likedKey(weekId), JSON.stringify(map)); } catch (e) {}
+    }
     function contactMailto(topicTitle) {
         const fill = (s) => (s || '').replace('{topic}', topicTitle || '');
         return topicTitle
@@ -648,7 +1000,19 @@
 
                 // Share (engine-level, 2026-08-13 — community request, GitHub issue #6):
                 // every topic's FIRST slide carries a quiet share affordance; S opens the sheet.
+                // Likes (2026-09-10, issue #6 second half): heart sits beside Share, only when a
+                // likes adapter is active — otherwise this block renders exactly as before.
                 if (slideIndex === 0) {
+                    if (likesStore) {
+                        slideHTML += `
+                            <button type="button" class="slide-like-btn" data-topic-id="${topic.id}" aria-label="Like this topic" title="Like this topic">
+                                <svg class="like-heart" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                </svg>
+                                <span class="like-count"></span>
+                            </button>
+                        `;
+                    }
                     slideHTML += `
                         <button type="button" class="slide-share-btn" data-topic-id="${topic.id}" aria-label="Share this topic" title="Share this topic (S)">
                             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -888,7 +1252,7 @@
         });
 
         // Animate inner elements stagger
-        const innerElements = nextSlideEl.querySelectorAll('.slide-topic-badge, .slide-heading, .slide-body, .slide-bullets li, .slide-link, .video-container, .topic-card, .connect-links, .slide-share-btn');
+        const innerElements = nextSlideEl.querySelectorAll('.slide-topic-badge, .slide-heading, .slide-body, .slide-bullets li, .slide-link, .video-container, .topic-card, .connect-links, .slide-share-btn, .slide-like-btn');
         if (innerElements.length > 0) {
             gsap.set(innerElements, { opacity: 0, y: 15 });
             gsap.to(innerElements, {
@@ -909,6 +1273,9 @@
             });
             nextSlideEl.querySelectorAll('.slide-share-btn').forEach(el => {
                 gsap.to(el, { opacity: 0.35, duration: 0.6, ease: 'power4.out', delay: 0.3 });
+            });
+            nextSlideEl.querySelectorAll('.slide-like-btn').forEach(el => {
+                gsap.to(el, { opacity: el.classList.contains('liked') ? 0.9 : 0.45, duration: 0.6, ease: 'power4.out', delay: 0.3 });
             });
         }
 
@@ -1193,9 +1560,97 @@
         if (btn) openShare(btn.dataset.topicId);
     });
 
+    // === Likes — hydration + interaction (no-op when no adapter is active) ===
+    const likeCounts = {};   // topicId -> count (hydrated once per deck)
+    let likesWeekId = null;
+
+    // Count display (Max, 2026-09-10): plain through 999; 1,000–99,999 as K with one
+    // decimal ("1K", "1.1K", "45.2K"); 100,000+ as whole K ("100K", "101K").
+    function formatLikeCount(n) {
+        if (n < 1000) return String(n);
+        if (n < 100000) {
+            const v = Math.floor(n / 100) / 10;
+            return (v % 1 === 0 ? String(v) : v.toFixed(1)) + 'K';
+        }
+        return Math.floor(n / 1000) + 'K';
+    }
+
+    function renderLikeBtn(btn, count, liked) {
+        btn.classList.toggle('liked', liked);
+        const countEl = btn.querySelector('.like-count');
+        if (countEl) countEl.textContent = count > 0 ? formatLikeCount(count) : '';
+    }
+
+    function initLikes(data) {
+        if (!likesStore) return;
+        likesWeekId = data.week;
+        const topicIds = (data.topics || []).map(t => t.id);
+        likesStore.load(likesWeekId, topicIds).then(counts => {
+            Object.assign(likeCounts, counts);
+            // The nostr adapter rewrites the liked map from relay truth during load —
+            // re-read it so a like made on another day (or lost localStorage) reconciles.
+            const likedNow = readLiked(likesWeekId);
+            document.querySelectorAll('.slide-like-btn').forEach(btn => {
+                const id = btn.dataset.topicId;
+                renderLikeBtn(btn, likeCounts[id] || 0, !!likedNow[id]);
+            });
+            document.body.classList.add('likes-live');   // hearts appear only once hydrated
+        }).catch(() => { /* adapter unreachable → hearts stay dormant, no errors */ });
+    }
+
+    function sparkleBurst(btn) {
+        // Light glimmer: a few tiny dots + stars radiating from the heart, then gone.
+        const PARTICLES = 7;
+        for (let i = 0; i < PARTICLES; i++) {
+            const p = document.createElement('span');
+            p.className = 'like-sparkle' + (i % 3 === 0 ? ' like-sparkle-star' : '');
+            const angle = (Math.PI * 2 * i) / PARTICLES + (Math.random() - 0.5) * 0.6;
+            const dist = 18 + Math.random() * 14;
+            p.style.setProperty('--sx', (Math.cos(angle) * dist).toFixed(1) + 'px');
+            p.style.setProperty('--sy', (Math.sin(angle) * dist).toFixed(1) + 'px');
+            p.style.animationDelay = (Math.random() * 80) + 'ms';
+            if (p.classList.contains('like-sparkle-star')) p.textContent = '✦';
+            btn.appendChild(p);
+            p.addEventListener('animationend', () => p.remove());
+        }
+    }
+
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.slide-like-btn');
+        if (!btn || !likesStore || !likesWeekId) return;
+        const id = btn.dataset.topicId;
+        const liked = readLiked(likesWeekId);
+        const current = likeCounts[id] || 0;
+        if (liked[id]) {
+            // Unlike: quiet — outline returns, count steps down, no celebration.
+            delete liked[id];
+            likeCounts[id] = Math.max(0, current - 1);
+            renderLikeBtn(btn, likeCounts[id], false);
+            likesStore.unlike(likesWeekId, id, current).catch(() => {});
+        } else {
+            liked[id] = true;
+            likeCounts[id] = current + 1;
+            renderLikeBtn(btn, likeCounts[id], true);
+            btn.classList.remove('like-pop');
+            void btn.offsetWidth;   // restart the pop animation on rapid re-like
+            btn.classList.add('like-pop');
+            sparkleBurst(btn);
+            likesStore.like(likesWeekId, id, current).catch(() => {});
+        }
+        writeLiked(likesWeekId, liked);
+    });
+
     // === TOC ===
     function buildTOC(data) {
         tocList.innerHTML = '';
+
+        // Week reference in the popout (Max, 2026-09-10): search can land you in any deck —
+        // the TOC says which one. "2026-W37" → "· Week 37 · 2026"
+        const tocWeekEl = document.getElementById('toc-week');
+        if (tocWeekEl && data.week) {
+            const m = data.week.match(/^(\d{4})-W(\d{2})$/);
+            tocWeekEl.textContent = m ? `· Week ${parseInt(m[2], 10)} · ${m[1]}` : `· ${data.week}`;
+        }
 
         // Overview item
         const overviewItem = document.createElement('button');
@@ -1487,6 +1942,7 @@
             // Build slides and TOC
             buildSlides(data);
             buildTOC(data);
+            initLikes(data);
             initLiveDashboard();
             initBip110Dashboard();
 
