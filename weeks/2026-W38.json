@@ -1,0 +1,217 @@
+{
+    "week": "2026-W38",
+    "date": "2026-09-17",
+    "title": "AB 2047's Clock Starts Ticking, Laser Z-Layers Go Public & UV-Printed Puzzles",
+    "subtitle": "This week in 3D printing news",
+    "timerMinutes": 20,
+    "topics": [
+        {
+            "id": "ab-2047-desk",
+            "title": "AB 2047: The Clock Is Running",
+            "description": "Formally presented to Newsom Monday — now he has to act",
+            "type": "discussion",
+            "slides": [
+                {
+                    "heading": "AB 2047: The Decision Clock Starts",
+                    "body": "Two weeks ago we covered the legislature passing this bill. Monday, September 14, the formal step happened: enrolled and presented to Governor Newsom at 1:30 p.m. That starts his decision clock — sign it, veto it, or it becomes law without his signature. California has no pocket veto.",
+                    "bullets": [
+                        "Enrolled and presented September 14 — he must act by September 30",
+                        "What's on his desk: consumer printers sold in California must eventually ship with 'firearm blocking technology'",
+                        "The stripped-down version — the Senate removed the most aggressive enforcement tools before the August 31 floor votes",
+                        "Everytown and Moms Demand Action are pushing hard for a signature; Prusa, VORON, EFF and the maker community remain opposed",
+                        "Our regulation tracker gets updated the day he moves"
+                    ],
+                    "link": "https://calmatters.digitaldemocracy.org/bills/ca_202520260ab2047",
+                    "linkLabel": "Track the Bill",
+                    "links": [
+                        {
+                            "label": "Our Regulation Tracker",
+                            "url": "https://github.com/MaxSikorski/3d-printing-regulation"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "toolchanger-watch",
+            "title": "Toolchanger Watch: Creality Steps In",
+            "description": "The K3 nozzle-changer gets real at IFA — and the rest of the field checks in",
+            "type": "discussion",
+            "slides": [
+                {
+                    "heading": "Creality K3: The Nozzle-Changer Goes Official",
+                    "body": "Remember KliTek from back in May? It's real now: Creality put the K3 product page live at IFA Berlin on September 4 and picked up an IFA Innovation Award for it. Not a full toolchanger — it swaps NOZZLES, not toolheads — but it's Creality's answer to the multi-tool year.",
+                    "bullets": [
+                        "K3 is the new K-series flagship: CoreXY with the KliTek automatic nozzle-changing system",
+                        "Nozzle swaps, not toolhead swaps — under 5 seconds a change, per Creality's page",
+                        "Release window is Q3 2026 — which ends in two weeks",
+                        "The rest of the field: INDX quiet this week (PrusaSlicer 3.0 still owes the Config Wizard profiles), Sovol M1D pre-orders running, Co Print's Quadro Kickstarter due in October"
+                    ],
+                    "link": "https://www.creality.com/campaigns/creality-nozzle-changing-3d-printer-2026",
+                    "linkLabel": "The K3 Page"
+                }
+            ]
+        },
+        {
+            "id": "follow-ups",
+            "title": "Follow-Ups: Pre-Order Day Delivered",
+            "description": "Three stories from past weeks all hit their dates",
+            "type": "discussion",
+            "slides": [
+                {
+                    "heading": "September 15 Was Follow-Up Day",
+                    "body": "Three running stories hit their marks this week — and every number came in at or under what we reported.",
+                    "bullets": [
+                        "SUNLU FilaDC i10: pre-order is LIVE at $179.99 — beats the 'under $200' rumor from last week's slide; ships from December",
+                        "FibreSeeker 3: US webstore open, $3,199 early bird (from $3,499), capped at 500 units through September 30",
+                        "HeyGears G1X: the Kickstarter closed September 11 at $17,463,066 from 3,927 backers — 17,463% funded; late pledges are open",
+                        "My advice on all three hasn't changed: let the first wave take the pre-order risk"
+                    ],
+                    "link": "https://store.sunlu.com/products/filament-dehumidifying-cabinet-filadc-i10",
+                    "linkLabel": "The i10 Pre-Order"
+                }
+            ]
+        },
+        {
+            "id": "makers-muse-uv",
+            "title": "Maker's Muse: UV Printing on Print-in-Place Puzzles",
+            "description": "Full-color art on a sliding puzzle, straight off the printer",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "UV Art on a Print-in-Place Puzzle",
+                    "body": "Angus at Maker's Muse combined two things we've covered separately: a parametric print-in-place sliding puzzle, then a UV flatbed printer putting full-color artwork straight onto the tiles. We talked UV printers when the HeyGears campaign ran — this is what the tech looks like in a maker's hands.",
+                    "videoUrl": "https://youtu.be/zRO3qmLI5Pg"
+                },
+                {
+                    "heading": "Why It Works So Well",
+                    "bullets": [
+                        "The puzzle prints assembled — tiles never leave the frame, so the printed image stays registered",
+                        "Flat color looks good; the textured RELIEF print with real tactile depth is the showstopper",
+                        "Hackaday picked it up September 16 — expect a wave of UV-decorated print-in-place designs",
+                        "UV flatbeds are the crossover tool of the year: 2D printing that understands 3D objects"
+                    ],
+                    "link": "https://youtu.be/zRO3qmLI5Pg",
+                    "linkLabel": "Watch the Video",
+                    "links": [
+                        {
+                            "label": "Hackaday's Writeup",
+                            "url": "https://hackaday.com/2026/09/16/full-color-looks-great-on-3d-printed-sliding-puzzles/"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "vr-throw-print",
+            "title": "Throw It at the Printer: VR Meets the Print Queue",
+            "description": "A Quest 3 workflow where hurling a model across the room starts the print",
+            "type": "discussion",
+            "slides": [
+                {
+                    "heading": "Model It in VR, Throw It, It Prints",
+                    "body": "The fun one this week: a software engineer wired a Meta Quest 3 to his Bambu P2S so he can grab a 3D model in VR and physically THROW it across the room at the printer — and the print starts. His words: 'I've never felt more like Tony Stark.'",
+                    "bullets": [
+                        "The glue is simple: a local webserver on his PC connects the headset, the phone app, and the printer",
+                        "He vibe-coded the pipeline with AI assistance rather than writing it by hand",
+                        "Code isn't public yet — he says he'll release it if there's enough interest, so go make interest",
+                        "Silly demo, serious point: printer APIs are now open enough that one person can build this"
+                    ],
+                    "link": "https://www.tomshardware.com/3d-printing/meta-quest-user-vibe-codes-3d-object-throwing-to-3d-printer-ive-never-felt-more-like-tony-stark-says-the-software-engineer",
+                    "linkLabel": "The Story"
+                }
+            ]
+        },
+        {
+            "id": "robotics-corner",
+            "title": "Robotics Corner: A 3D-Printed Boat Doing 40 Knots",
+            "description": "UMaine's 3Dirigo X — large-format printing at 500 pounds an hour",
+            "type": "discussion",
+            "slides": [
+                {
+                    "heading": "Robotics Corner: 3Dirigo X Hits the Water",
+                    "body": "Our large-format beat delivered a boat. UMaine's Advanced Structures and Composites Center christened the 3Dirigo X in Hampden, Maine — a 30-foot 3D-printed vessel engineered for offshore conditions at speeds approaching 40 knots. It's back in this week's news as the trials story spreads.",
+                    "bullets": [
+                        "Successor to 2019's 3Dirigo, the proof-of-concept that took three Guinness World Records",
+                        "The number that matters: print rate went from 20 pounds an hour in 2019 to 500 pounds an hour now",
+                        "3D-printed composites, designed for real open-ocean forces — not a demo hull",
+                        "Funded through the federal Accelerated Rapid Prototyping initiative; targets include commercial boatbuilding, unmanned vessels, and patrol craft",
+                        "Same trend line as our robot-arm segment: large-format printing is leaving the lab at industrial speed"
+                    ],
+                    "link": "https://umaine.edu/news/2026/08/university-of-maine-launches-3dirigo-x-advancing-future-of-maritime-manufacturing/",
+                    "linkLabel": "UMaine's Announcement",
+                    "links": [
+                        {
+                            "label": "This Week's News Brief",
+                            "url": "https://3dprint.com/332517/3d-printing-news-briefs-9-17-2026/"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "builder-spotlight",
+            "title": "Builder Spotlight: Laser Z-Layers, Released",
+            "description": "The laser-welded layer build from W34 is now a repo you can build",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "Builder Spotlight: 'I Changed a Thing' Releases the Laser Mod",
+                    "body": "Back in August we covered the build that welds each layer to the last with toolhead lasers — Z-strength hitting 94% of X in ABS. This week the builder released the whole project: a GitHub repo so you can put lasers on your own printer. And yes — I'll say it again — this was my idea years ago.",
+                    "videoUrl": "https://youtu.be/TVKNi_Bk3_o"
+                },
+                {
+                    "heading": "What's in the Repo",
+                    "bullets": [
+                        "CAD files and drawings for the laser mod kit, built around a modified Elegoo Neptune 4",
+                        "Klipper config with the laser PWM wiring, plus OrcaSlicer post-processing scripts that inject the laser commands",
+                        "An offline web portal: G-code visualizer, toolhead simulator, calibration tools — zero setup",
+                        "Experimental and at-your-own-risk: laser safety glasses and ventilation are mandatory, and some smoothing modes still have bugs"
+                    ],
+                    "link": "https://github.com/I-changed-a-thing/Laser-FDM",
+                    "linkLabel": "Build One Yourself",
+                    "links": [
+                        {
+                            "label": "The Release Video",
+                            "url": "https://youtu.be/TVKNi_Bk3_o"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "quick-tip",
+            "title": "Quick Tip of the Week",
+            "description": "Tinkercad exports are smarter than you think",
+            "type": "text",
+            "slides": [
+                {
+                    "heading": "Quick Tip: Don't Group Before You Export",
+                    "body": "Tinkercad changed how export works, and most people never noticed: leave your shapes UNGROUPED and they stay separate objects in the exported file — which unlocks real slicer tricks.",
+                    "bullets": [
+                        "Export OBJ with shapes ungrouped and Bambu Studio lets you assign a different filament color to each shape",
+                        "Separate shapes can also act as slicer MODIFIERS — overlap a box and bump just that zone to 80% infill",
+                        "Slicers handle the intersections: no extra internal walls where separate shapes overlap",
+                        "One exception: if the design contains a hole shape, Tinkercad still groups everything on export — cut your holes, then export"
+                    ],
+                    "link": "https://www.tinkercad.com/blog/export-update",
+                    "linkLabel": "The Export Update"
+                }
+            ]
+        },
+        {
+            "id": "community-news",
+            "title": "Community News & Topics",
+            "description": "Share what you're interested in talking about!",
+            "type": "text",
+            "slides": [
+                {
+                    "heading": "Next Week's Meetup",
+                    "body": "Find something you're interested in talking about? Share it here and we'll cover it in next week's meetup!",
+                    "link": "https://github.com/MaxSikorski/3d-printing-weekly-news/issues",
+                    "linkLabel": "Submit a Topic"
+                }
+            ]
+        }
+    ]
+}
