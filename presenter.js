@@ -1673,9 +1673,14 @@
         tocList.innerHTML = '';
 
         // Week reference in the popout (Max, 2026-09-10): search can land you in any deck —
-        // the TOC says which one. "2026-W37" → "· Week 37 · 2026"
+        // the TOC says which one. Meetup date since 2026-09-23 (Max): "· September 23 · 2026";
+        // falls back to the week id if a deck has no date.
         const tocWeekEl = document.getElementById('toc-week');
-        if (tocWeekEl && data.week) {
+        if (tocWeekEl && data.date) {
+            const d = new Date(`${data.date}T12:00:00`);
+            const monthDay = d.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
+            tocWeekEl.textContent = `· ${monthDay} · ${d.getFullYear()}`;
+        } else if (tocWeekEl && data.week) {
             const m = data.week.match(/^(\d{4})-W(\d{2})$/);
             tocWeekEl.textContent = m ? `· Week ${parseInt(m[2], 10)} · ${m[1]}` : `· ${data.week}`;
         }

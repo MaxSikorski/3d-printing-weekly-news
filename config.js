@@ -76,5 +76,5 @@ window.SITE_CONFIG = {
     accents: {},
     halo: [],
     liveAccent: "#f7931a",
-    archive: { openMonths: 2 }
+    archive: { openMonths: 0 }   // every month collapsed by default (Max, 2026-09-23)
 };

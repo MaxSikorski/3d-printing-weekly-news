@@ -325,7 +325,19 @@
         groups.forEach(group => {
             const groupLabel = document.createElement('div');
             groupLabel.className = 'palette-group';
-            groupLabel.textContent = `${group.entry.deckTitle} · ${formatPaletteDate(group.entry.date)}`;
+            // Deck header outranks the hits under it (Max, 2026-09-23): date big + bold,
+            // then "Week 38 · Deck title" as the quieter second line.
+            const groupDate = document.createElement('span');
+            groupDate.className = 'palette-group-date';
+            groupDate.textContent = formatPaletteDate(group.entry.date);
+            const groupDeck = document.createElement('span');
+            groupDeck.className = 'palette-group-deck';
+            const weekMatch = String(group.entry.week || '').match(/-W(\d{2})$/);
+            groupDeck.textContent = weekMatch
+                ? `Week ${parseInt(weekMatch[1], 10)} · ${group.entry.deckTitle}`
+                : group.entry.deckTitle;
+            groupLabel.appendChild(groupDate);
+            groupLabel.appendChild(groupDeck);
             searchPaletteResults.appendChild(groupLabel);
 
             group.hits.forEach(entry => {
