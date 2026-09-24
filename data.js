@@ -4,6 +4,11 @@
 window.INLINE_DATA = {
     "weeks": [
         {
+            "id": "2026-W39",
+            "date": "2026-09-24",
+            "title": "Snapmaker's 55 mm³/s Hotend, Bambu's Toolchanger Rumors & Support Fins"
+        },
+        {
             "id": "2026-W38",
             "date": "2026-09-17",
             "title": "AB 2047's Clock Starts Ticking, Laser Z-Layers Go Public & UV-Printed Puzzles"
@@ -92,6 +97,268 @@ window.INLINE_DATA = {
 };
 
 window.INLINE_WEEKS = {
+    "2026-W39": {
+        "week": "2026-W39",
+        "date": "2026-09-24",
+        "title": "Snapmaker's 55 mm³/s Hotend, Bambu's Toolchanger Rumors & Support Fins",
+        "subtitle": "This week in 3D printing news",
+        "timerMinutes": 20,
+        "topics": [
+            {
+                "id": "liber-hotend",
+                "title": "Snapmaker × Phaetus Liber: A High-Flow Hotend for the U1",
+                "description": "Hardened steel, up to 55 mm³/s, $34.99 a head",
+                "type": "discussion",
+                "slides": [
+                    {
+                        "heading": "Liber: Up to 55 mm³/s on the U1",
+                        "body": "Snapmaker and hotend maker Phaetus launched a drop-in high-flow hotend for the U1 toolchanger on September 22.",
+                        "bullets": [
+                            "Up to 55 mm³/s max flow, per Maker's Muse's sponsored build video",
+                            "Snapmaker's numbers vs the stock stainless hotend: PLA +66%, ABS +87%, PETG HF +43%",
+                            "Phaetus test print: 7 h 59 min down to 3 h 50 min",
+                            "DLC-coated hardened steel nozzle, so abrasive filaments are fine",
+                            "$34.99 each, or a 4-pack for $99 at launch ($119 list); stock hotend is $15.99",
+                            "U1 only, 0.4 mm only, max 300 °C"
+                        ],
+                        "link": "https://us.snapmaker.com/collections/3d-printer-accessories/products/liber-high-flow-hotend",
+                        "linkLabel": "The Liber Hotend",
+                        "links": [
+                            {
+                                "label": "Maker's Muse: the 55 mm³/s claim (9:37)",
+                                "url": "https://youtu.be/kdbWlE0GgiQ?t=577"
+                            },
+                            {
+                                "label": "Snapmaker's Announcement",
+                                "url": "https://www.snapmaker.com/blog/introducing-the-snapmaker-x-phaetus-libertm-high-flow-hotend-for-u1/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "ab-2047-watch",
+                "title": "AB 2047: Six Days Left",
+                "description": "Still on Newsom's desk; he has to act by September 30",
+                "type": "discussion",
+                "slides": [
+                    {
+                        "heading": "AB 2047: Decision Due by September 30",
+                        "body": "No signature and no veto yet. The bill has sat on the Governor's desk since September 14.",
+                        "bullets": [
+                            "Last official action: presented to Governor Newsom, September 14",
+                            "Deadline: September 30. If he does nothing, it becomes law without his signature",
+                            "On his desk: the narrowed version, with the Senate's cuts to enforcement",
+                            "Makers remain opposed: Prusa, VORON, EFF",
+                            "Our regulation tracker updates the day he acts"
+                        ],
+                        "link": "https://calmatters.digitaldemocracy.org/bills/ca_202520260ab2047",
+                        "linkLabel": "Track the Bill",
+                        "links": [
+                            {
+                                "label": "Our Regulation Tracker",
+                                "url": "https://github.com/MaxSikorski/3d-printing-regulation"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "bambu-toolchanger-rumor",
+                "title": "Rumor Mill: Is Bambu Building a Real Toolchanger?",
+                "description": "Patents show a 10-head rack; FCC filings name an H3C",
+                "type": "discussion",
+                "slides": [
+                    {
+                        "heading": "Bambu's Toolchanger: Patents Plus FCC Filings",
+                        "body": "Two separate trails point toward a Bambu toolchanger. Nothing is announced.",
+                        "bullets": [
+                            "Three Chinese patents from Bambu's parent company, filed June 30, published August 14",
+                            "The drawings: 10 spools, 9 printheads parked in a rack at the back, a 10th on the toolhead",
+                            "Whole printheads swap, not just hotends. That's a step past the H2C's Vortek nozzle changer",
+                            "FCC filings (reported): an 'H3C' certified September 11, a 'P3C' September 15",
+                            "Unconfirmed: whether either printer uses the patented design. Photos stay confidential until March 2027"
+                        ],
+                        "link": "https://3dprintingindustry.com/news/bambu-lab-patents-detail-automatic-printhead-changing-and-nozzle-monitoring-systems-254247/",
+                        "linkLabel": "The Patents",
+                        "links": [
+                            {
+                                "label": "3DPrinterMike: New Patents Reveal a Toolchanger",
+                                "url": "https://youtu.be/Ot-0FOfYIaE"
+                            },
+                            {
+                                "label": "The H3C + P3C FCC Filings",
+                                "url": "https://domechy.com/reviews-news/bambu-lab-h3c-and-p3c-are-coming-fcc-filings-found-patents-show-a-10-nozzle-hotend-changer/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "3dprintopia",
+                "title": "3DPrintopia: Philadelphia This Weekend",
+                "description": "Sept 26–27. I'm not going, but we'll cover it next week",
+                "type": "text",
+                "slides": [
+                    {
+                        "heading": "3DPrintopia: Sept 26–27, Philadelphia",
+                        "body": "East Coast 3D-printing festival at the Pennsylvania Convention Center. I can't make it this year. If you go, send photos. We'll run the highlights next week.",
+                        "bullets": [
+                            "Hall F, Pennsylvania Convention Center",
+                            "Saturday 10–5, Sunday 10–4",
+                            "$10 adults for the weekend, kids 17 and under free (Eventbrite only)",
+                            "Vendor demos, maker show-and-tell, a 3D-printed derby and electric Top Fuel dragster races",
+                            "Next week: the recap"
+                        ],
+                        "link": "https://3dprintopia.com/",
+                        "linkLabel": "3DPrintopia"
+                    }
+                ]
+            },
+            {
+                "id": "polymaker-affiliate",
+                "title": "Polymaker Reminder: A $12 Spool Worth Grabbing",
+                "description": "Our affiliate link, plus the HT-PLA-GF deal I just bought",
+                "type": "text",
+                "slides": [
+                    {
+                        "heading": "Polymaker: Affiliate Link + a Deal I Grabbed",
+                        "body": "Reminder: our Polymaker link gives you 15% off your first purchase, and all affiliate revenue funds the meetup. Full disclosure: Polymaker is one of the brands we work with.",
+                        "bullets": [
+                            "My deal: Polymaker HT-PLA-GF in Power Tool Red (Milwaukee red) for $12 on Amazon",
+                            "HT-PLA-GF: glass-fiber high-temp PLA; Polymaker's headline figure is 150 °C. Prices move, so check before you buy",
+                            "15% off your first order through our link. It's the same store and the same products",
+                            "All affiliate revenue goes back into the meetup"
+                        ],
+                        "link": "https://shop.polymaker.com/MAXSIKORSKI",
+                        "linkLabel": "Polymaker: 15% Off First Order"
+                    }
+                ]
+            },
+            {
+                "id": "most-liked",
+                "title": "Your Favorite Last Week",
+                "description": "The most-liked topic from the W38 deck",
+                "type": "text",
+                "slides": [
+                    {
+                        "heading": "Most-Liked Last Week: UV-Printed Puzzles",
+                        "body": "First full week of the like button. The winner: Maker's Muse printing full-color art onto print-in-place puzzles.",
+                        "bullets": [
+                            "Maker's Muse UV puzzles: 3 of the week's 6 likes",
+                            "Runners-up: AB 2047, VR throw-to-print, and the Laser-FDM Builder Spotlight, 1 each",
+                            "Angus is back tonight: Robotics Corner is next",
+                            "Tap the heart on any topic in the archive. It tells me what to cover more of"
+                        ],
+                        "link": "https://maxsikorski.github.io/3d-printing-weekly-news/week.html?week=2026-W38&topic=makers-muse-uv",
+                        "linkLabel": "Revisit Last Week's Winner"
+                    }
+                ]
+            },
+            {
+                "id": "robotics-corner",
+                "title": "Robotics Corner: Neil the Seal, a TPU Combat Robot",
+                "description": "Maker's Muse builds a beetleweight from flexible filament, then gets it smashed",
+                "type": "video",
+                "slides": [
+                    {
+                        "heading": "Robotics Corner: Neil the Seal",
+                        "body": "Angus at Maker's Muse built a beetleweight combat robot armored in TPU, printed on the U1 toolchanger, and took it to an Australian competition.",
+                        "videoUrl": "https://youtu.be/kdbWlE0GgiQ"
+                    },
+                    {
+                        "heading": "What the Arena Taught Him",
+                        "bullets": [
+                            "Armor: organic 95A high-flow TPU shells modeled with Fusion's Forms (T-splines), cubic infill",
+                            "'Baleen' front wedge: thin TPU fingers, 0.3 mm apart, that flex and fail locally",
+                            "Chassis in 64D TPU; cast-urethane wheels on 3D-printed hubs",
+                            "Lost to Atomizer: a 700 W horizontal spinner with a 300 g bar",
+                            "Lesson 1: turn on 'alternate extra wall'. It interlocks perimeters with infill",
+                            "Lesson 2: infill-density modifiers left unbonded seams, and the side armor tore off right there"
+                        ],
+                        "link": "https://youtu.be/kdbWlE0GgiQ",
+                        "linkLabel": "Watch the Fights"
+                    }
+                ]
+            },
+            {
+                "id": "builder-spotlight",
+                "title": "Builder Spotlight: thang010146's Animated Mechanisms",
+                "description": "4,000+ mechanism animations, with STEP files you can download",
+                "type": "tool",
+                "slides": [
+                    {
+                        "heading": "Builder Spotlight: thang010146",
+                        "body": "Nguyen Duc Thang, a retired mechanical engineer, animates one mechanism at a time. Linkages, gears, cams, worm drives. This week's: a window operator.",
+                        "videoUrl": "https://youtu.be/bqMY49hpdko"
+                    },
+                    {
+                        "heading": "How to Use His Library",
+                        "bullets": [
+                            "This week's video: a crank turns a worm drive, and a four-bar linkage swings the window a full 180°",
+                            "A self-locking worm holds the panel against the wind in any position",
+                            "4,000+ animated mechanisms, sorted into 4 parts: rotation, other motion, special-purpose, industry",
+                            "STEP files are linked in each video's description, so you can import them into Onshape, Fusion or FreeCAD",
+                            "A free index of the whole channel is downloadable from his channel page"
+                        ],
+                        "link": "https://www.youtube.com/@thang010146",
+                        "linkLabel": "Explore the Channel",
+                        "links": [
+                            {
+                                "label": "This Week's STEP Files",
+                                "url": "https://www.mediafire.com/file/oeeyx3udcp7hzcc/WindowOperatorSTEP.zip/file"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "quick-tip",
+                "title": "Quick Tip of the Week",
+                "description": "Support Fins: supports you design in, then snap off",
+                "type": "text",
+                "slides": [
+                    {
+                        "heading": "Quick Tip: Print It on Edge with Support Fins",
+                        "body": "Matthew Trahan's free web app adds breakaway fins to your STL, so the stronger orientation becomes printable. I've been talking with Matthew and contributing to the project.",
+                        "bullets": [
+                            "Why: lying or diagonal layers can test up to ~3× stronger than standing up. Flat is often the weakest way",
+                            "Load an STL or 3MF, rotate it, add fins, export. The fins live in the STL, so any slicer works",
+                            "Fins snap off clean: less plastic and fewer scars than tree supports",
+                            "Runs in your browser. Nothing uploads, no account. Free and open source (MIT)",
+                            "The idea comes from Slant 3D; Matthew automated it. Hackaday covered it September 23"
+                        ],
+                        "link": "https://printfins.com/",
+                        "linkLabel": "Try Support Fins",
+                        "links": [
+                            {
+                                "label": "Source on GitHub",
+                                "url": "https://github.com/gittrahan/support-fins"
+                            },
+                            {
+                                "label": "Hackaday's Writeup",
+                                "url": "https://hackaday.com/2026/09/23/forget-trees-add-fins-to-your-3d-prints-instead/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "community-news",
+                "title": "Community News & Topics",
+                "description": "Share what you're interested in talking about!",
+                "type": "text",
+                "slides": [
+                    {
+                        "heading": "Next Week's Meetup",
+                        "body": "Find something you're interested in talking about? Share it here and we'll cover it in next week's meetup!",
+                        "link": "https://github.com/MaxSikorski/3d-printing-weekly-news/issues",
+                        "linkLabel": "Submit a Topic"
+                    }
+                ]
+            }
+        ]
+    },
     "2026-W38": {
         "week": "2026-W38",
         "date": "2026-09-17",
