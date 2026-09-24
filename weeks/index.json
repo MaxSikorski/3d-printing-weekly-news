@@ -1,6 +1,11 @@
 {
     "weeks": [
         {
+            "id": "2026-W39",
+            "date": "2026-09-24",
+            "title": "Snapmaker's 55 mm³/s Hotend, Bambu's Toolchanger Rumors & Support Fins"
+        },
+        {
             "id": "2026-W38",
             "date": "2026-09-17",
             "title": "AB 2047's Clock Starts Ticking, Laser Z-Layers Go Public & UV-Printed Puzzles"
