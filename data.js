@@ -382,12 +382,12 @@ window.INLINE_WEEKS = {
                     {
                         "heading": "Secret Santa: Key Dates",
                         "bullets": [
-                            "Sign up by mid-October with a short survey of what you like",
+                            "Sign up now through October 15: a short survey of what you like",
                             "I'll message you your match and their likes",
-                            "Ship by December 5. Show and tell by December 15"
+                            "Ship by December 5. Show and tell at the Thursday, December 10 meetup"
                         ],
-                        "link": "https://discord.gg/pnFyeAZJsk",
-                        "linkLabel": "Tell Us You're In (Discord)"
+                        "link": "https://maxsikorski.github.io/3d-printing-weekly-news/secret-santa.html",
+                        "linkLabel": "Sign Up Now"
                     }
                 ]
             },
