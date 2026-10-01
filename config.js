@@ -21,7 +21,8 @@ window.SITE_CONFIG = {
         { rel: "apple-touch-icon", sizes: "180x180", href: "apple-touch-icon.png" }
     ],
     navLinks: [
-        { label: "Recommendations", href: "recommendations.html" }
+        { label: "Recommendations", href: "recommendations.html" },
+        { label: "Secret Santa", href: "secret-santa.html" }
     ],
     extraScripts: ["recommendations.js"],
     hostName: "Max Sikorski",
