@@ -1,0 +1,421 @@
+{
+    "week": "2026-W40",
+    "date": "2026-10-01",
+    "title": "AB 2047 Becomes Law, the Chube Compact Ships & Metal Printing with Robots",
+    "subtitle": "This week in 3D printing news",
+    "timerMinutes": 20,
+    "topics": [
+        {
+            "id": "ab-2047-signed",
+            "title": "AB 2047 Is Law, but It's Asleep",
+            "description": "Newsom signed California's printer-blocking bill. What it does now, what it could do later, and what we can do about it",
+            "type": "discussion",
+            "slides": [
+                {
+                    "heading": "AB 2047 Is Law, but It's Asleep",
+                    "body": "Newsom signed it on Saturday, September 26. Nothing changes for anyone today, but my take: this is a big loss for our community.",
+                    "bullets": [
+                        "Chapter 461, in effect January 1, 2027. Nothing happens until ASTM International writes a blocking-tech standard, and none exists",
+                        "From July 1, 2027, the CA DOJ checks quarterly. If a standard appears: rules within 24 months, sale ban 1 year later",
+                        "Earliest possible ban: mid-2028. Realistically 2030 or later"
+                    ]
+                },
+                {
+                    "heading": "AB 2047: The Off-Ramp and What Got Cut",
+                    "bullets": [
+                        "No standard by July 1, 2029? The DOJ can stop checking, but the law stays on the books",
+                        "Cut before signing: criminal penalties, fines, the approved-printer list, a fixed ban date",
+                        "Also cut: the industrial-printer exemption, which makes the scope wider"
+                    ],
+                    "link": "https://maxsikorski.github.io/3d-printing-regulation/#ca-ab2047",
+                    "linkLabel": "Our Regulation Tracker",
+                    "links": [
+                        {
+                            "label": "Read the Law (leginfo)",
+                            "url": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB2047"
+                        },
+                        {
+                            "label": "3D Print Rancher: \"California Just Nuked 3D Printers?\"",
+                            "url": "https://www.youtube.com/watch?v=4Y2e7wq9Rmg"
+                        }
+                    ]
+                },
+                {
+                    "heading": "What It Means for You",
+                    "body": "Our reading of the text, not legal advice. Once the ban is live, it covers selling a printer, or handing one over in exchange for anything of value.",
+                    "bullets": [
+                        "Printers you own: untouched. No retrofit, no registration, no limits on use",
+                        "Giving one away: a true gift isn't covered (friends, family, schools, inheritance). Trades and \"free with purchase\" probably are",
+                        "Selling used in CA: covered, with no grandfather clause. Expect lower resale value for California owners",
+                        "Building your own: parts aren't printers. Kits depend on how the DOJ defines them"
+                    ]
+                },
+                {
+                    "heading": "What It Means: Builders, Businesses, Everyone Else",
+                    "bullets": [
+                        "No anti-tampering rule: replacing firmware on your own machine breaks nothing in this law",
+                        "Businesses: what you print and sell isn't regulated. Fleet purchases and resale in CA are",
+                        "Outside CA: one global firmware could bring blocking tech to everyone. NY already has a similar law"
+                    ],
+                    "link": "https://maxsikorski.github.io/3d-printing-regulation/#ca-ab2047",
+                    "linkLabel": "Impact Details"
+                },
+                {
+                    "heading": "Brand by Brand: Who Gets Hit How",
+                    "body": "No brand has announced plans. This is my read of how each one is built.",
+                    "bullets": [
+                        "Bambu: easiest to make comply. Closed, cloud-connected firmware, one global build, so the biggest spillover risk",
+                        "Prusa: open-source firmware anyone can recompile, so an unremovable lock is close to impossible. Prusa: \"way too soon to say\"",
+                        "Sovol & Qidi: Klipper-based and sold heavily on Amazon. Any check would be easy to flash off",
+                        "VORON: Voron Design sells nothing and parts are outside the law. Exposure: kit vendors, and reselling a build in CA",
+                        "Prusa and VORON Design both signed the opposition letter"
+                    ],
+                    "link": "https://maxsikorski.github.io/3d-printing-regulation/#ca-ab2047",
+                    "linkLabel": "Our Regulation Tracker"
+                },
+                {
+                    "heading": "Prop Builders: Our Leverage",
+                    "body": "The law exempts printers used only for film and TV props. That's lawmakers admitting a detector can't tell a prop from a gun.",
+                    "bullets": [
+                        "1. ASTM is the on/off switch. Individuals can join its 3D printing committee (F42) and vote on the standard",
+                        "2. Quote the exemption back: a DL-44 is a Mauser C96 with greebles. Shape detection can't tell the difference",
+                        "3. Widen it: the DOJ can add exceptions. Ask for cosplay, theater, schools, airsoft and replica builders"
+                    ]
+                },
+                {
+                    "heading": "Prop Builders: What to Ask For",
+                    "bullets": [
+                        "4. Comment when the DOJ writes rules: ask for an appeal button, offline use, and detection of working gun parts instead of shapes",
+                        "5. Build a false-positive library: everyday files the scanners wrongly flag, like hose triggers and tubes",
+                        "Don't stretch the exemption to dodge the law. It says \"exclusively\" and \"entertainment industry\""
+                    ],
+                    "link": "https://maxsikorski.github.io/3d-printing-regulation/#prop-problem",
+                    "linkLabel": "The Prop Problem"
+                }
+            ]
+        },
+        {
+            "id": "toolchanger-race",
+            "title": "Toolchanger Race: Creality K3 Dates, Bambu's FCC Parade",
+            "description": "K3 pre-orders open mid-October under $900, and Bambu's FCC filings keep coming",
+            "type": "discussion",
+            "slides": [
+                {
+                    "heading": "Creality K3: Missed Q3, Pre-Orders Mid-October",
+                    "body": "Creality's Q3 target came and went. Its September 30 FAQ gives the new plan.",
+                    "bullets": [
+                        "Pre-orders open mid-October. Price \"expected to launch below $900\"",
+                        "Klipper-based firmware, released in phases. Root access out of the box",
+                        "First hands-on: Creality brought the K3 to 3DPrintopia last weekend",
+                        "No ship date yet"
+                    ],
+                    "link": "https://www.creality.com/blog/k3-questions-answered",
+                    "linkLabel": "Creality's K3 FAQ",
+                    "links": [
+                        {
+                            "label": "Hands-On at 3DPrintopia (3D Musketeers)",
+                            "url": "https://www.youtube.com/watch?v=Yjyzrv257hk"
+                        }
+                    ]
+                },
+                {
+                    "heading": "Bambu's FCC Parade",
+                    "body": "Still no announcement, but the regulatory filings keep piling up.",
+                    "bullets": [
+                        "S1 3D scanner: filed September 22, 60 W, likely handheld. Bambu's first scanner",
+                        "AMS 3H and AMS 3P: new filament systems in the same filings",
+                        "Also filed in September: H3C, P3C and an X2D Pro",
+                        "Everything here comes from filings. Prices and dates floating around are guesses"
+                    ],
+                    "link": "https://makers101.com/bambu-lab-s1-3d-scanner/",
+                    "linkLabel": "The S1 Filing"
+                }
+            ]
+        },
+        {
+            "id": "chube-compact",
+            "title": "The Chube Compact Is Shipping",
+            "description": "Luke's Lab's short Chube finally reaches customers, about a year after pre-orders",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "The Chube Compact Is Here",
+                    "body": "About a year after pre-orders opened, Luke's Laboratory is shipping. Mitsu Makes got one: \"It only took a whole year...\"",
+                    "videoUrl": "https://youtu.be/xWG-UFhEDr4"
+                },
+                {
+                    "heading": "Chube Compact: What You're Getting",
+                    "bullets": [
+                        "Shipped: about 25% of pre-orders by September 22, past 36% as of today",
+                        "$139.99 pre-order price, now $170. New orders ship after all pre-orders",
+                        "33 mm melt zone, 50 g, 80 W heater, PT1000 included",
+                        "Titanium heatbreak, V6 nozzle threads, 4×16 mm M3 mount",
+                        "Heads-up: the threads are tight on purpose, so first nozzle installs take extra force",
+                        "Made in Wrightstown, Wisconsin. Teased for 3DPrintopia 2025, shipping in earnest the week of 3DPrintopia 2026"
+                    ],
+                    "link": "https://www.lukeslabonline.com/blogs/news/shipping-and-shipping-and-shipping-and-shipping",
+                    "linkLabel": "Luke's Lab Shipping Update",
+                    "links": [
+                        {
+                            "label": "Chube Compact",
+                            "url": "https://www.lukeslabonline.com/products/chube-compact"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "prusa-ht-hotend",
+            "title": "Prusa's 400 °C HT Hotend for the CORE One",
+            "description": "A tool-free swap that opens up engineering filaments",
+            "type": "text",
+            "slides": [
+                {
+                    "heading": "Prusa HT Hotend: 400 °C on a CORE One",
+                    "body": "Launched September 30. Swap it in without tools in under a minute, and your CORE One prints the engineering stuff.",
+                    "bullets": [
+                        "$199.99. Up to 400 °C, 110 °C above the stock hotend",
+                        "Hardened E3D ObXidian 0.4 mm nozzle included",
+                        "Fits CORE One, One+, One+ Gen 2, One L and One L+. Not INDX, MK4 or XL",
+                        "Opens up PC Blend CF, PA11 CF, PPS-CF/GF and PPA-CF",
+                        "Or buy a CORE One L+ with it pre-installed for $2,169"
+                    ],
+                    "link": "https://www.prusa3d.com/product/ht-hotend-upgrade-for-core-one-and-core-one-l/",
+                    "linkLabel": "HT Hotend Upgrade"
+                }
+            ]
+        },
+        {
+            "id": "3dprintopia-recap",
+            "title": "3DPrintopia 2026: What We Saw",
+            "description": "Philadelphia's show last weekend, pieced together from attendee clips",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "3DPrintopia 2026 in 60 Seconds",
+                    "body": "No official recap yet, so here's what attendees posted from Philadelphia, September 26–27.",
+                    "videoUrl": "https://www.youtube.com/watch?v=abi_iOuJEes"
+                },
+                {
+                    "heading": "Spotted on the Floor",
+                    "bullets": [
+                        "Creality K3 toolchanger: the first public hands-on",
+                        "Unlayered 3D's 5-axis desktop printer, running live",
+                        "3D-printed Top Fuel dragster races, both days",
+                        "CraftableLABS has a full recap video coming Saturday, October 3"
+                    ],
+                    "link": "https://www.youtube.com/watch?v=_fubsFCYuN8",
+                    "linkLabel": "Unlayered's 5-Axis Printer",
+                    "links": [
+                        {
+                            "label": "Dragster Races (Delmar)",
+                            "url": "https://www.youtube.com/watch?v=BCoZhPGmTb0"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "ai-designs-prints",
+            "title": "AI Agents Designing Your Prints",
+            "description": "A Bambu H2S setup vlog where AI designs the parts. Plus my own Earn Your Keep project",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "AI Designs, the Printer Prints",
+                    "body": "rileybrown2 set up a Bambu H2S, then had AI design the parts.",
+                    "videoUrl": "https://youtu.be/L7eCk1V4HoU"
+                },
+                {
+                    "heading": "From Prompt to Pegboard",
+                    "bullets": [
+                        "Codex + Blender designed custom pegboard holders, then recolored them",
+                        "AI designed a sunset pegboard art piece, split into separate printable tiles",
+                        "A UPS keeps a power outage from ruining a print",
+                        "My similar experiment: the \"Earn Your Keep\" AI project. Ask me about it"
+                    ],
+                    "link": "https://youtu.be/L7eCk1V4HoU",
+                    "linkLabel": "Watch the Setup"
+                }
+            ]
+        },
+        {
+            "id": "prime-day-reminder",
+            "title": "Prime Day Is Next Week: Shop Through Our Page",
+            "description": "Prime Big Deal Days runs October 6–7. Our Recommendations page links support the meetup",
+            "type": "text",
+            "slides": [
+                {
+                    "heading": "Prime Big Deal Days: October 6–7",
+                    "body": "Amazon's fall Prime sale is next Tuesday and Wednesday. If you're buying filament, tools or upgrades, start from our Recommendations page.",
+                    "bullets": [
+                        "Every Amazon link on the page is a meetup referral link",
+                        "Click through from our page, then shop like normal. Costs you nothing extra",
+                        "Many of you already do this. Thank you!",
+                        "As an Amazon Associate, we, as the meetup, earn from qualifying purchases"
+                    ],
+                    "link": "https://maxsikorski.github.io/3d-printing-weekly-news/recommendations.html",
+                    "linkLabel": "Our Recommendations",
+                    "shop": true
+                }
+            ]
+        },
+        {
+            "id": "secret-santa",
+            "title": "Secret Santa: A Meetup Print Exchange",
+            "description": "Sign up, get matched, and print something for a fellow member. Free to join; you cover shipping",
+            "type": "text",
+            "slides": [
+                {
+                    "heading": "Secret Santa Print Exchange",
+                    "body": "Want in? Sign up, tell us what you're into, and I'll draw names from a digital hat. You print something fun or useful for your match.",
+                    "bullets": [
+                        "Single-color print, up to about half a spool and half a day of printing (a $10–20 part)",
+                        "Print to their taste: if your match loves Star Wars, print them something Star Wars",
+                        "Free to join. You only pay to ship your gift"
+                    ]
+                },
+                {
+                    "heading": "Secret Santa: Key Dates",
+                    "bullets": [
+                        "Sign up by mid-October with a short survey of what you like",
+                        "I'll message you your match and their likes",
+                        "Ship by December 5. Show and tell by December 15"
+                    ],
+                    "link": "https://discord.gg/pnFyeAZJsk",
+                    "linkLabel": "Tell Us You're In (Discord)"
+                }
+            ]
+        },
+        {
+            "id": "most-liked",
+            "title": "Your Favorite Last Week",
+            "description": "The most-liked topic from the W39 deck",
+            "type": "text",
+            "slides": [
+                {
+                    "heading": "Most-Liked Last Week: The Liber Hotend",
+                    "body": "Snapmaker and Phaetus's high-flow hotend for the U1 took 3 of last week's 5 likes. And there's news.",
+                    "bullets": [
+                        "Back in stock: $34.99 single, $99 for the 4-pack",
+                        "First independent review: Scratch 3DPrinting measured max flow going from 20 to 50 mm³/s",
+                        "Runners-up: the Polymaker reminder and Support Fins, 1 each",
+                        "Tap the heart on any topic in the archive. It tells me what to cover more of"
+                    ],
+                    "link": "https://www.youtube.com/watch?v=-5DfthaEeYg",
+                    "linkLabel": "Watch the Review",
+                    "links": [
+                        {
+                            "label": "Revisit Last Week's Winner",
+                            "url": "https://maxsikorski.github.io/3d-printing-weekly-news/week.html?week=2026-W39&topic=liber-hotend"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "robotics-corner",
+            "title": "Robotics Corner: WAAM, Metal Printing with a Robot Welder",
+            "description": "ADAXIS and Fronius team up on wire-arc additive manufacturing",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "Robotics Corner: Printing Metal with a Welder",
+                    "body": "ADAXIS (AdaOne robot-printing software) and Fronius (welding) teamed up on WAAM: wire-arc additive manufacturing.",
+                    "videoUrl": "https://youtu.be/mZry6dZCx9s"
+                },
+                {
+                    "heading": "WAAM in Plain English",
+                    "bullets": [
+                        "A robot arm and a welding arc melt ordinary welding wire, bead by bead. Think a giant FDM printer for metal",
+                        "Fast and huge: roughly 2–8 kg per hour, with parts several meters long",
+                        "Steel, stainless, aluminum, bronze, Inconel, titanium. The catch: ridged parts that need heat treatment and machining",
+                        "This collab: Fronius's CMT Additive PRO welding settings, driven by ADAXIS's toolpath and simulation software",
+                        "Scale check (Sep 21): ORNL printed a nearly 2-ton steel mold for Boeing in 8 weeks"
+                    ],
+                    "link": "https://youtu.be/mZry6dZCx9s",
+                    "linkLabel": "Watch ADAXIS × Fronius",
+                    "links": [
+                        {
+                            "label": "ORNL's 2-Ton Mold",
+                            "url": "https://www.ornl.gov/news/partnership-between-ornl-boeing-advances-manufacturing-aircraft-parts"
+                        },
+                        {
+                            "label": "WAAM 101 (RAMLAB)",
+                            "url": "https://www.ramlab.com/resources/waam-101/"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "builder-spotlight",
+            "title": "Builder Spotlight: A Fully 3D-Printed Mechanical Calculator",
+            "description": "3D all Workshop's crank-driven calculator, about 100 iterations in the making",
+            "type": "tool",
+            "slides": [
+                {
+                    "heading": "Builder Spotlight: 3D all Workshop",
+                    "body": "A mechanical calculator, every part FDM-printed. Turn the crank to add and multiply.",
+                    "videoUrl": "https://www.youtube.com/watch?v=WQeWL3TyeQQ"
+                },
+                {
+                    "heading": "What It Took",
+                    "bullets": [
+                        "About 100 design iterations over 2 months",
+                        "The hard part: the carry mechanism, which turns rotations into a final digit position",
+                        "FDM tolerances drove most of the redesigns, plus lubrication to get it running",
+                        "Hackaday featured it September 29"
+                    ],
+                    "link": "https://www.youtube.com/watch?v=WQeWL3TyeQQ",
+                    "linkLabel": "Watch the Build",
+                    "links": [
+                        {
+                            "label": "Hackaday's Writeup",
+                            "url": "https://hackaday.com/2026/09/29/designing-a-fully-3d-printed-mechanical-calculator/"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "quick-tip",
+            "title": "Quick Tip of the Week",
+            "description": "Glow-in-the-dark Halloween prints: start with a hardened nozzle",
+            "type": "text",
+            "slides": [
+                {
+                    "heading": "Quick Tip: Glow Filament Eats Brass Nozzles",
+                    "body": "It's Halloween printing season. Swap to a hardened steel nozzle before you load glow filament.",
+                    "bullets": [
+                        "Glow comes from strontium aluminate, a very hard powder. Prusa calls its glow PETG \"the most abrasive material we've ever made\"",
+                        "Use hardened steel (a 0.6 mm helps). Heavy use also wears PTFE tubes and extruder gears",
+                        "Dry it first. Then charge with UV or daylight: most of the glow comes in the first 1.5 hours"
+                    ],
+                    "link": "https://help.prusa3d.com/article/prusament-petg-ultraglow-troubleshooting_1043965",
+                    "linkLabel": "Prusa's Glow Filament Guide",
+                    "links": [
+                        {
+                            "label": "CNC Kitchen: Abrasive Nozzle Wear Test",
+                            "url": "https://www.cnckitchen.com/blog/how-much-abrasive-filaments-damage-your-nozzle"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "community-news",
+            "title": "Community News & Topics",
+            "description": "Share what you're interested in talking about!",
+            "type": "text",
+            "slides": [
+                {
+                    "heading": "Next Week's Meetup",
+                    "body": "Find something you're interested in talking about? Share it here and we'll cover it in next week's meetup!",
+                    "link": "https://github.com/MaxSikorski/3d-printing-weekly-news/issues",
+                    "linkLabel": "Submit a Topic"
+                }
+            ]
+        }
+    ]
+}
