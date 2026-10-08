@@ -1,6 +1,11 @@
 {
     "weeks": [
         {
+            "id": "2026-W41",
+            "date": "2026-10-08",
+            "title": "Bambu's Toolchanger Rumor Mill, Prusa Firmware 7.0 & a 15 MB Robot Brain"
+        },
+        {
             "id": "2026-W40",
             "date": "2026-10-01",
             "title": "AB 2047 Becomes Law, the Chube Compact Ships & Metal Printing with Robots"

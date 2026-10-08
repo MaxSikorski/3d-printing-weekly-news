@@ -1,0 +1,293 @@
+{
+    "week": "2026-W41",
+    "date": "2026-10-08",
+    "title": "Bambu's Toolchanger Rumor Mill, Prusa Firmware 7.0 & a 15 MB Robot Brain",
+    "subtitle": "This week in 3D printing news",
+    "timerMinutes": 20,
+    "topics": [
+        {
+            "id": "bambu-toolchanger-rumors",
+            "title": "Bambu Toolchanger: What's Real, What's Rumor",
+            "description": "FCC paperwork and patents say something is coming. A leaked photo this week says nothing at all",
+            "type": "discussion",
+            "slides": [
+                {
+                    "heading": "Bambu Toolchanger: What's Actually on Record",
+                    "body": "Bambu has announced nothing. Here's the hard evidence, and how old it is.",
+                    "bullets": [
+                        "FCC filings, Sep 11 to 22: printers labeled H3C, P3C and X2D Pro, plus the S1 scanner and AMS 3H / 3P. Photos sealed until about March 2027",
+                        "Chinese patents, published Aug 14: a rear rack of 9 printheads plus 1 on the carriage. 10 nozzles, 10 spools in the drawing",
+                        "It swaps printheads into one moving toolhead. A step past the H2C's Vortek, but not independent tools like a U1 or XL"
+                    ],
+                    "link": "https://makers101.com/bambu-lab-h3c-patent/",
+                    "linkLabel": "What the Patents Show",
+                    "links": [
+                        {
+                            "label": "The H3C FCC Filing",
+                            "url": "https://3dpcc.news/bambu-lab-h3c-fcc-filing"
+                        }
+                    ]
+                },
+                {
+                    "heading": "The \"Leaked Photo\" and the Numbers Going Around",
+                    "bullets": [
+                        "Nothing ties the patents to the FCC \"H3C\" except timing and the letter C",
+                        "A leaked H3C photo made the rounds Monday. The poster admits AI edited it, and the Bambu forum calls it fake. We're not showing it",
+                        "Prices and dates floating around ($2,299 H3C, $999 scanner, a mid-October launch) are blogger guesses, not leaks",
+                        "\"March 2027\" is when the FCC confidentiality expires, not a launch date",
+                        "Next real date to watch: Formnext, November 17 to 20"
+                    ],
+                    "link": "https://3dpcc.news/bambu-lab-h3c-fcc-filing",
+                    "linkLabel": "Status as of Today"
+                }
+            ]
+        },
+        {
+            "id": "prusa-firmware-7",
+            "title": "Prusa Firmware 7.0: Auto Z-Alignment and HT Hotend Support",
+            "description": "The CORE One family gets its biggest update in months, and INDX gets 6.9.2",
+            "type": "text",
+            "slides": [
+                {
+                    "heading": "Prusa Firmware 7.0.0 for the CORE One Family",
+                    "body": "Released October 5 for CORE One, One+, One L and One L+. Update before you shim your bed.",
+                    "bullets": [
+                        "Automatic Z-axis alignment on uneven beds",
+                        "HT hotend auto-detected, with PPS and PPA presets. Last week's $199.99 400 °C upgrade is now shipping",
+                        "PVA and BVOH support presets, filament color, tool mapping with Smart mapping"
+                    ],
+                    "link": "https://help.prusa3d.com/downloads/core-one-indx",
+                    "linkLabel": "Prusa Firmware Downloads"
+                },
+                {
+                    "heading": "Prusa 7.0: The Fixes, and INDX 6.9.2",
+                    "bullets": [
+                        "Runout Reaction setting on the CORE One L: act instantly or after a delay",
+                        "Fixes unreliable homing on CORE One and One+, better nozzle wiper cleaning",
+                        "CORE One INDX: firmware 6.9.2 on October 7 adds PVA/BVOH presets on the printer",
+                        "No new State of INDX post since July. PrusaSlicer 3.0 is still at alpha 12"
+                    ],
+                    "link": "https://www.prusa3d.com/product/ht-hotend-upgrade-for-core-one-and-core-one-l/",
+                    "linkLabel": "HT Hotend Upgrade",
+                    "links": [
+                        {
+                            "label": "Prusa Firmware Downloads",
+                            "url": "https://help.prusa3d.com/downloads/core-one-indx"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "needle3-duck",
+            "title": "A 15 MB AI Brain for a Robot Duck",
+            "description": "Better Stack fine-tunes Cactus Compute's tiny Needle 3 model to drive a simulated Open Duck Mini",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "A 15 MB AI Brain for a Robot Duck",
+                    "body": "Better Stack took Needle 3, a model small enough for a microcontroller, and taught it to boss around a simulated Open Duck Mini.",
+                    "videoUrl": "https://youtu.be/KQcQ7P78eTI"
+                },
+                {
+                    "heading": "Needle 3: Tiny Local AI That Calls Functions",
+                    "body": "Not a chatbot. It turns a sentence into a function call, and it runs on your own hardware.",
+                    "bullets": [
+                        "From Cactus Compute, released September 17, Apache-2.0. One set of weights, cut to 2 to 20 layers: 8 to 29 MB",
+                        "The duck is virtual: Antoine Pirrone's Open Duck Mini running in the MuJoCo physics simulator",
+                        "Fine-tuned on about 1,700 hand-written examples, 5 to 12 minutes on an RTX 5090. Five tools: walk, turn, dance, shake head, emote"
+                    ],
+                    "link": "https://cactuscompute.com/needle",
+                    "linkLabel": "Needle 3"
+                },
+                {
+                    "heading": "The Duck Learned Manners",
+                    "bullets": [
+                        "Obeys only if you say please. Gets angry when you're rude. Reacts to \"the floor is lava.\" Ignores impossible asks",
+                        "49 prompts it never saw: stock 27%, fine-tuned 84%, the 15 MB 4-layer version 61%",
+                        "Text input only, no voice. The \"beats bigger models\" claims are Cactus's own",
+                        "Try it: the duck app is on GitHub, and the written guide walks through the fine-tune"
+                    ],
+                    "link": "https://betterstack.com/community/guides/ai/needle3-edge/",
+                    "linkLabel": "The Written Guide",
+                    "links": [
+                        {
+                            "label": "Needle Duck App (GitHub)",
+                            "url": "https://github.com/andrisgauracs/needle-duck"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "microplastics-filter",
+            "title": "A 3D-Printed Filter That Catches Microplastics",
+            "description": "Researchers print PLA with a sacrificial additive to make pores an FDM nozzle never could",
+            "type": "text",
+            "slides": [
+                {
+                    "heading": "A 3D-Printed Water Filter for Microplastics",
+                    "body": "An FDM nozzle can't print pores small enough to trap microplastics. So the researchers printed the pores in afterward.",
+                    "bullets": [
+                        "PLA mixed with PEG (polyethylene glycol). The PEG forms tiny spheres inside the print",
+                        "Soak the part in 80 °C water: the PEG dissolves and leaves a porous mesh",
+                        "A 20-layer stack removed about 90% of micro- and nanoplastics. Best mix: 10% PEG",
+                        "Published in Separation and Purification Technology. Reusability still untested",
+                        "Hackaday's comment thread asks the obvious: does the PLA filter shed plastic of its own?"
+                    ],
+                    "link": "https://hackaday.com/2026/10/05/3d-printed-filter-removes-most-microplastics-from-water/",
+                    "linkLabel": "Hackaday's Writeup"
+                }
+            ]
+        },
+        {
+            "id": "pegboard-challenge",
+            "title": "Printables Challenge: Pegboard Wall Organizers",
+            "description": "Design a pegboard accessory by October 22. First prize is an MK4S kit",
+            "type": "text",
+            "slides": [
+                {
+                    "heading": "Design Challenge: Pegboard Wall Organizers",
+                    "body": "Two weeks left on Printables' October Designer Challenge. Every shop needs one more pegboard holder.",
+                    "bullets": [
+                        "Any printable organizer, holder, mount or accessory for a pegboard wall",
+                        "Judged on how securely it attaches, how easy it is to grab things, and how easy it is to print",
+                        "1st: an Original Prusa MK4S kit. 2nd: 1,050 Prusameters. 3rd: 700",
+                        "Entries close October 22, 23:59 UTC. Theme picked by Designer of the Month agepbiz"
+                    ],
+                    "link": "https://www.printables.com/contest/531-pegboard-wall-organizers",
+                    "linkLabel": "Enter the Challenge"
+                }
+            ]
+        },
+        {
+            "id": "most-liked",
+            "title": "Your Favorite Last Week: A Four-Way Tie",
+            "description": "Four topics got one heart each, so we're spotlighting Secret Santa: one week left to sign up",
+            "type": "text",
+            "slides": [
+                {
+                    "heading": "Last Week's Hearts: A Four-Way Tie",
+                    "body": "Four topics got one heart each: the Chube Compact, AI-designed prints, the mechanical calculator, and Secret Santa. So here's your Secret Santa reminder.",
+                    "bullets": [
+                        "Sign-ups close Thursday, October 15. People are already in, so don't be the one who missed it",
+                        "One single-color print, up to about half a spool and half a day (a $10 to $20 part). Free to join; you only pay shipping",
+                        "I'll message you your match and what they're into. Ship by December 5, show and tell December 10",
+                        "Tap the heart on any topic in the archive. It tells me what to cover more of"
+                    ],
+                    "link": "https://maxsikorski.github.io/3d-printing-weekly-news/secret-santa.html",
+                    "linkLabel": "Sign Up Now"
+                }
+            ]
+        },
+        {
+            "id": "robotics-corner",
+            "title": "Robotics Corner: The Yeah Hand, a 3D-Printed Robot Hand",
+            "description": "Five servos, fishing-line tendons and a mostly printed skeleton. Open hardware, kits available",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "Robotics Corner: The Yeah Hand",
+                    "body": "Vittorio Lumare's open-source, mostly 3D-printed robot hand (formerly Rebelia). Hackaday featured it Monday.",
+                    "videoUrl": "https://youtu.be/_zuhmYjeGcI"
+                },
+                {
+                    "heading": "How the Yeah Hand Works",
+                    "bullets": [
+                        "5 servos, 15 degrees of freedom. The fingers have no motors: fishing-line tendons run through PTFE tubes to cut friction",
+                        "Printed in Hyper ABS (skeleton), TPU 95A (fingers and palm) and PLA (covers). STLs plus parametric Blender source",
+                        "20 kg·cm per finger, lifts up to 8 kg, silicone grip pads and a thumbnail for small objects. 800 open-close cycles without overheating",
+                        "A flex-sensor glove mirrors your hand for teleoperation. Robotic version has arm flanges and a ROS driver; a prosthetic version is experimental",
+                        "Licensed CERN-OHL-S (hardware) and GPLv3 (firmware). Kits and assembled hands on Tindie"
+                    ],
+                    "link": "https://hackaday.io/project/204373-yeah-robotic-hand-formerly-rebelia",
+                    "linkLabel": "Project Page",
+                    "links": [
+                        {
+                            "label": "Hackaday's Writeup",
+                            "url": "https://hackaday.com/2026/10/05/building-a-cheap-dexterous-robot-hand/"
+                        },
+                        {
+                            "label": "Files on GitHub",
+                            "url": "https://github.com/opsobot/yeah-hand"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "builder-spotlight",
+            "title": "Builder Spotlight: KineticPrints' Moiré Wall Sculpture",
+            "description": "Two printed discs, one DC motor and nine LEDs make a moving optical illusion for your wall",
+            "type": "tool",
+            "slides": [
+                {
+                    "heading": "Builder Spotlight: KineticPrints",
+                    "body": "Rob rebuilt his moiré disc illusion to run on a single DC motor. The electronics got simpler and the effect stayed.",
+                    "videoUrl": "https://youtu.be/CzSoDBLdIfQ"
+                },
+                {
+                    "heading": "Build Your Own Moiré Disc",
+                    "bullets": [
+                        "Two fully printed patterned discs. One spins against the other and the interference makes the pattern move. Great under black light",
+                        "Version 1 used two modified 28BYJ-48 steppers and a custom PCB. Version 2: one brushed DC gear motor on a Pololu MAX14870 driver",
+                        "Brain: a Seeed XIAO ESP32-C3 or C6 on perfboard, with a ring of 9 WS2812B NeoPixels behind the discs",
+                        "The board hosts its own Wi-Fi hotspot. Open the phone page, set speed and light effects, and it remembers them",
+                        "Free files on Printables, firmware on GitHub"
+                    ],
+                    "link": "https://www.printables.com/model/1865850-moire-disc-illusion-single-dc-motor-version",
+                    "linkLabel": "Files on Printables",
+                    "links": [
+                        {
+                            "label": "Firmware (GitHub)",
+                            "url": "https://github.com/KineticPrints/04-Moire_disc-DC_motor-fw"
+                        },
+                        {
+                            "label": "KineticPrints on YouTube",
+                            "url": "https://www.youtube.com/@KineticPrints"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "quick-tip",
+            "title": "Quick Tip of the Week",
+            "description": "Ghost Studio: turn any model into a Halloween ghost in your browser",
+            "type": "text",
+            "slides": [
+                {
+                    "heading": "Quick Tip: Ghost Any Print with Ghost Studio",
+                    "body": "A free web app from a Prusa employee drapes a bedsheet ghost over any model, with the shape still showing through. Let's try it live.",
+                    "bullets": [
+                        "Drop in an STL, 3MF or OBJ. It loads a Benchy by default so you can see it work in seconds",
+                        "Export the STL, open it straight in PrusaSlicer, or send it to EasyPrint. No login, nothing to install",
+                        "Same post, same sale through October 31: Prusament PLA Halloween colors 5+1 free, and last week's Ultraglow + hardened 0.6 mm nozzle bundle 15% off ($119.83)"
+                    ],
+                    "link": "https://gzeus.github.io/3D-Ghost-Generator/",
+                    "linkLabel": "Open Ghost Studio",
+                    "links": [
+                        {
+                            "label": "Prusa's Halloween Post",
+                            "url": "https://blog.prusa3d.com/get-ready-for-halloween-with-our-spooky-filament-offer_138639/"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "community-news",
+            "title": "Community News & Topics",
+            "description": "Share what you're interested in talking about!",
+            "type": "text",
+            "slides": [
+                {
+                    "heading": "Next Week's Meetup",
+                    "body": "Find something you're interested in talking about? Share it here and we'll cover it in next week's meetup!",
+                    "link": "https://github.com/MaxSikorski/3d-printing-weekly-news/issues",
+                    "linkLabel": "Submit a Topic"
+                }
+            ]
+        }
+    ]
+}
