@@ -79,3 +79,12 @@ window.SITE_CONFIG = {
     liveAccent: "#f7931a",
     archive: { openMonths: 0 }   // every month collapsed by default (Max, 2026-09-23)
 };
+
+// Seasonal dressing (Max, 2026-10-08: full colour is the sanctioned exception to monochrome). Homepage only;
+// `seasonal-leaves.js` decides by date whether it's leaf season (Sep 22 – Nov 20) and does nothing otherwise.
+// Loaded from here so the engine files stay byte-identical with the sister site.
+(function () {
+    if (!/(^|\/)(index\.html)?$/.test(location.pathname)) return;
+    var s = document.createElement('script'); s.src = 'seasonal-leaves.js'; s.defer = true;
+    document.head.appendChild(s);
+})();
