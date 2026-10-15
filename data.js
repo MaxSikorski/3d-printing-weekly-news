@@ -4,6 +4,11 @@
 window.INLINE_DATA = {
     "weeks": [
         {
+            "id": "2026-W42",
+            "date": "2026-10-15",
+            "title": "INDX Problems & the Vibe-Coding Era"
+        },
+        {
             "id": "2026-W41",
             "date": "2026-10-08",
             "title": "Bambu's Toolchanger Rumor Mill, Prusa Firmware 7.0 & a 15 MB Robot Brain"
@@ -107,6 +112,370 @@ window.INLINE_DATA = {
 };
 
 window.INLINE_WEEKS = {
+    "2026-W42": {
+        "week": "2026-W42",
+        "date": "2026-10-15",
+        "title": "INDX Problems & the Vibe-Coding Era",
+        "subtitle": "This week in 3D printing news",
+        "timerMinutes": 20,
+        "topics": [
+            {
+                "id": "indx-problems",
+                "title": "The Prusa CORE One INDX Has Problems",
+                "description": "Thomas Sanladerer's review: third-party filament fails the mandatory calibration, settings don't save, and the camera is blocked",
+                "type": "video",
+                "slides": [
+                    {
+                        "heading": "The Prusa CORE One INDX Has Problems",
+                        "body": "Made with Layers, October 11. 264,000 views in four days, and a Hackaday follow-up on Monday.",
+                        "videoUrl": "https://youtu.be/fbQjWMXGZ4k"
+                    },
+                    {
+                        "heading": "What Tom Found",
+                        "bullets": [
+                            "The mandatory start-of-print calibration only works with Prusa's own filament. VoxelPLA wouldn't print until he deleted the sequence from the G-code by hand",
+                            "Prusa support's answer: use Prusament. It struggles with some Prusa filaments too",
+                            "Manual calibration results aren't saved, even though the screen says they are",
+                            "The INDX hardware blocks the camera, so you can't check a filament load",
+                            "Side by side, his Prusa XL \"simply works.\" What's good: 0.013 g of purge per change, and the Bondtech extruders"
+                        ],
+                        "link": "https://hackaday.com/2026/10/12/the-prusa-core-one-indx-a-troubled-multi-extruder-upgrade/",
+                        "linkLabel": "Hackaday's Writeup"
+                    },
+                    {
+                        "heading": "The Pushback, and Where It Stands",
+                        "bullets": [
+                            "Owners in the comments print third-party filament fine and suspect a firmware or slicer fix since he filmed",
+                            "One engineer's read: nozzle ooze upsets the force probe, not the filament brand",
+                            "Others pile on: tool heads flying off during changes, filament locking up in the channels",
+                            "No response from Prusa yet. Nothing new since firmware 6.9.2 on October 7",
+                            "Still a beta unit sold as a finished product. Give it two more years"
+                        ],
+                        "link": "https://youtu.be/fbQjWMXGZ4k",
+                        "linkLabel": "Watch the Review"
+                    }
+                ]
+            },
+            {
+                "id": "creality-k3",
+                "title": "Creality K3: Pre-Orders Open at $849",
+                "description": "Four nozzles, five-second swaps, and the Snapmaker U1's silhouette. Every number is Creality's own",
+                "type": "text",
+                "slides": [
+                    {
+                        "heading": "Creality K3: Pre-Orders Open at $849",
+                        "body": "Announced Tuesday, under the sub-$900 promise from last month. Four free rolls of Hyper PLA if you order by November 30.",
+                        "bullets": [
+                            "KliTek: four nozzle assemblies docked at the back, swapped in about 5 seconds. A full material change in under 15",
+                            "Creality's claims: up to 85% less waste and up to 80% shorter print times than a single-nozzle multi-color setup",
+                            "260 mm cube, 500 mm/s, 300 °C hotend, four built-in spool slots, four hardened 0.4 mm nozzles in the box",
+                            "Klipper-based firmware with root access. Creality Print 7.0, and OrcaSlicer works"
+                        ],
+                        "link": "https://www.prnewswire.com/news-releases/creality-k3-opens-for-pre-order-at-849-advancing-multi-color-3d-printing-302906901.html",
+                        "linkLabel": "The Announcement"
+                    },
+                    {
+                        "heading": "Snapmaker Clone? Close, but Not Quite",
+                        "bullets": [
+                            "Same shape as the Snapmaker U1: four tools, CoreXY, about $850 to $900",
+                            "The U1 swaps whole toolheads. The K3 swaps lightweight nozzle assemblies. Bambu's H2C swaps hotends. Three answers to the purge-waste problem",
+                            "Extras cost extra: the mixed-nozzle kit, the TPU kit, the CFS hub for more colors, the filtered top cover. No chamber heater",
+                            "No US ship date yet. No independent review yet. Europe in December",
+                            "It's a Creality pre-order. Remember the K2 Plus"
+                        ],
+                        "link": "https://www.creality.com/blog/k3-questions-answered",
+                        "linkLabel": "Creality's K3 FAQ"
+                    }
+                ]
+            },
+            {
+                "id": "form-studio-1",
+                "title": "Formlabs Form Studio 1: Professional Resin for $699",
+                "description": "Formlabs' first printer aimed at the home desk. Not as cheap as the headline, but affordable",
+                "type": "text",
+                "slides": [
+                    {
+                        "heading": "Formlabs Form Studio 1: Professional Resin for $699",
+                        "body": "Announced Wednesday, orders open now, ships November 16. I want one.",
+                        "bullets": [
+                            "A quarter of the Form 4's price. Formlabs calls it \"the world's most affordable professional resin 3D printer\"",
+                            "200 × 125 × 235 mm build volume. New Low Force Display engine from the Form 4: 28 LEDs, 35 µm pixels (30% finer than the Form 4)",
+                            "Averages 40 mm/h, up to 130 mm/h with Alpha Fast. Most prints under two hours",
+                            "Founder's Edition colors (aqua, teal, violet) through November 30. One-year warranty"
+                        ],
+                        "link": "https://formlabs.com/blog/announcing-form-studio-1/",
+                        "linkLabel": "Formlabs' Announcement"
+                    },
+                    {
+                        "heading": "Not As Cheap As You Think",
+                        "bullets": [
+                            "Six Alpha Resins from $29 per liter. Nine materials supported at launch",
+                            "Resin tank $55. Tank Pro $79, and you need it for third-party resin (at a speed cost)",
+                            "Flex build plate $135. Form Studio Wash+Cure $199. The VOC extractor is extra too",
+                            "Call it $1,000 to $1,100 on the desk before resin. Still the cheapest way into PreForm and Formlabs materials"
+                        ],
+                        "link": "https://formlabs.com/3d-printers/form-studio-1/",
+                        "linkLabel": "Form Studio 1 Specs"
+                    }
+                ]
+            },
+            {
+                "id": "polymaker-lawsuit",
+                "title": "California Sues Polymaker Over \"Ghost Gun\" Marketing",
+                "description": "San Diego County says the filament isn't illegal, the marketing is. First suit of its kind",
+                "type": "discussion",
+                "slides": [
+                    {
+                        "heading": "California Sues Polymaker Over \"Ghost Gun\" Marketing",
+                        "body": "Filed October 5 in San Diego Superior Court by the County Counsel, with Giffords Law Center. The complaint says filament itself is legal.",
+                        "bullets": [
+                            "The claim: Polymaker's marketing turned PLA into a \"firearm precursor part\" under California law",
+                            "Alleged: firearm-themed products, paid affiliates and influencers in the gun-printing scene, technical guidance"
+                        ],
+                        "link": "https://www.tomshardware.com/3d-printing/state-of-california-sues-3d-printer-filament-company-polymaker-for-promoting-ghost-guns-by-marketing-to-3d-printed-gun-community-state-alleges-company-turns-harmless-pla-filament-into-a-regulated-firearm-precursor-part",
+                        "linkLabel": "Tom's Hardware Coverage"
+                    },
+                    {
+                        "heading": "What the County Is Asking For",
+                        "bullets": [
+                            "Named 65 times: Sean Aranda, \"The 3D Print General,\" sponsored by Polymaker and then hired as Head of Customer Experience",
+                            "Asks for an injunction, civil penalties up to $2,500 per violation, and the profits",
+                            "No statement from Polymaker yet. Allegations, not findings. We'll follow it"
+                        ],
+                        "link": "https://www.nbcsandiego.com/news/local/new-san-diego-county-consumer-protection-unit-announces-first-set-of-lawsuits/4083519/",
+                        "linkLabel": "San Diego County's Announcement",
+                        "links": [
+                            {
+                                "label": "Tom's Hardware Coverage",
+                                "url": "https://www.tomshardware.com/3d-printing/state-of-california-sues-3d-printer-filament-company-polymaker-for-promoting-ghost-guns-by-marketing-to-3d-printed-gun-community-state-alleges-company-turns-harmless-pla-filament-into-a-regulated-firearm-precursor-part"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "hairy-robot",
+                "title": "3D-Printed \"Hair\": A Hairy Combat Robot in 48 Hours",
+                "description": "Maker's Muse armors an antweight with printed bristles. Same trick makes grass",
+                "type": "video",
+                "slides": [
+                    {
+                        "heading": "A Hairy Combat Robot in 48 Hours",
+                        "body": "Maker's Muse, October 7. All his robots were broken the week of Robot Royale 9, so he built a new one with 3D-printed hair.",
+                        "videoUrl": "https://youtu.be/c0_OhAfTF-Q"
+                    },
+                    {
+                        "heading": "How You Print Hair (and Grass)",
+                        "bullets": [
+                            "A 150 g antweight designed in Fusion and printed on an Elegoo Centauri Carbon 2, wired and fought inside two days",
+                            "The bristles come from the \"hairy lion\" trick: the slicer bridges each strand to a sacrificial wall, you cut the wall away and the hairs stay",
+                            "A hair dryer straightens or curls the strands after",
+                            "Grass works the same way. Print the lawn sideways, one strand per blade from tip to root, then free the plate"
+                        ],
+                        "link": "https://toms3d.org/2017/02/07/how-to-furry/",
+                        "linkLabel": "How to Furry (Tom's Explainer)",
+                        "links": [
+                            {
+                                "label": "3D Printable Grass",
+                                "url": "https://www.myminifactory.com/object/3d-print-114101"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "vibe-coding-era",
+                "title": "The Vibe-Coding Era",
+                "description": "AI made custom software cheap to build. The tools keep coming, this deck included",
+                "type": "tool",
+                "slides": [
+                    {
+                        "heading": "The Vibe-Coding Era",
+                        "body": "A lot of custom-built software exists now because of what AI can do. This slide deck and our own products included.",
+                        "bullets": [
+                            "Small, focused tools, built by one person, often in a weekend",
+                            "Most run in the browser. Nothing to install, nothing uploaded",
+                            "Several ship an MCP server, so an AI assistant can drive the tool for you",
+                            "I keep a list on our GitHub and add to it every week as I find more"
+                        ],
+                        "link": "https://github.com/MaxSikorski/3d-printing-weekly-news/blob/main/vibe-coded-apps.md",
+                        "linkLabel": "The Vibe-Coded Apps List"
+                    },
+                    {
+                        "heading": "The List So Far",
+                        "bullets": [
+                            "CurveCut: a free Luban3D alternative",
+                            "Printfins: a better way to support models",
+                            "Layerling: a self-hosted version of Tinkercad",
+                            "JumpStart 3D: a better version of Tinkercad. I'm hosting it now",
+                            "SolidCraft: parametric CAD, 2,685 stars in eight days",
+                            "FluidCAD: parametric CAD you can write as JavaScript",
+                            "Bumpmesh: textures for your 3D files"
+                        ],
+                        "link": "https://github.com/MaxSikorski/3d-printing-weekly-news/blob/main/vibe-coded-apps.md",
+                        "linkLabel": "The Vibe-Coded Apps List"
+                    }
+                ]
+            },
+            {
+                "id": "secret-santa",
+                "title": "Secret Santa: Sign-Ups Extended to October 22",
+                "description": "A few spots left. Sign up this week",
+                "type": "text",
+                "slides": [
+                    {
+                        "heading": "Secret Santa: Sign-Ups Extended to October 22",
+                        "body": "Last call. A few spots are left, and sign-ups now close next Thursday, October 22.",
+                        "bullets": [
+                            "One single-color print, up to about half a spool and half a day (a $10 to $20 part). Free to join; you only pay shipping",
+                            "I'll message you your match and what they're into",
+                            "Ship by December 5, show and tell December 10",
+                            "Sign up now so I can draw names next week"
+                        ],
+                        "link": "https://maxsikorski.github.io/3d-printing-weekly-news/secret-santa.html",
+                        "linkLabel": "Sign Up Now"
+                    }
+                ]
+            },
+            {
+                "id": "most-liked",
+                "title": "Your Favorite Last Week: The Yeah Hand",
+                "description": "Two hearts each for the Yeah Hand and the microplastics filter. The hand wins the tiebreak",
+                "type": "text",
+                "slides": [
+                    {
+                        "heading": "Last Week's Hearts: The Yeah Hand",
+                        "body": "Six hearts last week. The Yeah Hand and the microplastics filter tied at two each, so the robot hand takes the spot.",
+                        "bullets": [
+                            "Vittorio Lumare's open-source robot hand: 5 servos, 15 degrees of freedom, fishing-line tendons, mostly printed",
+                            "Lifts up to 8 kg. A flex-sensor glove mirrors your hand. Kits and assembled hands on Tindie",
+                            "Runner-up: the PLA-plus-PEG filter that catches about 90% of microplastics",
+                            "Tap the heart on any topic in the archive. It tells me what to cover more of"
+                        ],
+                        "link": "https://hackaday.io/project/204373-yeah-robotic-hand-formerly-rebelia",
+                        "linkLabel": "The Yeah Hand",
+                        "links": [
+                            {
+                                "label": "Last Week's Deck",
+                                "url": "https://maxsikorski.github.io/3d-printing-weekly-news/week.html?week=2026-W41"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "robotics-corner",
+                "title": "Robotics Corner: Gemini 4 Argon Teaches a Humanoid Cornhole",
+                "description": "Google's new model watched one video, wrote the simulation, and Apptronik's Apollo sank seven in a row",
+                "type": "video",
+                "slides": [
+                    {
+                        "heading": "Robotics Corner: Gemini 4 Argon",
+                        "body": "Google DeepMind, October 13. Argon is Google's new general model; robotics is one showcase.",
+                        "videoUrl": "https://youtu.be/9PICEmtfpWU"
+                    },
+                    {
+                        "heading": "Video to Sim to Real",
+                        "bullets": [
+                            "Researchers showed Argon a video of a person playing cornhole. It mapped the scene and built a MuJoCo physics simulation on its own",
+                            "The control it worked out ran on Apptronik's Apollo humanoid: seven consecutive shots in the real world",
+                            "Google says the pipeline compresses weeks of manual simulation modeling into a few hours",
+                            "Also shown: Spot rehearsing a foot-pedal trash bin in a digital twin, and a $100-class SO-101 arm",
+                            "Not open and not free: paid API or a Google AI Pro/Ultra plan. All numbers are Google's own, from an internal test"
+                        ],
+                        "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+                        "linkLabel": "Google's Announcement",
+                        "links": [
+                            {
+                                "label": "Argon for Robotics (Developer Post)",
+                                "url": "https://developers.googleblog.com/gemini-4-argon-for-robotics/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "builder-spotlight",
+                "title": "Builder Spotlight: Support Fins, Three Weeks Later",
+                "description": "Matthew Trahan's breakaway-fin tool went from 455 to 750 stars, grew plugins for seven apps, and became an MCP server today",
+                "type": "tool",
+                "slides": [
+                    {
+                        "heading": "Builder Spotlight: Support Fins, Three Weeks Later",
+                        "body": "Our W39 Quick Tip, revisited. Matthew Trahan's free web app bakes breakaway fins into your STL so the stronger orientation prints. I'm still talking with Matthew and contributing.",
+                        "bullets": [
+                            "455 stars when we showed it on September 24. 750 today, 10 contributors, about 200 commits in three weeks",
+                            "Plugins now: OrcaSlicer, PrusaSlicer 3.0, Cura 5, Fusion, Blender 4.2+, FreeCAD 1.0, Onshape, SolidWorks. All marked experimental",
+                            "A command line that fins a part with one command, and a Portuguese translation from a contributor"
+                        ],
+                        "link": "https://printfins.com/",
+                        "linkLabel": "Open Support Fins"
+                    },
+                    {
+                        "heading": "What Landed This Week",
+                        "bullets": [
+                            "Support Fins as an MCP server, published today. Claude Code or Claude Desktop can fin a part for you",
+                            "Orientation suggestions moved to a background worker. A 250,000-face model used to freeze the page for 14 seconds",
+                            "A bed pad on exports, cutouts along cut walls, and calibration coupons you print to tune the fins to your printer",
+                            "Still free, MIT, nothing uploaded. The fin idea is Slant 3D's; Matthew automated it"
+                        ],
+                        "link": "https://github.com/gittrahan/support-fins",
+                        "linkLabel": "Support Fins on GitHub",
+                        "links": [
+                            {
+                                "label": "Plugin Downloads",
+                                "url": "https://github.com/gittrahan/support-fins/releases/tag/plugins-latest"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "quick-tip",
+                "title": "Quick Tip of the Week",
+                "description": "Thermoform PLA: print it flat, press it over a mold with a hair dryer",
+                "type": "video",
+                "slides": [
+                    {
+                        "heading": "Quick Tip: Thermoforming PLA",
+                        "body": "Send to Print, October 10. Flat PLA mesh panels, a reusable PETG mold, and a hair dryer make a ghost treat bag you couldn't print directly.",
+                        "videoUrl": "https://youtu.be/UpAtByo_Jeo"
+                    },
+                    {
+                        "heading": "How Thermoforming Works",
+                        "bullets": [
+                            "Print the panels flat in PLA. Print the forming mold in PETG, which holds up to the heat",
+                            "Warm the PLA with a hair dryer or heat gun until it goes limp, press it over the mold, let it cool",
+                            "Lighter and faster than printing the shape, and the mold is reusable",
+                            "Free files on MakerWorld: ghost, candy corn and cloud treat bags in two sizes. The Fusion tutorial covers the hinge, threads and cap"
+                        ],
+                        "link": "https://makerworld.com/en/models/3336739-thermoformed-ghost-treat-containers",
+                        "linkLabel": "Ghost Boo Bag Files",
+                        "links": [
+                            {
+                                "label": "Watch the Tutorial",
+                                "url": "https://youtu.be/UpAtByo_Jeo"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "community-news",
+                "title": "Community News & Topics",
+                "description": "Share what you're interested in talking about!",
+                "type": "text",
+                "slides": [
+                    {
+                        "heading": "Next Week's Meetup",
+                        "body": "Find something you're interested in talking about? Share it here and we'll cover it in next week's meetup!",
+                        "link": "https://github.com/MaxSikorski/3d-printing-weekly-news/issues",
+                        "linkLabel": "Submit a Topic"
+                    }
+                ]
+            }
+        ]
+    },
     "2026-W41": {
         "week": "2026-W41",
         "date": "2026-10-08",
