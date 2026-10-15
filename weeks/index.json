@@ -1,6 +1,11 @@
 {
     "weeks": [
         {
+            "id": "2026-W42",
+            "date": "2026-10-15",
+            "title": "INDX Problems & the Vibe-Coding Era"
+        },
+        {
             "id": "2026-W41",
             "date": "2026-10-08",
             "title": "Bambu's Toolchanger Rumor Mill, Prusa Firmware 7.0 & a 15 MB Robot Brain"
