@@ -4,6 +4,11 @@
 window.INLINE_DATA = {
     "weeks": [
         {
+            "id": "2026-W43",
+            "date": "2026-10-22",
+            "title": "OrcaSlicer 2.5, Layerless Printing & JumpStart 3D"
+        },
+        {
             "id": "2026-W42",
             "date": "2026-10-15",
             "title": "INDX Problems & the Vibe-Coding Era"
@@ -112,6 +117,411 @@ window.INLINE_DATA = {
 };
 
 window.INLINE_WEEKS = {
+    "2026-W43": {
+        "week": "2026-W43",
+        "date": "2026-10-22",
+        "title": "OrcaSlicer 2.5, Layerless Printing & JumpStart 3D",
+        "subtitle": "This week in 3D printing news",
+        "timerMinutes": 20,
+        "topics": [
+            {
+                "id": "orcaslicer-25",
+                "title": "OrcaSlicer 2.5.0 Alpha: Plugins, Color Mixing and a CAD Tab",
+                "description": "\"The most feature-packed release in OrcaSlicer's history\": 950 pull requests from 140 contributors, out October 16",
+                "type": "tool",
+                "slides": [
+                    {
+                        "heading": "OrcaSlicer 2.5.0 Alpha: Plugins, Color Mixing and a CAD Tab",
+                        "body": "Released October 16 as an alpha: more than 950 pull requests from over 140 contributors.",
+                        "bullets": [
+                            "Python plugins: add features without forking the slicer. A plugin must ask before it touches your files, goes online, or launches programs",
+                            "Speed Dial: press Space and type the command or setting you want",
+                            "Color mixing: blend two or three loaded filaments into new colors. \"Decompose Color\" works out the mix for a target shade",
+                            "Texture Displacement: paint a region, pick one of 40+ textures or your own image, bake a printable relief"
+                        ],
+                        "link": "https://github.com/OrcaSlicer/OrcaSlicer/releases/tag/v2.5.0-alpha",
+                        "linkLabel": "Release Notes"
+                    },
+                    {
+                        "heading": "Also New, and the Alpha Caveat",
+                        "bullets": [
+                            "Belt printers, and parallel printing on IDEX and IQEX machines: two to four parts at once",
+                            "Profiles for the Bambu H2C and A2L, mixed nozzle sizes on the H2D and X2D",
+                            "An experimental Design tab: sketch-based parametric CAD inside the slicer, off by default",
+                            "Faster startup, slicing and G-code export",
+                            "It's an alpha. Back up your profiles and projects before you try it. 2.4.2 from July is still the stable release"
+                        ],
+                        "link": "https://www.orcaslicer.com/wiki/releases/release_2_5_0_alpha",
+                        "linkLabel": "Full Wiki Writeup",
+                        "links": [
+                            {
+                                "label": "Texture Displacement Preview",
+                                "url": "https://www.youtube.com/watch?v=D7w3tG1kdvE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "opencal-v2",
+                "title": "OpenCAL V2: Build Your Own Layerless Resin Printer for $1,600",
+                "description": "UC Berkeley, Prusa and Formlabs release an open-source volumetric printer. The whole part forms at once inside a spinning vial",
+                "type": "text",
+                "slides": [
+                    {
+                        "heading": "OpenCAL V2: Build Your Own Layerless Resin Printer",
+                        "body": "Released October 20 by UC Berkeley with Prusa Research and Formlabs. Computed axial lithography: a projector shines patterns into a spinning vial of resin and the whole part solidifies at once.",
+                        "bullets": [
+                            "No layers, no supports. A Rodin's Thinker replica in 90 seconds; inch-scale parts in one to two minutes",
+                            "About $1,600 in parts and about six hours to assemble: a consumer LED projector, a Raspberry Pi 5, a stepper, extrusion, acrylic and printed parts",
+                            "Already running at MIT, NIST and Purdue"
+                        ],
+                        "link": "https://3dprint.com/335160/opencal-v2-volumetric-printer-launched/",
+                        "linkLabel": "3DPrint.com Story"
+                    },
+                    {
+                        "heading": "Everything Is Public, Including the Resin Recipe",
+                        "bullets": [
+                            "Hardware under Prusa's Open Community License. Printable parts on Printables, code on GitHub, docs on Read the Docs",
+                            "Formlabs makes the OpenCAL resin and Prusa sells it through Printed Solid: $119.99 per liter. The formula is published too",
+                            "The free Tomo app turns an STL into the projection sequence",
+                            "Resin printing without a vat, a film or a support strategy. Worth watching for the kit someone will sell"
+                        ],
+                        "link": "https://www.printables.com/model/1641693-opencal",
+                        "linkLabel": "OpenCAL on Printables",
+                        "links": [
+                            {
+                                "label": "Source on GitHub",
+                                "url": "https://github.com/computed-axial-lithography/OpenCAL"
+                            },
+                            {
+                                "label": "Build Docs",
+                                "url": "https://opencal-org.readthedocs.io"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "roetz-speed-limit",
+                "title": "The Sub-Minute Benchy Guy Pushes Six Meters of Filament a Minute",
+                "description": "Roetz 4.0, October 17: the cable-driven Minute Man after a 59-second Benchy, now chasing five meters per second",
+                "type": "video",
+                "slides": [
+                    {
+                        "heading": "I Broke the 3D-Printing Speed Limit",
+                        "body": "Roetz 4.0, October 17. The follow-up to his 59-second Benchy: new extruder, new steppers, and a run at the real limits of the hot end.",
+                        "videoUrl": "https://youtu.be/yS10aRdBWXY"
+                    },
+                    {
+                        "heading": "The Numbers",
+                        "bullets": [
+                            "The Minute Man: a cable-driven printer bolted to a 1,300 kg coordinate measuring machine. Moving mass about 60 grams",
+                            "September: a 59-second Benchy at 1,700 mm/s and 200 g of acceleration, with most of the print near 200 mm³/s",
+                            "This video: about six meters of filament a minute, roughly 240 mm³/s, and head speeds of four to five meters per second",
+                            "Four Bondtech extruders feed one melt chamber. The hot end tops out near 400 mm³/s",
+                            "What breaks next: stepper comms over USB and keeping the plastic cool enough to stack"
+                        ],
+                        "link": "https://3dprintingindustry.com/news/minute-man-3d-printer-crosses-sub-60-second-benchy-barrier-254904/",
+                        "linkLabel": "The 59-Second Benchy Story"
+                    }
+                ]
+            },
+            {
+                "id": "compliant-gears",
+                "title": "Compliant Gears: Springy Teeth, No Backlash",
+                "description": "Seve's hollow-tooth gears preload themselves against the mating gear. OpenSCAD files are on GitHub under MIT",
+                "type": "video",
+                "slides": [
+                    {
+                        "heading": "Compliant Gears: Springy Teeth, No Backlash",
+                        "body": "Seve, October 5. 184,000 views. Hollow teeth with two thin flank walls that flex, so the pair runs with no play.",
+                        "videoUrl": "https://youtu.be/Pku42T__6qo"
+                    },
+                    {
+                        "heading": "How It Works, and the Files",
+                        "bullets": [
+                            "Each tooth is cut 0.10 mm oversize per flank. At the normal center distance the mating gear pushes the walls in, which takes up the play",
+                            "The rack-and-pinion version (October 15) does the same trick on a linear rail",
+                            "Parametric OpenSCAD on GitHub, MIT. STL, STEP and the source. Version 2 has 45-degree caps, so it prints without supports",
+                            "No load or wear numbers yet. Great for positioning, probably not for torque"
+                        ],
+                        "link": "https://github.com/seveibar/compliant-spur-gear",
+                        "linkLabel": "Compliant Spur Gear on GitHub",
+                        "links": [
+                            {
+                                "label": "Rack and Pinion Short",
+                                "url": "https://youtu.be/84kFqcPJg-8"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "creality-k3-mega",
+                "title": "Creality: K3 Ships November 2, and a 420 mm Ender-3 for $669",
+                "description": "The K3 pre-order page now has a ship date. The Ender-3 V3 Mega Combo is a 420 mm cube with a four-color unit",
+                "type": "text",
+                "slides": [
+                    {
+                        "heading": "Creality: K3 Ships November 2, and a 420 mm Ender-3 for $669",
+                        "bullets": [
+                            "K3: $849 pre-order, estimated shipping November 2. Four free rolls through November 30. Still no independent review",
+                            "Ender-3 V3 Mega: 420 × 420 × 420 mm bed-slinger, up to 500 mm/s, new Sprite-2 extruder rated for 85A to 95A TPU",
+                            "Mega Combo with the CFS Nano four-color unit: $669 early bird through November 10. The Ender-3 V3 Neo Combo is $329",
+                            "Announced October 15. All Creality's own numbers, no reviews yet"
+                        ],
+                        "link": "https://store.creality.com/products/k3-multi-material-multicolor-3d-printer",
+                        "linkLabel": "K3 Pre-Order Page",
+                        "links": [
+                            {
+                                "label": "Ender-3 V3 Mega Announcement",
+                                "url": "https://www.manilatimes.net/2026/10/15/tmt-newswire/pr-newswire/creality-launches-ender-3-v3-mega-combo-at-669-for-large-format-printing-and-batch-production/2446715"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "scanners",
+                "title": "Scanners: Creality's $699 Pika Reviewed, Bambu's S1 Still a Tease",
+                "description": "Tom's Hardware reviews the Pika handheld scanner. Bambu's first scanner is coming in November with no specs or price",
+                "type": "text",
+                "slides": [
+                    {
+                        "heading": "Scanners: Creality's $699 Pika Reviewed, Bambu's S1 Still a Tease",
+                        "bullets": [
+                            "Tom's Hardware, October 19: the Pika is 260 grams with batteries. A blue-laser mode that needs marker dots, and an infrared mode that doesn't",
+                            "Cordless with a recent phone. On a laptop you want 16 GB of RAM; 8 GB failed",
+                            "Weak spots: hair and tracking in infrared mode, play in the turntable bearing. Creality's Sermoon scanners start at $2,069",
+                            "Bambu S1: teased October 12, page says November. An FCC filing shows 60 W and 5 GHz Wi-Fi. Every price you've seen is a guess"
+                        ],
+                        "link": "https://www.tomshardware.com/3d-printing/3d-scanning/creality-pika-3d-scanner-review",
+                        "linkLabel": "Tom's Hardware Pika Review",
+                        "links": [
+                            {
+                                "label": "Bambu S1 Page",
+                                "url": "https://bambulab.com/en-us/s1"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "pla-compost",
+                "title": "A Year in the Ground: PLA Does Not Compost",
+                "description": "Hackaday, October 16: buried PLA samples came back unchanged after a full year in soil and compost",
+                "type": "discussion",
+                "slides": [
+                    {
+                        "heading": "A Year in the Ground: PLA Does Not Compost",
+                        "body": "Hackaday, October 16: the \"I built a thing\" experiment buried PLA in soil and in compost for a full year, next to a control set.",
+                        "bullets": [
+                            "Dug up: no visible change, no statistically significant change in tensile strength",
+                            "Microcalorimetry at the University of Basel: soil microbes don't feed on PLA",
+                            "Industrial composters in Switzerland, Germany and the US take PLA in principle. None would accept printed parts; too slow to pay",
+                            "Alternatives named: PHA, which breaks down without the hydrolysis step, or PETG for parts that should last",
+                            "So what do we do with the scrap bin?"
+                        ],
+                        "link": "https://hackaday.com/2026/10/16/disposing-of-pla-and-why-composting-is-not-an-option/",
+                        "linkLabel": "Hackaday Writeup"
+                    }
+                ]
+            },
+            {
+                "id": "secret-santa",
+                "title": "Secret Santa: Last Call, Tonight",
+                "description": "Sign-ups close at 3 AM Eastern tonight. Max contacts everyone who signed up after that",
+                "type": "text",
+                "slides": [
+                    {
+                        "heading": "Secret Santa: Last Call, Tonight",
+                        "body": "This is the last call. Sign-ups close tonight at 3 AM Eastern. If you've been meaning to, do it now.",
+                        "bullets": [
+                            "After the close I'll email, text or message everyone who signed up with their match and what they like",
+                            "Ship your gift by Saturday, December 5",
+                            "Show and tell at the Thursday, December 10 meetup",
+                            "Anything you print counts. The budget is small on purpose"
+                        ],
+                        "link": "https://maxsikorski.github.io/3d-printing-weekly-news/secret-santa.html",
+                        "linkLabel": "Sign Up Now"
+                    }
+                ]
+            },
+            {
+                "id": "most-liked",
+                "title": "Your Favorite Last Week: The Vibe-Coding Era",
+                "description": "Two hearts for the vibe-coding era. The list grew again this week, and the biggest entry is a CAD skill for your AI agent",
+                "type": "tool",
+                "slides": [
+                    {
+                        "heading": "Last Week's Hearts: The Vibe-Coding Era",
+                        "body": "Four hearts last week; the vibe-coding era took two. The list, one week later:",
+                        "bullets": [
+                            "SolidCraft: a free take on Fusion. JumpStart 3D: between Fusion and Tinkercad. Layerling: a Tinkercad you host yourself",
+                            "New: text-to-cad, a skill that gives Claude Code, Codex, Cursor or Gemini a CAD kernel. STEP, STL and 3MF out. 22,000 stars",
+                            "Fair warning: text-to-cad sends usage stats by default. One command turns it off",
+                            "Tap the heart on any topic in the archive. It tells me what to cover more of"
+                        ],
+                        "link": "https://github.com/MaxSikorski/3d-printing-weekly-news/blob/main/vibe-coded-apps.md",
+                        "linkLabel": "The Vibe-Coded Apps List",
+                        "links": [
+                            {
+                                "label": "text-to-cad on GitHub",
+                                "url": "https://github.com/earthtojake/text-to-cad"
+                            },
+                            {
+                                "label": "Last Week's Deck",
+                                "url": "https://maxsikorski.github.io/3d-printing-weekly-news/week.html?week=2026-W42"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "robotics-corner",
+                "title": "Robotics Corner: RoboParty RP1, a Fully Open-Source Humanoid",
+                "description": "Every drawing, board and BOM of a 1.35 m humanoid is public. Plus the SO-ARM102, a $439 printable arm kit",
+                "type": "video",
+                "slides": [
+                    {
+                        "heading": "Robotics Corner: RoboParty RP1",
+                        "body": "RoboParty's launch video, October 14. The formal launch followed on October 15 after a debut at IROS, where they kicked it and it stayed up.",
+                        "videoUrl": "https://youtu.be/xa6PkV6-Xsw"
+                    },
+                    {
+                        "heading": "What's Actually Open",
+                        "bullets": [
+                            "1.35 m, about 39 kg, 24 active degrees of freedom; the Pro has 30 with a neck and seven-joint arms. Their own joint modules peak at 160 N·m",
+                            "10 Ah hot-swap battery: three hours of runtime, 90 minutes to charge",
+                            "The hardware repo has the SolidWorks sources, drawings, Gerbers, harnesses and a BOM spreadsheet. The software side is ROS 2, Isaac Lab training and firmware",
+                            "Honest caveat: you can't print this one. The body is CNC aluminum and engineering plastic. No price, no ship date yet",
+                            "Their first robot, Roboto Origin, was the DIY one: 2,700 stars since January"
+                        ],
+                        "link": "https://github.com/Roboparty/RP1",
+                        "linkLabel": "RP1 on GitHub",
+                        "links": [
+                            {
+                                "label": "Hardware Files",
+                                "url": "https://github.com/Roboparty/rp1_hardware"
+                            },
+                            {
+                                "label": "Product Page",
+                                "url": "https://roboparty.com/products/RP1"
+                            }
+                        ]
+                    },
+                    {
+                        "heading": "SO-ARM102: The SO-101 Grows Up, $439 for Two",
+                        "bullets": [
+                            "Robonine's successor to the SO-101 LeRobot arm. Leader plus follower kit, $439, first batch ships late October, you assemble it",
+                            "Parallel gripper to 85 mm instead of one angular jaw. Payload 300 g, up from 150. Reach 483 mm. Tip deflection halved",
+                            "PET-CF frame instead of PLA, about 90% of the parts printed. STEP, STL, BOM and the print guide are on GitHub",
+                            "Same joint layout as the SO-101, so your LeRobot datasets still work. The LeRobot plugin is an alpha from October 17"
+                        ],
+                        "link": "https://robonine.com/shop/so-arm102-robotic-arm-kit/",
+                        "linkLabel": "SO-ARM102 Kit",
+                        "links": [
+                            {
+                                "label": "Files on GitHub",
+                                "url": "https://github.com/roboninecom/SO-ARM-102"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "builder-spotlight",
+                "title": "Builder Spotlight: JumpStart 3D, One Week Later",
+                "description": "The author came back with version 2.0 under MIT, and the community fork shipped 20 releases in six days",
+                "type": "tool",
+                "slides": [
+                    {
+                        "heading": "Builder Spotlight: JumpStart 3D, One Week Later",
+                        "body": "Last week I said I was hosting JumpStart 3D and didn't know who wrote it. This week I do: J.Siwek is back, with version 2.0 and the full source under MIT.",
+                        "bullets": [
+                            "Free CAD in your browser. No install, no account, no server. Beginner mode drags shapes; Advanced mode sketches, extrudes, fillets and shells on a real CAD kernel",
+                            "His 2.0 added 3D Sketch, a Lathe, Jump Brick Builder, patterns along a path, and a 256 mm build plate",
+                            "Our fork tracks his releases and adds its own work under the same license. 124 stars and 43 forks in a week"
+                        ],
+                        "link": "https://maxsikorski.github.io/jumpstart-3d/",
+                        "linkLabel": "Open JumpStart 3D"
+                    },
+                    {
+                        "heading": "What Shipped This Week: 20 Releases in Six Days",
+                        "bullets": [
+                            "An AI chat inside the app: pick a model, type \"a 40 by 30 by 20 block with an 8 mm hole,\" watch it build. Ollama, LM Studio, OpenAI-style or Anthropic",
+                            "An MCP server, so Claude Code or Codex can edit the design you have open and export STL, STEP, OBJ or 3MF",
+                            "Fastener, Gear, Hole-pattern and Name-plate dialogs: real threads with a print offset, involute gears with clearance, counterbored rows of holes",
+                            "Named parameters everywhere, and patterns you can edit later",
+                            "Back up and restore every design, save copies to a folder, or keep them on your own server over WebDAV"
+                        ],
+                        "link": "https://github.com/MaxSikorski/jumpstart-3d/releases",
+                        "linkLabel": "Release Notes"
+                    },
+                    {
+                        "heading": "Try It, Break It, Tell Me",
+                        "bullets": [
+                            "Online: maxsikorski.github.io/jumpstart-3d. Offline: download one HTML file and double-click it",
+                            "Claude Code users: two commands install the plugin. The README has the lines for Codex, Cursor and Gemini CLI",
+                            "The subreddit is new and public: r/Jumpstart3D. Bug reports, feature asks and your designs go there",
+                            "Built with AI, now shipping an AI. This is what the vibe-coding era looks like from the inside"
+                        ],
+                        "link": "https://www.reddit.com/r/Jumpstart3D/",
+                        "linkLabel": "r/Jumpstart3D",
+                        "links": [
+                            {
+                                "label": "Source on GitHub",
+                                "url": "https://github.com/MaxSikorski/jumpstart-3d"
+                            },
+                            {
+                                "label": "The Author's Site",
+                                "url": "https://sites.google.com/view/jumpstart-3d-creator/home"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "quick-tip",
+                "title": "Quick Tip of the Week",
+                "description": "Model small tabs onto your part's corners instead of adding mouse ears in the slicer",
+                "type": "video",
+                "slides": [
+                    {
+                        "heading": "Quick Tip: Tabs Instead of Mouse Ears",
+                        "body": "Contrive Design Innovations, October 8. One minute: a design trick against warping you add in CAD, not in the slicer.",
+                        "videoUrl": "https://youtu.be/JOhjVF3HKQ4"
+                    },
+                    {
+                        "heading": "How It Works",
+                        "bullets": [
+                            "Model thin tabs on the corners and long edges of the part, one layer or two thick, as part of the model",
+                            "They print with the first layer, hold the corners down, and snap or trim off when the part is done",
+                            "Unlike mouse ears, they travel with the model file, so every print of it gets them",
+                            "Works on anything with sharp corners in ABS, ASA or big flat PLA"
+                        ],
+                        "link": "https://youtu.be/JOhjVF3HKQ4",
+                        "linkLabel": "Watch the Tip"
+                    }
+                ]
+            },
+            {
+                "id": "community-news",
+                "title": "Community News & Topics",
+                "description": "Share what you're interested in talking about!",
+                "type": "text",
+                "slides": [
+                    {
+                        "heading": "Next Week's Meetup",
+                        "body": "Find something you're interested in talking about? Share it here and we'll cover it in next week's meetup!",
+                        "link": "https://github.com/MaxSikorski/3d-printing-weekly-news/issues",
+                        "linkLabel": "Submit a Topic"
+                    }
+                ]
+            }
+        ]
+    },
     "2026-W42": {
         "week": "2026-W42",
         "date": "2026-10-15",
