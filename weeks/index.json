@@ -1,6 +1,11 @@
 {
     "weeks": [
         {
+            "id": "2026-W43",
+            "date": "2026-10-22",
+            "title": "OrcaSlicer 2.5, Layerless Printing & JumpStart 3D"
+        },
+        {
             "id": "2026-W42",
             "date": "2026-10-15",
             "title": "INDX Problems & the Vibe-Coding Era"
