@@ -210,6 +210,48 @@
             ]
         },
         {
+            "id": "max-custom-pcbs",
+            "title": "Show and Tell: My Two Custom PCBs",
+            "description": "A 16-channel fireworks controller and a droid-head controller for C-3PO, both designed in EasyEDA and ordered from JLCPCB",
+            "type": "discussion",
+            "slides": [
+                {
+                    "heading": "Show and Tell: My Two Custom PCBs",
+                    "body": "Two boards I designed this month in EasyEDA and ordered from JLCPCB. This one runs the LED light show for the July fireworks display. It's already on order.",
+                    "imageUrls": [
+                        "photos/w43-fireworks-controller-top.jpg",
+                        "photos/w43-fireworks-controller-bottom.jpg"
+                    ]
+                },
+                {
+                    "heading": "Fireworks Controller A0: What's on It",
+                    "bullets": [
+                        "An ESP32 with an external antenna, 16 output channels on screw terminals, 12 V in behind a 10 A fuse",
+                        "Safety on the board: an arm key, a separate fire input, a stop input, an armed lamp and a status LED",
+                        "USB-C for programming, test points everywhere, and a 3D model to check the fit before paying for it",
+                        "I'll play the 3D-model recording live"
+                    ]
+                },
+                {
+                    "heading": "Droid Head Controller Rev A0: for C-3PO",
+                    "body": "The second board drives a C-3PO head: pan and tilt, eyes, a microphone and a speaker. Also on order, and not cheap. We'll talk about the cost.",
+                    "imageUrls": [
+                        "photos/w43-droid-head-controller-top.jpg",
+                        "photos/w43-droid-head-controller-bottom.jpg"
+                    ]
+                },
+                {
+                    "heading": "Droid Head Controller: What's on It",
+                    "bullets": [
+                        "ESP32 on a socket, two stepper-driver sockets for the pan and tilt motors, hall sensors to find home on both axes",
+                        "Connectors for the eyes, a mic and a speaker; two four-digit displays read volts and amps",
+                        "12 V in behind a 5 A fuse, a power switch, a remote-switch input that overrides it, and an expansion header for whatever comes next",
+                        "I'll pass around a printed mock-up of the board in the case Claude designed with me"
+                    ]
+                }
+            ]
+        },
+        {
             "id": "secret-santa",
             "title": "Secret Santa: Last Call, Tonight",
             "description": "Sign-ups close at 3 AM Eastern tonight. Max contacts everyone who signed up after that",
