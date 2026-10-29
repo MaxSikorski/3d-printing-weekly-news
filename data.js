@@ -352,7 +352,7 @@ window.INLINE_WEEKS = {
                 "slides": [
                     {
                         "heading": "3D Printed Sunglasses: Ben Did It Better",
-                        "body": "The Next Layer, October 22. Thirty minutes of Jonathan Levi failing at sunglasses so you don't have to. Our member Ben did this a while back, and his came out better.",
+                        "body": "The Next Layer, October 22. Thirty minutes of Jonathan Levi failing at sunglasses so you don't have to. Our member Ben did this in August, W33's Builder Spotlight, and his came out better.",
                         "videoUrl": "https://youtu.be/UHBfsXEo-NY"
                     },
                     {
@@ -365,7 +365,17 @@ window.INLINE_WEEKS = {
                             "Next round: flat lenses, more meat on the arms, design for printing from the start"
                         ],
                         "link": "https://youtu.be/UHBfsXEo-NY",
-                        "linkLabel": "Watch the Video"
+                        "linkLabel": "Watch the Video",
+                        "links": [
+                            {
+                                "label": "Ben's Glasses: W33 Builder Spotlight",
+                                "url": "https://maxsikorski.github.io/3d-printing-weekly-news/week.html?week=2026-W33&topic=builder-spotlight"
+                            },
+                            {
+                                "label": "Ben's Original Post",
+                                "url": "https://github.com/MaxSikorski/3d-printing-weekly-news/issues/4"
+                            }
+                        ]
                     }
                 ]
             },
