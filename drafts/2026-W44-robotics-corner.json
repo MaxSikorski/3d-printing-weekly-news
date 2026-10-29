@@ -1,0 +1,41 @@
+{
+ "id": "robotics-corner",
+ "title": "Robotics Corner: NormaCore Lamp, a Printable Robot Desk Lamp",
+ "description": "Five bus servos, 17 printed parts and about $140 in parts: an open-source lamp that moves like a character",
+ "type": "text",
+ "slides": [
+  {
+   "heading": "Robotics Corner: NormaCore Lamp",
+   "body": "NormaCore open-sourced Lamp on October 14: a fully 3D-printed desk lamp with 5 degrees of freedom that swivels, folds, tilts and rolls its shade. A small robot first and a light second.",
+   "link": "https://github.com/norma-core/norma-core/tree/main/hardware/lamp",
+   "linkLabel": "NormaCore Lamp on GitHub"
+  },
+  {
+   "heading": "Printing and Parts",
+   "bullets": [
+    "17 printed parts in 12 shapes, about 48 hours of printing, plus a PETG window disc in the shade",
+    "Five ST3215 12 V bus servos on one serial bus, the same servo family as the SO-101",
+    "About $140 for the simple version, about $160 for the LED version (README estimates)",
+    "Base ballast is three M16 hex bolts and six nuts, about 585 g of steel",
+    "Editable CAD, print files, firmware and simulation assets are all in the repo"
+   ]
+  },
+  {
+   "heading": "Two Ways to Build It",
+   "bullets": [
+    "Simple: servo adapter in the base, driven from your computer over USB",
+    "LED: an ESP32-CAM and a WS2812B ring in the head, with its own Wi-Fi web page, REST API and program editor",
+    "Same printed arm for both, so you can upgrade the head later without reprinting",
+    "Heads-up from the README: the base and head joints have no end stops, so don't force them past 90 degrees by hand"
+   ],
+   "link": "https://3dprinting.com/news/normacore-open-sources-a-fully-3d-printed-robotic-desk-lamp/",
+   "linkLabel": "3DPrinting.com Write-up"
+  },
+  {
+   "heading": "Bonus for SO-101 Owners",
+   "body": "Foxglove's October 23 post adds record-and-replay to a ROS 2 stack for the SO-101: hand-guide or teleop a motion, save it as an MCAP file, and play it back through collision-checked teleop. Still a work in progress.",
+   "link": "https://foxglove.dev/blog/record-and-replay-with-a-ros-2-powered-so-101",
+   "linkLabel": "Foxglove SO-101 Record-and-Replay"
+  }
+ ]
+}
