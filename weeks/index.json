@@ -1,6 +1,11 @@
 {
     "weeks": [
         {
+            "id": "2026-W44",
+            "date": "2026-10-29",
+            "title": "Bambu's H3C, OrcaSlicer 2.5 Beta & a Lockpicking Robot"
+        },
+        {
             "id": "2026-W43",
             "date": "2026-10-22",
             "title": "OrcaSlicer 2.5, Layerless Printing & JumpStart 3D"

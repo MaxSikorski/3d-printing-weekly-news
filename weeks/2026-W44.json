@@ -1,0 +1,530 @@
+{
+    "week": "2026-W44",
+    "date": "2026-10-29",
+    "title": "Bambu's H3C, OrcaSlicer 2.5 Beta & a Lockpicking Robot",
+    "subtitle": "This week in 3D printing news",
+    "timerMinutes": 20,
+    "topics": [
+        {
+            "id": "bambu-h3c",
+            "title": "Bambu H3C: Nine Tools, Reveal Tuesday at 9 AM",
+            "description": "Bambu's first toolchanger is official and lands Tuesday. The P3C and two new AMS units exist only in FCC filings so far",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "Bambu H3C: Nine Tools, Reveal Tuesday at 9 AM",
+                    "body": "Bambu Lab's second teaser, October 28. \"Retractable rack. Full visibility.\" The reveal is Tuesday, November 3, 9 AM Eastern.",
+                    "videoUrl": "https://youtu.be/y_mKf1XcEE4"
+                },
+                {
+                    "heading": "What's Official, What's Only in Filings",
+                    "bullets": [
+                        "Official: H3C, nine tools on a front rack that drops out of the way. First teaser October 23: \"Tool Changer. Game Changer.\" FCC photos from September show nine numbered docks",
+                        "Also official, October 26: TPU 75A, \"our softest yet\", with 75A and 90A printed in one build on the H3C. No price, volume or ship date for any of it",
+                        "P3C: FCC filing September 15, seven tool holders, dark grey body. Bambu hasn't said a word. Not confirmed for Tuesday",
+                        "AMS 3H and AMS 3P in filings September 21. The 3H runs on mains power up to 200 W, so a heated AMS is the obvious guess",
+                        "Every price you've seen, $2,299 to $3,500, is a blogger's guess"
+                    ],
+                    "link": "https://share.bambulab.com/3VI3GMu",
+                    "linkLabel": "Get Notified Tuesday",
+                    "links": [
+                        {
+                            "label": "Tom's Hardware on the Teaser",
+                            "url": "https://www.tomshardware.com/3d-printing/bambu-lab-teases-its-mysterious-h3c-tool-changer-3d-printer-features-nine-tools-and-a-drop-down-rack-slated-for-november-3-launch"
+                        },
+                        {
+                            "label": "P3C FCC Photos (3Druck)",
+                            "url": "https://3druck.com/en/printers-and-products/bambu-lab-p3c-fcc-photos-show-a-3d-printer-and-tool-changer-with-seven-holders-30164439/"
+                        },
+                        {
+                            "label": "AMS 3H and 3P Filings (3Druck)",
+                            "url": "https://3druck.com/en/printers-and-products/bambu-lab-fcc-documents-showcase-new-material-systems-ams-3h-and-ams-3p-44164443/"
+                        },
+                        {
+                            "label": "TPU 75A Teaser (Bambu Forum)",
+                            "url": "https://forum.bambulab.com/t/bambu-lab-h3c-tpu-75a-our-softest-yet-for-shore/261580"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "orcaslicer-25-beta",
+            "title": "OrcaSlicer 2.5.0 Beta: Unsupported Walls Print Last",
+            "description": "The beta landed October 27 with collision volumes and shorter travels. One new checkbox fixes mid-air walls",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "OrcaSlicer 2.5.0 Beta: Unsupported Walls Print Last",
+                    "body": "OrcaSlicer's own channel, October 27. One checkbox that reorders wall loops so an overhang always has something to grab.",
+                    "videoUrl": "https://youtu.be/oznqOq8_KBk"
+                },
+                {
+                    "heading": "Beta Out October 27, Stable Still 2.4.2",
+                    "bullets": [
+                        "Unsupported wall last: wall loops with nothing under them print after an anchored neighbour. Quality, Overhangs, needs Detect overhang wall on",
+                        "Toolhead collision volumes: mark bed clips and docks in the printer profile. Arrange, brims, supports and travel moves avoid them",
+                        "Shorter travel moves by default, so every print's G-code changes. Slicing up to 2× faster on detailed models",
+                        "Translucent filaments show in the preview. Plugins can now edit presets",
+                        "Alpha was October 16, beta October 27. Cura 5.14 is still in beta too"
+                    ],
+                    "link": "https://github.com/OrcaSlicer/OrcaSlicer/releases/tag/v2.5.0-beta",
+                    "linkLabel": "Download the 2.5.0 Beta",
+                    "links": [
+                        {
+                            "label": "Overhang Settings on the Wiki",
+                            "url": "https://www.orcaslicer.com/wiki/print_settings/quality/quality_settings_overhangs"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "bambu-black-friday",
+            "title": "Bambu Black Friday Is Live, and an AMS 2 Pro Service Notice",
+            "description": "The sale runs to December 1. Separately, summer-built AMS 2 Pro feeders were under-greased and get replaced free",
+            "type": "text",
+            "slides": [
+                {
+                    "heading": "Bambu Black Friday Is Live",
+                    "bullets": [
+                        "Sale runs October 27 to December 1. Up to $450 off the H2C with laser, $110 off the X2D Combo, $100 off the P2S Combo",
+                        "Filament up to 35% off in bulk, 40% off a single roll of engineering filament. 30-day price protection",
+                        "Room wisdom: don't buy an H2C or H2D until Tuesday's H3C pricing lands"
+                    ],
+                    "link": "https://us.store.bambulab.com/pages/black-friday-sale",
+                    "linkLabel": "Bambu Black Friday Terms",
+                    "shop": "Printers"
+                },
+                {
+                    "heading": "AMS 2 Pro Service Notice: Under-Greased Feeders",
+                    "bullets": [
+                        "Feeders built May to July 2026 didn't get enough grease, so the gears wear faster. Units in stores now aren't in that batch",
+                        "Bambu sends four new feeders free, shipping included, in batches over 3 to 5 weeks, plus a $20 code and a fresh 3-month warranty on them",
+                        "Affected owners were messaged through MakerWorld or Handy. Keep using yours until the new ones arrive. Check the wiki FAQ if you bought one this summer"
+                    ],
+                    "link": "https://forum.bambulab.com/t/service-notice-for-ams-2-pro-feeder-unit/261618",
+                    "linkLabel": "Bambu Service Notice"
+                }
+            ]
+        },
+        {
+            "id": "prusa-openprinttag",
+            "title": "Prusa: a $19 NFC Spool Reader, Firmware 8.0 and Black Friday Bundles",
+            "description": "The first OpenPrintTag reader you can buy, the firmware it needs, and a sale with bundles instead of price cuts",
+            "type": "text",
+            "slides": [
+                {
+                    "heading": "Prusa: a $19 NFC Spool Reader and Firmware 8.0",
+                    "bullets": [
+                        "OpenPrintTag Upgrade: an NFC reader in the CORE One spool holder, $19.44 today. Reads material and colour, preheats, writes the remaining filament back after a print",
+                        "CORE One family only, not INDX or MMU3 yet. Needs firmware 8.0.0, out October 22",
+                        "8.0.0 on INDX: a filament acceleration limit, per-tool data in Connect, gentler dock calibration. Still no \"State of INDX\" post"
+                    ],
+                    "link": "https://www.prusa3d.com/product/openprinttag-upgrade/",
+                    "linkLabel": "OpenPrintTag Upgrade"
+                },
+                {
+                    "heading": "Prusa Black Friday, and a 400 °C Hotend",
+                    "bullets": [
+                        "Black Friday October 22 to November 30: no printer price cuts, bundles instead. The CORE One+ Gen 2 bundle includes the tag reader, a spool, a year of extra warranty and a $50 INDX voucher",
+                        "Prusament 20 to 40% off",
+                        "One day older: the 400 °C HT hotend for the CORE One+ and L+, with new high-temp sheets. Prusa's own numbers: PA11-CF +23% layer strength, ASA +18%"
+                    ],
+                    "link": "https://blog.prusa3d.com/prusa-black-friday-2026-is-here-grab-the-biggest-deals-of-the-year_138966/",
+                    "linkLabel": "Prusa Black Friday Post",
+                    "links": [
+                        {
+                            "label": "HT Hotend Announcement",
+                            "url": "https://blog.prusa3d.com/ht-hotend-is-out-plus-we-offer-new-materials-and-hightemp-sheets-for-core-one-l_138625/"
+                        }
+                    ]
+                },
+                {
+                    "heading": "Buying Filament This Sale? Two Links That Fund the Meetup",
+                    "body": "Full disclosure, same as always: Polymaker is one of the brands we work with.",
+                    "bullets": [
+                        "Our Polymaker link: 15% off your first order. Same store, same products, the link credits us",
+                        "Our Amazon recommendations page: the printers, filament, dryers and tools we actually use",
+                        "Every cent of affiliate revenue goes back into running this meetup"
+                    ],
+                    "link": "https://shop.polymaker.com/MAXSIKORSKI",
+                    "linkLabel": "Polymaker: 15% Off First Order",
+                    "shop": "Filament & Materials"
+                }
+            ]
+        },
+        {
+            "id": "ai-cad",
+            "title": "AI Is Decent at CAD Now, and My Board Arrives Today",
+            "description": "A week of GPT-6 Astra doing all the CAD, and a live test of my AI-designed LED fireworks controller",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "AI Is Decent at CAD Now",
+                    "body": "Engineering Gone Wild, about October 25. He let GPT-6 Astra do all his CAD work for a week. 190,000 views.",
+                    "videoUrl": "https://youtu.be/T0Zswd29_Xo"
+                },
+                {
+                    "heading": "His Verdict, and Mine Arrives Today",
+                    "bullets": [
+                        "His closing line: a model that generates in five minutes isn't a five-minute job if it takes two hours to make usable",
+                        "For anything headed to manufacturing, the design and the drawing stay the engineer's responsibility",
+                        "GPT-6 Astra scored 95.9% on BenchCAD, but only in agentic mode where it renders, measures and retries",
+                        "Show and tell: my custom LED fireworks controller landed today. AI designed the board. Let's see if it works, live",
+                        "Last week's two PCBs are in the W43 deck if you missed them"
+                    ],
+                    "link": "https://youtu.be/T0Zswd29_Xo",
+                    "linkLabel": "Watch the Video",
+                    "links": [
+                        {
+                            "label": "Last Week's PCB Show and Tell",
+                            "url": "https://maxsikorski.github.io/3d-printing-weekly-news/week.html?week=2026-W43&topic=max-custom-pcbs"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "printed-rails",
+            "title": "Printed Linear Rails: 50,000 Cycles, No Visible Wear",
+            "description": "Printabot's third visit: five filaments and three lubricants on printed rails, then 50,000 cycles under load",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "Printed Linear Rails: 50,000 Cycles, No Visible Wear",
+                    "body": "Printabot, October 27, in Spanish with subtitles. His third visit to this deck: printed rails with PTFE tube running surfaces, now tested on two home-built rigs.",
+                    "videoUrl": "https://youtu.be/KAJs1MD_ChI"
+                },
+                {
+                    "heading": "The Numbers",
+                    "bullets": [
+                        "Friction rig: a 1 kg sled at 10 mm/s on a load cell. PLA, PETG, PETG-CF, PETG with 10% PTFE, ASA. PETG won, ASA second",
+                        "Lubricants: white lithium grease made it worse. Vaseline and vegetable oil both cut the friction",
+                        "Durability rig: MGN12-style carriage, 500 g load, 50,000 cycles of 8 cm at 200 mm/s in a 35 °C chamber",
+                        "Result: no visible wear under the microscope, the carriage a bit looser. Under 30 cents of material per bearing",
+                        "Printed on an Elegoo Centauri Carbon 2 that Elegoo sent him, disclosed up front"
+                    ],
+                    "link": "https://youtu.be/KAJs1MD_ChI",
+                    "linkLabel": "Watch the Tests",
+                    "links": [
+                        {
+                            "label": "W37: Printed Rails That Beat Steel",
+                            "url": "https://maxsikorski.github.io/3d-printing-weekly-news/week.html?week=2026-W37&topic=printabot-rails"
+                        },
+                        {
+                            "label": "W34: Printed Rails Hold 50 Pounds",
+                            "url": "https://maxsikorski.github.io/3d-printing-weekly-news/week.html?week=2026-W34&topic=printabot-petg-rails"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "printed-sunglasses",
+            "title": "3D Printed Sunglasses: Ben Did It Better",
+            "description": "The Next Layer spent thirty minutes failing at printed sunglasses. Five lessons, and a nod to our member Ben",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "3D Printed Sunglasses: Ben Did It Better",
+                    "body": "The Next Layer, October 22. Thirty minutes of Jonathan Levi failing at sunglasses so you don't have to. Our member Ben did this a while back, and his came out better.",
+                    "videoUrl": "https://youtu.be/UHBfsXEo-NY"
+                },
+                {
+                    "heading": "Five Lessons From a Failed Pair",
+                    "bullets": [
+                        "He printed an Oakley design pulled from a VR game model. Never meant for printing, and every problem traces back to that",
+                        "Hinges killed it: screw-in types too weak in soft plastic, heat-set inserts too big and they melt the arms. Real frames heat-press the hinge into the arm",
+                        "PVA's gumminess was a win for thin parts: it held them and peeled off without dissolving. HIPS under ASA came off clean",
+                        "Resin has potential if hinge alignment gets a jig",
+                        "Next round: flat lenses, more meat on the arms, design for printing from the start"
+                    ],
+                    "link": "https://youtu.be/UHBfsXEo-NY",
+                    "linkLabel": "Watch the Video"
+                }
+            ]
+        },
+        {
+            "id": "lockpicking-robot",
+            "title": "A DIY Lockpicking Robot on a Printed Frame",
+            "description": "An ESP32, two servos and a printed rack-and-pinion pick open a door cylinder one pin at a time. 393,000 views",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "A DIY Lockpicking Robot on a Printed Frame",
+                    "body": "Dr. Kun Dániel, about October 24. Three and a half minutes, 393,000 views. A printed rig clamps to a door cylinder and picks it one pin at a time.",
+                    "videoUrl": "https://youtu.be/o4AUKGdScNI"
+                },
+                {
+                    "heading": "What's in It",
+                    "bullets": [
+                        "Printed frame with a rack-and-pinion pick on a 9 g servo, a second servo for tension, an ESP32 with a small screen, one 18650 cell",
+                        "The screen logs each pin as it finds the set height: \"3rd pin found\", a height error on pin 5, then \"Lock OPEN\" at about 1:40",
+                        "\"Claude AI\" is in the title. No description or repo explains what it did. Most likely it wrote the firmware",
+                        "\"Opens any lock\" is a title claim. One euro cylinder is shown. No files published yet"
+                    ],
+                    "link": "https://youtu.be/o4AUKGdScNI",
+                    "linkLabel": "Watch It Open"
+                }
+            ]
+        },
+        {
+            "id": "secret-santa",
+            "title": "Secret Santa: Sign-Ups Closed, Matches This Week",
+            "description": "The list is closed. Every participant gets one message this week with their match and what they like",
+            "type": "text",
+            "slides": [
+                {
+                    "heading": "Secret Santa: Sign-Ups Closed, Matches This Week",
+                    "body": "Sign-ups closed Friday at 3 AM. If you're in, you're in.",
+                    "bullets": [
+                        "I draw the matches this week and send each person one message: who you print for and what they like. Email, or a Discord DM if that's all I have",
+                        "Reply with your mailing address when it arrives. I relay it to your Santa and nobody else sees it",
+                        "Ship by Saturday, December 5. Show and tell at the Thursday, December 10 meetup",
+                        "Anything you print counts. The budget is small on purpose"
+                    ],
+                    "link": "https://maxsikorski.github.io/3d-printing-weekly-news/secret-santa.html",
+                    "linkLabel": "Secret Santa Page"
+                }
+            ]
+        },
+        {
+            "id": "most-liked",
+            "title": "Your Favorite Last Week: Compliant Gears",
+            "description": "Seven hearts last week. Seve's springy-tooth gears took two, tied with Secret Santa, and win on content",
+            "type": "tool",
+            "slides": [
+                {
+                    "heading": "Last Week's Hearts: Compliant Gears",
+                    "body": "Seven hearts last week. Compliant gears took two, tied with Secret Santa. The gears win on content.",
+                    "bullets": [
+                        "Hollow teeth with two thin flank walls that flex, so the gear pair runs with no play",
+                        "Parametric OpenSCAD on GitHub, MIT. Version 2 prints without supports",
+                        "Runners-up: my custom PCBs, Robotics Corner and JumpStart 3D, one heart each",
+                        "Tap the heart on any topic in the archive. It tells me what to cover more of"
+                    ],
+                    "link": "https://github.com/seveibar/compliant-spur-gear",
+                    "linkLabel": "Compliant Spur Gear on GitHub",
+                    "links": [
+                        {
+                            "label": "Last Week's Deck",
+                            "url": "https://maxsikorski.github.io/3d-printing-weekly-news/week.html?week=2026-W43"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "robotics-corner",
+            "title": "Robotics Corner: Printable Humanoid Legs, a Humanoid Teardown Site and a Robot Lamp",
+            "description": "Hugging Face's $2,600 LeRobot Humanoid legs, robodienst.com's free part-by-part humanoid index, and NormaCore's printable robot desk lamp",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "Robotics Corner: Hugging Face's $2,600 Printable Legs",
+                    "body": "Techniahqrobot's video is from this week. The project itself, LeRobot Humanoid, went public in May. Legs and a torso you print and bolt together.",
+                    "videoUrl": "https://youtu.be/pROhnOXuyyI"
+                },
+                {
+                    "heading": "LeRobot Humanoid: What You Get",
+                    "bullets": [
+                        "About $2,500 in parts by the blog, $2,636 by the repo's bill of materials, filament included",
+                        "75 printed parts in nine subassemblies, about 3.5 kg of PLA+",
+                        "12 RobStride motors, a Raspberry Pi 5, a CAN-FD adapter and an IMU. Onshape CAD, Apache 2.0",
+                        "Legs only. The upper body is on the roadmap. Hugging Face calls it experimental"
+                    ],
+                    "link": "https://github.com/Virgileboat/lerobot-humanoid-hardware",
+                    "linkLabel": "Hardware Repo and BOM",
+                    "links": [
+                        {
+                            "label": "The May Blog Post",
+                            "url": "https://huggingface.co/blog/VirgileBatto/lerobot-humanoid"
+                        },
+                        {
+                            "label": "Software Repo",
+                            "url": "https://github.com/Virgileboat/lerobot-humanoid"
+                        }
+                    ]
+                },
+                {
+                    "heading": "robodienst.com: The Humanoid Industry, Taken Apart",
+                    "bullets": [
+                        "Stewy Ving, October 22. Free, no account. Part-by-part 3D teardowns of humanoids",
+                        "The newest robot from each major maker, 35 in all. Parts, materials and supply chain sections",
+                        "A world map of 418 production sites for the raw materials. History and bottlenecks pages, nine learning paths",
+                        "He runs Unitree G1 teardown workshops in the Netherlands"
+                    ],
+                    "link": "https://robodienst.com/",
+                    "linkLabel": "robodienst.com",
+                    "links": [
+                        {
+                            "label": "Why He Built It (Video)",
+                            "url": "https://youtu.be/r7U0rbkrBxQ"
+                        }
+                    ]
+                },
+                {
+                    "heading": "NormaCore Lamp: A Printable Robot Desk Lamp",
+                    "body": "Open-sourced October 14, found by Grok Bot. Five bus servos and 17 printed parts make a lamp that moves like a character. Render by NormaCore, Apache 2.0.",
+                    "imageUrl": "photos/w44-normacore-lamp-render.jpg"
+                },
+                {
+                    "heading": "Lamp: Printing and Parts",
+                    "bullets": [
+                        "17 printed parts in 12 shapes, about 550 g of PLA, plus a PETG window disc in the shade",
+                        "Five ST3215 12 V bus servos on one bus, the same family as the SO-101 arm",
+                        "Ballast is three M16 bolts and six nuts, about 585 g. CAD, print files, firmware and simulation assets are all in the repo"
+                    ],
+                    "link": "https://github.com/norma-core/norma-core/tree/main/hardware/lamp",
+                    "linkLabel": "NormaCore Lamp on GitHub"
+                },
+                {
+                    "heading": "Lamp: Two Ways to Build It",
+                    "bullets": [
+                        "USB version, about $140: a servo adapter in the base, driven from your computer",
+                        "LED version, about $160: an ESP32-CAM and a WS2812B ring in the head, with its own Wi-Fi web page and program editor",
+                        "Same printed arm for both, so you can upgrade the head later. No end stops, so don't force the joints past 90 degrees by hand"
+                    ],
+                    "link": "https://3dprinting.com/news/normacore-open-sources-a-fully-3d-printed-robotic-desk-lamp/",
+                    "linkLabel": "3DPrinting.com Write-up",
+                    "links": [
+                        {
+                            "label": "Bonus: Foxglove SO-101 Record and Replay",
+                            "url": "https://foxglove.dev/blog/record-and-replay-with-a-ros-2-powered-so-101"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "builder-spotlight",
+            "title": "Builder Spotlight: Vilmantas Baranauskas and the N3D Crossed-Cantilever Printer",
+            "description": "Two years from a first prototype to an open beta. Two arms cross over the bed and the hotend rides at the crossing",
+            "type": "tool",
+            "slides": [
+                {
+                    "heading": "Builder Spotlight: Vilmantas Baranauskas and the N3D",
+                    "body": "Casual CNC, October 27. Two years and two months from the first prototype video to an open beta of a crossed-cantilever printer.",
+                    "videoUrl": "https://youtu.be/VeMDUE40COw"
+                },
+                {
+                    "heading": "N3D: Two Arms Crossing Over the Bed",
+                    "bullets": [
+                        "Two cantilever arms cross above the bed and the hotend rides at the crossing. Klipper on a BTT Manta M5P with a CB1",
+                        "183.5 × 183.5 × 166 mm. MGN12H rails, five TMC2209 drivers, sensorless XY homing, an ADXL345",
+                        "Dual Z with a 3:1 block-and-tackle belt reduction. Rated to 800 mm/s and 12,000 mm/s²",
+                        "Takes an Ender-3 extruder and bed. CC BY-SA 4.0"
+                    ]
+                },
+                {
+                    "heading": "How to Try It",
+                    "bullets": [
+                        "Open beta, phase one, for experienced builders. Frame and motion parts are STL, the toolhead has STEP",
+                        "The bill of materials isn't finished, so there's no total cost yet",
+                        "Files on GitHub and Printables. Build it, report back. That's what the beta is for"
+                    ],
+                    "link": "https://github.com/vilmantasbaranauskas/n3d-crossed-cantilever-3d-printer",
+                    "linkLabel": "N3D on GitHub",
+                    "links": [
+                        {
+                            "label": "N3D on Printables",
+                            "url": "https://www.printables.com/model/1892989-crossed-cantilever-3d-printer-diy"
+                        },
+                        {
+                            "label": "Beta Announcement Video",
+                            "url": "https://youtu.be/VeMDUE40COw"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "more-links",
+            "title": "More From This Week",
+            "description": "Links from my notes and Grok Bot's research that didn't get a slide of their own",
+            "type": "text",
+            "slides": [
+                {
+                    "heading": "More From This Week",
+                    "body": "Links from my notes and from Grok Bot's daily research that didn't get their own slide. Browse them in the archive after the meetup.",
+                    "link": "https://foxglove.dev/blog/record-and-replay-with-a-ros-2-powered-so-101",
+                    "linkLabel": "Foxglove: Record and Replay on an SO-101",
+                    "links": [
+                        {
+                            "label": "Snapmaker PLA Full Spectrum Bundle: 4 kg CMYW for $89",
+                            "url": "https://www.prweb.com/releases/snapmaker-introduces-new-filament-bundle-expanding-its-full-spectrum-printing-ecosystem-302915783.html"
+                        },
+                        {
+                            "label": "Snapmaker Orca 2.4.1: Tool Changes Avoid the Prime Tower",
+                            "url": "https://github.com/Snapmaker/OrcaSlicer/releases/tag/v2.4.1"
+                        },
+                        {
+                            "label": "eSun eBox Plus: Four-Spool Dryer to 80 °C",
+                            "url": "https://www.globenewswire.com/news-release/2026/10/23/3387085/0/en/esun-introduces-ebox-plus-an-intelligent-filament-dryer-with-80-c-heating-and-four-spool-capacity.html"
+                        },
+                        {
+                            "label": "Anycubic × Thingiverse: Exclusive Model Partnership",
+                            "url": "https://www.prnewswire.com/news-releases/anycubic-and-thingiverse-announce-exclusive-partnership-to-expand-access-to-3d-models-302917751.html"
+                        },
+                        {
+                            "label": "Elegoo M1 Ultra: Their First 3D Scanner, $1,699",
+                            "url": "https://www.prnewswire.com/news-releases/elegoo-unveils-all-in-one-smart-3d-scanner-m1-ultra-delivering-precision-and-versatility-for-creators-302922087.html"
+                        },
+                        {
+                            "label": "OrcaSlicer 2.5.0: Print Unsupported Walls Last",
+                            "url": "https://youtu.be/oznqOq8_KBk"
+                        },
+                        {
+                            "label": "Printabot: Testing Printed Linear Rails",
+                            "url": "https://youtu.be/KAJs1MD_ChI"
+                        },
+                        {
+                            "label": "Send to Print: A Box That Folds Like Paper",
+                            "url": "https://youtu.be/XBsrxLw_OoU"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "quick-tip",
+            "title": "Quick Tip of the Week",
+            "description": "Print it flat in two layers and fold it into a box. Rotate the part so the creases cross the extrusion lines",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "Quick Tip: Print It Flat, Fold It Like Paper",
+                    "body": "Send to Print, about October 26. Eight minutes on a box that prints flat in two layers and folds up like a carton.",
+                    "videoUrl": "https://youtu.be/XBsrxLw_OoU"
+                },
+                {
+                    "heading": "How It Works",
+                    "bullets": [
+                        "The whole box is two layers thick. The creases are one layer",
+                        "A crease that runs along the extrusion lines splits. Rotate the part so every crease crosses the lines at 45 degrees. He couldn't tear it after that",
+                        "Tuck flaps close it. A locking tab with two hooks replaces the glued seam. No glue, no tools",
+                        "Flat means cheap colour: a Halloween pattern on the walls took three filament changes",
+                        "The model and the Fusion source file are on MakerWorld"
+                    ],
+                    "link": "https://youtu.be/XBsrxLw_OoU",
+                    "linkLabel": "Watch the Tip"
+                }
+            ]
+        },
+        {
+            "id": "community-news",
+            "title": "Community News & Topics",
+            "description": "Share what you're interested in talking about!",
+            "type": "text",
+            "slides": [
+                {
+                    "heading": "Next Week's Meetup",
+                    "body": "Find something you're interested in talking about? Share it here and we'll cover it in next week's meetup!",
+                    "link": "https://github.com/MaxSikorski/3d-printing-weekly-news/issues",
+                    "linkLabel": "Submit a Topic"
+                }
+            ]
+        }
+    ]
+}
