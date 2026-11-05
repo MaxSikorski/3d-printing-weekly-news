@@ -1,119 +1,114 @@
 {
     "weeks": [
         {
+            "id": "2026-W45",
+            "date": "2026-11-04",
+            "title": "Hack Wave"
+        },
+        {
             "id": "2026-W44",
-            "date": "2026-10-29",
-            "title": "Bambu's H3C, OrcaSlicer 2.5 Beta & a Lockpicking Robot"
+            "date": "2026-10-28",
+            "title": "Hot Water"
         },
         {
             "id": "2026-W43",
-            "date": "2026-10-22",
-            "title": "OrcaSlicer 2.5, Layerless Printing & JumpStart 3D"
+            "date": "2026-10-21",
+            "title": "Core 32 Ships"
         },
         {
             "id": "2026-W42",
-            "date": "2026-10-15",
-            "title": "INDX Problems & the Vibe-Coding Era"
+            "date": "2026-10-14",
+            "title": "Wallets With Modems"
         },
         {
             "id": "2026-W41",
-            "date": "2026-10-08",
-            "title": "Bambu's Toolchanger Rumor Mill, Prusa Firmware 7.0 & a 15 MB Robot Brain"
+            "date": "2026-10-07",
+            "title": "Mesh Banned, Rules Dropped"
         },
         {
             "id": "2026-W40",
-            "date": "2026-10-01",
-            "title": "AB 2047 Becomes Law, the Chube Compact Ships & Metal Printing with Robots"
+            "date": "2026-09-30",
+            "title": "Private Money, Private Minds"
         },
         {
             "id": "2026-W39",
-            "date": "2026-09-24",
-            "title": "Snapmaker's 55 mm³/s Hotend, Bambu's Toolchanger Rumors & Support Fins"
+            "date": "2026-09-23",
+            "title": "The Squeeze & the Signal"
         },
         {
             "id": "2026-W38",
-            "date": "2026-09-17",
-            "title": "AB 2047's Clock Starts Ticking, Laser Z-Layers Go Public & UV-Printed Puzzles"
+            "date": "2026-09-16",
+            "title": "The Senate Folds & the Agents Sign In"
         },
         {
             "id": "2026-W37",
-            "date": "2026-09-10",
-            "title": "The First Real Full-Color Printer, 45 Shades From Five Spools & a Printable Robot Vacuum"
+            "date": "2026-09-09",
+            "title": "The Liquid Heist, an On-Chain Ransom & the Self-Custody Dip"
         },
         {
             "id": "2026-W36",
-            "date": "2026-09-03",
-            "title": "AB 2047 Reaches Newsom's Desk, PrusaSlicer 3.0 Arrives & Creality Goes Red"
+            "date": "2026-09-02",
+            "title": "Dashjr's Exit, the CLN Embargo & the Dead-Cat Question"
         },
         {
             "id": "2026-W35",
-            "date": "2026-08-27",
-            "title": "AB 2047 Loses Its Teeth, INDX Gen 2 Ships & Sovol's $3.2M Finish"
+            "date": "2026-08-26",
+            "title": "Squeeze to $80K & a Million Sats in Guadalajara"
         },
         {
             "id": "2026-W34",
-            "date": "2026-08-20",
-            "title": "AB 2047 Advances, Bambu's Toolchanger Patents & Lasers Fix Weak Z-Layers"
+            "date": "2026-08-19",
+            "title": "Roll Your Own Entropy & the Mildest Bear on Record"
         },
         {
             "id": "2026-W33",
-            "date": "2026-08-13",
-            "title": "Prusa Goes Gen 2, Bambu Teases Its First Laser & AB 2047's Decision Day"
+            "date": "2026-08-12",
+            "title": "BIP-110 Is Dead & the Rise of the Bitcoin Red Team"
         },
         {
             "id": "2026-W32",
-            "date": "2026-08-06",
-            "title": "Qidi Plus5 Lands, INDX Slips to Mid-August & AB 2047 Hits the Suspense File"
+            "date": "2026-08-05",
+            "title": "The Coldcard Seed Heist & BIP-110's Flag Day"
         },
         {
             "id": "2026-W31",
-            "date": "2026-07-30",
-            "title": "M1D Goes Live, INDX Nozzles Aren't Hardened & HT-PLA's Fine Print"
+            "date": "2026-07-29",
+            "title": "BIP-110's Math Runs Out, Dorsey Puts Agents on Nostr & Clarity Misses Its Window"
         },
         {
             "id": "2026-W30",
-            "date": "2026-07-23",
-            "title": "INDX Kits Ship Within Days, Polymaker's Best Filament Yet & Pressure Advance Goes Automatic"
+            "date": "2026-07-22",
+            "title": "Voltage Pulls the Plug on Hobby Nodes, the Streak Turns & the Two August 7ths"
         },
         {
             "id": "2026-W29",
-            "date": "2026-07-16",
-            "title": "Curve Cut Goes Live, INDX Opens Orders & the Toolchanger Wars Heat Up"
+            "date": "2026-07-15",
+            "title": "Back and Saylor Reject BIP-110, Core 31.1's Privacy Fix & the ETF Whipsaw"
         },
         {
             "id": "2026-W28",
-            "date": "2026-07-09",
-            "title": "California's AB 2047, INDX Finally Ships & a Clay Printer That Prints the Impossible"
+            "date": "2026-07-08",
+            "title": "Strategy Sells $216M, Trump's $1.4B Crypto Year & Getting Started on Nostr"
         },
         {
             "id": "2026-W27",
-            "date": "2026-07-02",
-            "title": "SUNLU's US Factory, Sovol M1D Pricing & a Walking Robot Duck"
+            "date": "2026-07-01",
+            "title": "Worst Month Since 2022, Strategy's 'Never Sell' Ends & a Nostr-Native Internet"
         },
         {
             "id": "2026-W26",
-            "date": "2026-06-25",
-            "title": "Prime Day Deals, Desktop 5-Axis & a 3D-Printed Hypercar"
+            "date": "2026-06-24",
+            "title": "Two August Forks, Bitcoin Mortgages & Illinois's Crypto Tax"
         },
         {
             "id": "2026-W25",
-            "date": "2026-06-18",
-            "title": "MRRF's Last Ride, Open-Source Volumetric Printing & a 16-Color U1"
+            "date": "2026-06-17",
+            "title": "BIP-110's Fork Fight, the Rebound & a Record Difficulty Drop"
         },
         {
             "id": "2026-W24",
-            "date": "2026-06-11",
-            "title": "MRRF Weekend, BigTreeTech's ViViD & Formlabs Goes Industrial"
-        },
-        {
-            "id": "2026-W23",
-            "date": "2026-06-04",
-            "title": "A2L Launch, Creality's IPO & 3D Printer Ban Bills"
-        },
-        {
-            "id": "2026-W22",
-            "date": "2026-05-28",
-            "title": "PHA Filaments, Slicer Drama & Color Mixing"
+            "date": "2026-06-10",
+            "title": "ETF Exodus, Strategy's Dip Buy & the Reserve Bill"
         }
     ]
 }
