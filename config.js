@@ -43,10 +43,18 @@ window.SITE_CONFIG = {
             { label: "GitHub", href: "https://github.com/MaxSikorski" },
             { label: "Discord", href: "https://discord.gg/pnFyeAZJsk" },
             { label: "Buzz", href: "https://buzz.xyz/" },
-            { label: "Schedule a Chat", href: "https://cal.com/maxsikorski" }
+            { label: "Schedule a Chat", href: "https://cal.com/maxsikorski" },
+            { label: "ARC Today", href: "https://arctoday.substack.com/subscribe" }
         ],
         workWithLabel: "Work With Us",
         qrHref: "https://www.youtube.com/@maxwellsikorski4926"
+    },
+    // Newsletter (2026-11-05): ARC Today on Substack (ARC = Additive and Robotics Club), Grok Bot posts it daily.
+    // Same shape as the Bitcoin site's The Daily Relay block; only the Connect pill above uses the URL today.
+    newsletter: {
+        title: "ARC Today",
+        pitch: "3D printing, robotics and AI news every day. From the Additive and Robotics Club.",
+        signupUrl: "https://arctoday.substack.com/subscribe"
     },
     footer: {
         tagline: "3D print farm · R&amp;D &amp; manufacturing · CAD classes",

@@ -4,6 +4,11 @@
 window.INLINE_DATA = {
     "weeks": [
         {
+            "id": "2026-W45",
+            "date": "2026-11-05",
+            "title": "Bambu's H3C Is Here, $699 Toolchangers & AI-Designed Robots"
+        },
+        {
             "id": "2026-W44",
             "date": "2026-10-29",
             "title": "Bambu's H3C, OrcaSlicer 2.5 Beta & a Lockpicking Robot"
@@ -122,6 +127,514 @@ window.INLINE_DATA = {
 };
 
 window.INLINE_WEEKS = {
+    "2026-W45": {
+        "week": "2026-W45",
+        "date": "2026-11-05",
+        "title": "Bambu's H3C Is Here, $699 Toolchangers & AI-Designed Robots",
+        "subtitle": "This week in 3D printing news",
+        "timerMinutes": 20,
+        "topics": [
+            {
+                "id": "bambu-h3c",
+                "title": "Bambu H3C: $2,499, the First Bambu I'd Buy",
+                "description": "On sale since Tuesday. Nine preheated tools, a 9-spool AMS on top, and cheaper than a CORE One L INDX",
+                "type": "video",
+                "slides": [
+                    {
+                        "heading": "Bambu H3C: $2,499, the First Bambu I'd Buy",
+                        "body": "247printing's 31-minute tech review, November 3. I don't usually love Bambu stuff, but this is the first Bambu printer I'd actually buy.",
+                        "videoUrl": "https://youtu.be/rBzAdCNTAT8"
+                    },
+                    {
+                        "heading": "What You Get for $2,499",
+                        "bullets": [
+                            "Sold only as a combo with the AMS 3H: $2,499, €2,499, £2,199. $2,589 with TPU 75A and a CMYKW PLA pack. $2,799 with the Bambu Station",
+                            "Less than a Prusa CORE One L INDX, the closest match in size",
+                            "Nine tools, each with its own heater and filament path. Bambu says a 6-second material swap and 0.038 g purge in its best case",
+                            "330 × 320 × 325 mm. 350 °C nozzle, 120 °C bed, chamber heated to 65 °C",
+                            "Takes 1.75 mm and 2.85 mm filament. The 2.85 mm tool is for TPU, down to 75A"
+                        ],
+                        "link": "https://blog.bambulab.com/tool-changer-game-changer-bambu-lab-presents-h3c-the-defining-new-generation-of-3d-printers/",
+                        "linkLabel": "Bambu's H3C Launch Post"
+                    },
+                    {
+                        "heading": "What the Reviewers Found",
+                        "bullets": [
+                            "AMS 3H holds nine spools, but only two slots dry, to 85 °C. Tom's Hardware and TechRadar: Editor's Choice. How-To Geek: 9/10",
+                            "Tall: about a meter with the AMS on top, 36 kg. Reviewers reached for a step stool or the Bambu Station",
+                            "CNC Kitchen, about 400 hours: 6–7 second swaps against about 40 on the H2C. Real prints only about 10% faster than an H2C or H2D",
+                            "Each swap still primes about 50 mg. His Majora's Mask had over 4,000 swaps and about 200 g of waste",
+                            "Mixed nozzle sizes in one print, each with its own layer height. Bambu Studio 2.9.1 has it now; reviewers say it still needs work"
+                        ],
+                        "link": "https://www.cnckitchen.com/blog/bambu-lab-h3c-review",
+                        "linkLabel": "CNC Kitchen's H3C Review",
+                        "links": [
+                            {
+                                "label": "Tom's Hardware Review",
+                                "url": "https://www.tomshardware.com/3d-printing/bambu-lab-h3c-3d-printer-review"
+                            },
+                            {
+                                "label": "How-To Geek Review",
+                                "url": "https://www.howtogeek.com/bambu-lab-h3c-review/"
+                            },
+                            {
+                                "label": "Last Week's H3C Teaser Slide",
+                                "url": "https://maxsikorski.github.io/3d-printing-weekly-news/week.html?week=2026-W44&topic=bambu-h3c"
+                            }
+                        ]
+                    },
+                    {
+                        "heading": "Meanwhile: Is the Prusa INDX Ready?",
+                        "body": "3D Printing Nerd, October 30. The hardware prints beautifully with very little waste. Getting files onto it is the hard part.",
+                        "videoUrl": "https://youtu.be/jIT4Spl9CJc"
+                    },
+                    {
+                        "heading": "INDX: What Joel Found",
+                        "bullets": [
+                            "Easy to unbox and load. Majora's Mask and Hellboy came out great",
+                            "Filament management on the printer is \"complex\"",
+                            "He switched between PrusaSlicer 2.9.6 and the 3.0 alpha and got firmware warnings on the latest firmware",
+                            "Thomas Sanladerer called it \"a tech demo at best.\" Joel won't go that far",
+                            "Both he and CNC Kitchen say Bambu's software experience is ahead"
+                        ],
+                        "link": "https://youtu.be/jIT4Spl9CJc",
+                        "linkLabel": "Watch Joel's INDX Review"
+                    }
+                ]
+            },
+            {
+                "id": "black-friday-toolchangers",
+                "title": "Black Friday: Four Toolchangers for Less",
+                "description": "Snapmaker U1 at $699, Flashforge Creator 5 at $599, the Creality K3 shipping at $849, and the H2C down to $1,899",
+                "type": "text",
+                "slides": [
+                    {
+                        "heading": "Black Friday: Four Toolchangers for Less",
+                        "bullets": [
+                            "Snapmaker U1: $699 for Black Friday, its lowest price yet. Four toolheads. Very affordable",
+                            "Flashforge Creator 5: $599, down from $799, through November 30. The Creator 5 Pro is $749",
+                            "Creality K3: $849. First orders shipped November 2, four free rolls of Hyper PLA through November 30. Tom's Hardware: \"a tool changer, not a game changer\"",
+                            "Bambu H2C AMS Combo: $1,899 on sale, normally $2,199. Bambu's sale runs to December 1"
+                        ],
+                        "link": "https://us.snapmaker.com/products/snapmaker-u1",
+                        "linkLabel": "Snapmaker U1 at $699",
+                        "links": [
+                            {
+                                "label": "Creality K3 Now Shipping",
+                                "url": "https://www.prnewswire.com/news-releases/creality-k3-now-available-at-849-making-multi-color-3d-printing-more-practical-302927557.html"
+                            },
+                            {
+                                "label": "Tom's Hardware K3 Review",
+                                "url": "https://www.tomshardware.com/3d-printing/creality-k3-review"
+                            },
+                            {
+                                "label": "Flashforge Black Friday Prices",
+                                "url": "https://www.antonmansson.com/3d-printing-blog/flashforge-black-friday-2026"
+                            },
+                            {
+                                "label": "Bambu Black Friday Price Log",
+                                "url": "https://bambuhub.net/articles/bambu-black-friday-2026"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "slicer-week",
+                "title": "Slicer Week: Cura, Orca, Prusa and Bambu",
+                "description": "Every big slicer moved this week. Cura went stable today, Orca is one step from 2.5, and Prusa opened a plugin store",
+                "type": "tool",
+                "slides": [
+                    {
+                        "heading": "Slicer Week: Cura, Orca, Prusa and Bambu",
+                        "bullets": [
+                            "Cura 5.14, stable today: paint supports on or off by hand, with an overhang-angle slider. Overhangs and bridges colored in the preview",
+                            "OrcaSlicer 2.5.0 release candidate, November 1: Python plugins, belt printers, color mixing. The last test build before 2.5",
+                            "OrcaSlicer has an official YouTube channel now"
+                        ],
+                        "link": "https://github.com/Ultimaker/Cura/releases/tag/5.14.0",
+                        "linkLabel": "Cura 5.14 Release Notes",
+                        "links": [
+                            {
+                                "label": "OrcaSlicer 2.5.0 RC",
+                                "url": "https://github.com/OrcaSlicer/OrcaSlicer/releases/tag/v2.5.0-rc"
+                            },
+                            {
+                                "label": "OrcaSlicer on YouTube",
+                                "url": "https://www.youtube.com/@OfficialOrcaSlicer"
+                            }
+                        ]
+                    },
+                    {
+                        "heading": "Prusa and Bambu Slicers",
+                        "bullets": [
+                            "PrusaSlicer 3.0 alpha 13: a Lua plugin marketplace. Vase mode and soluble supports are now plugins",
+                            "PrusaSlicer 2.9.7: security fixes for malformed 3MF and G-code files. Update",
+                            "Bambu Studio 2.9.1: H3C support and mixed nozzle sizes. H2D gets it in November, H2C and X2D early 2027"
+                        ],
+                        "link": "https://github.com/prusa3d/PrusaSlicer/releases",
+                        "linkLabel": "PrusaSlicer Releases",
+                        "links": [
+                            {
+                                "label": "Bambu Studio 2.9.1",
+                                "url": "https://github.com/bambulab/BambuStudio/releases/tag/v02.09.01.70"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "internet-controls-printer",
+                "title": "He Let 1,531 People Control His 3D Printer",
+                "description": "smill wrote a bot that printed the internet's most-liked model links for a week, unsupervised. Yikes",
+                "type": "video",
+                "slides": [
+                    {
+                        "heading": "He Let 1,531 People Control His 3D Printer",
+                        "body": "smill, October 28. Twelve minutes, almost 200,000 views. Whatever the internet sent went on his shelf.",
+                        "videoUrl": "https://youtu.be/wKc_bOXS0Yk"
+                    },
+                    {
+                        "heading": "How It Worked",
+                        "bullets": [
+                            "People replied to his post with a model link. A bot queued them and printed the most-liked one next",
+                            "A Bambu A1 Mini ran unsupervised for a week. He didn't look at anything until the end",
+                            "Building his own slice-and-send pipeline took about two weeks",
+                            "He worried someone could hide malicious instructions in a file. That's the yikes",
+                            "Lesson: never auto-print files from strangers. Slice them yourself and keep your slicer updated"
+                        ],
+                        "link": "https://youtu.be/wKc_bOXS0Yk",
+                        "linkLabel": "Watch the Experiment"
+                    }
+                ]
+            },
+            {
+                "id": "secret-santa",
+                "title": "Secret Santa: Matches Are Coming",
+                "description": "Watch your email or Discord DMs for your match. Ship by December 5, show and tell December 10",
+                "type": "text",
+                "slides": [
+                    {
+                        "heading": "Secret Santa: Matches Are Coming",
+                        "bullets": [
+                            "Watch your email, or your Discord DMs, for one message: who you print for and what they like",
+                            "Reply with your mailing address. I relay it to your Santa and nobody else sees it",
+                            "Ship by Saturday, December 5. Show and tell at the Thursday, December 10 meetup"
+                        ],
+                        "link": "https://maxsikorski.github.io/3d-printing-weekly-news/secret-santa.html",
+                        "linkLabel": "Secret Santa Page"
+                    }
+                ]
+            },
+            {
+                "id": "most-liked",
+                "title": "Your Favorite Last Week: Robotics Corner",
+                "description": "Nine hearts last week. Robotics Corner took three: printable humanoid legs, a humanoid teardown site and a robot lamp",
+                "type": "tool",
+                "slides": [
+                    {
+                        "heading": "Your Favorite Last Week: Robotics Corner",
+                        "body": "Nine hearts last week. Robotics Corner took three. Secret Santa came second with two.",
+                        "bullets": [
+                            "Hugging Face's LeRobot Humanoid: printable legs and torso, about $2,600 in parts",
+                            "robodienst.com: free part-by-part teardowns of 35 humanoids",
+                            "NormaCore Lamp: a printable robot desk lamp on SO-101 servos",
+                            "Tap the heart on any topic in the archive. It tells me what to cover more of"
+                        ],
+                        "link": "https://maxsikorski.github.io/3d-printing-weekly-news/week.html?week=2026-W44&topic=robotics-corner",
+                        "linkLabel": "Last Week's Robotics Corner"
+                    }
+                ]
+            },
+            {
+                "id": "robotics-corner",
+                "title": "Robotics Corner: TPU Legs and a Robot Dog",
+                "description": "University of Tokyo's printed TPU muscle legs, Mahdi Designs' $300 18-motor hand, Mishin Machine's tilting gear joint and Cubic Doggo",
+                "type": "video",
+                "slides": [
+                    {
+                        "heading": "Robotics Corner: TPU Legs and a Robot Dog",
+                        "body": "First up: robot legs with muscles, tendons and ligaments printed in TPU on a Prusa XL. University of Tokyo. No rigid joints, no bearings.",
+                        "videoUrl": "https://youtu.be/CJ8Y0f0ZbW8"
+                    },
+                    {
+                        "heading": "TPU Muscles: How It Works",
+                        "bullets": [
+                            "Life-size legs, about 0.95 m. PLA bones, TPU 95A muscles, tendons and ligaments",
+                            "Lattice thickness sets stiffness: 1.5 mm to 3 mm struts made one about 28 times stiffer",
+                            "Motors at the pelvis pull six muscles through Bowden cables. Hip flexes about 90°, knee about 105°",
+                            "Walks only with overhead support. One life-size muscle takes 20 to 40 hours to print",
+                            "Published in Advanced Intelligent Systems, open access"
+                        ],
+                        "link": "https://3dprinting.com/news/university-of-tokyo-team-3d-prints-robot-legs-with-tpu-muscles-and-ligaments/",
+                        "linkLabel": "The Story on 3DPrinting.com",
+                        "links": [
+                            {
+                                "label": "The Paper",
+                                "url": "https://doi.org/10.1002/aisy.70537"
+                            }
+                        ]
+                    },
+                    {
+                        "heading": "A $300 Robot Hand With 18 Motors",
+                        "body": "Mahdi Designs, November 3. A tendon-driven humanoid hand from printed parts and cheap servos. Still in development.",
+                        "videoUrl": "https://youtu.be/Sk0x-xMNQks"
+                    },
+                    {
+                        "heading": "A Gear Joint That Tilts 180°",
+                        "body": "Mishin Machine, mid-October. Trochoidal teeth stay in mesh through a 180° tilt. Resin printed on a Form 4, driven by a CubeMars motor.",
+                        "videoUrl": "https://youtu.be/n1YChk8cAvM"
+                    },
+                    {
+                        "heading": "Grok Bot's Pick: Cubic Doggo 07B Wouf",
+                        "body": "Photo: SphericalCowww, MIT License.",
+                        "imageUrl": "photos/w45-cubic-doggo-wouf.jpg",
+                        "link": "https://github.com/SphericalCowww/CubicDoggo_07B",
+                        "linkLabel": "Cubic Doggo on GitHub"
+                    },
+                    {
+                        "heading": "Cubic Doggo: What Goes Into It",
+                        "bullets": [
+                            "A printable 12-servo robot dog on the same ST-3215 servos as the SO-101 arm. 2.2 kg, walks carrying over 1 kg",
+                            "PLA+ body, 12 ST-3215 servos on two Waveshare bus boards",
+                            "Raspberry Pi 5 running ROS 2 Jazzy, joystick control",
+                            "No custom PCB, only two solder joints. M3 screws and locknuts, no glue",
+                            "Editable FreeCAD files on GitHub and Printables",
+                            "Servo screws must be exactly 10 mm. One millimeter too long can damage a servo"
+                        ],
+                        "link": "https://www.printables.com/model/1895571-cubic-doggo-07b-wouf",
+                        "linkLabel": "Cubic Doggo on Printables"
+                    }
+                ]
+            },
+            {
+                "id": "ai-corner",
+                "title": "AI Corner: An AI-Designed Dancing Pumpkin",
+                "description": "One plain-English prompt, no manual CAD. AI agents designed and simulated a 12-joint robot, and the team printed it",
+                "type": "video",
+                "slides": [
+                    {
+                        "heading": "AI Corner: An AI-Designed Dancing Pumpkin",
+                        "body": "Google DeepMind, Halloween. AI agents designed, simulated and helped build this robot from one plain-English prompt.",
+                        "videoUrl": "https://x.com/a_ron_saunders/status/2116521850897342639"
+                    },
+                    {
+                        "heading": "The Pumpkin: What We Know",
+                        "bullets": [
+                            "12 degrees of freedom. No manual CAD",
+                            "Agents ran on Gemini 4 Argon in Google's Antigravity",
+                            "3D printed, with off-the-shelf actuators, a Raspberry Pi and a servo controller. Parts many of us already own",
+                            "No files yet. The team hopes to publish a tech report and maybe the design. Battery safety held it back"
+                        ],
+                        "link": "https://x.com/a_ron_saunders/status/2116521850897342639",
+                        "linkLabel": "Watch It Dance on X",
+                        "links": [
+                            {
+                                "label": "Google's Post",
+                                "url": "https://x.com/Google/status/2116522684154585227"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "more-links",
+                "title": "More From This Week",
+                "description": "Links from my notes and Grok Bot's research that didn't get a slide of their own",
+                "type": "text",
+                "slides": [
+                    {
+                        "heading": "More From This Week",
+                        "body": "Links from my notes and Grok Bot's daily research that didn't get their own slide. Printers and deals first, then Formnext, robots and AI. Browse them in the archive after the meetup.",
+                        "link": "https://store.creality.com/products/cfs-2-creality-filament-system",
+                        "linkLabel": "Creality CFS 2: Four Spools, Dries While Printing, $319",
+                        "links": [
+                            {
+                                "label": "Elegoo Black Friday: Centauri Carbon 2 Combo $369",
+                                "url": "https://www.prnewswire.com/news-releases/elegoo-launches-2026-black-friday--cyber-monday-deals-with-up-to-54-off-3d-printers-and-accessories-302926200.html"
+                            },
+                            {
+                                "label": "Anycubic Black Friday: Kobra X Combo $469",
+                                "url": "https://www.prnewswire.com/news-releases/anycubic-launches-2026-black-friday-and-cyber-monday-sale-across-13-global-markets-with-up-to-350-off-3d-printers-302927755.html"
+                            },
+                            {
+                                "label": "AxiLoop MC8: Eight Toolheads, Kickstarter Nov 12",
+                                "url": "https://signup.axiloop3d.com/mc8"
+                            },
+                            {
+                                "label": "Bambu P3C: Still Only in Filings",
+                                "url": "https://3dbite.com/bambu-lab-p3c-where-is-it-after-h3c-launch/"
+                            },
+                            {
+                                "label": "Studio 3e8 Mesa 1: Desktop Metal, Kickstarter Dec 1",
+                                "url": "https://www.studio3e8.com/post/studio-3e8-launch"
+                            },
+                            {
+                                "label": "Einstar EZ GO: A Scanner That Snaps on Your Phone",
+                                "url": "https://us.einstar.com/pages/einstar-ez-go"
+                            },
+                            {
+                                "label": "Kmart Australia's $249 Printer",
+                                "url": "https://eftm.com/2026/11/kmart-reveals-249-smart-3d-printer-with-enclosed-frame-and-auto-calibration-coming-soon-282962"
+                            }
+                        ]
+                    },
+                    {
+                        "heading": "Formnext, Filament and Community",
+                        "link": "https://www.voxelmatters.com/from-the-shenzhen-hq-to-formnext-in-frankfurt-its-a-new-creality/",
+                        "linkLabel": "Creality at Formnext: A Purge-Waste Recycler",
+                        "links": [
+                            {
+                                "label": "Formnext 2026 Launches to Watch (TCT)",
+                                "url": "https://www.tctmagazine.com/formnext-2026-the-machine-launches-applications-not-to-miss/"
+                            },
+                            {
+                                "label": "Polymaker CymphoniK: Six-Pellet Color Mixing",
+                                "url": "https://3dprinting.com/news/polymaker-announces-cymphonik-six-pellet-color-mixing-system-for-large-format-3d-printing/"
+                            },
+                            {
+                                "label": "Snapmaker U1 Innovation Fund: $50,000, to Dec 24",
+                                "url": "https://www.snapmaker.com/innovation-fund"
+                            },
+                            {
+                                "label": "Prague Firefighters Print Their Own Gear",
+                                "url": "https://blog.prusa3d.com/how-firefighters-use-3d-printing-to-save-lives-time-and-money_138620/"
+                            },
+                            {
+                                "label": "A $99 Printed Electric Spinning Wheel",
+                                "url": "https://www.kickstarter.com/projects/dreamingrobots/eew-maker-kit"
+                            },
+                            {
+                                "label": "A Backpack-Sized Folding Printer",
+                                "url": "https://3dprinting.com/news/student-designs-backpack-sized-folding-3d-printer-with-the-filament-spool-inside/"
+                            },
+                            {
+                                "label": "Orbital Matter Prints a Boom in Open Space",
+                                "url": "https://orbitalmatter.com/newsroom"
+                            }
+                        ]
+                    },
+                    {
+                        "heading": "Robots",
+                        "link": "https://github.com/roboninecom/STS32XX-Firmware",
+                        "linkLabel": "Robonine Firmware: Sharper SO-101 Servos",
+                        "links": [
+                            {
+                                "label": "Stringman: a $795 Open-Source Cable Robot",
+                                "url": "https://neufangled.com/"
+                            },
+                            {
+                                "label": "A $1.50 Robot Joint With a Printed Gearbox",
+                                "url": "https://github.com/yzytz17/1.5-joint-module"
+                            },
+                            {
+                                "label": "OpenJaws: NVIDIA's $400 Printable Gripper",
+                                "url": "https://open-jaws.github.io/"
+                            },
+                            {
+                                "label": "UMI-Live: A Printed Robot-Data Rig",
+                                "url": "https://umi-live.github.io/"
+                            },
+                            {
+                                "label": "A $300 Robot That Plays Fetch",
+                                "url": "https://circuitdigest.com/news/a-300-robot-that-plays-fetch-it-finds-the-ball-picks-it-up-and-brings-it-back-on-its-own"
+                            },
+                            {
+                                "label": "RoboColosseum: SO-101 Policies Ranked",
+                                "url": "https://robocolosseum.ai/"
+                            },
+                            {
+                                "label": "Chimera: a DIY Voron Toolchanger",
+                                "url": "https://github.com/rilmar/chimera-toolchanger"
+                            }
+                        ]
+                    },
+                    {
+                        "heading": "AI and Software",
+                        "link": "https://huggingface.co/spaces/lerobot/language-conditioned-policies",
+                        "linkLabel": "LeRobot: New Instructions Mid-Move",
+                        "links": [
+                            {
+                                "label": "Bambu Aimia: Five AI Model Makers in MakerWorld",
+                                "url": "https://all3dp.com/4/bambu-lab-unites-top-ai-3d-generators-in-makerworld-with-the-new-aimia-hub/"
+                            },
+                            {
+                                "label": "SOMA: Free AI CAD Run by Your Coding Agent",
+                                "url": "https://somacad.app/"
+                            },
+                            {
+                                "label": "MecAgent: Read the Terms Before AI Sees Your CAD",
+                                "url": "https://readmodelmag.com/stories/free-ai-tool-terms-mecagent"
+                            },
+                            {
+                                "label": "Kimi 3D Make: Prompt to Print File",
+                                "url": "https://www.kimi.com/en/help/3d-make/3d-make-overview"
+                            },
+                            {
+                                "label": "Kiln 1.5: Approve Prints From Your AI Chat",
+                                "url": "https://www.kiln3d.com/blog/kiln-1-5-0"
+                            },
+                            {
+                                "label": "topopt: Lighter Brackets From Your AI Agent",
+                                "url": "https://github.com/chartergroup/topopt"
+                            },
+                            {
+                                "label": "Lychee Slicer 8.0.4: AI Auto-Orientation",
+                                "url": "https://lychee.co/changelogs/lychee-slicer-8-0-4"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "quick-tip",
+                "title": "Quick Tip: Check Your Scans With ScanRuler",
+                "description": "CNC Kitchen's free ScanRuler checks a 3D scan against your CAD part, right in the browser",
+                "type": "tool",
+                "slides": [
+                    {
+                        "heading": "Quick Tip: Check Your Scans With ScanRuler",
+                        "body": "CNC Kitchen's free browser tool, new versions October 31 and November 1. Nothing to install, and your files never leave your computer.",
+                        "bullets": [
+                            "Fit spheres, cylinders and planes to a scan, then measure between them",
+                            "Color the scan by how far it's off from the CAD part",
+                            "Map wall thickness",
+                            "Turn a scan into a solid STEP body, or clean up and shrink the mesh",
+                            "Open source, AGPL"
+                        ],
+                        "link": "https://scanruler.com/",
+                        "linkLabel": "Try ScanRuler",
+                        "links": [
+                            {
+                                "label": "ScanRuler on GitHub",
+                                "url": "https://github.com/CNCKitchen/scanruler"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "community-news",
+                "title": "Community News & Topics",
+                "description": "Share what you're interested in talking about, and get the daily brief",
+                "type": "text",
+                "slides": [
+                    {
+                        "heading": "Next Week's Meetup",
+                        "body": "Find something you're interested in talking about? Share it here and we'll cover it in next week's meetup!",
+                        "link": "https://github.com/MaxSikorski/3d-printing-weekly-news/issues",
+                        "linkLabel": "Submit a Topic"
+                    },
+                    {
+                        "heading": "Get ARC Today",
+                        "body": "New: ARC Today, from the Additive and Robotics Club. 3D printing, robotics and AI news every day: all the links we find between meetups on YouTube, X, Reddit and GitHub, in one place. Free. Scan to subscribe.",
+                        "link": "https://arctoday.substack.com/subscribe",
+                        "linkLabel": "arctoday.substack.com"
+                    }
+                ]
+            }
+        ]
+    },
     "2026-W44": {
         "week": "2026-W44",
         "date": "2026-10-29",
