@@ -22,7 +22,7 @@
  * or say "check current price". Leave prices OUT of the "note" field here.
  *
  * CATEGORIES (exact strings): "Printers", "Filament & Materials", "Accessories",
- *   "Tools", "Electronics & Upgrades"
+ *   "Tools", "Electronics & Upgrades", "Workshop & Office"
  */
 
 window.AFFILIATE_DISCLOSURE = "As an Amazon Associate, we, as the meetup, earn from qualifying purchases.";
@@ -76,6 +76,9 @@ window.PRODUCTS = [
     /* ---------------- Electronics & Upgrades ---------------- */
     { id: "adxl345",        name: "ADXL345 Accelerometer",      brand: "", category: "Electronics & Upgrades", amazonUrl: "https://amzn.to/4eRijDc", brandUrl: "", code: "", note: "Cheap input-shaping sensor for Klipper (quick tip, W26)." },
     { id: "ldo-unicorn",    name: "LDO 'Unicorn' Chasing Kit",  brand: "LDO Motors", category: "Electronics & Upgrades", amazonUrl: "", brandUrl: "https://docs.ldomotors.com/en/voron/unicorn", code: "", note: "Resonance kit, accelerometer-in-nozzle (covered W26) — likely distributor-only." },
-    { id: "ldo-stealthchanger", name: "LDO Stealthchanger Kit", brand: "LDO Motors", category: "Electronics & Upgrades", amazonUrl: "", brandUrl: "https://ldomotion.com/products/stealth-changer", code: "", note: "Voron toolchanger kit — likely distributor-only." }
+    { id: "ldo-stealthchanger", name: "LDO Stealthchanger Kit", brand: "LDO Motors", category: "Electronics & Upgrades", amazonUrl: "", brandUrl: "https://ldomotion.com/products/stealth-changer", code: "", note: "Voron toolchanger kit — likely distributor-only." },
+
+    /* ---------------- Workshop & Office ---------------- */
+    { id: "bonsaii-shredder", name: "bonsaii 12-Sheet Cross-Cut Paper Shredder", brand: "bonsaii", category: "Workshop & Office", amazonUrl: "https://link.amazon/B0fpo8zOx", brandUrl: "", code: "", note: "Cross-cut office shredder." }
 
 ];
