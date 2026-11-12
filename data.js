@@ -4,6 +4,11 @@
 window.INLINE_DATA = {
     "weeks": [
         {
+            "id": "2026-W46",
+            "date": "2026-11-12",
+            "title": "OrcaSlicer 2.5, Three Kickstarters & a 3D-Printed Car"
+        },
+        {
             "id": "2026-W45",
             "date": "2026-11-05",
             "title": "Bambu's H3C Is Here, $699 Toolchangers & AI-Designed Robots"
@@ -127,6 +132,566 @@ window.INLINE_DATA = {
 };
 
 window.INLINE_WEEKS = {
+    "2026-W46": {
+        "week": "2026-W46",
+        "date": "2026-11-12",
+        "title": "OrcaSlicer 2.5, Three Kickstarters & a 3D-Printed Car",
+        "subtitle": "This week in 3D printing news",
+        "timerMinutes": 20,
+        "topics": [
+            {
+                "id": "orcaslicer-25",
+                "title": "OrcaSlicer 2.5 Is Out, Plugins and All",
+                "description": "The stable release landed November 7, and a wave of free community plugins showed up within two days",
+                "type": "discussion",
+                "slides": [
+                    {
+                        "heading": "OrcaSlicer 2.5 Is Out, Plugins and All",
+                        "body": "Stable release, November 7. The team calls it the biggest update in Orca's history: nearly 1,300 pull requests from more than 180 contributors.",
+                        "bullets": [
+                            "Python plugins, with a community plugin hub",
+                            "Belt-printer slicing and color mixing from loaded filaments",
+                            "Texture displacement and an experimental Design tab",
+                            "Print two to four parts at once on IDEX printers",
+                            "Bambu H2C and A2L support; mixed nozzle sizes on H2D and X2D"
+                        ],
+                        "link": "https://github.com/OrcaSlicer/OrcaSlicer/releases/tag/v2.5.0",
+                        "linkLabel": "OrcaSlicer 2.5.0 Release"
+                    },
+                    {
+                        "heading": "Before You Upgrade",
+                        "bullets": [
+                            "Bambu process presets now default to Grid infill, not Cross Hatch",
+                            "Plugins are not sandboxed. Only install ones you trust",
+                            "Windows builds are now signed",
+                            "Since the beta: bridges print at bridge speed again, scarf seams stop banding"
+                        ],
+                        "link": "https://all3dp.com/6/orcaslicer-2-5-0-released-adds-plug-ins-native-cad-design-space-texture-mapping-and-more/",
+                        "linkLabel": "All3DP's Rundown"
+                    },
+                    {
+                        "heading": "The First Plugins",
+                        "bullets": [
+                            "Color Split: cut a painted model into one part per color, no AMS needed",
+                            "Flow Line Art: print a photo as one spiral line",
+                            "Print Memory and Klipper Sync: learn from your Klipper history, catch bad settings",
+                            "Head Room: fit a cosplay helmet to your head before printing",
+                            "All brand new and barely tested. Read the code first"
+                        ],
+                        "link": "https://github.com/barismert98/orcaslicer-color-split",
+                        "linkLabel": "Color Split on GitHub",
+                        "links": [
+                            {
+                                "label": "Klipper Sync",
+                                "url": "https://github.com/ahmedbebars/klipper-sync"
+                            },
+                            {
+                                "label": "Head Room",
+                                "url": "https://github.com/ChrisRollz/head-room"
+                            }
+                        ]
+                    },
+                    {
+                        "heading": "Also New in Software",
+                        "bullets": [
+                            "Bambuddy 1.3.0: the free Bambu farm manager adds per-print archives and staff approval",
+                            "Queued jobs now wait for the right filament instead of printing the wrong one",
+                            "PrusaSlicer 3.0 alpha 14 fixes alpha 13's MMU crashes"
+                        ],
+                        "link": "https://github.com/maziggy/bambuddy/releases/tag/v1.3.0",
+                        "linkLabel": "Bambuddy 1.3.0",
+                        "links": [
+                            {
+                                "label": "PrusaSlicer 3.0 Alpha 14",
+                                "url": "https://github.com/prusa3d/PrusaSlicer/releases/tag/version_3.0.0-alpha14"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "prusa-firmware",
+                "title": "Prusa Owners: Update Your Firmware",
+                "description": "A researcher took over his own MK4S over the network. Buddy firmware 7.0.0 and newer fix it on 15 Prusa models",
+                "type": "discussion",
+                "slides": [
+                    {
+                        "heading": "Prusa Owners: Update Your Firmware",
+                        "body": "Researcher Yannick Dixken spent a week attacking his own MK4S with an AI model and a fuzzer. He found 14 issues and ended up running his own code on the printer. Prusa fixed them all in Buddy firmware 7.0.0.",
+                        "bullets": [
+                            "Affected: CORE One family, XL, MK4/MK4S, MK3.9, MK3.5 and MINI",
+                            "Fix: firmware 7.0.0 or newer (8.0.0 includes it)",
+                            "Prusa knows of no real-world attacks. Exploit code is expected in December"
+                        ],
+                        "link": "https://dixken.de/blog/never-gonna-print-you-up",
+                        "linkLabel": "Never Gonna Print You Up (Dixken)"
+                    },
+                    {
+                        "heading": "What to Do Tonight",
+                        "bullets": [
+                            "Check the firmware on every printer, not just one",
+                            "Keep printers off the open internet. Use a VPN for remote access",
+                            "Leave TLS on for Prusa Connect",
+                            "Don't print from USB sticks you didn't set up yourself",
+                            "Side story: Prusa held back the open-source code for weeks, then called that \"the wrong call\""
+                        ],
+                        "link": "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases/tag/v7.0.0",
+                        "linkLabel": "Firmware 7.0.0 Release Notes",
+                        "links": [
+                            {
+                                "label": "Prusa's Statement",
+                                "url": "https://forum.prusa3d.com/forum/english-forum-general-discussion-announcements-and-releases/update-about-printer-firmware-and-source-code-release/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "kickstarter-week",
+                "title": "Kickstarter Week: Three New Printers",
+                "description": "A four-toolhead printer launching today, InfiMech's MX past two million dollars, and a resin printer that washes its own prints",
+                "type": "discussion",
+                "slides": [
+                    {
+                        "heading": "Kickstarter Week: Three New Printers",
+                        "body": "Three crowdfunded printers in one week. Kickstarter is a pledge, not a store: delivery dates slip and refunds aren't guaranteed.",
+                        "bullets": [
+                            "Co Print Quadro: four toolheads, from $649, live today",
+                            "InfiMech MX: from $299, over $2 million raised",
+                            "UniFormation S10: resin that washes and dries itself, about $999"
+                        ]
+                    },
+                    {
+                        "heading": "Co Print Quadro: Four Toolheads, $649",
+                        "bullets": [
+                            "Live on Kickstarter today, 11 AM Eastern",
+                            "Four separate toolheads, about a 1-second swap, up to 90% less waste",
+                            "300 mm cube, 600 mm/s, hardened steel nozzles",
+                            "$649 Super Early Bird (retail $899). Shipping planned from February 2027"
+                        ],
+                        "link": "https://coprint3d.com/blogs/quadro/progress-update-4",
+                        "linkLabel": "Co Print Quadro",
+                        "links": [
+                            {
+                                "label": "Specs and FAQ",
+                                "url": "https://coprint3d.com/pages/faq"
+                            }
+                        ]
+                    },
+                    {
+                        "heading": "InfiMech MX: $2.1 Million in Three Days",
+                        "bullets": [
+                            "Live since November 10, ends December 10",
+                            "Over $2.1 million from about 2,870 backers (goal: $51,000)",
+                            "MX from $299, MX Pro from $549 (later tiers cost more)",
+                            "No delivery date published yet"
+                        ],
+                        "link": "https://www.kickstarter.com/projects/infimech-mx-series/infimech-mx-3d-printer-8x-more-efficiency-8x-less-waste",
+                        "linkLabel": "InfiMech MX on Kickstarter"
+                    },
+                    {
+                        "heading": "UniFormation S10: Resin That Cleans Itself",
+                        "bullets": [
+                            "After printing, the part moves into a built-in 9-liter wash tank, then warm-air dries",
+                            "16K screen, 223 × 126 × 200 mm build volume",
+                            "About $999 pledge. Over $630,000 raised, ends December 1",
+                            "Limits: curing is a $30 add-on, supports still come off by hand",
+                            "Ships March 2027"
+                        ],
+                        "link": "https://the-gadgeteer.com/2026/11/11/this-resin-printer-washes-and-dries-its-own-prints/",
+                        "linkLabel": "The Gadgeteer's Writeup",
+                        "links": [
+                            {
+                                "label": "S10 FAQ",
+                                "url": "https://uniformation3d.com/pages/uniformation-s10-faqs"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "family-printers",
+                "title": "Printers for the Family: $329 and $349",
+                "description": "Creality's kid-run mBox and QIDI's MakeBuddy Smart5 both launched this week, just in time for holiday shopping",
+                "type": "discussion",
+                "slides": [
+                    {
+                        "heading": "Printers for the Family: $329 and $349",
+                        "body": "Two enclosed starter printers for kids and families launched the same week. Same idea, different trade-offs.",
+                        "bullets": [
+                            "Creality mBox: $329, TikTok Shop only, promo through December 10",
+                            "QIDI MakeBuddy Smart5: $349 on QIDI's store",
+                            "Both enclosed, both app-driven, both aimed at holiday gifts"
+                        ]
+                    },
+                    {
+                        "heading": "mBox vs. Smart5",
+                        "bullets": [
+                            "Build size: 153 mm cube vs. 180 mm cube",
+                            "Materials: PLA only vs. PLA and PETG",
+                            "Heated bed: no vs. yes",
+                            "Where to buy: TikTok Shop vs. QIDI's own store",
+                            "Smart5 comes with four spools and two DIY kits"
+                        ],
+                        "link": "https://qidi3d.com/products/smart5",
+                        "linkLabel": "QIDI MakeBuddy Smart5",
+                        "links": [
+                            {
+                                "label": "Creality mBox Launch Post",
+                                "url": "https://x.com/Creality3dP/status/2119429741690438080"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "formnext-bambu-circle",
+                "title": "Formnext Next Week + Bambu Circle",
+                "description": "Teasers ahead of the big show in Frankfurt, November 17 to 20, and Bambu's plan to certify local print shops",
+                "type": "discussion",
+                "slides": [
+                    {
+                        "heading": "Formnext Next Week + Bambu Circle",
+                        "body": "Formnext runs November 17 to 20 in Frankfurt. Expect reveals next week; here's what's been teased.",
+                        "bullets": [
+                            "Elegoo: an upgraded resin printer plus one unnamed machine",
+                            "Snapmaker: a U1 top cover, a color-mixing filament bundle, a model library",
+                            "Bambu: H3C and the R1 laser on show"
+                        ],
+                        "link": "https://www.prnewswire.com/news-releases/discover-elegoos-latest-products-and-and-whats-next-at-formnext-2026-302931564.html",
+                        "linkLabel": "Elegoo's Formnext Preview",
+                        "links": [
+                            {
+                                "label": "Snapmaker at Formnext",
+                                "url": "https://www.voxelmatters.com/snapmaker-to-bring-its-u1-toolchanger-ecosystem-to-formnext/"
+                            }
+                        ]
+                    },
+                    {
+                        "heading": "Bambu Circle: Certified Local Print Shops",
+                        "bullets": [
+                            "Bambu will train and certify local partners to fix printers, sell, print and teach",
+                            "Pilot in the Netherlands; Germany and France in early 2027",
+                            "Goal: a certified partner within an hour's drive of every European user",
+                            "Waiting list is open now. No costs or US plans announced"
+                        ],
+                        "link": "https://blog.bambulab.com/bambu-lab-to-present-the-bambu-circle-programme-and-showcase-h3c-and-r1-at-formnext-2026/",
+                        "linkLabel": "Bambu's Announcement"
+                    }
+                ]
+            },
+            {
+                "id": "most-liked",
+                "title": "Your Favorite Last Week: AI Corner",
+                "description": "Seven hearts last week. AI Corner took two: Google's AI-designed dancing pumpkin robot",
+                "type": "tool",
+                "slides": [
+                    {
+                        "heading": "Your Favorite Last Week: AI Corner",
+                        "body": "Seven hearts last week. AI Corner took two. Every other topic got one.",
+                        "bullets": [
+                            "Google DeepMind's dancing pumpkin: a 12-joint robot designed from one plain-English prompt",
+                            "3D printed, with off-the-shelf servos and a Raspberry Pi",
+                            "Tap the heart on any topic in the archive. It tells me what to cover more of"
+                        ],
+                        "link": "https://maxsikorski.github.io/3d-printing-weekly-news/week.html?week=2026-W45&topic=ai-corner",
+                        "linkLabel": "Last Week's AI Corner"
+                    }
+                ]
+            },
+            {
+                "id": "robotics-corner",
+                "title": "Robotics Corner: Greg the High-Five Robot",
+                "description": "A printed five-servo arm whose CAD, firmware and vision code an AI wrote, plus a litter-picking rover and a chess-fixing arm",
+                "type": "text",
+                "slides": [
+                    {
+                        "heading": "Robotics Corner: Greg the High-Five Robot",
+                        "body": "Hold up an open palm and Greg reaches out and slaps it. Andris Gauracs printed and built it; Claude Code wrote the CAD, the firmware and the vision code. MIT license. Image: Andris Gauracs / high-five-robot.",
+                        "imageUrl": "photos/w46-greg-high-five-robot.jpg",
+                        "link": "https://github.com/andrisgauracs/high-five-robot",
+                        "linkLabel": "high-five-robot on GitHub"
+                    },
+                    {
+                        "heading": "What Goes Into Greg",
+                        "bullets": [
+                            "A tiny ESP32 camera streams video; your computer spots a raised palm",
+                            "A second ESP32 drives five hobby servos",
+                            "About $140 to $230 in parts",
+                            "PLA or PETG, 0.2 mm layers, no supports, fits a 225 mm bed"
+                        ],
+                        "link": "https://www.youtube.com/watch?v=pxZ_urjSU4I",
+                        "linkLabel": "The Build Video"
+                    },
+                    {
+                        "heading": "MOSS: A Printed Litter-Picking Rover",
+                        "bullets": [
+                            "Tracked rover with printed TPU tracks and an SO-101-style arm",
+                            "About $460 in base parts, $600 to $1,390 with a computer and cameras",
+                            "Drives and picks things up today; litter picking on its own isn't shown yet",
+                            "Builder's tip this week: thicker charging wires, the thin ones got warm"
+                        ],
+                        "link": "https://github.com/metrox-eth/moss",
+                        "linkLabel": "MOSS on GitHub"
+                    },
+                    {
+                        "heading": "An Arm That Fixes Your Chess Board",
+                        "bullets": [
+                            "An SO-101 picks up knocked-over pieces and stands them back on their squares",
+                            "Within 4 mm, and the gripper camera checks each piece",
+                            "No AI training: just a fast motion library, small enough for an ESP32"
+                        ],
+                        "link": "https://x.com/s_kandrushin/status/2120497603343495428",
+                        "linkLabel": "Watch It on X",
+                        "links": [
+                            {
+                                "label": "The Library on GitHub",
+                                "url": "https://github.com/stepankandrushin/lerobot-so101-inverse-kinematics"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "ai-corner",
+                "title": "AI Corner: Praxis-1 Learned From SO-101s",
+                "description": "Runway's open robot model trained partly on thousands of hobbyist SO-101 recordings, a free no-code course, and Claude designing gadgets",
+                "type": "text",
+                "slides": [
+                    {
+                        "heading": "AI Corner: Praxis-1 Learned From SO-101s",
+                        "body": "Runway, the AI video company, released Praxis-1 on November 11: a free, open robot model. Part of its training came from robot-arm recordings that hobbyists uploaded to Hugging Face.",
+                        "bullets": [
+                            "3,956 public SO-100/SO-101 datasets from 1,783 people",
+                            "Maybe some of yours",
+                            "Apache-2.0, works with LeRobot",
+                            "An SO-101 version came out today"
+                        ],
+                        "link": "https://runway.com/news/company-news/praxis-1-is-now-available",
+                        "linkLabel": "Runway's Announcement",
+                        "links": [
+                            {
+                                "label": "SO-101 Checkpoint",
+                                "url": "https://huggingface.co/runwayml/praxis-1-so101"
+                            }
+                        ]
+                    },
+                    {
+                        "heading": "The Catch: A Big Graphics Card",
+                        "bullets": [
+                            "Running it needs a GPU with at least 80 GB of memory",
+                            "The full model is 54 GB; a smaller version is 17.5 GB",
+                            "Runway lists Jetson Thor and RTX 5090 as targets"
+                        ],
+                        "link": "https://github.com/runwayml/praxis-1-oss",
+                        "linkLabel": "Praxis-1 on GitHub"
+                    },
+                    {
+                        "heading": "No GPU? Viam's Free Course",
+                        "bullets": [
+                            "Teach your SO-101 to move a mug, with no code and no graphics card",
+                            "Record demos, train in Viam's cloud for free, run it on your arm",
+                            "About 1 hour with their model, about 5 hours with your own demos",
+                            "Mac (Apple Silicon) or Linux. No Windows yet"
+                        ],
+                        "link": "https://www.viam.com/education/vla-training",
+                        "linkLabel": "Viam VLA Course"
+                    },
+                    {
+                        "heading": "Claude Designed Three Working Gadgets",
+                        "bullets": [
+                            "Anthropic's new Claude Fable 5.2 went from a one-paragraph prompt to a working device",
+                            "Specs, circuit boards, firmware and 3D-printable cases",
+                            "A speakerphone, a voice-assistant hub and a handheld virtual pet",
+                            "All three worked without electrical fixes. Early prototypes, not products"
+                        ],
+                        "link": "https://www.anthropic.com/research/claude-electronics-design",
+                        "linkLabel": "Anthropic's Writeup"
+                    }
+                ]
+            },
+            {
+                "id": "builder-spotlight",
+                "title": "Builder Spotlight: Kevin Kuehn's PETG Car",
+                "description": "A road-legal electric car with a body printed from 600+ pieces of PETG, and the free tool he built to split it",
+                "type": "tool",
+                "slides": [
+                    {
+                        "heading": "Builder Spotlight: Kevin Kuehn's PETG Car",
+                        "body": "A road-legal, registered electric car in California. The body is 3D printed: more than 600 PETG pieces from three printers running around the clock for about a month.",
+                        "link": "https://www.printables.com/model/1905725-custom-road-legal-electric-car-3d-printed-petg-car",
+                        "linkLabel": "The Car on Printables"
+                    },
+                    {
+                        "heading": "How He Built It",
+                        "bullets": [
+                            "Designed in Fusion, checked for strength and airflow before printing",
+                            "About 8 mm PETG shell, joined with heat staples, then skinned in carbon fiber",
+                            "Nissan Leaf motor and battery, Miata suspension and steering",
+                            "Two seats front to back, under 2,000 lb"
+                        ],
+                        "link": "https://hackaday.com/2026/11/09/you-wouldnt-download-a-car/",
+                        "linkLabel": "Hackaday's Writeup"
+                    },
+                    {
+                        "heading": "Try It: Section3D",
+                        "bullets": [
+                            "The free tool he wrote to split the body",
+                            "Cuts any oversized model into support-free pieces that fit your bed",
+                            "Numbers the parts, adds dowel holes, packs the plates",
+                            "Exports 3MFs plus a PDF assembly guide",
+                            "Windows, open source (GPL-3.0)"
+                        ],
+                        "link": "https://github.com/k-kuehn/Section3D",
+                        "linkLabel": "Section3D on GitHub"
+                    }
+                ]
+            },
+            {
+                "id": "more-links",
+                "title": "More From This Week",
+                "description": "Links from my notes and Grok Bot's research that didn't get a slide of their own",
+                "type": "text",
+                "slides": [
+                    {
+                        "heading": "More From This Week",
+                        "body": "Links from my notes and Grok Bot's daily research that didn't get their own slide. Printers and filament first, then fun builds, robots and AI. Browse them in the archive after the meetup.",
+                        "link": "https://www.sovol3d.com/products/sovol-m1d-3d-printer",
+                        "linkLabel": "Sovol M1D Toolchanger: Pre-Orders Ship Late December",
+                        "links": [
+                            {
+                                "label": "Polymaker Black Friday: Up to 50% Off",
+                                "url": "https://shop.polymaker.com/pages/bfcm-sale-2026"
+                            },
+                            {
+                                "label": "3D-Fuel Cuts Prices for Good: PLA+ Now $22.95",
+                                "url": "https://www.fabbaloo.com/news/3d-fuel-permanently-drops-filament-prices"
+                            },
+                            {
+                                "label": "Prusament PETG ESD: Static-Safe Filament",
+                                "url": "https://www.prusa3d.com/product/prusament-petg-esd-black-1kg/"
+                            },
+                            {
+                                "label": "Snapmaker Ends Support for 2.0, J1 and Ray",
+                                "url": "https://www.snapmaker.com/blog/so-long-and-thanks-for-all-the-wonderful/"
+                            },
+                            {
+                                "label": "3DXTECH Donates 185 kg of Filament to MakeGood",
+                                "url": "https://www.voxelmatters.com/3dxtech-donates-185-kg-of-filament-to-makegood-for-custom-assistive-devices/"
+                            }
+                        ]
+                    },
+                    {
+                        "heading": "Fun Builds and Videos",
+                        "link": "https://youtu.be/jAl4WTtwQww",
+                        "linkLabel": "Machinist vs. Engineer (Practical Machinist)",
+                        "links": [
+                            {
+                                "label": "Can Ultrasonic Audio 3D Print? (Joel Telling)",
+                                "url": "https://www.youtube.com/watch?v=-MkgIYHJCmw"
+                            },
+                            {
+                                "label": "Print & Place: Electronics Buried Mid-Print",
+                                "url": "https://hpi.de/baudisch/projects/print-and-place.html"
+                            },
+                            {
+                                "label": "StudPrint: A Printer Made of LEGO",
+                                "url": "https://github.com/AdamTuraj/StudPrint"
+                            },
+                            {
+                                "label": "Turn an Ender 3 Into an Earthquake Table",
+                                "url": "https://github.com/RomanJasen/3D-printer-to-shake-table-conversion-scripts"
+                            },
+                            {
+                                "label": "3DMidi: Make Your Printer Play Music",
+                                "url": "https://github.com/QUINRY/3DMidi"
+                            },
+                            {
+                                "label": "A Printable Train Whistle",
+                                "url": "https://www.thingiverse.com/thing:7432815"
+                            }
+                        ]
+                    },
+                    {
+                        "heading": "Robots and AI",
+                        "link": "https://huggingface.co/blog/lerobot/lerobot-release-v070",
+                        "linkLabel": "LeRobot 0.7: Talk to a Running Robot",
+                        "links": [
+                            {
+                                "label": "SO-101 Balances a Ping-Pong Ball",
+                                "url": "https://github.com/zecice/so101-pingpong-balance"
+                            },
+                            {
+                                "label": "Two SO-101s Fold a Pair of Pants",
+                                "url": "https://github.com/Morantkk/SO101-PI05"
+                            },
+                            {
+                                "label": "SO-ARM 102: Aiming 20% Cheaper Than an SO-101",
+                                "url": "https://x.com/robo_nine/status/2119852399812653416"
+                            },
+                            {
+                                "label": "PrintExo: A Printed Ankle Exoskeleton",
+                                "url": "https://printexo.github.io"
+                            },
+                            {
+                                "label": "text-to-cad Studio: Free AI CAD App",
+                                "url": "https://texttocad.studio"
+                            },
+                            {
+                                "label": "Slant 3D's Free AI Model Tools",
+                                "url": "https://www.youtube.com/watch?v=SD8ji9fRXeU"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "quick-tip",
+                "title": "Quick Tip: Zack Freedman's 30 Tips",
+                "description": "Thirty hacks and facts in 40 minutes, from wet filament to mouse ears. Pick three and try them this week",
+                "type": "video",
+                "slides": [
+                    {
+                        "heading": "Quick Tip: Zack Freedman's 30 Tips",
+                        "body": "Zack Freedman, November 11. Thirty tips, tricks and bits of trivia in 40 minutes, for new and veteran printers alike.",
+                        "videoUrl": "https://youtu.be/ct-n2lI0I9g"
+                    },
+                    {
+                        "heading": "Five Worth Stealing",
+                        "bullets": [
+                            "Wet filament isn't just stringy. Moisture slowly breaks some plastics down for good",
+                            "PCTG: his \"all-purpose all-star\" filament",
+                            "Abrasive filaments chew through brass. Know when fibers actually help",
+                            "Mouse ears beat brims for corners that lift",
+                            "Angle the print to cut down on supports"
+                        ],
+                        "link": "https://youtu.be/ct-n2lI0I9g",
+                        "linkLabel": "Watch the Full Video"
+                    }
+                ]
+            },
+            {
+                "id": "community-news",
+                "title": "Community News & Topics",
+                "description": "Share what you're interested in talking about, and get the daily brief",
+                "type": "text",
+                "slides": [
+                    {
+                        "heading": "Next Week's Meetup",
+                        "body": "Find something you're interested in talking about? Share it here and we'll cover it in next week's meetup!",
+                        "link": "https://github.com/MaxSikorski/3d-printing-weekly-news/issues",
+                        "linkLabel": "Submit a Topic"
+                    },
+                    {
+                        "heading": "Get ARC Today",
+                        "body": "New: ARC Today, from the Additive and Robotics Club. 3D printing, robotics and AI news every day: all the links we find between meetups on YouTube, X, Reddit and GitHub, in one place. Free. Scan to subscribe.",
+                        "link": "https://arctoday.substack.com/subscribe",
+                        "linkLabel": "arctoday.substack.com"
+                    }
+                ]
+            }
+        ]
+    },
     "2026-W45": {
         "week": "2026-W45",
         "date": "2026-11-05",
