@@ -1,7 +1,7 @@
 {
     "week": "2026-W46",
     "date": "2026-11-12",
-    "title": "OrcaSlicer 2.5, Three Kickstarters & a 3D-Printed Car",
+    "title": "OrcaSlicer 2.5, Non-Planar Slicing & a 3D-Printed Car",
     "subtitle": "This week in 3D printing news",
     "timerMinutes": 20,
     "topics": [
@@ -70,6 +70,48 @@
                         {
                             "label": "PrusaSlicer 3.0 Alpha 14",
                             "url": "https://github.com/prusa3d/PrusaSlicer/releases/tag/version_3.0.0-alpha14"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "pancakeslicer",
+            "title": "PancakeSlicer: Non-Planar Slicing, Free",
+            "description": "Alpaca Engineering built a free, self-hostable slicer on the OrcaSlicer engine that bends layers to follow curved tops, on printers you already own",
+            "type": "video",
+            "slides": [
+                {
+                    "heading": "PancakeSlicer: Non-Planar Slicing, Free",
+                    "body": "Alpaca Engineering, today. Why non-planar slicing still isn't everyday, and the free slicer he built to fix that. Printed on an A1 mini, sliced from an iPad.",
+                    "videoUrl": "https://youtu.be/cRSoVq_reGQ"
+                },
+                {
+                    "heading": "What Non-Planar Can and Can't Do",
+                    "bullets": [
+                        "The nozzle moves up and down mid-layer, so top layers follow a curve instead of stair-stepping",
+                        "The limit is clearance: a stock A1 mini can tilt about 11°, about 43° with the duct off and remote cooling",
+                        "The flat ring around the nozzle tip gouges the print past roughly 30–40°",
+                        "On a 3-axis printer it won't wrap layers around a part or get rid of overhangs"
+                    ],
+                    "link": "https://youtu.be/cRSoVq_reGQ",
+                    "linkLabel": "Watch the Explainer"
+                },
+                {
+                    "heading": "Try It",
+                    "bullets": [
+                        "Built on the OrcaSlicer engine. Free and open source (AGPL-3.0)",
+                        "Browser demo, desktop builds, or host it yourself for a whole makerspace",
+                        "Checks paths against your printer's head: Bambu A1/P1/X1, Prusa MK4 and CORE One, Voron, Creality K1/K2 and more",
+                        "Simple profiles: Draft, Everyday, Fine Detail, Strong, on any printer or nozzle",
+                        "Experimental: watch the G-code preview and stay with the printer"
+                    ],
+                    "link": "https://github.com/ZimengXiong/PancakeSlicer",
+                    "linkLabel": "PancakeSlicer on GitHub",
+                    "links": [
+                        {
+                            "label": "Try the Browser Demo",
+                            "url": "https://demo.pancake.cooking/"
                         }
                     ]
                 }
@@ -273,7 +315,7 @@
             "slides": [
                 {
                     "heading": "Robotics Corner: Greg the High-Five Robot",
-                    "body": "Hold up an open palm and Greg reaches out and slaps it. Andris Gauracs printed and built it; Claude Code wrote the CAD, the firmware and the vision code. MIT license. Image: Andris Gauracs / high-five-robot.",
+                    "body": "Raise your palm and Greg high-fives it. Image: Andris Gauracs (MIT).",
                     "imageUrl": "photos/w46-greg-high-five-robot.jpg",
                     "link": "https://github.com/andrisgauracs/high-five-robot",
                     "linkLabel": "high-five-robot on GitHub"
@@ -281,6 +323,7 @@
                 {
                     "heading": "What Goes Into Greg",
                     "bullets": [
+                        "Andris Gauracs built it; Claude Code wrote the CAD, firmware and vision code",
                         "A tiny ESP32 camera streams video; your computer spots a raised palm",
                         "A second ESP32 drives five hobby servos",
                         "About $140 to $230 in parts",
