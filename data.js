@@ -4,6 +4,11 @@
 window.INLINE_DATA = {
     "weeks": [
         {
+            "id": "2026-W47",
+            "date": "2026-11-19",
+            "title": "Formnext Toolchangers, QIDI Q3D & G-Flex PETG"
+        },
+        {
             "id": "2026-W46",
             "date": "2026-11-12",
             "title": "OrcaSlicer 2.5, Non-Planar Slicing & a 3D-Printed Car"
@@ -132,6 +137,635 @@ window.INLINE_DATA = {
 };
 
 window.INLINE_WEEKS = {
+    "2026-W47": {
+        "week": "2026-W47",
+        "date": "2026-11-19",
+        "title": "Formnext Toolchangers, QIDI Q3D & G-Flex PETG",
+        "subtitle": "This week in 3D printing news",
+        "timerMinutes": 20,
+        "topics": [
+            {
+                "id": "formnext-toolchangers",
+                "title": "Formnext Was a Toolchanger Show",
+                "description": "Elegoo and Phaetus both showed toolchangers in Frankfurt this week, next to Bambu's H3C and two Kickstarter machines",
+                "type": "discussion",
+                "slides": [
+                    {
+                        "heading": "Formnext Was a Toolchanger Show",
+                        "body": "Formnext ran in Frankfurt this week (November 17–20). Walk the hobby halls and almost every big booth had a printer that swaps whole toolheads.",
+                        "bullets": [
+                            "Elegoo Centauri X Ultra: four print heads, Elegoo's first toolchanger",
+                            "Phaetus Hydra: the hotend company's own toolhead-switching system",
+                            "Bambu H3C, AXILOOP MC8 (eight heads) and Co Print Quadro on show too",
+                            "QIDI went a different way: two nozzles and a hot chamber (next topic)"
+                        ],
+                        "link": "https://www.prnewswire.com/news-releases/elegoo-showcases-new-solutions-across-resin-printing-fdm-printing-and-3d-scanning-at-formnext-2026-302942916.html",
+                        "linkLabel": "Elegoo's Formnext Announcement"
+                    },
+                    {
+                        "heading": "Elegoo's Toolchanger, Up Close",
+                        "body": "The Next Layer, November 17. A first look at the Centauri X Ultra on the show floor.",
+                        "videoUrl": "https://youtu.be/bQvlfL1Wmi4"
+                    },
+                    {
+                        "heading": "Centauri X Ultra: What We Know",
+                        "bullets": [
+                            "Four independent print heads, about 5 seconds per swap",
+                            "256 mm cube, same as the Centauri Carbon 2",
+                            "Up to 20 colors with Elegoo's AFS unit",
+                            "350 °C nozzles, 120 °C bed, 500 mm/s",
+                            "Side boxes hold four spools and dry them at 65 °C",
+                            "No price, no date. Specs are from the booth panel and may change"
+                        ],
+                        "link": "https://www.psych0h3ad.tech/en/elegoo-centauri-x-ultra-toolchanger-cc2-comparison/",
+                        "linkLabel": "Booth Specs (Psych0h3ad)"
+                    },
+                    {
+                        "heading": "Phaetus Hydra",
+                        "body": "The Next Layer, November 17. The hotend maker's own toolhead-switching system, with 1-second swaps claimed. Kit or full printer, price, date: not announced yet.",
+                        "videoUrl": "https://youtu.be/1l-noUPisB4",
+                        "links": [
+                            {
+                                "label": "Phaetus Hydra Teaser",
+                                "url": "https://www.youtube.com/shorts/7-Yct2CFZxI"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "qidi-q3d",
+                "title": "QIDI Q3D: Two Nozzles, a Hot Chamber",
+                "description": "QIDI's new $599 dual-nozzle printer with a 70 °C heated chamber. I think it's the right direction for QIDI",
+                "type": "discussion",
+                "slides": [
+                    {
+                        "heading": "QIDI Q3D: Two Nozzles, a Hot Chamber",
+                        "body": "Launched at Formnext. I think this is the right direction for QIDI. Image: QIDI.",
+                        "imageUrl": "photos/w47-qidi-q3d.jpg",
+                        "link": "https://qidi3d.com/products/q3d",
+                        "linkLabel": "QIDI Q3D"
+                    },
+                    {
+                        "heading": "Why I Like the Direction",
+                        "bullets": [
+                            "Two hotends, each with its own nozzle and filament path",
+                            "Swap between two materials with much less purging (QIDI's claim)",
+                            "70 °C heated chamber for nylon, ABS and carbon fiber",
+                            "QIDI is building on what it's known for: hot, enclosed machines for tough filaments",
+                            "Add the QIDI Box for multicolor on top"
+                        ]
+                    },
+                    {
+                        "heading": "The Numbers",
+                        "bullets": [
+                            "$599, or $749 with the QIDI Box",
+                            "260 mm cube, 350 °C nozzle, 120 °C bed",
+                            "CoreXY, linear rail on X, up to 600 mm/s",
+                            "Bed leveling with an eddy-current sensor in the hotend",
+                            "HEPA and carbon filter built in"
+                        ],
+                        "link": "https://3dprintingindustry.com/news/qidi-launches-q3d-dual-nozzle-3d-printer-at-formnext-2026-technical-specifications-and-pricing-256926/",
+                        "linkLabel": "Full Specs (3D Printing Industry)"
+                    },
+                    {
+                        "heading": "Before You Pre-Order",
+                        "bullets": [
+                            "QIDI says \"pay $30, save $100\". The checkout total is $529, so $70 off list",
+                            "The $30 deposit is refundable",
+                            "Ships about 3 months after you pay in full, so around February",
+                            "No hands-on reviews yet",
+                            "How the two nozzles work with the QIDI Box isn't spelled out yet"
+                        ],
+                        "link": "https://qidi3d.com/products/q3d",
+                        "linkLabel": "Pre-Order Page"
+                    }
+                ]
+            },
+            {
+                "id": "more-formnext",
+                "title": "More From Formnext",
+                "description": "Prusa's self-hosted printer manager, Snapmaker's color mixing, Elegoo's self-refilling resin printer, a desktop CNC that cuts steel",
+                "type": "discussion",
+                "slides": [
+                    {
+                        "heading": "More From Formnext",
+                        "bullets": [
+                            "Prusa Connect Local: Prusa's printer manager on your own Pi or PC, no cloud",
+                            "Works with Prusa and Klipper printers. Free for personal use and small shops, public beta",
+                            "Snapmaker: a top cover for the U1 and a \"Full Spectrum\" color-mixing filament bundle",
+                            "Elegoo Saturn 5 Ultra: a resin printer that refills itself, early 2027"
+                        ],
+                        "link": "https://www.prusa3d.com/p/connect/connect-local/",
+                        "linkLabel": "Prusa Connect Local",
+                        "links": [
+                            {
+                                "label": "Snapmaker at Formnext",
+                                "url": "https://3dprintingindustry.com/news/snapmaker-brings-u1-ecosystem-and-full-spectrum-color-mixing-to-formnext-2026-256694/"
+                            }
+                        ]
+                    },
+                    {
+                        "heading": "Also on the Show Floor",
+                        "bullets": [
+                            "Makera A1S: a desktop CNC that cuts steel. $2,599 pre-order through December 4, ships January",
+                            "Lynxel LB1 and LC1: resin printers for very thick resins, LC1 in full color. Kickstarter in December",
+                            "Prusa previewed a rugged printer for field work",
+                            "Creality: new Raptor Pro Max scanner",
+                            "Bambu: no new printer, just the H3C, R1 laser and Bambu Circle"
+                        ],
+                        "link": "https://www.makera.com/products/makera-a1s-desktop-cnc",
+                        "linkLabel": "Makera A1S",
+                        "links": [
+                            {
+                                "label": "Prusa at Formnext",
+                                "url": "https://www.prusa3d.com/p/formnext-2026/"
+                            },
+                            {
+                                "label": "Lynxel LB1 and LC1",
+                                "url": "https://3dprintingindustry.com/news/lynxel-unveils-new-resin-3d-printers-supporting-300000-cp-viscosity-256559/"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "g-flex-petg",
+                "title": "Polymaker G-Flex: PETG That Bends",
+                "description": "Polymaker's new PETG and TPU blend, $21.99 a kilo. Plus Polymaker is now on the shelf at Target",
+                "type": "discussion",
+                "slides": [
+                    {
+                        "heading": "Polymaker G-Flex: PETG That Bends",
+                        "body": "Polymaker's new PETG and TPU blend. It bends like TPU and prints like PETG. Think snap-fits, hinges, cosplay and drone parts.",
+                        "bullets": [
+                            "$21.99 per kilo, 1.75 mm",
+                            "\"No break\" in impact tests, both flat and upright (Polymaker's test)",
+                            "Up to 300 mm/s, and it runs through an AMS or CFS",
+                            "230–240 °C nozzle, 70 °C bed",
+                            "Six colors now, four more coming"
+                        ],
+                        "link": "https://shop.polymaker.com/products/polymaker-gflex-petg",
+                        "linkLabel": "Polymaker G-Flex PETG",
+                        "links": [
+                            {
+                                "label": "Launch Details (3DPrinting.com)",
+                                "url": "https://3dprinting.com/news/polymaker-g-flex-petg-elastic-petg-tpu-blend/"
+                            }
+                        ]
+                    },
+                    {
+                        "heading": "Polymaker Is at Target Now",
+                        "bullets": [
+                            "Polymaker filament is on the shelf at select Target stores",
+                            "Panchroma PLA colors, including a new Tri Matte",
+                            "Polymaker hasn't said which stores or what it costs",
+                            "Seen it at a Target near you? Tell us in Discord"
+                        ],
+                        "link": "https://x.com/Polymaker_3D/status/2122351642737516981",
+                        "linkLabel": "Polymaker's Post"
+                    }
+                ]
+            },
+            {
+                "id": "perforated-prints",
+                "title": "Perforated Prints: Peel Off the Top",
+                "description": "Rau Studio's trick: print one layer of dots so the top of a part tears off cleanly",
+                "type": "video",
+                "slides": [
+                    {
+                        "heading": "Perforated Prints: Peel Off the Top",
+                        "body": "Rau Studio, November 14. A layer of printed dots works like paper perforation: the part looks solid, but the top peels off clean. No files yet.",
+                        "videoUrl": "https://youtu.be/2FkBJ_pof28"
+                    }
+                ]
+            },
+            {
+                "id": "kickstarter-check-in",
+                "title": "Kickstarter Check-In",
+                "description": "Co Print Quadro's early birds are nearly gone, InfiMech passes $2.4 million, and Revopoint launches a scanner",
+                "type": "discussion",
+                "slides": [
+                    {
+                        "heading": "Kickstarter Check-In",
+                        "bullets": [
+                            "Co Print Quadro: about $490,000 from 650 backers, ends December 7",
+                            "Its $649 early bird is almost gone: about 35 of 500 left when I checked",
+                            "InfiMech MX: about $2.4 million from 3,226 backers, ends December 10",
+                            "UniFormation S10: about $650,000, ends December 1",
+                            "New: Revopoint MIRACO 2 standalone scanner, $1,425 for the first 150 backers"
+                        ],
+                        "link": "https://www.kickstarter.com/projects/coprint3d/co-print-quadro-independent-4-toolhead-color-3d-printer",
+                        "linkLabel": "Co Print Quadro on Kickstarter",
+                        "links": [
+                            {
+                                "label": "Revopoint MIRACO 2",
+                                "url": "https://revopoint3d.com/blogs/news/revopoint-launches-miraco-2-on-kickstarter-scan-in-one-create-with-agents"
+                            },
+                            {
+                                "label": "Last Week's Kickstarter Slide",
+                                "url": "https://maxsikorski.github.io/3d-printing-weekly-news/week.html?week=2026-W46&topic=kickstarter-week"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "black-friday",
+                "title": "Black Friday Is Live",
+                "description": "Thanksgiving is next Thursday. The brand-store deals I checked, and our Recommendations page for Amazon",
+                "type": "text",
+                "slides": [
+                    {
+                        "heading": "Black Friday Is Live",
+                        "body": "Thanksgiving is next Thursday, so this is our last meetup before the big sales. Brand-store deals I checked:",
+                        "bullets": [
+                            "Snapmaker U1: $699, down from $999, through December 1",
+                            "Creality K2: $349, down from $549. Ender-3 V3 SE: $169",
+                            "Anycubic: up to $350 off. Kobra X Combo: $469",
+                            "Sovol SV08: $529 · Bambu: filament up to 35% off",
+                            "Prusa: free gifts with printers, Prusament up to 40% off"
+                        ],
+                        "link": "https://store.creality.com/blogs/buying-guides/black-friday-3d-printer-deals-2026",
+                        "linkLabel": "Creality's Deals",
+                        "links": [
+                            {
+                                "label": "Snapmaker U1 at $699 (All3DP)",
+                                "url": "https://all3dp.com/4/snapmaker-u1-drops-to-699-this-black-friday/"
+                            },
+                            {
+                                "label": "Sovol Black Friday",
+                                "url": "https://www.sovol3d.com/pages/black-friday-sale"
+                            },
+                            {
+                                "label": "Prusa Black Friday",
+                                "url": "https://www.prusa3d.com/p/black-friday-2026/"
+                            }
+                        ]
+                    },
+                    {
+                        "heading": "Shopping on Amazon? Start Here",
+                        "body": "If you're buying on Amazon anyway, start from our Recommendations page. Printers, filament and tools we've covered on these slides.",
+                        "bullets": [
+                            "Click through from our page, then shop like normal. Costs you nothing extra",
+                            "Every click supports the meetup. Thank you!",
+                            "Check the current price on Amazon. Deals move all week",
+                            "As an Amazon Associate, we, as the meetup, earn from qualifying purchases"
+                        ],
+                        "link": "https://maxsikorski.github.io/3d-printing-weekly-news/recommendations.html",
+                        "linkLabel": "Our Recommendations",
+                        "shop": true
+                    }
+                ]
+            },
+            {
+                "id": "stow-p1",
+                "title": "Stow P1: A Printer That Folds Flat",
+                "description": "A battery-powered printer that folds down to the size of a big book. Files on GitHub",
+                "type": "tool",
+                "slides": [
+                    {
+                        "heading": "Stow P1: A Printer That Folds Flat",
+                        "body": "Fits in a backpack. Image: gao.lab (CC BY-NC-SA).",
+                        "imageUrl": "photos/w47-stow-p1.jpg",
+                        "link": "https://github.com/ethangao907/stow-p1",
+                        "linkLabel": "Stow P1 on GitHub"
+                    },
+                    {
+                        "heading": "How It Folds",
+                        "bullets": [
+                            "Folds to about 300 × 300 × 80 mm, roughly a big book",
+                            "Opens to about 180 × 200 × 175 mm of build space",
+                            "A scissor lift is the Z axis. Klipper turns its curve into straight Z moves",
+                            "Runs on its own 6S battery or a 24 V supply",
+                            "Mostly printed parts. CAD, parts list and firmware are all on GitHub",
+                            "V1 has no heated bed or enclosure. Non-commercial license: no selling kits"
+                        ],
+                        "link": "https://github.com/ethangao907/stow-p1",
+                        "linkLabel": "Build Files"
+                    }
+                ]
+            },
+            {
+                "id": "most-liked",
+                "title": "Your Favorite Last Week: Robotics Corner",
+                "description": "One heart last week, and it went to Greg the High-Five Robot",
+                "type": "tool",
+                "slides": [
+                    {
+                        "heading": "Your Favorite Last Week: Robotics Corner",
+                        "body": "One heart last week, and it went to Robotics Corner.",
+                        "bullets": [
+                            "Greg the High-Five Robot: raise your palm and it high-fives you",
+                            "Tap the heart on any topic. It tells me what to cover more of"
+                        ],
+                        "imageUrl": "photos/w46-greg-high-five-robot.jpg",
+                        "link": "https://maxsikorski.github.io/3d-printing-weekly-news/week.html?week=2026-W46&topic=robotics-corner",
+                        "linkLabel": "Last Week's Robotics Corner"
+                    }
+                ]
+            },
+            {
+                "id": "robotics-corner",
+                "title": "Robotics Corner: A Solar Robot Jellyfish",
+                "description": "A jellyfish that lives on the tank's light, UC San Diego's printed soft robot at 4.7 m/s, and a robot dog that flies",
+                "type": "video",
+                "slides": [
+                    {
+                        "heading": "Robotics Corner: A Solar Robot Jellyfish",
+                        "body": "Robert Skinner, November 15. Three years in the making. It sinks, charges from the tank lights, then pulses back up.",
+                        "videoUrl": "https://youtu.be/35T9oz1o83g"
+                    },
+                    {
+                        "heading": "How the Jellyfish Works",
+                        "bullets": [
+                            "A store-then-burst trick from BEAM robotics, with an ATtiny85 deciding when to fire",
+                            "A saw-tooth cam pushes brass rods out under a 3D-printed silicone skin",
+                            "The skin springs back and squeezes water out, like a real jellyfish",
+                            "Snail cams and nautilus gears failed first. He shows them all",
+                            "No files. He's planning a whole tank of solar robots"
+                        ],
+                        "link": "https://circuitdigest.com/news/solar-powered-robot-jellyfish-swims-through-an-aquarium-using-only-the-tanks-lights",
+                        "linkLabel": "The Build (CircuitDigest)"
+                    },
+                    {
+                        "heading": "A Printed Soft Robot at 4.7 m/s",
+                        "body": "UC San Diego, Science Robotics, November 18. Printed in one piece, no electronics: compressed air drives it at 4.72 m/s, and it swims. Still tethered to a compressor.",
+                        "videoUrl": "https://youtu.be/Vp91APtbR0E",
+                        "links": [
+                            {
+                                "label": "UC San Diego's Story",
+                                "url": "https://today.ucsd.edu/story/the-fastest-soft-robot-ever-built-doesnt-need-electronics-to-function"
+                            }
+                        ]
+                    },
+                    {
+                        "heading": "Sesame Drone: Now With Files",
+                        "bullets": [
+                            "Dorian Todd's Sesame robot folds its legs into propeller arms",
+                            "Walks, flies, lands, walks away",
+                            "Printed carbon-fiber nylon parts take the thrust",
+                            "New this week: hardware files and STLs on GitHub, November 14 (Apache-2.0)"
+                        ],
+                        "link": "https://github.com/dorianborian/sesame-robot-drone",
+                        "linkLabel": "Sesame Drone on GitHub",
+                        "links": [
+                            {
+                                "label": "The Video",
+                                "url": "https://www.youtube.com/watch?v=9K6GmO5QFN4"
+                            },
+                            {
+                                "label": "Write-Up",
+                                "url": "https://www.doriantodd.com/projects/sesame-drone"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "ai-corner",
+                "title": "AI Corner: A Robot Brain Trained in Sim",
+                "description": "MIT's PEAR learned robots in simulation only, Google sets up an SO-101 from chat, Praxis-1 runs on the SO-101",
+                "type": "text",
+                "slides": [
+                    {
+                        "heading": "AI Corner: A Robot Brain Trained in Sim",
+                        "bullets": [
+                            "PEAR: an open 27B model from MIT, Berkeley, UC San Diego and NVIDIA",
+                            "Trained only in simulation, with zero real-world demos",
+                            "60% success on a real two-arm robot, up from 0% before training",
+                            "Apache-2.0, and it ships an SO-101 station",
+                            "Slow for now: seconds of thinking per move. No SO-101 results yet"
+                        ],
+                        "link": "https://mit-han-lab.github.io/pear-blog/",
+                        "linkLabel": "PEAR Write-Up",
+                        "links": [
+                            {
+                                "label": "PEAR on GitHub",
+                                "url": "https://github.com/mit-han-lab/pear"
+                            }
+                        ]
+                    },
+                    {
+                        "heading": "Google Sets Up an SO-101 From Chat",
+                        "bullets": [
+                            "New Gemini 4 Hydrogen model for robotics, November 17",
+                            "Free Antigravity plugin installs LeRobot and calibrates an SO-101",
+                            "One prompt and the arm waves. Simulation built in",
+                            "Needs a paid Google AI Pro or Ultra plan"
+                        ],
+                        "link": "https://developers.googleblog.com/gemini-hydrogen-for-robotics/",
+                        "linkLabel": "Google's Announcement",
+                        "links": [
+                            {
+                                "label": "The Plugin on GitHub",
+                                "url": "https://github.com/google-deepmind/robotics-antigravity-plugin"
+                            }
+                        ]
+                    },
+                    {
+                        "heading": "Praxis-1 Now Runs on the SO-101",
+                        "bullets": [
+                            "Last week's AI Corner: Runway's open robot model",
+                            "Now with an SO-101 checkpoint and a LeRobot client",
+                            "Trained on about 1,070 hours of community SO-100 and SO-101 data",
+                            "Apache-2.0. Aimed at a 32 GB RTX 5090"
+                        ],
+                        "link": "https://github.com/runwayml/praxis-1-oss#so-101-rig",
+                        "linkLabel": "Praxis-1 on GitHub",
+                        "links": [
+                            {
+                                "label": "Last Week's AI Corner",
+                                "url": "https://maxsikorski.github.io/3d-printing-weekly-news/week.html?week=2026-W46&topic=ai-corner"
+                            }
+                        ]
+                    },
+                    {
+                        "heading": "A Tiny Model That Makes Real Parts",
+                        "bullets": [
+                            "smoothstone: a 1.7B model running on a regular CPU",
+                            "It never writes geometry. It picks a tested OpenSCAD recipe and fills in the sizes",
+                            "39 of 40 blind requests right",
+                            "Writing OpenSCAD itself: 0 of 15",
+                            "Free and open source (MIT)"
+                        ],
+                        "link": "https://github.com/baney75/smoothstone",
+                        "linkLabel": "smoothstone on GitHub"
+                    },
+                    {
+                        "heading": "Free AI Failure Detection for Farms",
+                        "bullets": [
+                            "Printago spots spaghetti on camera, with OctoEverywhere, and pauses the printer",
+                            "Free on every plan until 2027",
+                            "New MCP server: Claude or ChatGPT can queue jobs and tell you which beds to clear"
+                        ],
+                        "link": "https://printago.io/changelog/ai-failure-detection-and-mcp",
+                        "linkLabel": "Printago's Changelog"
+                    }
+                ]
+            },
+            {
+                "id": "more-links",
+                "title": "More From This Week",
+                "description": "Links from my notes and Grok Bot's research that didn't get a slide of their own",
+                "type": "text",
+                "slides": [
+                    {
+                        "heading": "More From This Week",
+                        "body": "Links from my notes and Grok Bot's daily research that didn't get their own slide. Software first, then printers and gear, then robots and AI. Browse them in the archive after the meetup.",
+                        "link": "https://github.com/OrcaSlicer/OrcaSlicer/releases/tag/v2.5.1",
+                        "linkLabel": "OrcaSlicer 2.5.1: Fixes, Plus Toolchanger Settings Copy",
+                        "links": [
+                            {
+                                "label": "OrcaSlicer 2.5: 15 New Features (The Next Layer)",
+                                "url": "https://youtu.be/qpn2TicfRxE"
+                            },
+                            {
+                                "label": "Stella Scope: Free Farm Dashboard for Klipper and Prusa",
+                                "url": "https://github.com/3d3dcanada/stella-scope-community"
+                            },
+                            {
+                                "label": "Fluidd 1.38: Update Klipper Boards From the Browser",
+                                "url": "https://github.com/fluidd-core/fluidd/releases/tag/v1.38.0"
+                            },
+                            {
+                                "label": "Bambu Farm Manager 3.2: Filament Use per Print",
+                                "url": "https://wiki.bambulab.com/en/software/bambu-farm-release-notes/3-2-0"
+                            },
+                            {
+                                "label": "MOSAIC: Klipper Toolchanger Offsets From a $10 Probe",
+                                "url": "https://github.com/Slimohan/MOSAIC"
+                            },
+                            {
+                                "label": "Prusa EasyPrint and Printables Inside Fusion",
+                                "url": "https://www.autodesk.com/products/fusion-360/blog/access-printables-and-prusa-easyprint-from-your-autodesk-fusion-toolbar/"
+                            }
+                        ]
+                    },
+                    {
+                        "heading": "Printers, Filament and Gear",
+                        "link": "https://formlabs.com/3d-printers/form-studio-1/",
+                        "linkLabel": "Formlabs Form Studio 1: Its $699 Resin Printer",
+                        "links": [
+                            {
+                                "label": "BIQU Infinity Bed: Conveyor Belt for Bambu P1 and P2S",
+                                "url": "https://biqu.equipment/products/foxlt-infinity-bed"
+                            },
+                            {
+                                "label": "Full-Color Flashforge CJ270 (Uncle Jessy)",
+                                "url": "https://youtu.be/S-IA6v1O2KM"
+                            },
+                            {
+                                "label": "Bambu H3C Color Mix (3D Printing Nerd)",
+                                "url": "https://youtu.be/R12mckXoGxQ"
+                            },
+                            {
+                                "label": "Testing Whisker-Reinforced Nylon (Hackaday)",
+                                "url": "https://hackaday.com/2026/11/17/testing-tismo-whisker-reinforced-poticon-std1-pa-filament/"
+                            },
+                            {
+                                "label": "Print Your Own Solder Paste Stencil",
+                                "url": "https://shanquea.github.io/easyeda-3d-stencil/?lang=en"
+                            },
+                            {
+                                "label": "Bambu MakerKids: Free Printing Lessons for Kids",
+                                "url": "https://x.com/BambulabGlobal/status/2123038602615533833"
+                            }
+                        ]
+                    },
+                    {
+                        "heading": "Robots and AI",
+                        "link": "https://gridfinitytools.com",
+                        "linkLabel": "Gridfinity Tool Studio: Photo of a Tool In, Bin Out",
+                        "links": [
+                            {
+                                "label": "RIG-TARS: A $99 Walking Robot Kit You Print",
+                                "url": "https://circuitdigest.com/news/rig-tars-is-a-99-open-source-esp32-s3-robot-kit-that-walks-like-tars-from-interstellar"
+                            },
+                            {
+                                "label": "Mural V2: An Open-Source Wall-Drawing Robot",
+                                "url": "https://hackaday.com/2026/11/17/a-pen-plotter-to-draw-you-up-on-the-wall/"
+                            },
+                            {
+                                "label": "Polyzon Maker: Free Text- and Photo-to-3D on Your PC",
+                                "url": "https://maker.polyzon.org/en/"
+                            },
+                            {
+                                "label": "Meshy Tested 125 AI Models on Real Printers",
+                                "url": "https://www.meshy.ai/blog/printability-study-make-printable"
+                            },
+                            {
+                                "label": "Formlabs' R&D Lead Let Claude Do the CAD",
+                                "url": "https://x.com/formlabs/status/2121389208510116134"
+                            },
+                            {
+                                "label": "An SO-101 Plugs In a Network Cable",
+                                "url": "https://github.com/luisluis8414/so101-sfp-insertion"
+                            },
+                            {
+                                "label": "An SO-101 Plays Chess",
+                                "url": "https://hakim-site.pages.dev/posts/so101/"
+                            },
+                            {
+                                "label": "Hebbian RUA: Let Claude, GPT or Gemini Drive a Robot Arm",
+                                "url": "https://github.com/Hebbian-Robotics/rua"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "quick-tip",
+                "title": "Quick Tip: Two-Color Ornaments, One Nozzle",
+                "description": "No AMS? Add a color change partway up and swap the filament yourself",
+                "type": "text",
+                "slides": [
+                    {
+                        "heading": "Quick Tip: Two-Color Ornaments, One Nozzle",
+                        "body": "No AMS? You can still print a two-color ornament. Swap the filament partway up.",
+                        "bullets": [
+                            "In the slicer preview, drag the layer slider to where the color should change",
+                            "Add a color change or a pause on that layer",
+                            "PrusaSlicer, OrcaSlicer and Bambu Studio all have it on the slider",
+                            "The printer stops, you swap filament, it carries on"
+                        ],
+                        "link": "https://help.prusa3d.com/article/insert-pause-or-custom-g-code-at-layer_120490",
+                        "linkLabel": "How To (Prusa Help)"
+                    },
+                    {
+                        "heading": "Make It Look Good",
+                        "bullets": [
+                            "Design it in layers: a flat base color, then raised text or a star on top",
+                            "Put the change on the first layer of the raised part",
+                            "Push the new filament through until the color runs clean",
+                            "Stay close. The printer waits for you",
+                            "Same trick drops in a magnet or a nut for the hanging loop"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "community-news",
+                "title": "Community News & Topics",
+                "description": "Share what you're interested in talking about, and get the daily brief",
+                "type": "text",
+                "slides": [
+                    {
+                        "heading": "Next Week's Meetup",
+                        "body": "Find something you're interested in talking about? Share it here and we'll cover it in next week's meetup!",
+                        "link": "https://github.com/MaxSikorski/3d-printing-weekly-news/issues",
+                        "linkLabel": "Submit a Topic"
+                    },
+                    {
+                        "heading": "Get ARC Today",
+                        "body": "New: ARC Today, from the Additive and Robotics Club. 3D printing, robotics and AI news every day: all the links we find between meetups on YouTube, X, Reddit and GitHub, in one place. Free. Scan to subscribe.",
+                        "link": "https://arctoday.substack.com/subscribe",
+                        "linkLabel": "arctoday.substack.com"
+                    }
+                ]
+            }
+        ]
+    },
     "2026-W46": {
         "week": "2026-W46",
         "date": "2026-11-12",
